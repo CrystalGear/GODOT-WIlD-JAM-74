@@ -31,6 +31,11 @@ project/assembly_name="GodotTemplate"
 
 enabled=PackedStringArray("res://addons/debug_menu/plugin.cfg")
 
+[global_group]
+
+car_part="used for car part items"
+tool="used for tool items"
+
 [input]
 
 move_right={

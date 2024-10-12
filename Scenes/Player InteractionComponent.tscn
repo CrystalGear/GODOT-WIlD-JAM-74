@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dk7jv8yi31nxm"]
+
+[ext_resource type="Script" path="res://Scripts/player_interaction_component.gd" id="1_go03m"]
+[ext_resource type="PackedScene" uid="uid://deuuoq4j0fh2c" path="res://Scenes/InventoryComponent.tscn" id="2_1yhnt"]
+
+[node name="PlayerInteractionComponent" type="Node3D"]
+script = ExtResource("1_go03m")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+target_position = Vector3(0, 0, 1)
+
+[node name="InventoryComponent" parent="." instance=ExtResource("2_1yhnt")]
