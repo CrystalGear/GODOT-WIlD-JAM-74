@@ -1,3 +1,77 @@
-[gd_scene format=3 uid="uid://b76f2gih7f1jo"]
+[gd_scene load_steps=4 format=3 uid="uid://b76f2gih7f1jo"]
 
-[node name="MainMenu" type="Node2D"]
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_0ql8g"]
+[ext_resource type="Texture2D" uid="uid://orr75x8cq8b" path="res://icon.svg" id="2_hqxtv"]
+[ext_resource type="Theme" uid="uid://duemvjths1y6w" path="res://Themes/menu_theme.tres" id="3_xuq28"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0ql8g")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_hqxtv")
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -330.0
+offset_top = -31.0
+offset_right = -73.0
+offset_bottom = 35.0
+grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("3_xuq28")
+text = "Start
+"
+
+[node name="OptionsButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -330.0
+offset_top = 69.0
+offset_right = -73.0
+offset_bottom = 135.0
+grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("3_xuq28")
+text = "Options
+"
+
+[node name="ExitButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -334.0
+offset_top = 165.0
+offset_right = -77.0
+offset_bottom = 231.0
+grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("3_xuq28")
+text = "Exit"
+
+[connection signal="button_down" from="StartButton" to="." method="_on_start_button_button_down"]
+[connection signal="button_down" from="OptionsButton" to="." method="_on_options_button_button_down"]
+[connection signal="button_down" from="ExitButton" to="." method="_on_exit_button_button_down"]
