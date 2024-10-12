@@ -1,3 +1,15 @@
-[gd_scene format=3 uid="uid://dkbwkvi8f7mtw"]
+[gd_scene load_steps=3 format=3 uid="uid://dkbwkvi8f7mtw"]
 
-[node name="Player" type="Node3D"]
+[ext_resource type="Script" path="res://Scripts/Player_Scripts/player.gd" id="1_xnuy8"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_udcbu"]
+height = 1.7
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_xnuy8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_udcbu")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.677103, 0)
