@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dg5fj4mgq7r4j"
+path="res://.godot/imported/Bath.obj-40b2b0ffcda9cd39636f9779bb29d801.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Bath.obj-40b2b0ffcda9cd39636f9779bb29d801.mesh"]
+
+source_file="res://Models/Bathroom Furniture/Bath.obj"
+dest_files=["res://.godot/imported/Bath.obj-40b2b0ffcda9cd39636f9779bb29d801.mesh", "res://.godot/imported/Bath.obj-40b2b0ffcda9cd39636f9779bb29d801.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
