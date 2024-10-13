@@ -48,7 +48,6 @@ func show_win_screen():
 	_change_scene(WIN_SCREEN)
 	
 func load_scene_by_path(scene):
-	print(scene)
 	if scene is String:
 		var scene_resource = load(scene)
 		if scene_resource is PackedScene:
