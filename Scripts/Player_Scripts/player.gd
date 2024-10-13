@@ -19,6 +19,8 @@ func _input(event):
 		$Camera3D.rotation.x = clampf($Camera3D.rotation.x, -deg_to_rad(70), deg_to_rad(70))
 
 func _ready():
+	$RayCast3D.target_position = Vector3(0, player_height, 0)
+	$RayCast3D.enabled = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	$CollisionShape3D.shape.height = player_height
 	print($CollisionShape3D.shape.height)
@@ -64,7 +66,11 @@ func crouch(delta: float):
 		$AnimationPlayer.play("crouch")
 		print($CollisionShape3D.shape.height)
 	elif Input.is_action_just_pressed("crouch") && (b_is_crouching == true):
-		b_is_crouching = false
-		current_move_speed = walking_speed
-		$AnimationPlayer.play_backwards("crouch")
-		print($CollisionShape3D.shape.height)
+		$RayCast3D.force_raycast_update()
+		if not $RayCast3D.is_colliding():
+			b_is_crouching = false
+			current_move_speed = walking_speed
+			$AnimationPlayer.play_backwards("crouch")
+			print($CollisionShape3D.shape.height)
+		else:
+			print("Not enough space to stand up!")

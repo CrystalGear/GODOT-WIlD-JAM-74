@@ -39,4 +39,4 @@ data = {
 metadata/_editor_floor_ = Vector3(0, -1, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_mkna3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.54343, 1.99077, 12.1051)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.54343, 1.84997, 12.1051)

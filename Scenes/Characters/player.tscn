@@ -2,7 +2,8 @@
 
 [ext_resource type="Script" path="res://Scripts/Player_Scripts/player.gd" id="1_xnuy8"]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_udcbu"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gbg41"]
+radius = 0.4
 height = 1.7
 
 [sub_resource type="Animation" id="Animation_2raob"]
@@ -47,13 +48,15 @@ _data = {
 script = ExtResource("1_xnuy8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("CylinderShape3D_udcbu")
+shape = SubResource("CapsuleShape3D_gbg41")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.677, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.448461, 0)
 keep_aspect = 0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_lk1yr")
 }
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
