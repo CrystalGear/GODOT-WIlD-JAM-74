@@ -4,17 +4,25 @@ extends CharacterBody3D
 @export var speed = 5.0
 @export var jump_velocity = 4.5
 var mouse_sensitivity = 0.002
+var joystick_sensitivity = 2
 
 func _input(event):
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		rotate_y(-event.relative.x * mouse_sensitivity)
 		$Camera3D.rotate_x(-event.relative.y * mouse_sensitivity)
 		$Camera3D.rotation.x = clampf($Camera3D.rotation.x, -deg_to_rad(70), deg_to_rad(70))
-		
+
+func handle_joystick_rotation():
+	var rotation_y_input = Input.get_axis("look_left", "look_right")
+	rotation_degrees.y -= rotation_y_input * joystick_sensitivity
+	var rotation_x_input = Input.get_axis("look_up", "look_down")
+	rotation_degrees.x -= rotation_x_input * joystick_sensitivity
+
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _physics_process(delta: float) -> void:
+	handle_joystick_rotation()
 	apply_gravity(delta)
 	jump()
 	handle_movement()
