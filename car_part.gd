@@ -1,4 +1,4 @@
-extends Node
+class_name Car_part extends Holdable
 
 
 # Called when the node enters the scene tree for the first time.
@@ -9,8 +9,3 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
-
-var _keys : Dictionary = {
-	"Test Key" : false
-}

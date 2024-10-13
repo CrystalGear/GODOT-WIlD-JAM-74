@@ -35,6 +35,8 @@ enabled=PackedStringArray("res://addons/debug_menu/plugin.cfg")
 
 car_part="used for car part items"
 tool="used for tool items"
+key=""
+interactable=""
 
 [input]
 

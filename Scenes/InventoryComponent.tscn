@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://deuuoq4j0fh2c"]
-
-[ext_resource type="Script" path="res://Scripts/inventory_component.gd" id="1_ebsd4"]
-
-[node name="InventoryComponent" type="Node"]
-script = ExtResource("1_ebsd4")
-
-[node name="ItemSlotTransform" type="Node3D" parent="."]

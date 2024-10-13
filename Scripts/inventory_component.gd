@@ -11,7 +11,7 @@ extends Node
 ##		
 ##		you can only hold one holdable item at once
 
-func pick_up_car_part(item_to_pickup: RigidBody3D) -> bool:
+func pick_up_car_part(item_to_pickup: Car_part) -> bool:
 	##THIS FUNCTION IS EXPLICITLY FOR CAR PARTS
 	##USE pick_up_key() for keys
 	##USE pick_up_tool() for tools
@@ -23,7 +23,7 @@ func pick_up_car_part(item_to_pickup: RigidBody3D) -> bool:
 		
 	return false
 
-func pick_up_tool(item_to_pickup: RigidBody3D) -> bool:
+func pick_up_tool(item_to_pickup: Tool) -> bool:
 	##THIS FUNCTION IS EXPLICITLY FOR TOOLS
 	##USE pick_up_key() for keys
 	##USE pick_up_car_part() for car parts

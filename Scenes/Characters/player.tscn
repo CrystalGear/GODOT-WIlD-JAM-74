@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dkbwkvi8f7mtw"]
+[gd_scene load_steps=4 format=3 uid="uid://dkbwkvi8f7mtw"]
 
 [ext_resource type="Script" path="res://Scripts/Player_Scripts/player.gd" id="1_xnuy8"]
+[ext_resource type="PackedScene" uid="uid://d4jrqdt68qvbu" path="res://Scenes/player_interaction_component.tscn" id="2_aar0c"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_udcbu"]
 height = 1.7
@@ -13,3 +14,12 @@ shape = SubResource("CylinderShape3D_udcbu")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.677103, 0)
+
+[node name="PlayerInteractionComponent" parent="Camera3D" instance=ExtResource("2_aar0c")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="ItemSlotTransform" parent="Camera3D/PlayerInteractionComponent/InventoryComponent" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.208793, -0.945821)
+
+[editable path="Camera3D/PlayerInteractionComponent"]
+[editable path="Camera3D/PlayerInteractionComponent/InventoryComponent"]

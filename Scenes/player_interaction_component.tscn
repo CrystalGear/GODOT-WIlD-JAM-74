@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://d4jrqdt68qvbu"]
+
+[ext_resource type="Script" path="res://Scripts/player_interaction_component.gd" id="1_eu14b"]
+[ext_resource type="PackedScene" uid="uid://dao1xvie718m1" path="res://Scenes/inventory_component.tscn" id="2_sd2mq"]
+
+[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_gmp2x"]
+length = 2.3
+
+[node name="PlayerInteractionComponent" type="Area3D"]
+collision_layer = 65535
+script = ExtResource("1_eu14b")
+
+[node name="InventoryComponent" parent="." instance=ExtResource("2_sd2mq")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SeparationRayShape3D_gmp2x")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

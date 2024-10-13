@@ -1,4 +1,4 @@
-extends Node
+class_name Item extends Node3D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -10,7 +10,5 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
-var _keys : Dictionary = {
-	"Test Key" : false
-}
+func set_outline_visibility(value: bool):
+	$OutLine.visible = value
