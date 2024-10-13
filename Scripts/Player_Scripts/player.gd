@@ -13,10 +13,9 @@ func _input(event):
 		$Camera3D.rotation.x = clampf($Camera3D.rotation.x, -deg_to_rad(70), deg_to_rad(70))
 
 func handle_joystick_rotation():
-	var rotation_y_input = Input.get_axis("look_left", "look_right")
-	rotation_degrees.y -= rotation_y_input * joystick_sensitivity
-	var rotation_x_input = Input.get_axis("look_up", "look_down")
-	rotation_degrees.x -= rotation_x_input * joystick_sensitivity
+	var rotation_input = Input.get_vector("look_up", "look_down", "look_left", "look_right")
+	rotation_degrees.y -= rotation_input.y * joystick_sensitivity
+	rotation_degrees.x -= rotation_input.x * joystick_sensitivity
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

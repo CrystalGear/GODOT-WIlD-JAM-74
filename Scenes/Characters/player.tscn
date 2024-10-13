@@ -13,3 +13,4 @@ shape = SubResource("CylinderShape3D_udcbu")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.677103, 0)
+keep_aspect = 0
