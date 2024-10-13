@@ -1,3 +1,25 @@
-[gd_scene format=3 uid="uid://c7ocvb2duj8e6"]
+[gd_scene load_steps=5 format=3 uid="uid://c7ocvb2duj8e6"]
+
+[ext_resource type="Script" path="res://Scripts/test_cube.gd" id="1_3ahd0"]
+[ext_resource type="PackedScene" uid="uid://ia38iawogjd7" path="res://Scenes/default_environment.tscn" id="1_58fx7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hh7em"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0dviq"]
 
 [node name="LevelDebug" type="Node3D"]
+
+[node name="Test Cube" type="RigidBody3D" parent="." groups=["pausable"]]
+gravity_scale = 0.1
+script = ExtResource("1_3ahd0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Test Cube"]
+shape = SubResource("BoxShape3D_hh7em")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Test Cube"]
+mesh = SubResource("BoxMesh_0dviq")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.07169)
+
+[node name="DefaultEnvironment" parent="." instance=ExtResource("1_58fx7")]
