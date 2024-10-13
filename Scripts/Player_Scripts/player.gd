@@ -15,23 +15,23 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _physics_process(delta: float) -> void:
-	apply_gravity(delta)
-	jump()
-	handle_movement()
+	_apply_gravity(delta)
+	_jump()
+	_handle_movement()
 	move_and_slide()
 
 # Add the gravity.
-func apply_gravity(delta: float):
+func _apply_gravity(delta: float):
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
 # Handle jump.
-func jump():
+func _jump():
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = jump_velocity
 
 # Get the input direction and handle the movement/deceleration.
-func handle_movement():
+func _handle_movement():
 	var input_dir := Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
