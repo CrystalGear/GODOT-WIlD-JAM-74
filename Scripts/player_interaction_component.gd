@@ -10,14 +10,16 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-func InteractWithItem() -> bool:
+func interact_with_item() -> bool:
 ## item interaction function.
 ## returns true if interaction successful
-## returns false if interaction failed 
+## returns false if interaction failed
+
 	if not $RayCast3D.is_colliding():
 		return false
 	else:
 		var target = $RayCast3D.get_collider()
+		
 		return true
 		
 		
