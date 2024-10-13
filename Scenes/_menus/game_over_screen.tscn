@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://vhn5cnsocr2j"]
+[gd_scene load_steps=2 format=3 uid="uid://vhn5cnsocr2j"]
+
+[ext_resource type="Texture2D" uid="uid://orr75x8cq8b" path="res://icon.svg" id="1_w7ksk"]
 
 [node name="GameOverScreen" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(114, 93)
+texture = ExtResource("1_w7ksk")
