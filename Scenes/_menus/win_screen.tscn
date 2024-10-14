@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://bbj8wqjbkwvar"]
+[gd_scene load_steps=2 format=3 uid="uid://bbj8wqjbkwvar"]
+
+[ext_resource type="Texture2D" uid="uid://orr75x8cq8b" path="res://icon.svg" id="1_prpw1"]
 
 [node name="WinScreen" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1066, 546)
+texture = ExtResource("1_prpw1")

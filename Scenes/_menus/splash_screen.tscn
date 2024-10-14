@@ -1,3 +1,17 @@
-[gd_scene format=3 uid="uid://d1qulakchfluv"]
+[gd_scene load_steps=3 format=3 uid="uid://d1qulakchfluv"]
+
+[ext_resource type="Texture2D" uid="uid://orr75x8cq8b" path="res://icon.svg" id="1_4x34b"]
+[ext_resource type="Script" path="res://Scripts/splash_screen.gd" id="1_6sk1p"]
 
 [node name="SplashScreen" type="Node2D"]
+script = ExtResource("1_6sk1p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(618, 298)
+texture = ExtResource("1_4x34b")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
