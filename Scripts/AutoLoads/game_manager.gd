@@ -1,9 +1,9 @@
 extends Node
 
 # Constants
-var PAUSE_TIME: float = 3.0
-var PAUSE_UI:PackedScene = preload("res://Scenes/pause.tscn")
-var DISALLOWED_PAUSE_LEVELS = ["SplashScreen", "MainMenu", "OptionsMenu", "WinScreen", "CreditsMenu", "GameOverScreen"]
+const PAUSE_TIME: float = 3.0
+const PAUSE_UI:PackedScene = preload("res://Scenes/pause.tscn")
+const DISALLOWED_PAUSE_LEVELS = ["SplashScreen", "MainMenu", "OptionsMenu", "WinScreen", "CreditsMenu", "GameOverScreen"]
 
 # Runtime variables
 var b_paused:bool = false
@@ -22,7 +22,7 @@ func _process(delta: float) -> void:
 	
 func _player_input() -> void:
 	
-	# Exit early if the scene is null (liek when transitioning)
+	# Exit early if the scene is null (like when transitioning)
 	if get_tree().current_scene == null:
 		return	
 		
@@ -68,7 +68,7 @@ func _toggle_pause(b_new_state:bool) -> void:
 	# Get any object marked as pausable
 	var nodes = get_tree().get_nodes_in_group("pausable")
 	
-	# Iterate through objects and if they can be pasued set their state
+	# Iterate through objects and if they can be paused set their state
 	for node in nodes:
 		if node.has_method("toggle_pause"):
 			node.toggle_pause(b_new_state)
