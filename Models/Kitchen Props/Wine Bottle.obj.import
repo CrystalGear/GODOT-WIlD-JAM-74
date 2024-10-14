@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://0rnt0b0yleup"
+path="res://.godot/imported/Wine Bottle.obj-de62a1e7beeb1125d7748800a7e43fcf.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Wine Bottle.obj-de62a1e7beeb1125d7748800a7e43fcf.mesh"]
+
+source_file="res://Models/Kitchen Props/Wine Bottle.obj"
+dest_files=["res://.godot/imported/Wine Bottle.obj-de62a1e7beeb1125d7748800a7e43fcf.mesh", "res://.godot/imported/Wine Bottle.obj-de62a1e7beeb1125d7748800a7e43fcf.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
