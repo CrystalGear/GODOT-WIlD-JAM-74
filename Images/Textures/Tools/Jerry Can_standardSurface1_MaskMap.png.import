@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cx6jt0v2ii6j2"
-path.s3tc="res://.godot/imported/ScrewDriver_standardSurface1_Normal.png-1782fee8a9948163aa3456f000d416f6.s3tc.ctex"
+uid="uid://cmifkff0eipnu"
+path.s3tc="res://.godot/imported/Jerry Can_standardSurface1_MaskMap.png-e9554121d222b2ed6b7a121f28a3d123.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/Tools/ScrewDriver_standardSurface1_Normal.png"
-dest_files=["res://.godot/imported/ScrewDriver_standardSurface1_Normal.png-1782fee8a9948163aa3456f000d416f6.s3tc.ctex"]
+source_file="res://Images/Textures/Tools/Jerry Can_standardSurface1_MaskMap.png"
+dest_files=["res://.godot/imported/Jerry Can_standardSurface1_MaskMap.png-e9554121d222b2ed6b7a121f28a3d123.s3tc.ctex"]
 
 [params]
 
@@ -20,12 +20,12 @@ compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=1
+compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=1
-roughness/src_normal="res://Textures/Tools/ScrewDriver_standardSurface1_Normal.png"
+roughness/mode=0
+roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmifkff0eipnu"
-path.s3tc="res://.godot/imported/Jerry Can_standardSurface1_MaskMap.png-2f3baab32594378d17ba70574d917d80.s3tc.ctex"
+uid="uid://bugcb2r1l4j5e"
+path.s3tc="res://.godot/imported/Jerry Can_standardSurface1_BaseMap.png-d88432c9cbe373709e2289adce998cbf.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/Tools/Jerry Can_standardSurface1_MaskMap.png"
-dest_files=["res://.godot/imported/Jerry Can_standardSurface1_MaskMap.png-2f3baab32594378d17ba70574d917d80.s3tc.ctex"]
+source_file="res://Images/Textures/Tools/Jerry Can_standardSurface1_BaseMap.png"
+dest_files=["res://.godot/imported/Jerry Can_standardSurface1_BaseMap.png-d88432c9cbe373709e2289adce998cbf.s3tc.ctex"]
 
 [params]
 

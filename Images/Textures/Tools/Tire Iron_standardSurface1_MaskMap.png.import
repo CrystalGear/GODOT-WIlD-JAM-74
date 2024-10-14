@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3synoh7h5n5p"
-path.s3tc="res://.godot/imported/Wrench_standardSurface1_BaseMap.png-9ba040f5b3abb26c521dc430d31b39b7.s3tc.ctex"
+uid="uid://dwbiw57ran0pe"
+path.s3tc="res://.godot/imported/Tire Iron_standardSurface1_MaskMap.png-9fab63bc4eee1a1563922a8dfc4bff94.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/Tools/Wrench_standardSurface1_BaseMap.png"
-dest_files=["res://.godot/imported/Wrench_standardSurface1_BaseMap.png-9ba040f5b3abb26c521dc430d31b39b7.s3tc.ctex"]
+source_file="res://Images/Textures/Tools/Tire Iron_standardSurface1_MaskMap.png"
+dest_files=["res://.godot/imported/Tire Iron_standardSurface1_MaskMap.png-9fab63bc4eee1a1563922a8dfc4bff94.s3tc.ctex"]
 
 [params]
 

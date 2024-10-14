@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxgisiaqrkamj"
-path.s3tc="res://.godot/imported/ScrewDriver_standardSurface1_MaskMap.png-4a305d5ae6072dfc90ed89b5e5770448.s3tc.ctex"
+uid="uid://djqy2ihnt8sf4"
+path.s3tc="res://.godot/imported/Hammer_standardSurface1_BaseMap.png-f01d1b2faa1a4cdbe60af465095a9ade.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/Tools/ScrewDriver_standardSurface1_MaskMap.png"
-dest_files=["res://.godot/imported/ScrewDriver_standardSurface1_MaskMap.png-4a305d5ae6072dfc90ed89b5e5770448.s3tc.ctex"]
+source_file="res://Images/Textures/Tools/Hammer_standardSurface1_BaseMap.png"
+dest_files=["res://.godot/imported/Hammer_standardSurface1_BaseMap.png-f01d1b2faa1a4cdbe60af465095a9ade.s3tc.ctex"]
 
 [params]
 

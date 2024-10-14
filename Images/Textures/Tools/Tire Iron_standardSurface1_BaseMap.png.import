@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6jgwwb4ykckm"
-path.s3tc="res://.godot/imported/ScrewDriver_standardSurface1_BaseMap.png-be38a2ce90cb7995e67da2651e9ff8cf.s3tc.ctex"
+uid="uid://yxb16rkk8k7x"
+path.s3tc="res://.godot/imported/Tire Iron_standardSurface1_BaseMap.png-fccc0980c8a488da0fdf8fe9cb0ad3c3.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/Tools/ScrewDriver_standardSurface1_BaseMap.png"
-dest_files=["res://.godot/imported/ScrewDriver_standardSurface1_BaseMap.png-be38a2ce90cb7995e67da2651e9ff8cf.s3tc.ctex"]
+source_file="res://Images/Textures/Tools/Tire Iron_standardSurface1_BaseMap.png"
+dest_files=["res://.godot/imported/Tire Iron_standardSurface1_BaseMap.png-fccc0980c8a488da0fdf8fe9cb0ad3c3.s3tc.ctex"]
 
 [params]
 
