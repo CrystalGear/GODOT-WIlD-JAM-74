@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bh3s3stvnf4wx"
+path="res://.godot/imported/Plate.obj-68a693e3eca7c3c6d486b887e1afbf91.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Plate.obj-68a693e3eca7c3c6d486b887e1afbf91.mesh"]
+
+source_file="res://Models/Kitchen Props/Plate.obj"
+dest_files=["res://.godot/imported/Plate.obj-68a693e3eca7c3c6d486b887e1afbf91.mesh", "res://.godot/imported/Plate.obj-68a693e3eca7c3c6d486b887e1afbf91.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

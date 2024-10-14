@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://qi40k1wrjana"
+path="res://.godot/imported/Cabinet.obj-bf01a44f387c2345cba85c282852364a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Cabinet.obj-bf01a44f387c2345cba85c282852364a.mesh"]
+
+source_file="res://Models/Kitchen Furniture/Cabinet.obj"
+dest_files=["res://.godot/imported/Cabinet.obj-bf01a44f387c2345cba85c282852364a.mesh", "res://.godot/imported/Cabinet.obj-bf01a44f387c2345cba85c282852364a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

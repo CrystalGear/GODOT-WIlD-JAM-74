@@ -1,7 +1,71 @@
-[gd_scene load_steps=3 format=3 uid="uid://c15oa1883es0v"]
+[gd_scene load_steps=32 format=3 uid="uid://c15oa1883es0v"]
 
 [ext_resource type="MeshLibrary" uid="uid://c36omsnk37fsq" path="res://Scenes/blockout/Blockout_Mesh_Lib (Exported).tres" id="1_vswtf"]
 [ext_resource type="PackedScene" uid="uid://dkbwkvi8f7mtw" path="res://Scenes/Characters/player.tscn" id="2_mkna3"]
+[ext_resource type="ArrayMesh" uid="uid://qi40k1wrjana" path="res://Models/Kitchen Furniture/Cabinet.obj" id="3_2x1nw"]
+[ext_resource type="Texture2D" uid="uid://ct0aucefm4wfu" path="res://Textures/Kitchen Furniture/Cabinet_initialShadingGroup_BaseMap.png" id="4_0icpg"]
+[ext_resource type="Texture2D" uid="uid://yv7xgqlksnqw" path="res://Textures/Kitchen Furniture/Cabinet_initialShadingGroup_MaskMap.png" id="5_g5jad"]
+[ext_resource type="Texture2D" uid="uid://878h154mhmyd" path="res://Textures/Kitchen Furniture/Cabinet_initialShadingGroup_Normal.png" id="6_kjeec"]
+[ext_resource type="ArrayMesh" uid="uid://8m8tmyr64ej3" path="res://Models/Kitchen Furniture/Cabinet Door.obj" id="7_fxda2"]
+[ext_resource type="Texture2D" uid="uid://c1uns3qa1suo0" path="res://Textures/Kitchen Furniture/Cabinet Door_initialShadingGroup_BaseMap.png" id="8_40w1d"]
+[ext_resource type="Texture2D" uid="uid://ntbovapr3627" path="res://Textures/Kitchen Furniture/Cabinet Door_initialShadingGroup_MaskMap.png" id="9_1l5mc"]
+[ext_resource type="Texture2D" uid="uid://cjvfqg166ab3t" path="res://Textures/Kitchen Furniture/Cabinet Door_initialShadingGroup_Normal.png" id="10_lre2f"]
+[ext_resource type="ArrayMesh" uid="uid://xl7etfg5o0ae" path="res://Models/Kitchen Furniture/Microwave.obj" id="11_4lrqd"]
+[ext_resource type="Texture2D" uid="uid://b68apgrrgg5pe" path="res://Textures/Kitchen Furniture/Microwave_initialShadingGroup_BaseMap.png" id="12_vh0hm"]
+[ext_resource type="Texture2D" uid="uid://d2s12ofw22ynr" path="res://Textures/Kitchen Furniture/Microwave_initialShadingGroup_MaskMap.png" id="13_mvttl"]
+[ext_resource type="Texture2D" uid="uid://bf8rerp6ffmo" path="res://Textures/Kitchen Furniture/Microwave_initialShadingGroup_Normal.png" id="14_ecpq7"]
+[ext_resource type="ArrayMesh" uid="uid://bh3s3stvnf4wx" path="res://Models/Kitchen Props/Plate.obj" id="15_0pvp3"]
+[ext_resource type="Texture2D" uid="uid://lic7kxhs5i20" path="res://Textures/Kitchen Props/Plate_initialShadingGroup_BaseMap.png" id="16_2ah5o"]
+[ext_resource type="Texture2D" uid="uid://dxmf55l8nbuci" path="res://Textures/Kitchen Props/Plate_initialShadingGroup_MaskMap.png" id="17_r7f5f"]
+[ext_resource type="Texture2D" uid="uid://dcicwhjpuo1fw" path="res://Textures/Kitchen Props/Plate_initialShadingGroup_Normal.png" id="18_0vr7m"]
+[ext_resource type="ArrayMesh" uid="uid://dmmkvf2ukgx31" path="res://Models/Kitchen Props/Large Bowl.obj" id="19_eio1g"]
+[ext_resource type="ArrayMesh" uid="uid://dsdte4p0q5ood" path="res://Models/Kitchen Props/Small Bowl.obj" id="20_tlj0t"]
+[ext_resource type="ArrayMesh" uid="uid://c4d71c7x77ilv" path="res://Models/Kitchen Props/Small Plate.obj" id="21_ld4mx"]
+[ext_resource type="ArrayMesh" uid="uid://blhdr0yxpjivt" path="res://Models/Kitchen Furniture/Microwave Door.obj" id="22_oikod"]
+[ext_resource type="Texture2D" uid="uid://bbk7fod0osjjl" path="res://Textures/Kitchen Furniture/Microwave Door_initialShadingGroup_BaseMap.png" id="23_fl3pw"]
+[ext_resource type="Texture2D" uid="uid://bsq2obwlwiesk" path="res://Textures/Kitchen Furniture/Microwave Door_initialShadingGroup_MaskMap.png" id="24_kx80j"]
+[ext_resource type="Texture2D" uid="uid://b2lkcb5wkrpx4" path="res://Textures/Kitchen Furniture/Microwave Door_initialShadingGroup_Normal.png" id="25_ykxfp"]
+[ext_resource type="Material" uid="uid://itujtdmpighj" path="res://Textures/Kitchen Furniture/MicroWave Glass Door.tres" id="26_cmvui"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_44kip"]
+albedo_texture = ExtResource("4_0icpg")
+metallic = 1.0
+metallic_texture = ExtResource("5_g5jad")
+roughness_texture = ExtResource("5_g5jad")
+normal_enabled = true
+normal_texture = ExtResource("6_kjeec")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sn0ub"]
+albedo_texture = ExtResource("8_40w1d")
+metallic = 1.0
+metallic_texture = ExtResource("9_1l5mc")
+roughness_texture = ExtResource("9_1l5mc")
+normal_enabled = true
+normal_texture = ExtResource("10_lre2f")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fl2uj"]
+albedo_texture = ExtResource("12_vh0hm")
+metallic = 1.0
+metallic_texture = ExtResource("13_mvttl")
+roughness_texture = ExtResource("13_mvttl")
+normal_enabled = true
+normal_texture = ExtResource("14_ecpq7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hdsgm"]
+albedo_texture = ExtResource("16_2ah5o")
+metallic = 1.0
+metallic_texture = ExtResource("17_r7f5f")
+roughness_texture = ExtResource("17_r7f5f")
+normal_enabled = true
+normal_texture = ExtResource("18_0vr7m")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_llp03"]
+albedo_texture = ExtResource("23_fl3pw")
+metallic = 1.0
+metallic_texture = ExtResource("24_kx80j")
+roughness_texture = ExtResource("24_kx80j")
+normal_enabled = true
+normal_texture = ExtResource("25_ykxfp")
 
 [node name="BlockoutLevel" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88603, 0.212463, -0.236816)
@@ -40,3 +104,46 @@ metadata/_editor_floor_ = Vector3(0, -1, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_mkna3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.54343, 1.99077, 12.1051)
+
+[node name="Cabinet" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0, 1.01474, 1.6647)
+mesh = ExtResource("3_2x1nw")
+surface_material_override/0 = SubResource("StandardMaterial3D_44kip")
+
+[node name="Cabinet Door" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0, 1.01474, 1.6647)
+mesh = ExtResource("7_fxda2")
+surface_material_override/0 = SubResource("StandardMaterial3D_sn0ub")
+
+[node name="MicroWave" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, -0.0646458, 1.98976, 1.47682)
+mesh = ExtResource("11_4lrqd")
+surface_material_override/0 = SubResource("StandardMaterial3D_fl2uj")
+
+[node name="Plate" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, 0.339159, 2.03329, 0.684593)
+mesh = ExtResource("15_0pvp3")
+surface_material_override/0 = SubResource("StandardMaterial3D_hdsgm")
+
+[node name="Large Bowl" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, -0.161778, 2.03329, 0.684593)
+mesh = ExtResource("19_eio1g")
+surface_material_override/0 = SubResource("StandardMaterial3D_hdsgm")
+
+[node name="Small Bowl" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, -0.679822, 2.03329, 0.684593)
+mesh = ExtResource("20_tlj0t")
+surface_material_override/0 = SubResource("StandardMaterial3D_hdsgm")
+
+[node name="Small Plate" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, -1.04755, 2.03329, 0.684593)
+mesh = ExtResource("21_ld4mx")
+surface_material_override/0 = SubResource("StandardMaterial3D_hdsgm")
+
+[node name="MicroWave Door" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.025, 0, 0, 0, 0.025, 0, 0, 0, 0.025, -0.0646458, 1.98976, 1.47682)
+mesh = ExtResource("22_oikod")
+surface_material_override/0 = SubResource("StandardMaterial3D_llp03")
+surface_material_override/1 = ExtResource("26_cmvui")
+surface_material_override/2 = ExtResource("26_cmvui")
+surface_material_override/3 = ExtResource("26_cmvui")
