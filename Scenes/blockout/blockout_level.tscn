@@ -1,11 +1,7 @@
-[gd_scene load_steps=23 format=3 uid="uid://c15oa1883es0v"]
+[gd_scene load_steps=18 format=3 uid="uid://c15oa1883es0v"]
 
 [ext_resource type="MeshLibrary" uid="uid://c36omsnk37fsq" path="res://Scenes/blockout/Blockout_Mesh_Lib (Exported).tres" id="1_vswtf"]
 [ext_resource type="PackedScene" uid="uid://dkbwkvi8f7mtw" path="res://Scenes/Characters/player.tscn" id="2_mkna3"]
-[ext_resource type="ArrayMesh" uid="uid://dg5fj4mgq7r4j" path="res://Models/Bathroom Furniture/Bath.obj" id="3_yuoy8"]
-[ext_resource type="Texture2D" uid="uid://8od6j23oa1ty" path="res://Textures/Bathroom Furniture/Bath_standardSurface1_BaseMap.png" id="4_004uu"]
-[ext_resource type="Texture2D" uid="uid://dk8vo3782r3ky" path="res://Textures/Bathroom Furniture/Bath_standardSurface1_MaskMap.png" id="5_mxu8k"]
-[ext_resource type="Texture2D" uid="uid://dp04wcpbtp4ne" path="res://Textures/Bathroom Furniture/Bath_standardSurface1_Normal.png" id="6_2os7l"]
 [ext_resource type="ArrayMesh" uid="uid://ywtxew7ixbmf" path="res://Models/Bathroom Furniture/Sink.obj" id="7_83hc5"]
 [ext_resource type="Texture2D" uid="uid://cag5f4yypidva" path="res://Textures/Bathroom Furniture/Sink_standardSurface1_BaseMap.png" id="8_xmj62"]
 [ext_resource type="Texture2D" uid="uid://dcw3wveds2jly" path="res://Textures/Bathroom Furniture/Sink_standardSurface1_MaskMap.png" id="9_ydc17"]
@@ -18,14 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://c34l2yr1edmlv" path="res://Textures/Bathroom Furniture/Toilet_Lid_standardSurface1_BaseMap.png" id="16_m6373"]
 [ext_resource type="Texture2D" uid="uid://c30206q12ncxm" path="res://Textures/Bathroom Furniture/Toilet_Lid_standardSurface1_MaskMap.png" id="17_raxa7"]
 [ext_resource type="Texture2D" uid="uid://do32y28hj68re" path="res://Textures/Bathroom Furniture/Toilet_Lid_standardSurface1_Normal.png" id="18_2q80o"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lqa15"]
-albedo_texture = ExtResource("4_004uu")
-metallic = 1.0
-metallic_texture = ExtResource("5_mxu8k")
-roughness_texture = ExtResource("5_mxu8k")
-normal_enabled = true
-normal_texture = ExtResource("6_2os7l")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e32wj"]
 albedo_texture = ExtResource("8_xmj62")
@@ -88,11 +76,6 @@ metadata/_editor_floor_ = Vector3(0, -1, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_mkna3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.54343, 1.99077, 12.1051)
-
-[node name="Bath" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, -1.87476, 0.897234, 10.6626)
-mesh = ExtResource("3_yuoy8")
-surface_material_override/0 = SubResource("StandardMaterial3D_lqa15")
 
 [node name="Sink" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, -1.87476, 0.897234, 9.2934)

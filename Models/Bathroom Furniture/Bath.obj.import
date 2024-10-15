@@ -16,7 +16,7 @@ dest_files=["res://.godot/imported/Bath.obj-40b2b0ffcda9cd39636f9779bb29d801.mes
 [params]
 
 generate_tangents=true
-scale_mesh=Vector3(1, 1, 1)
+scale_mesh=Vector3(0.025, 0.025, 0.025)
 offset_mesh=Vector3(0, 0, 0)
 optimize_mesh=true
 force_disable_mesh_compression=false
