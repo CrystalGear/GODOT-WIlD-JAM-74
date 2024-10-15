@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://cuvcn1w5lnm64"]
+
+[ext_resource type="Texture2D" uid="uid://km87wgeeuyej" path="res://Textures/Kitchen Props/Mug2_initialShadingGroup_BaseMap.png" id="1_qri71"]
+[ext_resource type="Texture2D" uid="uid://0sot0uwr3tl6" path="res://Textures/Kitchen Props/Mug2_initialShadingGroup_MaskMap.png" id="2_a57im"]
+[ext_resource type="Texture2D" uid="uid://3r7slt7b2acs" path="res://Textures/Kitchen Props/Mug2_initialShadingGroup_Normal.png" id="3_8o6bu"]
+
+[resource]
+albedo_texture = ExtResource("1_qri71")
+metallic = 1.0
+metallic_texture = ExtResource("2_a57im")
+roughness_texture = ExtResource("2_a57im")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_8o6bu")
+ao_enabled = true
+ao_texture = ExtResource("2_a57im")
+ao_texture_channel = 1

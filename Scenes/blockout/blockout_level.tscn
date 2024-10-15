@@ -1,69 +1,7 @@
-[gd_scene load_steps=30 format=3 uid="uid://c15oa1883es0v"]
+[gd_scene load_steps=3 format=3 uid="uid://c15oa1883es0v"]
 
 [ext_resource type="MeshLibrary" uid="uid://c36omsnk37fsq" path="res://Scenes/blockout/Blockout_Mesh_Lib (Exported).tres" id="1_vswtf"]
 [ext_resource type="PackedScene" uid="uid://dkbwkvi8f7mtw" path="res://Scenes/Characters/player.tscn" id="2_mkna3"]
-[ext_resource type="ArrayMesh" uid="uid://bh3s3stvnf4wx" path="res://Models/Kitchen Props/Plate.obj" id="15_0pvp3"]
-[ext_resource type="Texture2D" uid="uid://lic7kxhs5i20" path="res://Textures/Kitchen Props/Plate_initialShadingGroup_BaseMap.png" id="16_2ah5o"]
-[ext_resource type="Texture2D" uid="uid://dxmf55l8nbuci" path="res://Textures/Kitchen Props/Plate_initialShadingGroup_MaskMap.png" id="17_r7f5f"]
-[ext_resource type="Texture2D" uid="uid://dcicwhjpuo1fw" path="res://Textures/Kitchen Props/Plate_initialShadingGroup_Normal.png" id="18_0vr7m"]
-[ext_resource type="ArrayMesh" uid="uid://dmmkvf2ukgx31" path="res://Models/Kitchen Props/Large Bowl.obj" id="19_eio1g"]
-[ext_resource type="ArrayMesh" uid="uid://dsdte4p0q5ood" path="res://Models/Kitchen Props/Small Bowl.obj" id="20_tlj0t"]
-[ext_resource type="ArrayMesh" uid="uid://c4d71c7x77ilv" path="res://Models/Kitchen Props/Small Plate.obj" id="21_ld4mx"]
-[ext_resource type="ArrayMesh" uid="uid://df68uvihfegyh" path="res://Models/Kitchen Props/Mug.obj" id="22_8akgo"]
-[ext_resource type="Texture2D" uid="uid://miqo5rhha8p2" path="res://Textures/Kitchen Props/Mug_initialShadingGroup_BaseMap.png" id="23_ydxlg"]
-[ext_resource type="Texture2D" uid="uid://rf70ai55d5o" path="res://Textures/Kitchen Props/Mug_initialShadingGroup_MaskMap.png" id="24_kpq4d"]
-[ext_resource type="PackedScene" uid="uid://svkumh80rj56" path="res://Scenes/Game Objects/wine_bottle.tscn" id="24_o68eq"]
-[ext_resource type="Texture2D" uid="uid://ci8qpodr47okg" path="res://Textures/Kitchen Props/Mug_initialShadingGroup_Normal.png" id="25_1fq3x"]
-[ext_resource type="Texture2D" uid="uid://km87wgeeuyej" path="res://Textures/Kitchen Props/Mug2_initialShadingGroup_BaseMap.png" id="26_rg61j"]
-[ext_resource type="Texture2D" uid="uid://0sot0uwr3tl6" path="res://Textures/Kitchen Props/Mug2_initialShadingGroup_MaskMap.png" id="27_irf44"]
-[ext_resource type="Texture2D" uid="uid://3r7slt7b2acs" path="res://Textures/Kitchen Props/Mug2_initialShadingGroup_Normal.png" id="28_lx4js"]
-[ext_resource type="ArrayMesh" uid="uid://ba4um0utisaxk" path="res://Models/Kitchen Props/Rug.obj" id="29_6ncge"]
-[ext_resource type="Texture2D" uid="uid://c8dic4y1admav" path="res://Textures/Kitchen Props/Rug_initialShadingGroup_BaseMap.png" id="30_c87yy"]
-[ext_resource type="Texture2D" uid="uid://uq61ormx8af3" path="res://Textures/Kitchen Props/Rug_initialShadingGroup_MaskMap.png" id="31_61ls5"]
-[ext_resource type="Texture2D" uid="uid://tk47e1m3shnr" path="res://Textures/Kitchen Props/Rug_initialShadingGroup_Normal.png" id="32_1xlxb"]
-[ext_resource type="Texture2D" uid="uid://byxr03p0t31w8" path="res://Textures/Kitchen Props/Rug2_initialShadingGroup_BaseMap.png" id="33_ev1u0"]
-[ext_resource type="Texture2D" uid="uid://cjpnlp7d6vwb1" path="res://Textures/Kitchen Props/Rug2_initialShadingGroup_MaskMap.png" id="34_c3grk"]
-[ext_resource type="Texture2D" uid="uid://cmhnnr65c8aqo" path="res://Textures/Kitchen Props/Rug2_initialShadingGroup_Normal.png" id="35_cwtr5"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hdsgm"]
-albedo_texture = ExtResource("16_2ah5o")
-metallic = 1.0
-metallic_texture = ExtResource("17_r7f5f")
-roughness_texture = ExtResource("17_r7f5f")
-normal_enabled = true
-normal_texture = ExtResource("18_0vr7m")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mip3h"]
-albedo_texture = ExtResource("23_ydxlg")
-metallic = 1.0
-metallic_texture = ExtResource("24_kpq4d")
-roughness_texture = ExtResource("24_kpq4d")
-normal_enabled = true
-normal_texture = ExtResource("25_1fq3x")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f2lcg"]
-albedo_texture = ExtResource("26_rg61j")
-metallic = 1.0
-metallic_texture = ExtResource("27_irf44")
-roughness_texture = ExtResource("27_irf44")
-normal_enabled = true
-normal_texture = ExtResource("28_lx4js")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5mdoa"]
-albedo_texture = ExtResource("30_c87yy")
-metallic = 1.0
-metallic_texture = ExtResource("31_61ls5")
-roughness_texture = ExtResource("31_61ls5")
-normal_enabled = true
-normal_texture = ExtResource("32_1xlxb")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mcxfg"]
-albedo_texture = ExtResource("33_ev1u0")
-metallic = 1.0
-metallic_texture = ExtResource("34_c3grk")
-roughness_texture = ExtResource("34_c3grk")
-normal_enabled = true
-normal_texture = ExtResource("35_cwtr5")
 
 [node name="BlockoutLevel" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88603, 0.212463, -0.236816)
@@ -102,46 +40,3 @@ metadata/_editor_floor_ = Vector3(0, -1, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_mkna3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.54343, 1.99077, 12.1051)
-
-[node name="Plate" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.00028012, 0, 0.0249984, 0, 0.025, 0, -0.0249984, 0, 0.00028012, -2.66693, 2.03329, 1.36316)
-mesh = ExtResource("15_0pvp3")
-surface_material_override/0 = SubResource("StandardMaterial3D_hdsgm")
-
-[node name="Large Bowl" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.00028012, 0, 0.0249984, 0, 0.025, 0, -0.0249984, 0, 0.00028012, -2.67254, 2.03329, 1.86407)
-mesh = ExtResource("19_eio1g")
-surface_material_override/0 = SubResource("StandardMaterial3D_hdsgm")
-
-[node name="Small Bowl" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.00028012, 0, 0.0249984, 0, 0.025, 0, -0.0249984, 0, 0.00028012, -2.67834, 2.03329, 2.38208)
-mesh = ExtResource("20_tlj0t")
-surface_material_override/0 = SubResource("StandardMaterial3D_hdsgm")
-
-[node name="Small Plate" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.00028012, 0, 0.0249984, 0, 0.025, 0, -0.0249984, 0, 0.00028012, -2.68246, 2.03329, 2.74978)
-mesh = ExtResource("21_ld4mx")
-surface_material_override/0 = SubResource("StandardMaterial3D_hdsgm")
-
-[node name="Mug 1" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, -1.38003, 2.03329, 0.684593)
-mesh = ExtResource("22_8akgo")
-surface_material_override/0 = SubResource("StandardMaterial3D_mip3h")
-
-[node name="Mug 2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, -1.59733, 2.03329, 0.684593)
-mesh = ExtResource("22_8akgo")
-surface_material_override/0 = SubResource("StandardMaterial3D_f2lcg")
-
-[node name="Mug 3" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, -0.644567, 1.00236, 3.46272)
-mesh = ExtResource("29_6ncge")
-surface_material_override/0 = SubResource("StandardMaterial3D_5mdoa")
-
-[node name="Mug 4" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.0200272, 0, 0, 0, 0.0200272, 0, 0, 0, 0.0404729, 1.65705, 1.00236, 3.46272)
-mesh = ExtResource("29_6ncge")
-surface_material_override/0 = SubResource("StandardMaterial3D_mcxfg")
-
-[node name="Wine Bottle" parent="." instance=ExtResource("24_o68eq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.11861, 2, 0.685286)
