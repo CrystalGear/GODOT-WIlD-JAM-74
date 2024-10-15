@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dl025dvc1rfce"]
+[gd_scene load_steps=6 format=3 uid="uid://dl025dvc1rfce"]
 
+[ext_resource type="PhysicsMaterial" uid="uid://cgjgp1v8epf62" path="res://PhysicsMaterial/default_tool_physics.tres" id="1_f3jk7"]
 [ext_resource type="ArrayMesh" uid="uid://cwxbpv5dy2cr" path="res://Models/Tire Iron.obj" id="1_wqeui"]
 [ext_resource type="Material" uid="uid://csffjgr7i3qj4" path="res://Materials/tire_iron.tres" id="2_x22wm"]
 
@@ -10,6 +11,13 @@ points = PackedVector3Array(-0.0134124, 0.367734, -0.0138881, -0.0490929, 0.4605
 points = PackedVector3Array(0.0294548, 0.0750085, 0.00753012, -0.0276754, 0.00352937, -0.00674682, -0.0276754, 0.00352937, 0.00753012, -0.0133929, 0.367734, -0.0138881, 0.0151722, 0.00352937, -0.0281706, 0.0151722, 0.367734, 0.0146658, 0.0151722, 0.00352937, 0.0289595, -0.0133929, 0.367734, 0.0146658, 0.0151722, 0.367734, -0.0138881, -0.0133929, 0.0678071, -0.0281706, -0.0133929, 0.060677, 0.0289595, 0.0294548, 0.00352937, -0.0138881, -0.0276754, 0.0678071, 0.00753012, 0.0294548, 0.00352937, 0.0146658, 0.0151722, 0.0678071, 0.0289595, 0.0151722, 0.0678071, -0.0281706, -0.0133929, 0.00352937, -0.0281706, -0.0133929, 0.00352937, 0.0289595, 0.0294548, 0.0678071, -0.0138881, -0.0276754, 0.0678071, -0.00674682, -0.0205285, 0.0678071, 0.0218127, -0.0205285, 0.0678071, -0.0210238, 0.0294548, 0.0678071, 0.0146658, -0.0205285, 0.00352937, 0.0218127, -0.0205285, 0.00352937, -0.0210238, -0.00624599, 0.0678071, 0.0289595, 0.0294548, 0.0750085, -0.00674682, 0.0223079, 0.0750085, 0.0218127, 0.0223079, 0.0750085, -0.0210238)
 
 [node name="Tire_Iron" type="RigidBody3D"]
+physics_material_override = ExtResource("1_f3jk7")
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, 0.25, 0)
+contact_monitor = true
+max_contacts_reported = 10
+linear_damp = 0.1
+angular_damp = 0.1
 
 [node name="Tire_Iron" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_wqeui")

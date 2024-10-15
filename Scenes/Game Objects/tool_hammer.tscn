@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dvaa6ypjd3u3t"]
+[gd_scene load_steps=6 format=3 uid="uid://dvaa6ypjd3u3t"]
 
+[ext_resource type="PhysicsMaterial" uid="uid://cgjgp1v8epf62" path="res://PhysicsMaterial/default_tool_physics.tres" id="1_p0oh0"]
 [ext_resource type="ArrayMesh" uid="uid://db6iivtvy6som" path="res://Models/Hammer.obj" id="1_q081c"]
 [ext_resource type="Material" uid="uid://hrtqx2ptepgo" path="res://Materials/tool_hammer.tres" id="2_uyioe"]
 
@@ -10,6 +11,13 @@ points = PackedVector3Array(0.0285472, 0.319573, 0.0276667, -0.0378322, 0.336162
 points = PackedVector3Array(-0.0212333, -0.00133741, -0.00553117, -0.0157, -0.00133741, -0.0110656, -0.0110148, 0.308914, -0.0178792, 0.0230333, 0.0042192, -0.0110656, -0.0101623, 0.0042192, 0.0166, -0.0227942, 0.307938, 0.00592122, 0.0249406, 0.310275, -0.0120191, 0.0230333, 0.0042192, 0.0110656, -0.0110581, 0.3095, 0.0179442, 0.0119667, -0.00133741, -0.0166, 0.0250436, 0.310971, 0.0120706, 0.0119667, -0.00133741, 0.0166, -0.0228004, 0.30798, -0.00592279, -0.0212333, -0.00133741, 0.00553117, 0.0175, 0.297404, -0.0166, -0.0101623, 0.0042192, -0.0166, 0.0191334, 0.312102, 0.0182334, 0.0230333, -0.00133741, -0.00553117, -0.004629, -0.00133741, 0.0166, 0.0230333, -0.00133741, 0.00553117, -0.004629, -0.00133741, -0.0166, 0.0175, 0.291847, -0.0166, -0.0157, -0.00133741, 0.0110656)
 
 [node name="Tool_Hammer" type="RigidBody3D"]
+physics_material_override = ExtResource("1_p0oh0")
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, 0.2, 0)
+contact_monitor = true
+max_contacts_reported = 10
+linear_damp = 0.1
+angular_damp = 0.1
 
 [node name="Tool_Hammer" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_q081c")
