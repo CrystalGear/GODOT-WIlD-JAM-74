@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dtnooqeyf3hh7"
+path="res://.godot/imported/Toilet.obj-4bf3de3e8989982a26a4f7ba5d630d7e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Toilet.obj-4bf3de3e8989982a26a4f7ba5d630d7e.mesh"]
+
+source_file="res://Models/Bathroom Furniture/Toilet.obj"
+dest_files=["res://.godot/imported/Toilet.obj-4bf3de3e8989982a26a4f7ba5d630d7e.mesh", "res://.godot/imported/Toilet.obj-4bf3de3e8989982a26a4f7ba5d630d7e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
