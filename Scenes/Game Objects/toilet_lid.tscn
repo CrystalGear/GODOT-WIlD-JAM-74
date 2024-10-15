@@ -1,16 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://bmmddg0boaxrs"]
+[gd_scene load_steps=5 format=3 uid="uid://bmmddg0boaxrs"]
 
+[ext_resource type="PhysicsMaterial" uid="uid://cgjgp1v8epf62" path="res://PhysicsMaterial/default_tool_physics.tres" id="1_etjrr"]
 [ext_resource type="ArrayMesh" uid="uid://f5p00nblyepl" path="res://Models/Bathroom Furniture/Toilet Lid.obj" id="1_ia84t"]
 [ext_resource type="Material" uid="uid://bdfxihhktt1e" path="res://Materials/toilet_lid.tres" id="2_p6hyo"]
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_fhypx"]
-points = PackedVector3Array(-0.275509, 1.3267, -0.602312, -0.292977, 1.34635, -0.300744, 0.250636, 1.30684, -0.334264, 0.31016, 1.37634, -0.592392, -0.28546, 1.37634, -0.304502, 0.240684, 1.30684, -0.57255, -0.225874, 1.30684, -0.334264, -0.28546, 1.37634, -0.592392, 0.31016, 1.37634, -0.304502, 0.300271, 1.3267, -0.602312, -0.215922, 1.30684, -0.57255, 0.31016, 1.3267, -0.304502, -0.28546, 1.3267, -0.304502, 0.302745, 1.35563, -0.6033, 0.31016, 1.3267, -0.592392, -0.28546, 1.3267, -0.592392, -0.2778, 1.35562, -0.603173, 0.317545, 1.35588, -0.596445, -0.292712, 1.35588, -0.596383, 0.317841, 1.34635, -0.300661, 0.250636, 1.30684, -0.562598, -0.225874, 1.30684, -0.562598)
+[sub_resource type="BoxShape3D" id="BoxShape3D_qdo84"]
+size = Vector3(0.62207, 0.043457, 0.302246)
 
 [node name="Toilet_Lid" type="RigidBody3D"]
+physics_material_override = ExtResource("1_etjrr")
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, 1, -0.3)
+contact_monitor = true
+max_contacts_reported = 10
 
 [node name="Toilet_Lid" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_ia84t")
 surface_material_override/0 = ExtResource("2_p6hyo")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("ConvexPolygonShape3D_fhypx")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00878906, 1.35557, -0.453188)
+shape = SubResource("BoxShape3D_qdo84")

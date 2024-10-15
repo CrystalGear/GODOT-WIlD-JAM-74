@@ -32,7 +32,7 @@
 [node name="BlockoutLevel" parent="." instance=ExtResource("2_fyn8b")]
 
 [node name="Player" parent="." instance=ExtResource("3_qsqcb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -4.8602)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8954, 2, -4.8602)
 
 [node name="Cabinet" parent="." instance=ExtResource("4_ey6o2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -7.5)

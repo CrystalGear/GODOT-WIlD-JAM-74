@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5x1jupt08y6"]
+[gd_scene load_steps=5 format=3 uid="uid://b5x1jupt08y6"]
 
+[ext_resource type="PhysicsMaterial" uid="uid://cgjgp1v8epf62" path="res://PhysicsMaterial/default_tool_physics.tres" id="1_hl8kf"]
 [ext_resource type="ArrayMesh" uid="uid://8m8tmyr64ej3" path="res://Models/Kitchen Furniture/Cabinet Door.obj" id="1_sdxtm"]
 [ext_resource type="Material" uid="uid://gopgmwyam4mi" path="res://Materials/cabinet_door.tres" id="2_f1adg"]
 
@@ -12,6 +13,7 @@ axis_lock_linear_y = true
 axis_lock_linear_z = true
 axis_lock_angular_x = true
 axis_lock_angular_z = true
+physics_material_override = ExtResource("1_hl8kf")
 gravity_scale = 0.0
 freeze_mode = 1
 contact_monitor = true
