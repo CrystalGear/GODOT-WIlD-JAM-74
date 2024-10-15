@@ -1,0 +1,19 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://itujtdmpighj"]
+
+[ext_resource type="Texture2D" uid="uid://cc4xb62c0srav" path="res://Textures/Kitchen Furniture/Microwave Door_blinn2SG_BaseMap.png" id="1_5kslp"]
+[ext_resource type="Texture2D" uid="uid://dq10u7d70dv6e" path="res://Textures/Kitchen Furniture/Microwave Door_blinn2SG_MaskMap.png" id="2_wfrlf"]
+[ext_resource type="Texture2D" uid="uid://b2lkcb5wkrpx4" path="res://Textures/Kitchen Furniture/Microwave Door_initialShadingGroup_Normal.png" id="3_d8e3a"]
+
+[resource]
+transparency = 1
+blend_mode = 4
+albedo_texture = ExtResource("1_5kslp")
+metallic = 1.0
+metallic_texture = ExtResource("2_wfrlf")
+roughness_texture = ExtResource("2_wfrlf")
+roughness_texture_channel = 2
+normal_enabled = true
+normal_texture = ExtResource("3_d8e3a")
+ao_enabled = true
+ao_texture = ExtResource("2_wfrlf")
+ao_texture_channel = 1
