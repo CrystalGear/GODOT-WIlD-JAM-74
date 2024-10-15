@@ -30,7 +30,8 @@ mesh = ExtResource("1_145fn")
 surface_material_override/0 = ExtResource("2_su7kl")
 
 [node name="Cabinet Door" parent="." instance=ExtResource("5_kh6yq")]
-transform = Transform3D(0.998055, 0, -0.0623376, 0, 1, 0, 0.0623376, 0, 0.998055, -0.3, 0, 0.25)
+transform = Transform3D(0.993524, 0, -0.113619, 0, 1, 0, 0.113619, 0, 0.993524, -0.3, 0, 0.25)
+freeze = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0183105, 0.95127, -0.032959)

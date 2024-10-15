@@ -32,19 +32,39 @@
 [node name="BlockoutLevel" parent="." instance=ExtResource("2_fyn8b")]
 
 [node name="Player" parent="." instance=ExtResource("3_qsqcb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8954, 2, -4.8602)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.12008, 2, -4.8602)
 
 [node name="Cabinet" parent="." instance=ExtResource("4_ey6o2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -7.5)
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_z = true
 
 [node name="Cabinet2" parent="." instance=ExtResource("4_ey6o2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.59873, 1, -7.5)
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_z = true
 
 [node name="Cabinet3" parent="." instance=ExtResource("4_ey6o2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.407488, 1, -7.5)
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_z = true
 
 [node name="Cabinet4" parent="." instance=ExtResource("4_ey6o2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.342512, 1, -7.5)
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_z = true
 
 [node name="Bath" parent="." instance=ExtResource("5_bmix1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 1, -7)
