@@ -1,9 +1,19 @@
 extends CharacterBody3D
 
 
+
+
+@onready var raycast = $Camera3D/Raycast
+@onready var hand = $Camera3D/Hand
+
 @export var speed = 5.0
 @export var jump_velocity = 4.5
+@export var pull = 5
+
 var mouse_sensitivity = 0.002
+
+var picked_object
+
 
 func _input(event):
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
@@ -19,6 +29,8 @@ func _physics_process(delta: float) -> void:
 	_jump()
 	_handle_movement()
 	move_and_slide()
+	_grab()
+	_carry()
 
 # Add the gravity.
 func _apply_gravity(delta: float):
@@ -40,3 +52,44 @@ func _handle_movement():
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		velocity.z = move_toward(velocity.z, 0, speed)
+
+
+		
+
+func _grab():
+	if Input.is_action_just_pressed("primary_action"):
+		if picked_object == null:
+			print("grab input pressed")
+		
+			_pick_object()
+		elif picked_object != null:
+			_drop()
+		
+		
+		
+		
+
+func _pick_object():
+	var collider = raycast.get_collider()
+	print(collider)
+	
+	if collider != null and collider is RigidBody3D:
+		picked_object = collider
+		
+		print("picked object up, that object is-")
+		print(picked_object)
+
+
+func _carry():
+	if picked_object != null:
+		var start = picked_object.global_transform.origin
+		var hand_pos = hand.global_transform.origin
+		picked_object.set_linear_velocity((hand_pos-start) * pull)
+		
+		print("carrying")
+
+
+func _drop():
+	if picked_object != null:
+		picked_object = null
+		

@@ -13,3 +13,9 @@ shape = SubResource("CylinderShape3D_udcbu")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.677103, 0)
+
+[node name="Raycast" type="RayCast3D" parent="Camera3D"]
+target_position = Vector3(0, 0, -3)
+
+[node name="Hand" type="Node3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.68574)
