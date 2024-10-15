@@ -7,9 +7,11 @@
 [resource]
 transparency = 1
 blend_mode = 4
+cull_mode = 2
 albedo_texture = ExtResource("1_01e2a")
 metallic = 1.0
 metallic_texture = ExtResource("2_ryba8")
 roughness_texture = ExtResource("2_ryba8")
+roughness_texture_channel = 1
 normal_enabled = true
 normal_texture = ExtResource("3_yqg14")
