@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dkbwkvi8f7mtw" path="res://Scenes/Characters/player.tscn" id="3_qsqcb"]
 [ext_resource type="PackedScene" path="res://Scenes/Game Objects/cabinet.tscn" id="4_ey6o2"]
 [ext_resource type="PackedScene" uid="uid://bcrfodun78qow" path="res://Scenes/Game Objects/bath.tscn" id="5_bmix1"]
-[ext_resource type="PackedScene" path="res://Scenes/Game Objects/jerry_can.tscn" id="6_uudng"]
+[ext_resource type="PackedScene" uid="uid://cdqoqp1m2hq51" path="res://Scenes/Game Objects/jerry_can.tscn" id="6_uudng"]
 [ext_resource type="PackedScene" path="res://Scenes/Game Objects/kettle.tscn" id="7_4mfj2"]
 [ext_resource type="PackedScene" path="res://Scenes/Game Objects/micro_wave.tscn" id="8_jmcuh"]
 [ext_resource type="PackedScene" uid="uid://bletst11kfa1j" path="res://Scenes/Game Objects/large_bowl.tscn" id="9_0aqpu"]
@@ -15,7 +15,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/Game Objects/pumpkin.tscn" id="13_6ylba"]
 [ext_resource type="PackedScene" path="res://Scenes/Game Objects/rug_1.tscn" id="14_1ew8d"]
 [ext_resource type="PackedScene" path="res://Scenes/Game Objects/rug_2.tscn" id="15_ba5qm"]
-[ext_resource type="PackedScene" path="res://Scenes/Game Objects/screw_driver.tscn" id="16_1i2w4"]
+[ext_resource type="PackedScene" uid="uid://c23vuaprb6n43" path="res://Scenes/Game Objects/screw_driver.tscn" id="16_1i2w4"]
 [ext_resource type="PackedScene" uid="uid://01lqrl4m4dia" path="res://Scenes/Game Objects/sink.tscn" id="17_xuuva"]
 [ext_resource type="PackedScene" path="res://Scenes/Game Objects/small_bowl.tscn" id="18_hujf7"]
 [ext_resource type="PackedScene" path="res://Scenes/Game Objects/small_plate.tscn" id="19_otx7b"]
@@ -50,7 +50,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.342512, 1, -7.5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 1, -7)
 
 [node name="Jerry_Can" parent="." instance=ExtResource("6_uudng")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0.75)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1787, 0.75)
 
 [node name="Kettle" parent="." instance=ExtResource("7_4mfj2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, -7.5)
