@@ -3,7 +3,7 @@
 [ext_resource type="MeshLibrary" uid="uid://c36omsnk37fsq" path="res://Scenes/blockout/Blockout_Mesh_Lib (Exported).tres" id="1_vswtf"]
 [ext_resource type="PackedScene" uid="uid://dkbwkvi8f7mtw" path="res://Scenes/Characters/player.tscn" id="2_mkna3"]
 [ext_resource type="PackedScene" uid="uid://bn360g2suksd2" path="res://Scenes/Game Objects/object_grab.tscn" id="3_ggcl1"]
-[ext_resource type="PackedScene" uid="uid://cmr1smx6winca" path="res://Scenes/test_sphere.tscn" id="4_5g3lk"]
+[ext_resource type="PackedScene" uid="uid://cmr1smx6winca" path="res://Scenes/Game Objects/test_sphere.tscn" id="4_5g3lk"]
 
 [node name="BlockoutLevel" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88603, 0.212463, -0.236816)
@@ -50,3 +50,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.64827, 5.46955)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.98672, 2.18617)
 
 [node name="RigidBody3D" parent="ObjectGrab2" instance=ExtResource("4_5g3lk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.74875)
