@@ -1,33 +1,39 @@
 extends CharacterBody3D
 
-
-var current_move_speed = 5.0
+#exports
 @export var walking_speed = 5.0
 @export var crouch_walk_speed = 2.5
 @export var jump_velocity = 4.5
 @export var player_height = 1.7
+
+@onready var camera = $Camera3D
+@onready var collision_shape = $CollisionShape3D
+@onready var raycast = $RayCast3D
+@onready var animation_player = $AnimationPlayer
+
+#vars
 var b_is_crouching = false
+var current_move_speed = 5.0
 var mouse_sensitivity = 0.002
 var joystick_sensitivity = 2
 
 func _input(event):
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		rotate_y(-event.relative.x * mouse_sensitivity)
-		$Camera3D.rotate_x(-event.relative.y * mouse_sensitivity)
-		$Camera3D.rotation.x = clampf($Camera3D.rotation.x, -deg_to_rad(70), deg_to_rad(70))
+		camera.rotate_x(-event.relative.y * mouse_sensitivity)
+		camera.rotation.x = clampf(camera.rotation.x, -deg_to_rad(70), deg_to_rad(70))
 
 func _ready():
-	$RayCast3D.target_position = Vector3(0, player_height, 0)
-	$RayCast3D.enabled = true
+	raycast.target_position = Vector3(0, player_height, 0)
+	raycast.enabled = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	$CollisionShape3D.shape.height = player_height
-	print($CollisionShape3D.shape.height)
+	collision_shape.shape.height = player_height
 
 func _physics_process(delta: float) -> void:
 	handle_joystick_rotation()
 	apply_gravity(delta)
 	jump()
-	crouch(delta)
+	crouch()
 	handle_movement()
 	move_and_slide()
 
@@ -57,18 +63,15 @@ func handle_joystick_rotation():
 	rotation_degrees.y -= rotation_input.y * joystick_sensitivity
 	rotation_degrees.x -= rotation_input.x * joystick_sensitivity
 
-func crouch(delta: float):
-	if Input.is_action_just_pressed("crouch") && (b_is_crouching == false):
+func crouch():
+	if not Input.is_action_just_pressed("crouch"):
+		return
+	if (b_is_crouching == false):
 		b_is_crouching = true
 		current_move_speed = crouch_walk_speed
-		$AnimationPlayer.play("crouch")
-		print($CollisionShape3D.shape.height)
-	elif Input.is_action_just_pressed("crouch") && (b_is_crouching == true):
-		$RayCast3D.force_raycast_update()
-		if not $RayCast3D.is_colliding():
+		animation_player.play("crouch")
+	else:
+		if not raycast.is_colliding():
 			b_is_crouching = false
 			current_move_speed = walking_speed
-			$AnimationPlayer.play_backwards("crouch")
-			print($CollisionShape3D.shape.height)
-		else:
-			print("Not enough space to stand up!")
+			animation_player.play_backwards("crouch")
