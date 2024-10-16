@@ -11,6 +11,8 @@ extends Node
 ##		
 ##		you can only hold one holdable item at once
 
+var KeysQuantity : int
+
 func pick_up_car_part(item_to_pickup: Car_part) -> bool:
 	##THIS FUNCTION IS EXPLICITLY FOR CAR PARTS
 	##USE pick_up_key() for keys
@@ -36,10 +38,7 @@ func pick_up_tool(item_to_pickup: Tool) -> bool:
 	return false
 
 func pick_up_key() -> void:
-	##THIS FUNCTION IS EXPLICITLY FOR TOOLS
-	##USE pick_up_tool() for tools
-	##USE pick_up_car_part() for car parts
-	pass
+	KeysQuantity += 1
 
 func throw_held_item(throwing_power: float) -> void:
 	pass
