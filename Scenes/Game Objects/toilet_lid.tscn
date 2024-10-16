@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmmddg0boaxrs"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://cgjgp1v8epf62" path="res://PhysicsMaterial/default_tool_physics.tres" id="1_etjrr"]
+[ext_resource type="ArrayMesh" uid="uid://f5p00nblyepl" path="res://Models/Bathroom Furniture/Toilet Lid.obj" id="1_ia84t"]
+[ext_resource type="Material" uid="uid://bdfxihhktt1e" path="res://Materials/toilet_lid.tres" id="2_p6hyo"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qdo84"]
+size = Vector3(0.62207, 0.043457, 0.302246)
+
+[node name="Toilet_Lid" type="RigidBody3D"]
+physics_material_override = ExtResource("1_etjrr")
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, 1, -0.3)
+contact_monitor = true
+max_contacts_reported = 10
+
+[node name="Toilet_Lid" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_ia84t")
+surface_material_override/0 = ExtResource("2_p6hyo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00878906, 1.35557, -0.453188)
+shape = SubResource("BoxShape3D_qdo84")

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://xpv24fn7ql4f"
+path="res://.godot/imported/Wrench.obj-015a48aa4d8586e37b163aee8d9bd381.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Wrench.obj-015a48aa4d8586e37b163aee8d9bd381.mesh"]
+
+source_file="res://Models/Wrench.obj"
+dest_files=["res://.godot/imported/Wrench.obj-015a48aa4d8586e37b163aee8d9bd381.mesh", "res://.godot/imported/Wrench.obj-015a48aa4d8586e37b163aee8d9bd381.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(0.025, 0.025, 0.025)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

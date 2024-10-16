@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5x1jupt08y6"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://cgjgp1v8epf62" path="res://PhysicsMaterial/default_tool_physics.tres" id="1_hl8kf"]
+[ext_resource type="ArrayMesh" uid="uid://8m8tmyr64ej3" path="res://Models/Kitchen Furniture/Cabinet Door.obj" id="1_sdxtm"]
+[ext_resource type="Material" uid="uid://gopgmwyam4mi" path="res://Materials/cabinet_door.tres" id="2_f1adg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_reluc"]
+size = Vector3(0.550415, 0.846191, 0.076416)
+
+[node name="Cabinet Door" type="RigidBody3D"]
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+physics_material_override = ExtResource("1_hl8kf")
+gravity_scale = 0.0
+freeze = true
+freeze_mode = 1
+contact_monitor = true
+max_contacts_reported = 10
+
+[node name="Cabinet Door" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, -0.25)
+mesh = ExtResource("1_sdxtm")
+surface_material_override/0 = ExtResource("2_f1adg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.284119, 0.450439, 0.0247803)
+shape = SubResource("BoxShape3D_reluc")

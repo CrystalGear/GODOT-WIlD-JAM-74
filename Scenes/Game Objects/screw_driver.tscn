@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://c23vuaprb6n43"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://cgjgp1v8epf62" path="res://PhysicsMaterial/default_tool_physics.tres" id="1_i1cd4"]
+[ext_resource type="ArrayMesh" uid="uid://dvxwei4l2g0ma" path="res://Models/Screw Driver.obj" id="1_it6gg"]
+[ext_resource type="Material" uid="uid://bvp7uuvvisbqp" path="res://Materials/screw_driver.tres" id="2_1r7lp"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_lmlk3"]
+height = 0.259189
+radius = 0.023259
+
+[node name="Screw_Driver" type="RigidBody3D"]
+physics_material_override = ExtResource("1_i1cd4")
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, 0.13, 0)
+contact_monitor = true
+max_contacts_reported = 10
+linear_damp = 0.1
+angular_damp = 0.1
+
+[node name="Screw_Driver" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_it6gg")
+surface_material_override/0 = ExtResource("2_1r7lp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125794, 0)
+shape = SubResource("CylinderShape3D_lmlk3")

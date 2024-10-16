@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://f2vmqitmguct"]
+
+[ext_resource type="ArrayMesh" uid="uid://xpv24fn7ql4f" path="res://Models/Wrench.obj" id="1_au37b"]
+[ext_resource type="PhysicsMaterial" uid="uid://cgjgp1v8epf62" path="res://PhysicsMaterial/default_tool_physics.tres" id="1_ck5mf"]
+[ext_resource type="Material" uid="uid://do1tcixy661mj" path="res://Materials/wrench.tres" id="2_upu77"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_is7cm"]
+size = Vector3(0.0595703, 0.177734, 0.015625)
+
+[node name="Wrench" type="RigidBody3D"]
+physics_material_override = ExtResource("1_ck5mf")
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, 0.1, 0)
+contact_monitor = true
+max_contacts_reported = 10
+linear_damp = 0.1
+angular_damp = 0.1
+
+[node name="Wrench" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_au37b")
+surface_material_override/0 = ExtResource("2_upu77")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0874236, 0)
+shape = SubResource("BoxShape3D_is7cm")

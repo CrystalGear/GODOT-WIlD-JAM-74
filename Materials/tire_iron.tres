@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://csffjgr7i3qj4"]
+
+[ext_resource type="Texture2D" uid="uid://yxb16rkk8k7x" path="res://Images/Textures/Tools/Tire Iron_standardSurface1_BaseMap.png" id="1_hrtr8"]
+[ext_resource type="Texture2D" uid="uid://dwbiw57ran0pe" path="res://Images/Textures/Tools/Tire Iron_standardSurface1_MaskMap.png" id="2_h2igf"]
+[ext_resource type="Texture2D" uid="uid://bswxlu3apngr5" path="res://Images/Textures/Tools/Tire Iron_standardSurface1_Normal.png" id="3_q5ahp"]
+
+[resource]
+albedo_texture = ExtResource("1_hrtr8")
+metallic = 1.0
+metallic_texture = ExtResource("2_h2igf")
+roughness_texture = ExtResource("2_h2igf")
+roughness_texture_channel = 2
+normal_enabled = true
+normal_texture = ExtResource("3_q5ahp")
+ao_enabled = true
+ao_texture = ExtResource("2_h2igf")
+ao_texture_channel = 1
