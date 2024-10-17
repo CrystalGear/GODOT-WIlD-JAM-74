@@ -8,15 +8,19 @@ var player: CharacterBody3D = null
 func _ready():
 	player = get_tree().root.get_node("BlockoutLevel/Player")
 	if player:
-		nav_agent.target_position = player.global_transform.origin
+		set_target_to_player()
 
 func _process(delta):
 	if player:
-		nav_agent.target_position = player.global_transform.origin
+		set_target_to_player()
+		move_towards_target()
 
-		if not nav_agent.is_navigation_finished():
-			var next_position = nav_agent.get_next_path_position()
-			var direction = (next_position - global_transform.origin).normalized()
-			velocity = direction * speed
+func set_target_to_player():
+	nav_agent.target_position = player.global_transform.origin
 
+func move_towards_target():
+	if not nav_agent.is_navigation_finished():
+		var next_position = nav_agent.get_next_path_position()
+		var direction = (next_position - global_transform.origin).normalized()
+		velocity = direction * speed
 		move_and_slide()
