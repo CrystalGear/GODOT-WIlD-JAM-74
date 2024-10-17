@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://dwomwunyo01ot"]
+
+[ext_resource type="ArrayMesh" uid="uid://xl7etfg5o0ae" path="res://Models/Kitchen Furniture/Microwave.obj" id="1_1dflr"]
+[ext_resource type="Material" uid="uid://c82rsctnd7wpg" path="res://Materials/micro_wave.tres" id="2_pjrcg"]
+[ext_resource type="PackedScene" uid="uid://bm75u1upsjqa4" path="res://Scenes/Game Objects/micro_wave_door.tscn" id="5_xi3v3"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vi645"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2kb3d"]
+size = Vector3(0.462463, 0.0518494, 0.35791)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pq75p"]
+size = Vector3(0.024292, 0.235352, 0.354614)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q2xuj"]
+size = Vector3(0.105896, 0.235352, 0.354614)
+
+[node name="MicroWave" type="RigidBody3D"]
+physics_material_override = SubResource("PhysicsMaterial_vi645")
+freeze = true
+contact_monitor = true
+max_contacts_reported = 10
+
+[node name="MicroWave" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_1dflr")
+surface_material_override/0 = ExtResource("2_pjrcg")
+
+[node name="MicroWave Door" parent="." instance=ExtResource("5_xi3v3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.17, 0, 0.23)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0500793, 0.311911, 0.0505371)
+shape = SubResource("BoxShape3D_2kb3d")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0500793, 0.0257131, 0.0486099)
+shape = SubResource("BoxShape3D_2kb3d")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.169912, 0.168005, 0.0493774)
+shape = SubResource("BoxShape3D_pq75p")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.225363, 0.168005, 0.0493774)
+shape = SubResource("BoxShape3D_q2xuj")

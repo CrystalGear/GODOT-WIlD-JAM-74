@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://cf6iskhoghxyi"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://cgjgp1v8epf62" path="res://PhysicsMaterial/default_tool_physics.tres" id="1_5w1m3"]
+[ext_resource type="ArrayMesh" uid="uid://c4d71c7x77ilv" path="res://Models/Kitchen Props/Small Plate.obj" id="1_27wjb"]
+[ext_resource type="Material" uid="uid://bn51aeok3tikj" path="res://Materials/plate_and_bowls.tres" id="2_3yiat"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_5guq1"]
+points = PackedVector3Array(0.0714505, 0.00949206, 0.119064, -0.0246189, 0.00483245, -0.128235, -0.0317221, 0.000688533, -0.120452, -0.127528, 0.00949206, 0.0555506, -0.0213108, -0.0136262, 0.0733921, 0.126501, 0.00949206, -0.0545241, 0.0723836, -0.0136281, -0.0202928, -0.0697567, -0.0136028, -0.0306352, -0.110601, 0.00949206, -0.0841586, -0.0428426, 0.00949206, 0.131773, 0.0882061, -0.0069083, 0.0559471, 0.028717, -0.0105219, -0.0871966, 0.0545241, 0.00949206, -0.126501, -0.100048, -0.00689898, 0.0336751, 0.135017, 0.00949206, 0.0258896, 0.028711, -0.0105205, 0.0882018, -0.121421, 0.000686733, -0.0306832, -0.0743475, 0.000673611, 0.101577, 0.0811025, -0.0032127, -0.0811025, -0.0582839, -0.010435, -0.071696, -0.00828397, 0.000680818, 0.125141, 0.103267, -0.00691847, -0.014294, -0.0213138, -0.0136278, -0.072381, 0.0614965, -0.0135499, 0.045292, -0.0724771, 0.00949206, -0.118038, -0.062478, -0.0135433, 0.0452631, 0.0935424, 0.000705224, 0.0828055, -0.136017, 0.00949206, -0.0248631, 0.030703, 0.000689208, -0.120473, -0.0820671, -0.0032127, -0.0810439, 0.0538477, 0.000670798, 0.113162, 0.124205, 0.000682818, 0.00828797)
+
+[node name="Small Plate" type="RigidBody3D"]
+physics_material_override = ExtResource("1_5w1m3")
+contact_monitor = true
+max_contacts_reported = 10
+
+[node name="Small Plate" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_27wjb")
+surface_material_override/0 = ExtResource("2_3yiat")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_5guq1")

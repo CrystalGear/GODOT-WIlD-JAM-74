@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://ddey0qc0s7ku7"]
+
+[ext_resource type="ArrayMesh" uid="uid://0rnt0b0yleup" path="res://Models/Kitchen Props/Wine Bottle.obj" id="1_7pkfd"]
+[ext_resource type="PhysicsMaterial" uid="uid://cgjgp1v8epf62" path="res://PhysicsMaterial/default_tool_physics.tres" id="1_xf3h1"]
+[ext_resource type="Material" uid="uid://cdscjf8pl73lk" path="res://Materials/Wine Bottle.tres" id="2_vqcev"]
+[ext_resource type="Material" uid="uid://och53dgdm0ad" path="res://Materials/Wine Cork.tres" id="3_mroyw"]
+[ext_resource type="Material" uid="uid://cmjb8p8md434x" path="res://Materials/Wine.tres" id="4_1gl5r"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_kkdl0"]
+height = 0.592638
+radius = 0.0588663
+
+[node name="Wine Bottle" type="RigidBody3D"]
+physics_material_override = ExtResource("1_xf3h1")
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, 0.1, 0)
+contact_monitor = true
+max_contacts_reported = 10
+linear_damp_mode = 1
+linear_damp = 0.5
+angular_damp_mode = 1
+angular_damp = 0.5
+
+[node name="Wine Bottle" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_7pkfd")
+surface_material_override/0 = ExtResource("2_vqcev")
+surface_material_override/1 = ExtResource("3_mroyw")
+surface_material_override/2 = ExtResource("2_vqcev")
+surface_material_override/3 = ExtResource("3_mroyw")
+surface_material_override/4 = ExtResource("2_vqcev")
+surface_material_override/5 = ExtResource("3_mroyw")
+surface_material_override/6 = ExtResource("2_vqcev")
+surface_material_override/7 = ExtResource("4_1gl5r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.291548, 0)
+shape = SubResource("CylinderShape3D_kkdl0")

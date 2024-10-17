@@ -8,7 +8,9 @@ const MAIN_MENU = preload("res://Scenes/_menus/main_menu.tscn")
 const OPTIONS_MENU = preload("res://Scenes/_menus/options_menu.tscn")
 const SPLASH_SCREEN = preload("res://Scenes/_menus/splash_screen.tscn")
 const WIN_SCREEN = preload("res://Scenes/_menus/win_screen.tscn")
-const FIRST_LEVEL = preload("res://Scenes/_levels/level_1.tscn")
+#const FIRST_LEVEL = preload("res://Scenes/_levels/level_1.tscn")
+# uncommenty for debugging
+const FIRST_LEVEL = preload("res://Scenes/_levels/level_debug.tscn")
 
 # Runtime Variables
 var current_scene: Node = null

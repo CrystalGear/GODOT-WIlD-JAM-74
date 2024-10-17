@@ -1,0 +1,39 @@
+[gd_scene load_steps=8 format=3 uid="uid://bm75u1upsjqa4"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://cgjgp1v8epf62" path="res://PhysicsMaterial/default_tool_physics.tres" id="1_0ryrm"]
+[ext_resource type="ArrayMesh" uid="uid://blhdr0yxpjivt" path="res://Models/Kitchen Furniture/Microwave Door.obj" id="1_mhh8c"]
+[ext_resource type="Material" uid="uid://g060h1exs27m" path="res://Materials/micro_wave_door.tres" id="2_hi412"]
+[ext_resource type="Material" uid="uid://itujtdmpighj" path="res://Materials/MicroWave Glass Door.tres" id="3_4x6ha"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r6vb2"]
+albedo_color = Color(0, 0, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sgkq0"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cfai5"]
+size = Vector3(0.372375, 0.328125, 0.0179443)
+
+[node name="MicroWave Door" type="RigidBody3D"]
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_z = true
+physics_material_override = ExtResource("1_0ryrm")
+gravity_scale = 0.0
+contact_monitor = true
+max_contacts_reported = 10
+
+[node name="MicroWave Door" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.17, 0, -0.23)
+mesh = ExtResource("1_mhh8c")
+surface_material_override/0 = ExtResource("2_hi412")
+surface_material_override/1 = ExtResource("3_4x6ha")
+surface_material_override/2 = SubResource("StandardMaterial3D_r6vb2")
+surface_material_override/3 = ExtResource("3_4x6ha")
+surface_material_override/4 = SubResource("StandardMaterial3D_sgkq0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.175262, 0.167724, 0.00457764)
+shape = SubResource("BoxShape3D_cfai5")

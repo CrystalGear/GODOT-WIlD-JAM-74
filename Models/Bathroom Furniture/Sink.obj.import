@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ywtxew7ixbmf"
+path="res://.godot/imported/Sink.obj-decd1c791b8caa47a839b07b348f1579.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Sink.obj-decd1c791b8caa47a839b07b348f1579.mesh"]
+
+source_file="res://Models/Bathroom Furniture/Sink.obj"
+dest_files=["res://.godot/imported/Sink.obj-decd1c791b8caa47a839b07b348f1579.mesh", "res://.godot/imported/Sink.obj-decd1c791b8caa47a839b07b348f1579.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(0.025, 0.025, 0.025)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
