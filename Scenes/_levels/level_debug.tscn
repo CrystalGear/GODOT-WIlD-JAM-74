@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://c7ocvb2duj8e6"]
+[gd_scene load_steps=26 format=3 uid="uid://c7ocvb2duj8e6"]
 
 [ext_resource type="PackedScene" uid="uid://ia38iawogjd7" path="res://Scenes/default_environment.tscn" id="1_58fx7"]
 [ext_resource type="PackedScene" uid="uid://c15oa1883es0v" path="res://Scenes/blockout/blockout_level.tscn" id="2_fyn8b"]
@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cayk0xcknxwwm" path="res://Scenes/Game Objects/mug_2.tscn" id="11_fcl2u"]
 [ext_resource type="PackedScene" uid="uid://bcgacy5fiavus" path="res://Scenes/Game Objects/plate.tscn" id="12_no03k"]
 [ext_resource type="PackedScene" uid="uid://rmrv1k73c0da" path="res://Scenes/Game Objects/pumpkin.tscn" id="13_6ylba"]
-[ext_resource type="PackedScene" path="res://Scenes/Game Objects/rug_1.tscn" id="14_1ew8d"]
+[ext_resource type="PackedScene" uid="uid://xdq3wo4mkd1b" path="res://Scenes/Game Objects/rug_1.tscn" id="14_1ew8d"]
 [ext_resource type="PackedScene" uid="uid://d2wg4783km05k" path="res://Scenes/Game Objects/rug_2.tscn" id="15_ba5qm"]
 [ext_resource type="PackedScene" uid="uid://c23vuaprb6n43" path="res://Scenes/Game Objects/screw_driver.tscn" id="16_1i2w4"]
 [ext_resource type="PackedScene" uid="uid://01lqrl4m4dia" path="res://Scenes/Game Objects/sink.tscn" id="17_xuuva"]
@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://dvaa6ypjd3u3t" path="res://Scenes/Game Objects/tool_hammer.tscn" id="22_g4667"]
 [ext_resource type="PackedScene" uid="uid://ddey0qc0s7ku7" path="res://Scenes/Game Objects/wine_bottle.tscn" id="23_krj8f"]
 [ext_resource type="PackedScene" uid="uid://f2vmqitmguct" path="res://Scenes/Game Objects/wrench.tscn" id="24_u6grm"]
+[ext_resource type="PackedScene" uid="uid://xg1ukuosssw2" path="res://Scenes/item.tscn" id="25_fxcsa"]
 
 [node name="LevelDebug" type="Node3D"]
 
@@ -32,7 +33,7 @@
 [node name="BlockoutLevel" parent="." instance=ExtResource("2_fyn8b")]
 
 [node name="Player" parent="." instance=ExtResource("3_qsqcb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.12008, 2, -4.8602)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.22312, 2, -4.84741)
 
 [node name="Cabinet" parent="." instance=ExtResource("4_ey6o2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -7.5)
@@ -131,3 +132,10 @@ transform = Transform3D(0.992291, 0, -0.12393, 0, 1, 0, 0.12393, 0, 0.992291, -0
 
 [node name="Wrench" parent="." instance=ExtResource("24_u6grm")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.31433, 2.11482, 0.683252)
+
+[node name="Item" parent="." instance=ExtResource("25_fxcsa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.64892, 2.47483, -6.03588)
+
+[editable path="Player"]
+[editable path="Player/Camera3D/PlayerInteractionComponent"]
+[editable path="Player/Camera3D/PlayerInteractionComponent/InventoryComponent"]
