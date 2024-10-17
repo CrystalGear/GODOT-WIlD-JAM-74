@@ -6,5 +6,7 @@ var opening: bool = false;
 func use():
 	if opening:
 		animation_player.play_backwards("open")
+		opening = false
 	else:
 		animation_player.play("open")
+		opening = true
