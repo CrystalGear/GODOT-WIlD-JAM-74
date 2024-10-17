@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=3 uid="uid://db00eeujpwpdl"]
+
+[ext_resource type="PackedScene" uid="uid://b1kkvefvr8gp7" path="res://Models/Modular Kit/SM_G_Banister.fbx" id="1_6x1eg"]
+[ext_resource type="PackedScene" uid="uid://cnu5joyxjrxrk" path="res://Models/Modular Kit/SM_G_Door.fbx" id="2_ubcbm"]
+[ext_resource type="PackedScene" uid="uid://bnu6h0d10oewk" path="res://Models/Modular Kit/SM_G_Window_Wall.fbx" id="3_3llbb"]
+[ext_resource type="PackedScene" uid="uid://d4ja70i23omel" path="res://Models/Modular Kit/SM_G_Floor_3x3m.fbx" id="4_jf86m"]
+[ext_resource type="PackedScene" uid="uid://cmpem4gwv2de2" path="res://Models/Modular Kit/SM_G_Plain_Wall.fbx" id="5_72vqe"]
+[ext_resource type="PackedScene" uid="uid://cljsgyewgvdrd" path="res://Models/Modular Kit/SM_G_Ridge Wall.fbx" id="6_2n8kt"]
+[ext_resource type="PackedScene" uid="uid://cia4cyy7d47uv" path="res://Models/Modular Kit/SM_G_Stairs.fbx" id="7_wb7d6"]
+
+[node name="BlockoutMeshLibrary" type="Node3D"]
+
+[node name="SM_G_Banister" parent="." instance=ExtResource("1_6x1eg")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 2.14446)
+
+[node name="SM_G_Door" parent="." instance=ExtResource("2_ubcbm")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0.491283)
+
+[node name="SM_G_Window_Wall" parent="SM_G_Door" instance=ExtResource("3_3llbb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.4285)
+
+[node name="Plain Wall" parent="." instance=ExtResource("4_jf86m")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.0494, 0, 1.31656)
+
+[node name="SM_G_Plain_Wall" parent="Plain Wall" instance=ExtResource("5_72vqe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0968268)
+
+[node name="Rigged Wall" parent="." instance=ExtResource("4_jf86m")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.54887, 0, 1.31048)
+
+[node name="SM_G_Ridge Wall" parent="Rigged Wall" instance=ExtResource("6_2n8kt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0774729)
+
+[node name="SM_G_Floor_3x3m3" parent="." instance=ExtResource("4_jf86m")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -1.76465)
+
+[node name="SM_G_Stairs" parent="." instance=ExtResource("7_wb7d6")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 2.82229)
