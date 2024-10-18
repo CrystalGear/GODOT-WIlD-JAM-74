@@ -14,7 +14,7 @@ extends Node
 var KeysQuantity : int
 var held_item : Item
 
-func pick_up_car_part(item_to_pickup: Car_part) -> bool:
+func pick_up_car_part(item_to_pickup: Node3D) -> bool:
 	##THIS FUNCTION IS EXPLICITLY FOR CAR PARTS
 	##USE pick_up_key() for keys
 	##USE pick_up_tool() for tools
@@ -29,7 +29,7 @@ func pick_up_car_part(item_to_pickup: Car_part) -> bool:
 		
 	return false
 
-func pick_up_tool(item_to_pickup: Tool) -> bool:
+func pick_up_tool(item_to_pickup: Node3D) -> bool:
 	##THIS FUNCTION IS EXPLICITLY FOR TOOLS
 	##USE pick_up_key() for keys
 	##USE pick_up_car_part() for car parts
@@ -37,6 +37,15 @@ func pick_up_tool(item_to_pickup: Tool) -> bool:
 	#check if there is already an item held and if the item attempting to pickup is in correct group
 	if $ItemSlotTransform.get_child_count() == 0 and item_to_pickup is Tool :
 		held_item = item_to_pickup
+		#held_item.collision_layer = 0
+		#held_item.collision_mask = 0
+		
+		
+		((held_item as Node3D) as RigidBody3D).freeze = true
+		held_item.reparent($ItemSlotTransform, true)
+		held_item.transform = $ItemSlotTransform.transform
+		held_item.set_physics_process(false)
+		
 		return true
 		
 	return false
@@ -46,10 +55,12 @@ func pick_up_key() -> void:
 
 func throw_held_item(throwing_power: float) -> void:
 	pass
-	
+
 func carry(player: Player):
 	var player_node = player
 	if held_item != null:
+		
+		return
 		var start = held_item.global_transform.origin
 		var hand_pos = $ItemSlotTransform.global_transform.origin
 		var new_velocity = (hand_pos-start) * player_node.pull
@@ -67,7 +78,8 @@ func carry(player: Player):
 
 func drop():
 	if held_item != null:
-		held_item.collision_layer = 1
-		held_item.collision_mask = 1
+		held_item.reparent(get_tree().current_scene, true)
+		((held_item as Node3D) as RigidBody3D).freeze = false
+		held_item.set_physics_process(true)
 		print("dropped item")
 		held_item = null

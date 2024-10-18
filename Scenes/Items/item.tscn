@@ -20,10 +20,9 @@ _surfaces = [{
 }]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_mpx4a"]
-size = Vector3(0.0585938, 0.172485, 0.0203887)
+size = Vector3(0.0828247, 0.186678, 0.0672739)
 
 [node name="Item" type="RigidBody3D" groups=["interactable", "key"]]
-collision_layer = 65535
 script = ExtResource("1_m78y1")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -31,10 +30,9 @@ mesh = ExtResource("2_olell")
 surface_material_override/0 = SubResource("StandardMaterial3D_3gb0w")
 
 [node name="Outline" type="MeshInstance3D" parent="."]
-visible = false
 mesh = SubResource("ArrayMesh_7ay6k")
 skeleton = NodePath("../MeshInstance3D")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000189453, 0.0868705, -0.000527914)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000464118, 0.0864836, 7.3133e-05)
 shape = SubResource("BoxShape3D_mpx4a")

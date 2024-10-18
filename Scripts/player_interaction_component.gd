@@ -9,10 +9,11 @@ func _on_body_entered(body: Node3D) -> void:
 		item.set_outline_visibility(true)
 
 
-func _on_body_exited(body: Node3D) -> void:
-	if body.is_in_group("interactable") and item:
-		item.set_outline_visibility(false)
-		item = null
+func _on_body_exited(body: Node3D)-> void:
+	if item:
+		if body is Item:
+			item.set_outline_visibility(false)
+			item = null
 
 func _pick_up_item() -> void:
 	if item:
@@ -22,6 +23,7 @@ func _pick_up_item() -> void:
 			item = null
 			return
 		elif InventoryComponent.pick_up_tool(item):
+			item.set_outline_visibility(false)
 			item = null
 			return
 		elif InventoryComponent.pick_up_key():
