@@ -15,7 +15,7 @@ var main_camera: Camera3D
 var audio_players: Array[AudioStreamPlayer3D] = []
 var game_timer: CanvasLayer
 
-func _ready():
+func _ready() -> void:
 	setup_timer()
 	attach_to_player()
 
@@ -39,7 +39,7 @@ func register_audio_player(player: AudioStreamPlayer3D) -> void:
 	else:
 		game_timer = game_timers[0]
 
-func play_random_ambience():
+func play_random_ambience() -> void:
 	# Calculate the current chance based on the timer
 	
 	var current_chance: float = 0
@@ -84,7 +84,7 @@ func attach_to_player() -> void:
 			music_player.get_parent().remove_child(music_player)
 		main_camera.add_child(music_player)
 		
-func play_track(track: AudioStream):
+func play_track(track: AudioStream) -> void:
 	if music_player.stream == track:
 		if not music_player.playing:
 			music_player.play()
@@ -94,12 +94,12 @@ func play_track(track: AudioStream):
 
 	update_music_volume()
 
-func update_music_volume():
+func update_music_volume() -> void:
 	var master_volume = OptionsManager.Get_Master_Volume()
 	var music_volume = OptionsManager.Get_Music_Volume()
 	music_player.volume_db = linear_to_db(master_volume * music_volume)
 
-func pause_music():
+func pause_music() -> void:
 	music_player.stop()
 
 # Play an audio clip at a specified position in the world
