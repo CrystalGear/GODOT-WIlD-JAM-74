@@ -4,9 +4,9 @@ extends Node
 
 # Configurations
 @export var ambient_music: AudioStream
-@export var ambient_check_interval = 5  # Time in seconds between attempting to play ambient sound
-@export_range(0.01, 1) var min_ambient_play_chance = 0.05
-@export_range(0.01, 1) var max_ambient_play_chance = 0.5
+@export var ambient_check_interval: float = 5  # Time in seconds between attempting to play ambient sound
+@export_range(0.01, 1) var min_ambient_play_chance: float = 0.05
+@export_range(0.01, 1) var max_ambient_play_chance: float = 0.5
 
 # Cached references
 var main_camera: Camera3D
