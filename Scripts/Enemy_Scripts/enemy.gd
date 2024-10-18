@@ -1,4 +1,6 @@
-extends CharacterBody3D
+class_name Enemy extends CharacterBody3D
+
+signal direction_changed()
 
 @export var speed: float = 3.0
 var player: CharacterBody3D = null
@@ -12,52 +14,6 @@ func _ready():
 
 func _process(delta):
 	_check_collisions()
-	# Handles state transitions and updates behavior based on the current state.
-	# debug_mode: disables detection of player and increases speed to allow observation of random pathing.
-	if debug_mode:
-		patrol_speed = 10
-		speed = patrol_speed
-		print(transform.origin)
-		match state:
-			EnemyState.PATROL:
-				patrol_behavior()
-	else:
-		match state:
-			EnemyState.PATROL:
-				patrol_behavior()
-			EnemyState.CHASE:
-				chase_behavior()
-		check_for_player()
-
-func patrol():
-	# Sets a random patrol point for the enemy to move towards.
-	var random_position = await get_random_patrol_point()
-	nav_agent.target_position = random_position
-	state = EnemyState.PATROL
-	speed = patrol_speed
-
-func chase():
-	# Switches the enemy state to CHASE.
-	state = EnemyState.CHASE
-	speed = chase_speed
-
-func check_for_player():
-	# Checks if the player is within detection radius and transitions state accordingly.
-	if player and global_transform.origin.distance_to(player.global_transform.origin) <= detection_radius:
-		chase()
-	else:
-		if state == EnemyState.CHASE and global_transform.origin.distance_to(player.global_transform.origin) > detection_radius:
-			patrol()
-
-func patrol_behavior():
-	# Manages the patrol behavior of the enemy.
-	if nav_agent.is_navigation_finished():
-		patrol()
-	else:
-		move_towards_target()
-
-func chase_behavior():
-	# Manages the chase behavior of the enemy.
 	if player:
 		set_target_to_player()
 		move_towards_target()
@@ -89,15 +45,3 @@ func _check_collisions():
 					else:
 						$VisionRaycast.debug_shape_custom_color = Color(0, 255,0)
 						print ("I DONT SEE YOU")
-
-func get_random_patrol_point() -> Vector3:
-	# Generates a random point within the patrol area and validates it using NavigationServer3D.
-	await get_tree().physics_frame
-	var random_position = Vector3(
-		randf_range(patrol_min_bounds.x, patrol_max_bounds.x),
-		patrol_min_bounds.y,
-		randf_range(patrol_min_bounds.z, patrol_max_bounds.z)
-	)
-	var map_rid = nav_region.get_navigation_map()
-	var nearest_point = NavigationServer3D.map_get_closest_point(map_rid, random_position)
-	return nearest_point
