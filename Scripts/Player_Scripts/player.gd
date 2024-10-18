@@ -1,9 +1,9 @@
 extends CharacterBody3D
 
 #exports
-@export var walking_speed = 5.0
+@export var walking_speed:float = 5.0
 @export var crouch_walk_speed = 2.5
-@export var jump_velocity = 4.5
+@export var jump_velocity:float = 4.5
 @export var player_height = 1.7
 
 @onready var camera = $Camera3D
@@ -14,20 +14,28 @@ extends CharacterBody3D
 #vars
 var b_is_crouching = false
 var current_move_speed = 5.0
-var mouse_sensitivity = 0.002
+var mouse_sensitivity:float:
+	get:
+		# Shifting the mouse sensitivity stored by 200 due to the low precision of the slider.
+		return OptionsManager.mouse_sensitivity / 200
+	set(value):
+		OptionsManager.Set_Mouse_Sensitivity(value * 200)
 var joystick_sensitivity = 2
 
-func _input(event):
+func _input(event) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
 		rotate_y(-event.relative.x * mouse_sensitivity)
 		camera.rotate_x(-event.relative.y * mouse_sensitivity)
 		camera.rotation.x = clampf(camera.rotation.x, -deg_to_rad(70), deg_to_rad(70))
 
-func _ready():
+func _ready() -> void:
 	raycast.target_position = Vector3(0, player_height, 0)
 	raycast.enabled = true
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	collision_shape.shape.height = player_height
+	
+	#Attempt to place the music player as a child of the palyer
+	AudioManager.attach_to_player()
 	
 
 func _physics_process(delta: float) -> void:
@@ -44,12 +52,12 @@ func _apply_gravity(delta: float):
 		velocity += get_gravity() * delta
 
 # Handle jump.
-func _jump():
+func _jump() -> void:
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = jump_velocity
 
 # Get the input direction and handle the movement/deceleration.
-func _handle_movement():
+func _handle_movement() -> void:
 	var input_dir := Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:

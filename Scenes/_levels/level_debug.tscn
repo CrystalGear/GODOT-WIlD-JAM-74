@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://c7ocvb2duj8e6"]
+[gd_scene load_steps=26 format=3 uid="uid://c7ocvb2duj8e6"]
 
 [ext_resource type="PackedScene" uid="uid://ia38iawogjd7" path="res://Scenes/default_environment.tscn" id="1_58fx7"]
 [ext_resource type="PackedScene" uid="uid://c15oa1883es0v" path="res://Scenes/blockout/blockout_level.tscn" id="2_fyn8b"]
@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://cayk0xcknxwwm" path="res://Scenes/Game Objects/mug_2.tscn" id="11_fcl2u"]
 [ext_resource type="PackedScene" uid="uid://bcgacy5fiavus" path="res://Scenes/Game Objects/plate.tscn" id="12_no03k"]
 [ext_resource type="PackedScene" uid="uid://rmrv1k73c0da" path="res://Scenes/Game Objects/pumpkin.tscn" id="13_6ylba"]
-[ext_resource type="PackedScene" path="res://Scenes/Game Objects/rug_1.tscn" id="14_1ew8d"]
+[ext_resource type="PackedScene" uid="uid://xdq3wo4mkd1b" path="res://Scenes/Game Objects/rug_1.tscn" id="14_1ew8d"]
 [ext_resource type="PackedScene" uid="uid://d2wg4783km05k" path="res://Scenes/Game Objects/rug_2.tscn" id="15_ba5qm"]
 [ext_resource type="PackedScene" uid="uid://c23vuaprb6n43" path="res://Scenes/Game Objects/screw_driver.tscn" id="16_1i2w4"]
 [ext_resource type="PackedScene" uid="uid://01lqrl4m4dia" path="res://Scenes/Game Objects/sink.tscn" id="17_xuuva"]
@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://dvaa6ypjd3u3t" path="res://Scenes/Game Objects/tool_hammer.tscn" id="22_g4667"]
 [ext_resource type="PackedScene" uid="uid://ddey0qc0s7ku7" path="res://Scenes/Game Objects/wine_bottle.tscn" id="23_krj8f"]
 [ext_resource type="PackedScene" uid="uid://f2vmqitmguct" path="res://Scenes/Game Objects/wrench.tscn" id="24_u6grm"]
+[ext_resource type="PackedScene" uid="uid://bbmqruprrgtxx" path="res://Scenes/ambient_generator.tscn" id="25_1b3p2"]
 
 [node name="LevelDebug" type="Node3D"]
 
@@ -34,7 +35,62 @@
 [node name="Player" parent="." instance=ExtResource("3_qsqcb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.12008, 2, -4.8602)
 
-[node name="Cabinet" parent="." instance=ExtResource("4_ey6o2")]
+[node name="Movable Objects" type="Node" parent="."]
+
+[node name="Wrench" parent="Movable Objects" instance=ExtResource("24_u6grm")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.31433, 2.11482, 0.683252)
+
+[node name="Small Bowl" parent="Movable Objects" instance=ExtResource("18_hujf7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 2.03546, -7.32445)
+
+[node name="Small Plate" parent="Movable Objects" instance=ExtResource("19_otx7b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.277983, 1.99095, -7.36726)
+
+[node name="Tire_Iron" parent="Movable Objects" instance=ExtResource("20_uvkku")]
+transform = Transform3D(1, 0, 0, 0, 5.96046e-08, 1, 0, -1, 5.96046e-08, -1.00513, 2.04157, 0.758977)
+
+[node name="Toilet" parent="Movable Objects" instance=ExtResource("21_dcsty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.25, 1, -7.25)
+
+[node name="Tool_Hammer" parent="Movable Objects" instance=ExtResource("22_g4667")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.53692, 2.06716, 0.61096)
+
+[node name="Wine Bottle" parent="Movable Objects" instance=ExtResource("23_krj8f")]
+transform = Transform3D(0.161087, 0, 0.98694, 0, 1, 0, -0.98694, 0, 0.161087, -0.251072, 2.1025, -7.7068)
+
+[node name="Wine Bottle2" parent="Movable Objects" instance=ExtResource("23_krj8f")]
+transform = Transform3D(0.992291, 0, -0.12393, 0, 1, 0, 0.12393, 0, 0.992291, -0.558215, 1.9769, -7.7068)
+
+[node name="Screw_Driver" parent="Movable Objects" instance=ExtResource("16_1i2w4")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.75, 2.1183, 0.75)
+
+[node name="Large Bowl" parent="Movable Objects" instance=ExtResource("9_0aqpu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.676291, 2.01053, -7.68749)
+
+[node name="Mug 1" parent="Movable Objects" instance=ExtResource("10_amf3u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.536803, 1.9769, -7.43811)
+
+[node name="Mug 2" parent="Movable Objects" instance=ExtResource("11_fcl2u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.173139, 1.9769, -7.46436)
+
+[node name="Plate" parent="Movable Objects" instance=ExtResource("12_no03k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 2, -7.75)
+
+[node name="Pumpkin" parent="Movable Objects" instance=ExtResource("13_6ylba")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.75, 2, -0.25)
+
+[node name="Pumpkin2" parent="Movable Objects" instance=ExtResource("13_6ylba")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.75, 2, 0.25)
+
+[node name="Jerry_Can" parent="Movable Objects" instance=ExtResource("6_uudng")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1787, 0.75)
+
+[node name="Kettle" parent="Movable Objects" instance=ExtResource("7_4mfj2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, -7.5)
+
+[node name="LevelObjects" type="Node" parent="."]
+
+[node name="Cabinet" parent="LevelObjects" instance=ExtResource("4_ey6o2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -7.5)
 axis_lock_linear_x = true
 axis_lock_linear_y = true
@@ -42,7 +98,7 @@ axis_lock_linear_z = true
 axis_lock_angular_x = true
 axis_lock_angular_z = true
 
-[node name="Cabinet2" parent="." instance=ExtResource("4_ey6o2")]
+[node name="Cabinet2" parent="LevelObjects" instance=ExtResource("4_ey6o2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.59873, 1, -7.5)
 axis_lock_linear_x = true
 axis_lock_linear_y = true
@@ -50,7 +106,7 @@ axis_lock_linear_z = true
 axis_lock_angular_x = true
 axis_lock_angular_z = true
 
-[node name="Cabinet3" parent="." instance=ExtResource("4_ey6o2")]
+[node name="Cabinet3" parent="LevelObjects" instance=ExtResource("4_ey6o2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.407488, 1, -7.5)
 axis_lock_linear_x = true
 axis_lock_linear_y = true
@@ -58,7 +114,7 @@ axis_lock_linear_z = true
 axis_lock_angular_x = true
 axis_lock_angular_z = true
 
-[node name="Cabinet4" parent="." instance=ExtResource("4_ey6o2")]
+[node name="Cabinet4" parent="LevelObjects" instance=ExtResource("4_ey6o2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.342512, 1, -7.5)
 axis_lock_linear_x = true
 axis_lock_linear_y = true
@@ -66,68 +122,22 @@ axis_lock_linear_z = true
 axis_lock_angular_x = true
 axis_lock_angular_z = true
 
-[node name="Bath" parent="." instance=ExtResource("5_bmix1")]
+[node name="Bath" parent="LevelObjects" instance=ExtResource("5_bmix1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, 1, -7)
 
-[node name="Jerry_Can" parent="." instance=ExtResource("6_uudng")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1787, 0.75)
-
-[node name="Kettle" parent="." instance=ExtResource("7_4mfj2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, -7.5)
-
-[node name="MicroWave" parent="." instance=ExtResource("8_jmcuh")]
+[node name="MicroWave" parent="LevelObjects" instance=ExtResource("8_jmcuh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 2, -7.5)
 
-[node name="Large Bowl" parent="." instance=ExtResource("9_0aqpu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.676291, 2.01053, -7.68749)
-
-[node name="Mug 1" parent="." instance=ExtResource("10_amf3u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.536803, 1.9769, -7.43811)
-
-[node name="Mug 2" parent="." instance=ExtResource("11_fcl2u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.173139, 1.9769, -7.46436)
-
-[node name="Plate" parent="." instance=ExtResource("12_no03k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 2, -7.75)
-
-[node name="Pumpkin" parent="." instance=ExtResource("13_6ylba")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.75, 2, -0.25)
-
-[node name="Pumpkin2" parent="." instance=ExtResource("13_6ylba")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.75, 2, 0.25)
-
-[node name="Rug1" parent="." instance=ExtResource("14_1ew8d")]
+[node name="Rug1" parent="LevelObjects" instance=ExtResource("14_1ew8d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, 1)
 
-[node name="Rug2" parent="." instance=ExtResource("15_ba5qm")]
+[node name="Rug2" parent="LevelObjects" instance=ExtResource("15_ba5qm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, -4)
 
-[node name="Screw_Driver" parent="." instance=ExtResource("16_1i2w4")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.75, 2.1183, 0.75)
-
-[node name="Sink" parent="." instance=ExtResource("17_xuuva")]
+[node name="Sink" parent="LevelObjects" instance=ExtResource("17_xuuva")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -27.839, 1, -5.10928)
 
-[node name="Small Bowl" parent="." instance=ExtResource("18_hujf7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 2.03546, -7.32445)
+[node name="Ambient Noise Generators" type="Node" parent="."]
 
-[node name="Small Plate" parent="." instance=ExtResource("19_otx7b")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.277983, 1.99095, -7.36726)
-
-[node name="Tire_Iron" parent="." instance=ExtResource("20_uvkku")]
-transform = Transform3D(1, 0, 0, 0, 5.96046e-08, 1, 0, -1, 5.96046e-08, -1.00513, 2.04157, 0.758977)
-
-[node name="Toilet" parent="." instance=ExtResource("21_dcsty")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.25, 1, -7.25)
-
-[node name="Tool_Hammer" parent="." instance=ExtResource("22_g4667")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.53692, 2.06716, 0.61096)
-
-[node name="Wine Bottle" parent="." instance=ExtResource("23_krj8f")]
-transform = Transform3D(0.161087, 0, 0.98694, 0, 1, 0, -0.98694, 0, 0.161087, -0.251072, 2.1025, -7.7068)
-
-[node name="Wine Bottle2" parent="." instance=ExtResource("23_krj8f")]
-transform = Transform3D(0.992291, 0, -0.12393, 0, 1, 0, 0.12393, 0, 0.992291, -0.558215, 1.9769, -7.7068)
-
-[node name="Wrench" parent="." instance=ExtResource("24_u6grm")]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -1.31433, 2.11482, 0.683252)
+[node name="AmbientGenerator" parent="Ambient Noise Generators" instance=ExtResource("25_1b3p2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.33298, 2, -4.8602)

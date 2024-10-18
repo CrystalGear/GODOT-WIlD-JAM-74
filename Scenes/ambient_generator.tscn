@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbmqruprrgtxx"]
+
+[ext_resource type="AudioStream" uid="uid://duitr68352nwy" path="res://Audio/AmbientSFX/ambient_sample.mp3" id="1_p18tf"]
+[ext_resource type="Script" path="res://Scripts/ambient_generator.gd" id="2_bgbx4"]
+
+[node name="AmbientGenerator" type="AudioStreamPlayer3D"]
+stream = ExtResource("1_p18tf")
+script = ExtResource("2_bgbx4")

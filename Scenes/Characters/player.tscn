@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dkbwkvi8f7mtw"]
+[gd_scene load_steps=7 format=3 uid="uid://dkbwkvi8f7mtw"]
 
 [ext_resource type="Script" path="res://Scripts/Player_Scripts/player.gd" id="1_xnuy8"]
+[ext_resource type="PackedScene" uid="uid://drw7vuij4qrl0" path="res://Scenes/UI/timer_canvas.tscn" id="2_dq00m"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gbg41"]
 radius = 0.4
@@ -60,3 +61,5 @@ libraries = {
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.523499, 0)
 keep_aspect = 0
+
+[node name="timer_canvas" parent="." instance=ExtResource("2_dq00m")]
