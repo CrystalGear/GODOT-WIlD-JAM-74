@@ -11,6 +11,15 @@ extends Node
 ##		
 ##		you can only hold one holdable item at once
 
+
+var player_node
+
+@export var drop_launch_force : float = 3
+
+
+func _ready() -> void:
+	$ShapeCast3D.target_position = $ItemSlotTransform.position
+
 var KeysQuantity : int
 var held_item : Item
 
@@ -24,7 +33,12 @@ func pick_up_car_part(item_to_pickup: Node3D) -> bool:
 		held_item = item_to_pickup
 		held_item.collision_layer = 0
 		held_item.collision_mask = 0
-		print("item conditions true")
+		
+		((held_item as Node3D) as RigidBody3D).freeze = true
+		held_item.reparent($ItemSlotTransform, true)
+		held_item.transform = $ItemSlotTransform.transform
+		held_item.set_physics_process(false)
+		
 		return true
 		
 	return false
@@ -37,14 +51,14 @@ func pick_up_tool(item_to_pickup: Node3D) -> bool:
 	#check if there is already an item held and if the item attempting to pickup is in correct group
 	if $ItemSlotTransform.get_child_count() == 0 and item_to_pickup is Tool :
 		held_item = item_to_pickup
-		#held_item.collision_layer = 0
-		#held_item.collision_mask = 0
-		
+		held_item.collision_layer = 0
+		held_item.collision_mask = 0
 		
 		((held_item as Node3D) as RigidBody3D).freeze = true
 		held_item.reparent($ItemSlotTransform, true)
 		held_item.transform = $ItemSlotTransform.transform
 		held_item.set_physics_process(false)
+		
 		
 		return true
 		
@@ -78,8 +92,16 @@ func carry(player: Player):
 
 func drop():
 	if held_item != null:
+		
+		held_item.collision_layer = 2
+		held_item.collision_mask = 1
+		held_item.global_position = player_node.camera.global_position
 		held_item.reparent(get_tree().current_scene, true)
 		((held_item as Node3D) as RigidBody3D).freeze = false
 		held_item.set_physics_process(true)
+		held_item.apply_impulse(-player_node.camera.global_transform.basis[2]*held_item.mass*drop_launch_force)
 		print("dropped item")
 		held_item = null
+	
+	
+	

@@ -22,6 +22,7 @@ _surfaces = [{
 }]
 
 [node name="Wrench" type="RigidBody3D"]
+collision_layer = 2
 physics_material_override = ExtResource("1_ck5mf")
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, 0.1, 0)

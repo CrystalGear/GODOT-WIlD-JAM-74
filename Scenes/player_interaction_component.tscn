@@ -7,7 +7,7 @@
 length = 2.3
 
 [node name="PlayerInteractionComponent" type="Area3D"]
-collision_layer = 65535
+collision_mask = 3
 script = ExtResource("1_eu14b")
 
 [node name="InventoryComponent" parent="." instance=ExtResource("2_sd2mq")]

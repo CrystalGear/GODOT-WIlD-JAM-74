@@ -1,8 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://dao1xvie718m1"]
+[gd_scene load_steps=3 format=3 uid="uid://dao1xvie718m1"]
 
 [ext_resource type="Script" path="res://Scripts/inventory_component.gd" id="1_wg4ur"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_7avjm"]
 
 [node name="InventoryComponent" type="Node3D"]
 script = ExtResource("1_wg4ur")
 
 [node name="ItemSlotTransform" type="Node3D" parent="."]
+
+[node name="ShapeCast3D" type="ShapeCast3D" parent="."]
+shape = SubResource("SphereShape3D_7avjm")
+margin = 0.05

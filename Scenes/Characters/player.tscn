@@ -46,6 +46,7 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody3D"]
+collision_layer = 0
 script = ExtResource("1_xnuy8")
 pull = 15
 

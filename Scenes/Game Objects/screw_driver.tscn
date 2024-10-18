@@ -23,7 +23,7 @@ _surfaces = [{
 }]
 
 [node name="Screw_Driver" type="RigidBody3D"]
-mass = 193.068
+collision_layer = 2
 physics_material_override = ExtResource("1_i1cd4")
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, 0.13, 0)

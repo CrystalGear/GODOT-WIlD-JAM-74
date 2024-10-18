@@ -42,7 +42,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	interact_with_object()
 	drop_held_object()
-	#interaction_component.InventoryComponent.carry(self)
+	interaction_component.InventoryComponent.player_node = self
 	
 
 # Add the gravity.
