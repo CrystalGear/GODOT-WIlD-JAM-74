@@ -14,11 +14,9 @@ extends Node
 
 var player_node
 
-@export var drop_launch_force : float = 3
+@export var drop_launch_force : float = 5
+@export var throw_launch_force : float = 20
 
-
-func _ready() -> void:
-	$ShapeCast3D.target_position = $ItemSlotTransform.position
 
 var KeysQuantity : int
 var held_item : Item
@@ -38,7 +36,6 @@ func pick_up_car_part(item_to_pickup: Node3D) -> bool:
 		held_item.reparent($ItemSlotTransform, true)
 		held_item.transform = $ItemSlotTransform.transform
 		held_item.set_physics_process(false)
-		
 		return true
 		
 	return false
@@ -58,8 +55,6 @@ func pick_up_tool(item_to_pickup: Node3D) -> bool:
 		held_item.reparent($ItemSlotTransform, true)
 		held_item.transform = $ItemSlotTransform.transform
 		held_item.set_physics_process(false)
-		
-		
 		return true
 		
 	return false
@@ -67,40 +62,50 @@ func pick_up_tool(item_to_pickup: Node3D) -> bool:
 func pick_up_key() -> void:
 	KeysQuantity += 1
 
-func throw_held_item(throwing_power: float) -> void:
-	pass
-
-func carry(player: Player):
-	var player_node = player
+func throw_held_item() -> void:
 	if held_item != null:
-		
-		return
-		var start = held_item.global_transform.origin
-		var hand_pos = $ItemSlotTransform.global_transform.origin
-		var new_velocity = (hand_pos-start) * player_node.pull
-		var smooth_velocity = lerp(held_item.linear_velocity, new_velocity, 0.3)
-		held_item.set_linear_velocity(smooth_velocity)
-		held_item.global_transform.basis = player.camera.global_transform.basis
-		 
-		##Get the player node (does not work in ready or @onready) check distance to picked object and drop if too far away.
-		if player_node != null:
-			var player_pos = player_node.global_transform.origin
-			var max_distance = 4.5
-			var distance_to_player = start.distance_to(player_pos)
-			if distance_to_player > max_distance:
-				drop()
-
-func drop():
-	if held_item != null:
-		
+		#add collision back to item
 		held_item.collision_layer = 2
 		held_item.collision_mask = 1
+		
+		#move the item to the camera position to prevent throwing out of bounds
 		held_item.global_position = player_node.camera.global_position
+		
+		#reparent to the tree so its not attached to the player anymore
 		held_item.reparent(get_tree().current_scene, true)
+		
+		#turn physics sim back on
 		((held_item as Node3D) as RigidBody3D).freeze = false
 		held_item.set_physics_process(true)
-		held_item.apply_impulse(-player_node.camera.global_transform.basis[2]*held_item.mass*drop_launch_force)
-		print("dropped item")
+		
+		#throw
+		held_item.apply_impulse(-player_node.camera.global_transform.basis[2]*(held_item.mass*throw_launch_force))
+		
+		#clear the held item variable
+		held_item = null
+
+
+
+func drop_held_item():
+	if held_item != null:
+		#add collision back to item
+		held_item.collision_layer = 2
+		held_item.collision_mask = 1
+		
+		#move the item to the camera position to prevent throwing out of bounds
+		held_item.global_position = player_node.camera.global_position
+		
+		#reparent to the tree so its not attached to the player anymore
+		held_item.reparent(get_tree().current_scene, true)
+		
+		#turn physics sim back on
+		((held_item as Node3D) as RigidBody3D).freeze = false
+		held_item.set_physics_process(true)
+		
+		#throw
+		held_item.apply_impulse(-player_node.camera.global_transform.basis[2]*(held_item.mass*drop_launch_force))
+		
+		#clear the held item variable
 		held_item = null
 	
 	

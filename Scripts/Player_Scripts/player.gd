@@ -42,6 +42,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	interact_with_object()
 	drop_held_object()
+	throw_held_object()
 	interaction_component.InventoryComponent.player_node = self
 	
 
@@ -86,10 +87,13 @@ func crouch():
 			
 func interact_with_object():
 	if Input.is_action_just_pressed("primary_action"):
-		print("primary action used")
 		interaction_component.interact_with_item()
 
 func drop_held_object():
 	if Input.is_action_just_pressed("secondary_action"):
 		interaction_component.drop_item()
+		
+func throw_held_object():
+	if Input.is_action_just_pressed("throw"):
+		interaction_component.throw_item()
 	

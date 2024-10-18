@@ -27,6 +27,9 @@ _surfaces = [{
 [node name="Jerry_Can" type="RigidBody3D"]
 mass = 3.5
 physics_material_override = SubResource("PhysicsMaterial_dgcg2")
+continuous_cd = true
+contact_monitor = true
+max_contacts_reported = 10
 script = ExtResource("1_gxube")
 
 [node name="Jerry_Can" type="MeshInstance3D" parent="."]
@@ -37,5 +40,6 @@ surface_material_override/0 = ExtResource("2_qu0ga")
 shape = SubResource("ConvexPolygonShape3D_6rtje")
 
 [node name="Outline" type="MeshInstance3D" parent="."]
+visible = false
 mesh = SubResource("ArrayMesh_j0tin")
 skeleton = NodePath("../Jerry_Can")

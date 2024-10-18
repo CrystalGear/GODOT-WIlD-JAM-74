@@ -41,4 +41,7 @@ func interact_with_item() -> void:
 		_pick_up_item()
 		
 func drop_item():
-	InventoryComponent.drop()
+	InventoryComponent.drop_held_item()
+
+func throw_item():
+	InventoryComponent.throw_held_item()

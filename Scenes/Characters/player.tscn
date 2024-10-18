@@ -68,7 +68,7 @@ keep_aspect = 0
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="ItemSlotTransform" parent="Camera3D/PlayerInteractionComponent/InventoryComponent" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9006e-07, -0.361538, 1.03635)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.127626, -0.137938, 0.476709)
 
 [editable path="Camera3D/PlayerInteractionComponent"]
 [editable path="Camera3D/PlayerInteractionComponent/InventoryComponent"]

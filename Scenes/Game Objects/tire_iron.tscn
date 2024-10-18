@@ -29,6 +29,7 @@ collision_layer = 2
 physics_material_override = ExtResource("1_f3jk7")
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, 0.25, 0)
+continuous_cd = true
 contact_monitor = true
 max_contacts_reported = 10
 linear_damp = 0.1

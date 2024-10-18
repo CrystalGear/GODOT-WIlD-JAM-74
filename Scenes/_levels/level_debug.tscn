@@ -34,9 +34,6 @@
 [node name="Player" parent="." instance=ExtResource("3_qsqcb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.22312, 2, -4.84741)
 
-[node name="ItemSlotTransform" parent="Player/Camera3D/PlayerInteractionComponent/InventoryComponent" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.14, 0.594)
-
 [node name="Cabinet" parent="." instance=ExtResource("4_ey6o2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -7.5)
 axis_lock_linear_x = true
