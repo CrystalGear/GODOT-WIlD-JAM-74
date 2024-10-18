@@ -1,3 +1,159 @@
-[gd_scene format=3 uid="uid://c25twsyjp0yy1"]
+[gd_scene load_steps=4 format=3 uid="uid://c25twsyjp0yy1"]
 
-[node name="OptionsMenu" type="Node2D"]
+[ext_resource type="Script" path="res://Scripts/options_menu.gd" id="1_yqx1b"]
+[ext_resource type="Texture2D" uid="uid://djqy2ihnt8sf4" path="res://Images/Textures/Tools/Hammer_standardSurface1_BaseMap.png" id="2_7qypm"]
+[ext_resource type="Theme" uid="uid://duemvjths1y6w" path="res://Themes/menu_theme.tres" id="3_ahr2r"]
+
+[node name="OptionsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yqx1b")
+
+[node name="BackgroundArt" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_7qypm")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Options Backing" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 564.0
+offset_top = 226.0
+offset_right = -564.0
+offset_bottom = -226.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0980392, 0.0980392, 0.0980392, 0.341176)
+
+[node name="MasterVolumeLabel" type="Label" parent="Options Backing"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -351.0
+offset_top = -286.0
+offset_right = -43.0
+offset_bottom = -228.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_ahr2r")
+text = "Master Volume"
+horizontal_alignment = 2
+
+[node name="HSlider" type="HSlider" parent="Options Backing/MasterVolumeLabel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 382.0
+offset_right = 382.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 1.0
+step = 0.001
+
+[node name="MusicVolumeLabel" type="Label" parent="Options Backing"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -351.0
+offset_top = -156.0
+offset_right = -43.0
+offset_bottom = -98.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_ahr2r")
+text = "Music 
+Volume"
+horizontal_alignment = 2
+
+[node name="HSlider" type="HSlider" parent="Options Backing/MusicVolumeLabel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 382.0
+offset_right = 382.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 1.0
+step = 0.001
+
+[node name="SFXVolumeLabel" type="Label" parent="Options Backing"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -351.0
+offset_top = -29.0
+offset_right = -43.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_ahr2r")
+text = "SFX Volume"
+horizontal_alignment = 2
+
+[node name="HSlider" type="HSlider" parent="Options Backing/SFXVolumeLabel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 382.0
+offset_right = 382.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 1.0
+step = 0.001
+
+[node name="MouseSensitivityLabel" type="Label" parent="Options Backing"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -351.0
+offset_top = 214.0
+offset_right = -43.0
+offset_bottom = 272.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_ahr2r")
+text = "Master Volume"
+horizontal_alignment = 2
+
+[node name="HSlider" type="HSlider" parent="Options Backing/MouseSensitivityLabel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 382.0
+offset_right = 382.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 0.5
+step = 0.0
