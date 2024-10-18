@@ -24,6 +24,7 @@ func _ready():
 		call_deferred("patrol")
 
 func _process(delta):
+	_check_collisions()
 	# Handles state transitions and updates behavior based on the current state.
 	# debug_mode: disables detection of player and increases speed to allow observation of random pathing.
 	if debug_mode:
@@ -97,3 +98,21 @@ func get_random_patrol_point() -> Vector3:
 	var map_rid = nav_region.get_navigation_map()
 	var nearest_point = NavigationServer3D.map_get_closest_point(map_rid, random_position)
 	return nearest_point
+
+func _check_collisions():
+	var overlaps = $VisionArea.get_overlapping_bodies()
+	if overlaps.size() > 0:
+		for overlap in overlaps:
+			if overlap.name == "Player":
+				var playerPosition = overlap.global_transform.origin
+				$VisionRaycast.force_raycast_update()
+
+				if $VisionRaycast.is_colliding():
+					var collider = $VisionRaycast.get_collider()
+
+					if collider.name == "Player":
+						$VisionRaycast.debug_shape_custom_color = Color(174,0,0)
+						print ("I SEE YOU")
+					else:
+						$VisionRaycast.debug_shape_custom_color = Color(0, 255,0)
+						print ("I DONT SEE YOU")
