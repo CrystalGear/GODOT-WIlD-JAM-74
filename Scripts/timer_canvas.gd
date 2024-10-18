@@ -2,23 +2,24 @@ extends CanvasLayer
 
 @onready var timer_text: Label = $timer_text
 @export var time_limit: float = 120.0
-var timer: float
+var time_remaining: float
 var continueCountdown: bool = true
 
 # Sets the value of timer to be equal to time_limit on start.
 func _ready() -> void:
-	timer = time_limit
+	time_remaining = time_limit
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if (continueCountdown):
-		timer -= delta
-		timer_text.text = str(timer)
+	if (not continueCountdown): return
 		
-		if (timer <= 0):
-			timer = 0
-			continueCountdown = false
+	time_remaining -= delta
+	timer_text.text = str(time_remaining)
+		
+	if (time_remaining <= 0):
+		time_remaining = 0
+		continueCountdown = false
 
 # Returns a float indicating how long remains on the timer.
 func return_normalized_time_remaining() -> float:
-	return clamp(timer / time_limit, 0 ,1)
+	return clamp(time_remaining / time_limit, 0 ,1)
