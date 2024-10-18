@@ -5,7 +5,7 @@
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_xjvjf"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1ty2j"]
-radius = 0.2
+radius = 0.1
 height = 1.5
 
 [node name="Enemy" type="CharacterBody3D"]
