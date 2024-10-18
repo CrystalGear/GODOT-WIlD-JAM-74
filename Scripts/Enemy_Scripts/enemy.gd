@@ -7,8 +7,8 @@ enum EnemyState { PATROL, CHASE }
 @export var chase_speed: float = 3.0
 @export var detection_radius: float = 10.0
 
-@export var patrol_min_bounds: Vector3 = Vector3(-10, 0, -10)
-@export var patrol_max_bounds: Vector3 = Vector3(10, 0, 10)
+@export var patrol_min_bounds: Vector3 = Vector3(-1000, 0, -1000)
+@export var patrol_max_bounds: Vector3 = Vector3(1000, 0, 1000)
 
 var player: CharacterBody3D = null
 var state: EnemyState = EnemyState.PATROL
