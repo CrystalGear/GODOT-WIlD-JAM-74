@@ -5,9 +5,10 @@ extends CharacterBody3D
 @export var jump_velocity:float = 4.5
 var mouse_sensitivity:float:
 	get:
-		return OptionsManager.mouse_sensitivity
+		# Shifting the mouse sensitivity stored by 200 due to the low precision of the slider.
+		return OptionsManager.mouse_sensitivity / 200
 	set(value):
-		OptionsManager.Set_Mouse_Sensitivity(value)
+		OptionsManager.Set_Mouse_Sensitivity(value * 200)
 
 func _input(event) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:

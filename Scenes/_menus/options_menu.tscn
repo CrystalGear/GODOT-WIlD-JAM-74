@@ -24,9 +24,20 @@ texture = ExtResource("2_7qypm")
 expand_mode = 1
 
 [node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -190.0
+offset_top = -118.0
+offset_right = -85.0
+offset_bottom = -52.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("3_ahr2r")
+text = "Back"
 
 [node name="Options Backing" type="ColorRect" parent="."]
 layout_mode = 1
@@ -58,7 +69,7 @@ theme = ExtResource("3_ahr2r")
 text = "Master Volume"
 horizontal_alignment = 2
 
-[node name="HSlider" type="HSlider" parent="Options Backing/MasterVolumeLabel"]
+[node name="MasterVolumeSlider" type="HSlider" parent="Options Backing/MasterVolumeLabel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -69,6 +80,17 @@ grow_horizontal = 2
 grow_vertical = 2
 max_value = 1.0
 step = 0.001
+
+[node name="Info" type="Label" parent="Options Backing/MasterVolumeLabel"]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 47.0
+offset_right = 495.0
+offset_bottom = 105.0
+theme = ExtResource("3_ahr2r")
+theme_override_colors/font_color = Color(0.515867, 0.515867, 0.515867, 1)
+theme_override_font_sizes/font_size = 22
+text = "Modifier for all sound channels"
 
 [node name="MusicVolumeLabel" type="Label" parent="Options Backing"]
 layout_mode = 1
@@ -84,11 +106,10 @@ offset_bottom = -98.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_ahr2r")
-text = "Music 
-Volume"
+text = "Music Volume"
 horizontal_alignment = 2
 
-[node name="HSlider" type="HSlider" parent="Options Backing/MusicVolumeLabel"]
+[node name="MusicVolumeSlider" type="HSlider" parent="Options Backing/MusicVolumeLabel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -99,6 +120,17 @@ grow_horizontal = 2
 grow_vertical = 2
 max_value = 1.0
 step = 0.001
+
+[node name="Info2" type="Label" parent="Options Backing/MusicVolumeLabel/MusicVolumeSlider"]
+layout_mode = 0
+offset_left = -217.0
+offset_top = 52.0
+offset_right = 113.0
+offset_bottom = 110.0
+theme = ExtResource("3_ahr2r")
+theme_override_colors/font_color = Color(0.515867, 0.515867, 0.515867, 1)
+theme_override_font_sizes/font_size = 22
+text = "Modifier for background music"
 
 [node name="SFXVolumeLabel" type="Label" parent="Options Backing"]
 layout_mode = 1
@@ -108,16 +140,16 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -351.0
-offset_top = -29.0
+offset_top = -42.0
 offset_right = -43.0
-offset_bottom = 29.0
+offset_bottom = 16.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_ahr2r")
 text = "SFX Volume"
 horizontal_alignment = 2
 
-[node name="HSlider" type="HSlider" parent="Options Backing/SFXVolumeLabel"]
+[node name="SFXVolumeSlider" type="HSlider" parent="Options Backing/SFXVolumeLabel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -129,7 +161,18 @@ grow_vertical = 2
 max_value = 1.0
 step = 0.001
 
-[node name="MouseSensitivityLabel" type="Label" parent="Options Backing"]
+[node name="Info2" type="Label" parent="Options Backing/SFXVolumeLabel/SFXVolumeSlider"]
+layout_mode = 0
+offset_left = -217.0
+offset_top = 46.0
+offset_right = 113.0
+offset_bottom = 104.0
+theme = ExtResource("3_ahr2r")
+theme_override_colors/font_color = Color(0.515867, 0.515867, 0.515867, 1)
+theme_override_font_sizes/font_size = 22
+text = "Modifier for sound effects"
+
+[node name="AmbientVolumeLabel" type="Label" parent="Options Backing"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -137,16 +180,16 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -351.0
-offset_top = 214.0
+offset_top = 53.0
 offset_right = -43.0
-offset_bottom = 272.0
+offset_bottom = 111.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_ahr2r")
-text = "Master Volume"
+text = "Ambient Volume"
 horizontal_alignment = 2
 
-[node name="HSlider" type="HSlider" parent="Options Backing/MouseSensitivityLabel"]
+[node name="AmbientVolumeSlider" type="HSlider" parent="Options Backing/AmbientVolumeLabel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -155,5 +198,63 @@ offset_left = 382.0
 offset_right = 382.0
 grow_horizontal = 2
 grow_vertical = 2
-max_value = 0.5
-step = 0.0
+max_value = 1.0
+step = 0.001
+
+[node name="Info2" type="Label" parent="Options Backing/AmbientVolumeLabel/AmbientVolumeSlider"]
+layout_mode = 0
+offset_left = -201.5
+offset_top = 49.0
+offset_right = 128.5
+offset_bottom = 107.0
+theme = ExtResource("3_ahr2r")
+theme_override_colors/font_color = Color(0.515867, 0.515867, 0.515867, 1)
+theme_override_font_sizes/font_size = 22
+text = "Modifier for all environmental sound effects"
+
+[node name="MouseSensitivityLabel" type="Label" parent="Options Backing"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -355.0
+offset_top = 214.0
+offset_right = -38.0
+offset_bottom = 272.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_ahr2r")
+text = "Look Sensitivity"
+horizontal_alignment = 2
+
+[node name="LookSensitivitySlider" type="HSlider" parent="Options Backing/MouseSensitivityLabel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 382.0
+offset_right = 382.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 0.1
+step = 0.001
+
+[node name="Info2" type="Label" parent="Options Backing/MouseSensitivityLabel/LookSensitivitySlider"]
+layout_mode = 0
+offset_left = -213.0
+offset_top = 51.0
+offset_right = 117.0
+offset_bottom = 109.0
+theme = ExtResource("3_ahr2r")
+theme_override_colors/font_color = Color(0.515867, 0.515867, 0.515867, 1)
+theme_override_font_sizes/font_size = 22
+text = "How the player can turn"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="value_changed" from="Options Backing/MasterVolumeLabel/MasterVolumeSlider" to="." method="_on_master_volume_slider_value_changed"]
+[connection signal="value_changed" from="Options Backing/MusicVolumeLabel/MusicVolumeSlider" to="." method="_on_music_volume_slider_value_changed"]
+[connection signal="value_changed" from="Options Backing/SFXVolumeLabel/SFXVolumeSlider" to="." method="_on_sfx_volume_slider_value_changed"]
+[connection signal="value_changed" from="Options Backing/AmbientVolumeLabel/AmbientVolumeSlider" to="." method="_on_ambient_volume_slider_value_changed"]
+[connection signal="value_changed" from="Options Backing/MouseSensitivityLabel/LookSensitivitySlider" to="." method="_on_look_sensitivity_slider_value_changed"]
