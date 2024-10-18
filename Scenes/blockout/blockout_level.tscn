@@ -25,13 +25,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.37306, 1.99077, 6.91264)
 
 [node name="Enemy" parent="." instance=ExtResource("2_8dan7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.11245, 2.05906, 7.09449)
-speed = 3.0
-patrol_speed = 1.5
-chase_speed = 3.0
-detection_radius = 10.0
-debug_mode = false
-patrol_min_bounds = Vector3(-50, 0, -15)
-patrol_max_bounds = Vector3(10, 0, 20)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_1jiqe")
