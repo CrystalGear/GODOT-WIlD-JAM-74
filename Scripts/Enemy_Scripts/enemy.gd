@@ -6,9 +6,10 @@ enum EnemyState { PATROL, CHASE }
 @export var patrol_speed: float = 1.5
 @export var chase_speed: float = 3.0
 @export var detection_radius: float = 10.0
+@export var debug_mode: bool = false
 
-@export var patrol_min_bounds: Vector3 = Vector3(-1000, 0, -1000)
-@export var patrol_max_bounds: Vector3 = Vector3(1000, 0, 1000)
+@export var patrol_min_bounds: Vector3 = Vector3(-50, 0, -15)
+@export var patrol_max_bounds: Vector3 = Vector3(10, 0, 20)
 
 var player: CharacterBody3D = null
 var state: EnemyState = EnemyState.PATROL
@@ -24,12 +25,21 @@ func _ready():
 
 func _process(delta):
 	# Handles state transitions and updates behavior based on the current state.
-	match state:
-		EnemyState.PATROL:
-			patrol_behavior()
-		EnemyState.CHASE:
-			chase_behavior()
-	check_for_player()
+	# debug_mode: disables detection of player and increases speed to allow observation of random pathing.
+	if debug_mode:
+		patrol_speed = 10
+		speed = patrol_speed
+		print(transform.origin)
+		match state:
+			EnemyState.PATROL:
+				patrol_behavior()
+	else:
+		match state:
+			EnemyState.PATROL:
+				patrol_behavior()
+			EnemyState.CHASE:
+				chase_behavior()
+		check_for_player()
 
 func patrol():
 	# Sets a random patrol point for the enemy to move towards.
