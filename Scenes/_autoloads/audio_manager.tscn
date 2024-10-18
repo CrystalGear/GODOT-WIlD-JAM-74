@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://bjmhmos3r0i82"]
+[gd_scene load_steps=3 format=3 uid="uid://bjmhmos3r0i82"]
 
 [ext_resource type="Script" path="res://Scripts/AutoLoads/audio_manager.gd" id="1_clk6r"]
+[ext_resource type="AudioStream" uid="uid://c15jgq1abgne0" path="res://Audio/Music/placeholder_music.mp3" id="2_6vrqg"]
 
 [node name="AudioManager" type="Node"]
 script = ExtResource("1_clk6r")
+ambient_music = ExtResource("2_6vrqg")
+
+[node name="Music Player" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_6vrqg")
+autoplay = true

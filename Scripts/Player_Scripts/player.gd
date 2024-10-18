@@ -19,6 +19,9 @@ func _input(event) -> void:
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
+	#Attempt to place the music player as a child of the palyer
+	AudioManager.attach_to_player()
+	
 
 func _physics_process(delta: float) -> void:
 	_apply_gravity(delta)
