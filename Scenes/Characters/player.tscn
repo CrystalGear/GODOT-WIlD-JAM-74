@@ -13,3 +13,11 @@ shape = SubResource("CylinderShape3D_udcbu")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.677103, 0)
+
+[node name="FlashlightHand" type="Node3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26002, -0.267397, -0.188811)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Camera3D/FlashlightHand"]
+light_color = Color(0.983455, 0.830219, 0.434699, 1)
+spot_range = 41.9366
+spot_angle = 44.6278

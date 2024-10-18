@@ -3,6 +3,12 @@ extends CharacterBody3D
 
 @export var speed = 5.0
 @export var jump_velocity = 4.5
+
+@export var flash_light_on = false
+@export var light_charge = 100
+@export var light_fade_threshold = 40
+@onready var flash_light: SpotLight3D = $Camera3D/FlashlightHand/SpotLight3D
+
 var mouse_sensitivity = 0.002
 
 func _input(event):
@@ -13,13 +19,47 @@ func _input(event):
 		
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	
 
 func _physics_process(delta: float) -> void:
 	_apply_gravity(delta)
 	_jump()
 	_handle_movement()
 	move_and_slide()
+	
+	# Sticking flashlight code here for now
+	# Stops charging down once charge is at 0
+	if (light_charge > 0 && flash_light_on == true):
+		light_charge -= (delta * 1.5)
+	
+	# Checks if light charge is under the fading threshold, default 40%
+	# then starts fading the flashlight
+	if (flash_light_on == true):
+		if (light_charge < light_fade_threshold):
+			if(light_charge < 0):
+				light_charge = 0
+			flash_light.light_energy = (light_charge / light_fade_threshold)
+		else:
+			flash_light.light_energy = 1
+	else:
+		flash_light.light_energy = 0
+	
+	if (Input.is_action_just_pressed("right_click")):
+		_flash_light_toggle()
+
+func _flash_light_toggle():
+	if (flash_light_on == true):
+		flash_light_on = false
+		print("Flashlight Off")
+	else:
+		flash_light_on = true
+		print("Flashlight On")
+
+func _flash_light_charge(new_charge: float) -> void:
+	if (new_charge > 100):
+		new_charge = 100
+	elif (new_charge < 0):
+		new_charge = 0
+	light_charge = new_charge
 
 # Add the gravity.
 func _apply_gravity(delta: float):
