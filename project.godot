@@ -22,7 +22,7 @@ AudioManager="*res://Scripts/AutoLoads/audio_manager.gd"
 GameManager="*res://Scripts/AutoLoads/game_manager.gd"
 LevelManager="*res://Scripts/AutoLoads/level_manager.gd"
 OptionsManager="*res://Scripts/AutoLoads/options_manager.gd"
-DebugMenu="*res://addons/debug_menu/debug_menu.tscn"
+DebugMenu="*res://Audio/Music/addons/debug_menu/debug_menu.tscn"
 
 [display]
 
@@ -35,7 +35,7 @@ project/assembly_name="GodotTemplate"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/debug_menu/plugin.cfg")
+enabled=PackedStringArray()
 
 [global_group]
 
@@ -149,3 +149,7 @@ crouch={
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":7,"pressure":0.0,"pressed":true,"script":null)
 ]
 }
+
+[physics]
+
+3d/physics_engine="JoltPhysics3D"
