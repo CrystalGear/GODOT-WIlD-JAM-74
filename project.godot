@@ -18,11 +18,11 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-AudioManager="*res://Scripts/AutoLoads/audio_manager.gd"
 GameManager="*res://Scripts/AutoLoads/game_manager.gd"
 LevelManager="*res://Scripts/AutoLoads/level_manager.gd"
-OptionsManager="*res://Scripts/AutoLoads/options_manager.gd"
 DebugMenu="*res://addons/debug_menu/debug_menu.tscn"
+OptionsManager="*res://Scenes/_autoloads/options_manager.tscn"
+AudioManager="*res://Scenes/_autoloads/audio_manager.tscn"
 
 [display]
 
