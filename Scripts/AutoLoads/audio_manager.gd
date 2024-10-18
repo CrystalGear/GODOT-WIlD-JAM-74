@@ -4,7 +4,7 @@ extends Node
 
 # Configurations
 @export var ambient_music: AudioStream
-@export var ambient_check_interval = 5.0  # Time in seconds between attempting to play ambient sound
+@export var ambient_check_interval = 5  # Time in seconds between attempting to play ambient sound
 @export_range(0.01, 1) var min_ambient_play_chance = 0.05
 @export_range(0.01, 1) var max_ambient_play_chance = 0.5
 
@@ -13,6 +13,7 @@ var main_camera: Camera3D
 
 # Runtime variables
 var audio_players: Array[AudioStreamPlayer3D] = []
+var game_timer: CanvasLayer
 
 func _ready():
 	setup_timer()
@@ -30,16 +31,30 @@ func setup_timer() -> void:
 	
 func register_audio_player(player: AudioStreamPlayer3D) -> void:
 	audio_players.append(player)
+	
+	# We search for this on audio player registration as that happens at start of level, it forces it to be reset if the timer has been destroyed
+	var game_timers = get_tree().get_nodes_in_group("gameTimer")
+	if game_timers.is_empty():
+		game_timer = null
+	else:
+		game_timer = game_timers[0]
 
 func play_random_ambience():
 	# Calculate the current chance based on the timer
-	# TODO read this from the timer, but need to merge first
-	# var current_chance = lerp(min_ambient_play_chance, max_ambient_play_chance, normalized_timer_remaining)
-	var current_chance = (min_ambient_play_chance + max_ambient_play_chance) / 2	# Temporary fix
-
+	
+	var current_chance: float = 0
+	
+	if game_timer == null:
+		current_chance = (min_ambient_play_chance + max_ambient_play_chance) / 2
+	else:
+		current_chance = lerp(
+			max_ambient_play_chance,
+			min_ambient_play_chance,
+			game_timer.return_normalized_time_remaining())
+		
 	# Generate a random number between 0 and 1
 	var rand_chance = randf()
-
+	
 	# Check if the random number is less than the current chance to play, exit early if not.
 	if rand_chance > current_chance:
 		return
