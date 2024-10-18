@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://blnnbmexf5lhr"]
+[gd_scene load_steps=8 format=3 uid="uid://blnnbmexf5lhr"]
 
 [ext_resource type="Script" path="res://Scripts/Enemy_Scripts/enemy.gd" id="1_rxut0"]
 [ext_resource type="PackedScene" uid="uid://tt2ai5880nap" path="res://Scenes/vision_area.tscn" id="2_kwo7c"]
@@ -10,7 +10,14 @@ radius = 0.1
 height = 1.5
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_k1s2x"]
-points = PackedVector3Array(0, 0, 0, 1, 0, 15, 0.707, 0.707, 15, 0, 1, 15, -0.707, 0.707, 15, -1, 0, 15, -0.707, -0.707, 15, 0, -1, -15, 0.707, -0.707, 15, 0, -1, 15)
+points = PackedVector3Array(0, 0, 0, 5, 0, 15, 3.535, 3.535, 15, 0, 5, 15, -3.535, 3.535, 15, -5, 0, 15, -3.535, -3.535, 15, 0, -5, -15, 3.535, -3.535, 15, 0, -5, 15)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vbaap"]
+albedo_color = Color(1, 0, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ynd2p"]
+material = SubResource("StandardMaterial3D_vbaap")
+size = Vector3(0.4, 0.4, 0.4)
 
 [node name="Enemy" type="CharacterBody3D"]
 script = ExtResource("1_rxut0")
@@ -27,7 +34,7 @@ shape = SubResource("CapsuleShape3D_1ty2j")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.793086, 10.4424)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="VisionArea"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.389619, 4.38652)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.65665, 4.38652)
 shape = SubResource("ConvexPolygonShape3D_k1s2x")
 
 [node name="VisionRaycast" type="RayCast3D" parent="."]
@@ -35,3 +42,7 @@ target_position = Vector3(0, 0, 100)
 collision_mask = 3
 debug_shape_custom_color = Color(1, 0, 0, 1)
 debug_shape_thickness = 5
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.546551, 0.499467)
+mesh = SubResource("BoxMesh_ynd2p")

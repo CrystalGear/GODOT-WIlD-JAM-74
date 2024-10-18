@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-enum EnemyState { PATROL, CHASE }
+enum EnemyState { PATROL, CHASE, SEARCH }
 
 @export var speed: float = 3.0
 @export var patrol_speed: float = 1.5
@@ -13,6 +13,7 @@ enum EnemyState { PATROL, CHASE }
 
 var player: CharacterBody3D = null
 var state: EnemyState = EnemyState.PATROL
+var b_can_see_player: bool = false
 
 @onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
 @onready var nav_region: NavigationRegion3D = get_node("../NavigationRegion3D")
@@ -23,8 +24,7 @@ func _ready():
 	if player:
 		call_deferred("patrol")
 
-func _process(delta):
-	_check_collisions()
+func handle_debug_mode():
 	# Handles state transitions and updates behavior based on the current state.
 	# debug_mode: disables detection of player and increases speed to allow observation of random pathing.
 	if debug_mode:
@@ -40,7 +40,20 @@ func _process(delta):
 				patrol_behavior()
 			EnemyState.CHASE:
 				chase_behavior()
-		check_for_player()
+			EnemyState.SEARCH:
+				search_behavior()
+		#check_for_player()
+		if b_can_see_player:
+			state = EnemyState.CHASE
+		elif state == EnemyState.CHASE and not b_can_see_player:
+			state = EnemyState.SEARCH
+		elif state == EnemyState.SEARCH and not b_can_see_player:
+			state = EnemyState.PATROL
+
+func _process(delta):
+	_check_collisions()
+	handle_debug_mode()
+	look_at(global_transform.origin - velocity)
 
 func patrol():
 	# Sets a random patrol point for the enemy to move towards.
@@ -60,7 +73,8 @@ func check_for_player():
 		chase()
 	else:
 		if state == EnemyState.CHASE and global_transform.origin.distance_to(player.global_transform.origin) > detection_radius:
-			patrol()
+			#patrol()
+			state = EnemyState.SEARCH
 
 func patrol_behavior():
 	# Manages the patrol behavior of the enemy.
@@ -74,6 +88,17 @@ func chase_behavior():
 	if player:
 		set_target_to_player()
 		move_towards_target()
+	if not b_can_see_player:
+		state = EnemyState.SEARCH
+		nav_agent.target_position = player.global_transform.origin
+		
+func search_behavior():
+	# The enemy looks around for a short period before resuming patrol.
+	if nav_agent.is_navigation_finished():
+		patrol()
+	else:
+		move_towards_target()
+
 
 func set_target_to_player():
 	# Sets the target position of the navigation agent to the player's position.
@@ -113,6 +138,8 @@ func _check_collisions():
 					if collider.name == "Player":
 						$VisionRaycast.debug_shape_custom_color = Color(174,0,0)
 						print ("I SEE YOU")
+						b_can_see_player = true
 					else:
 						$VisionRaycast.debug_shape_custom_color = Color(0, 255,0)
 						print ("I DONT SEE YOU")
+						b_can_see_player = false
