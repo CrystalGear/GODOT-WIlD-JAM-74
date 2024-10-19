@@ -43,7 +43,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		flash_light.light_energy = 0
 	
-	if (Input.is_action_just_pressed("right_click")):
+	if (Input.is_action_just_pressed("secondary_action")):
 		_flash_light_toggle()
 
 func _flash_light_toggle():
