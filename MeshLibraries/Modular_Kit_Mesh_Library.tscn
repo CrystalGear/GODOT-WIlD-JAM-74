@@ -303,9 +303,10 @@ shape = SubResource("ConcavePolygonShape3D_urh6v")
 [node name="SM A Window End" parent="." instance=ExtResource("23_r62ap")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.92169, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SM A Window End"]
+[node name="StaticBody3D" type="StaticBody3D" parent="SM A Window End/SM_Attic_Window_End" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.60837, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SM A Window End/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SM A Window End/SM_Attic_Window_End/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.60837, 0)
 shape = SubResource("ConcavePolygonShape3D_mnl12")
 
