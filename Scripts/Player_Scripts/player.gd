@@ -1,4 +1,4 @@
-extends CharacterBody3D
+class_name Player extends CharacterBody3D
 
 #exports
 @export var walking_speed:float = 5.0
@@ -6,10 +6,13 @@ extends CharacterBody3D
 @export var jump_velocity:float = 4.5
 @export var player_height = 1.7
 
+@export var pull = 12
+
 @onready var camera = $Camera3D
 @onready var collision_shape = $CollisionShape3D
 @onready var raycast = $RayCast3D
 @onready var animation_player = $AnimationPlayer
+@onready var interaction_component = $Camera3D/PlayerInteractionComponent
 
 #vars
 var b_is_crouching = false
@@ -45,6 +48,11 @@ func _physics_process(delta: float) -> void:
 	crouch()
 	_handle_movement()
 	move_and_slide()
+	interact_with_object()
+	drop_held_object()
+	throw_held_object()
+	interaction_component.InventoryComponent.player_node = self
+	
 
 # Add the gravity.
 func _apply_gravity(delta: float):
@@ -84,3 +92,16 @@ func crouch():
 			b_is_crouching = false
 			current_move_speed = walking_speed
 			animation_player.play_backwards("crouch")
+			
+func interact_with_object():
+	if Input.is_action_just_pressed("primary_action"):
+		interaction_component.interact_with_item()
+
+func drop_held_object():
+	if Input.is_action_just_pressed("secondary_action"):
+		interaction_component.drop_item()
+		
+func throw_held_object():
+	if Input.is_action_just_pressed("throw"):
+		interaction_component.throw_item()
+	
