@@ -31,7 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://5rw4g32g1cg8" path="res://Scenes/Game Objects/rug_1.tscn" id="29_f773r"]
 [ext_resource type="PackedScene" uid="uid://cwrtbfn8155qr" path="res://Scenes/Game Objects/table.tscn" id="30_6s6m8"]
 [ext_resource type="PackedScene" uid="uid://d0j0g4n0fvhrs" path="res://Scenes/Game Objects/chair.tscn" id="31_ay10j"]
-[ext_resource type="PackedScene" uid="uid://m1cdwq3nn5vf" path="res://Models/BedRoom/Bed.fbx" id="32_2xj8i"]
+[ext_resource type="PackedScene" uid="uid://dx2ssnl1g2oj8" path="res://Scenes/Game Objects/bed.tscn" id="32_b30sh"]
 
 [node name="LevelDebug" type="Node3D"]
 
@@ -189,13 +189,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.1069, 2.49008, 3.37315)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.4405, 1.51, 12.4768)
 
 [node name="Cabinet6" parent="." instance=ExtResource("4_ey6o2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.839, 1.51, 12.4768)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.8521, 1.51, 12.4768)
 
 [node name="Cabinet7" parent="." instance=ExtResource("4_ey6o2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.2386, 1.51, 12.4768)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.2623, 1.51, 12.4768)
 
 [node name="Cabinet8" parent="." instance=ExtResource("4_ey6o2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.6371, 1.51, 12.4768)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.6777, 1.51, 12.4768)
 
 [node name="Sink" parent="." instance=ExtResource("17_xuuva")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.7941, 1.51, 12.4132)
@@ -215,11 +215,11 @@ transform = Transform3D(-0.999999, 0, 0.00167552, 0, 1, 0, -0.00167552, 0, -0.99
 [node name="Chair4" parent="." instance=ExtResource("31_ay10j")]
 transform = Transform3D(-0.999999, 0, 0.00167552, 0, 1, 0, -0.00167552, 0, -0.999999, -28.169, 1.51, 17.1928)
 
-[node name="Bed" parent="." instance=ExtResource("32_2xj8i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.51818, 4.66015, 14.6888)
+[node name="Bed" parent="." instance=ExtResource("32_b30sh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.60357, 4.70861, 14.7617)
 
-[node name="Bed2" parent="." instance=ExtResource("32_2xj8i")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -29.1943, 4.66015, 21.0367)
+[node name="Bed2" parent="." instance=ExtResource("32_b30sh")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -28.9744, 4.70861, 21.0552)
 
-[node name="Bed3" parent="." instance=ExtResource("32_2xj8i")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -29.0773, 4.66015, 10.726)
+[node name="Bed3" parent="." instance=ExtResource("32_b30sh")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -28.9744, 4.70861, 10.4945)
