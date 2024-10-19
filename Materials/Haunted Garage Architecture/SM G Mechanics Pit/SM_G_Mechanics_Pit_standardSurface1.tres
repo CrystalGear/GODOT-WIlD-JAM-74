@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://dky6efjnd6vsd"]
+
+[ext_resource type="Texture2D" uid="uid://b5osi3k4ewbnv" path="res://Images/Textures/Haunted Garage Architecture/SM G Mechanics Pit/SM_G_Mechanics_Pit_standardSurface1_BaseColor.1001.png" id="1_i2rgf"]
+[ext_resource type="Texture2D" uid="uid://biahl27bpifva" path="res://Images/Textures/Haunted Garage Architecture/SM G Mechanics Pit/SM_G_Mechanics_Pit_standardSurface1_OcclusionRoughnessMetallic.1001.png" id="2_0e2au"]
+[ext_resource type="Texture2D" uid="uid://bl6766g0k6kbg" path="res://Images/Textures/Haunted Garage Architecture/SM G Mechanics Pit/SM_G_Mechanics_Pit_standardSurface1_Normal.1001.png" id="3_amnj0"]
+
+[resource]
+albedo_texture = ExtResource("1_i2rgf")
+metallic = 1.0
+metallic_texture = ExtResource("2_0e2au")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_0e2au")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_amnj0")
+ao_enabled = true
+ao_texture = ExtResource("2_0e2au")

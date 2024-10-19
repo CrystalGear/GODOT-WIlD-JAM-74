@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://bg5m8k332mw5m"]
+
+[ext_resource type="Texture2D" uid="uid://kr1co7qvkvkl" path="res://Images/Textures/Haunted Attic Architecture/SM A Gable End/SM A Gable End_AtticInterior_BaseColor.1001.png" id="1_yu78w"]
+[ext_resource type="Texture2D" uid="uid://cxd5eqxbdr122" path="res://Images/Textures/Haunted Attic Architecture/SM A Gable End/SM A Gable End_AtticInterior_OcclusionRoughnessMetallic.1001.png" id="2_epg52"]
+[ext_resource type="Texture2D" uid="uid://co77xd24ne7mu" path="res://Images/Textures/Haunted Attic Architecture/SM A Gable End/SM A Gable End_AtticInterior_Normal.1001.png" id="3_51ai3"]
+
+[resource]
+albedo_texture = ExtResource("1_yu78w")
+metallic = 1.0
+metallic_texture = ExtResource("2_epg52")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_epg52")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_51ai3")
+ao_enabled = true
+ao_texture = ExtResource("2_epg52")

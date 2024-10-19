@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://b0fky1a1hg0lx"]
+
+[ext_resource type="Texture2D" uid="uid://b17541vnvnfd8" path="res://Images/Textures/Haunted Garage Architecture/SM G Ridge Wall 3x3m/SM_G_Ridge Wall_M_Walls_BaseColor.1001.png" id="1_37hrw"]
+[ext_resource type="Texture2D" uid="uid://pgvr1ujb7p6q" path="res://Images/Textures/Haunted Garage Architecture/SM G Ridge Wall 3x3m/SM_G_Ridge Wall_M_Walls_OcclusionRoughnessMetallic.1001.png" id="2_510tm"]
+[ext_resource type="Texture2D" uid="uid://b5cko5egn7ie1" path="res://Images/Textures/Haunted Garage Architecture/SM G Ridge Wall 3x3m/SM_G_Ridge Wall_M_Walls_Normal.1001.png" id="3_g543u"]
+
+[resource]
+albedo_texture = ExtResource("1_37hrw")
+metallic = 1.0
+metallic_texture = ExtResource("2_510tm")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_510tm")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_g543u")
+ao_enabled = true
+ao_texture = ExtResource("2_510tm")

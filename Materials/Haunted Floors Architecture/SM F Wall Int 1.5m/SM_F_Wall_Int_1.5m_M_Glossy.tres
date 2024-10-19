@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://dup6jnju7bmi7"]
+
+[ext_resource type="Texture2D" uid="uid://b4rywwnibqedc" path="res://Images/Textures/Haunted Floors Architecture/SM F Wall Int 1.5m/SM_F_Wall_Int_1.5m_M_Glossy_BaseColor.1001.png" id="1_61td4"]
+[ext_resource type="Texture2D" uid="uid://do48akikq8l1n" path="res://Images/Textures/Haunted Floors Architecture/SM F Wall Int 1.5m/SM_F_Wall_Int_1.5m_M_Glossy_OcclusionRoughnessMetallic.1001.png" id="2_24nl6"]
+[ext_resource type="Texture2D" uid="uid://dkvd6itr8l6mh" path="res://Images/Textures/Haunted Floors Architecture/SM F Wall Int 1.5m/SM_F_Wall_Int_1.5m_M_Glossy_Normal.1001.png" id="3_aih6n"]
+
+[resource]
+albedo_texture = ExtResource("1_61td4")
+metallic = 1.0
+metallic_texture = ExtResource("2_24nl6")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_24nl6")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_aih6n")
+ao_enabled = true
+ao_texture = ExtResource("2_24nl6")
