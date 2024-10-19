@@ -159,9 +159,10 @@ shape = SubResource("ConcavePolygonShape3D_mjyf5")
 [node name="SM_F_BayWall_Int_6x3mm" parent="." instance=ExtResource("8_t2bvm")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 6.82931, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="SM_F_BayWall_Int_6x3mm"]
+[node name="StaticBody3D" type="StaticBody3D" parent="SM_F_BayWall_Int_6x3mm/SM_Wall_Int_Bay_6x1_5m6" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_F_BayWall_Int_6x3mm/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SM_F_BayWall_Int_6x3mm/SM_Wall_Int_Bay_6x1_5m6/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 shape = SubResource("ConcavePolygonShape3D_cj7ta")
 
