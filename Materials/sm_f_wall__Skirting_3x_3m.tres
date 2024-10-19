@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://ev2q2sxakqd3"]
+
+[ext_resource type="Texture2D" uid="uid://cbru0b2y02y85" path="res://Textures/Modular Kit/SM F WALL 3X3_M_Walls/SM F Wall 3x3m_M_Glossy_BaseColor.1001.png" id="1_e8b27"]
+[ext_resource type="Texture2D" uid="uid://b52uy74s844wy" path="res://Textures/Modular Kit/SM F WALL 3X3_M_Walls/SM F Wall 3x3m_M_Glossy_OcclusionRoughnessMetallic.1001.png" id="2_1moc6"]
+[ext_resource type="Texture2D" uid="uid://den1chhpe1600" path="res://Textures/Modular Kit/SM F WALL 3X3_M_Walls/SM F Wall 3x3m_M_Glossy_Normal.1001.png" id="3_khotr"]
+
+[resource]
+albedo_texture = ExtResource("1_e8b27")
+metallic = 1.0
+metallic_texture = ExtResource("2_1moc6")
+roughness_texture = ExtResource("2_1moc6")
+normal_enabled = true
+normal_texture = ExtResource("3_khotr")
