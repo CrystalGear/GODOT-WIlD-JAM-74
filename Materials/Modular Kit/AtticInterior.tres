@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bqj6n2ohfekky"]
+
+[resource]
+resource_name = "AtticInterior"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.162503, 0.242176, 0.253528, 1)
+roughness = 0.2
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.0
