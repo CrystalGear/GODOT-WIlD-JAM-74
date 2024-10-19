@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://c7ocvb2duj8e6"]
+[gd_scene load_steps=33 format=3 uid="uid://c7ocvb2duj8e6"]
 
 [ext_resource type="PackedScene" uid="uid://ia38iawogjd7" path="res://Scenes/default_environment.tscn" id="1_58fx7"]
 [ext_resource type="PackedScene" uid="uid://c15oa1883es0v" path="res://Scenes/blockout/blockout_level.tscn" id="2_fyn8b"]
@@ -31,6 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://5rw4g32g1cg8" path="res://Scenes/Game Objects/rug_1.tscn" id="29_f773r"]
 [ext_resource type="PackedScene" uid="uid://cwrtbfn8155qr" path="res://Scenes/Game Objects/table.tscn" id="30_6s6m8"]
 [ext_resource type="PackedScene" uid="uid://d0j0g4n0fvhrs" path="res://Scenes/Game Objects/chair.tscn" id="31_ay10j"]
+[ext_resource type="PackedScene" uid="uid://m1cdwq3nn5vf" path="res://Models/BedRoom/Bed.fbx" id="32_2xj8i"]
 
 [node name="LevelDebug" type="Node3D"]
 
@@ -179,7 +180,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.7196, 1.51, 5.83386)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.4651, 2.07228, 6.14981)
 
 [node name="Mug 1" parent="." instance=ExtResource("10_amf3u")]
-transform = Transform3D(0.721047, 0, -0.692886, 0, 1, 0, 0.692886, 0, 0.721047, -25.7091, 2.07228, 6.49416)
+transform = Transform3D(0.721047, 0, -0.692886, 0, 1, 0, 0.692886, 0, 0.721047, -25.7109, 2.09169, 6.48978)
 
 [node name="Pumpkin2" parent="." instance=ExtResource("13_6ylba")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.1069, 2.49008, 3.37315)
@@ -213,3 +214,12 @@ transform = Transform3D(-0.999999, 0, 0.00167552, 0, 1, 0, -0.00167552, 0, -0.99
 
 [node name="Chair4" parent="." instance=ExtResource("31_ay10j")]
 transform = Transform3D(-0.999999, 0, 0.00167552, 0, 1, 0, -0.00167552, 0, -0.999999, -28.169, 1.51, 17.1928)
+
+[node name="Bed" parent="." instance=ExtResource("32_2xj8i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.51818, 4.66015, 14.6888)
+
+[node name="Bed2" parent="." instance=ExtResource("32_2xj8i")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -29.1943, 4.66015, 21.0367)
+
+[node name="Bed3" parent="." instance=ExtResource("32_2xj8i")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -29.0773, 4.66015, 10.726)
