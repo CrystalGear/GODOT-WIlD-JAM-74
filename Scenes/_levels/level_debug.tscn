@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://c7ocvb2duj8e6"]
+[gd_scene load_steps=32 format=3 uid="uid://c7ocvb2duj8e6"]
 
 [ext_resource type="PackedScene" uid="uid://ia38iawogjd7" path="res://Scenes/default_environment.tscn" id="1_58fx7"]
 [ext_resource type="PackedScene" uid="uid://c15oa1883es0v" path="res://Scenes/blockout/blockout_level.tscn" id="2_fyn8b"]
@@ -29,6 +29,8 @@
 [ext_resource type="PackedScene" uid="uid://cwp5kgbtdhvyp" path="res://Scenes/Game Objects/tv.tscn" id="27_j33u4"]
 [ext_resource type="PackedScene" uid="uid://bams2i4fn5aa6" path="res://Scenes/Game Objects/rug_2.tscn" id="28_twbws"]
 [ext_resource type="PackedScene" uid="uid://5rw4g32g1cg8" path="res://Scenes/Game Objects/rug_1.tscn" id="29_f773r"]
+[ext_resource type="PackedScene" uid="uid://cwrtbfn8155qr" path="res://Scenes/Game Objects/table.tscn" id="30_6s6m8"]
+[ext_resource type="PackedScene" uid="uid://d0j0g4n0fvhrs" path="res://Scenes/Game Objects/chair.tscn" id="31_ay10j"]
 
 [node name="LevelDebug" type="Node3D"]
 
@@ -196,3 +198,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.6371, 1.51, 12.4768)
 
 [node name="Sink" parent="." instance=ExtResource("17_xuuva")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.7941, 1.51, 12.4132)
+
+[node name="Table" parent="." instance=ExtResource("30_6s6m8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.5973, 1.51, 16.627)
+
+[node name="Chair" parent="." instance=ExtResource("31_ay10j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.169, 1.51, 16.1222)
+
+[node name="Chair2" parent="." instance=ExtResource("31_ay10j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.919, 1.51, 16.1222)
+
+[node name="Chair3" parent="." instance=ExtResource("31_ay10j")]
+transform = Transform3D(-0.999999, 0, 0.00167552, 0, 1, 0, -0.00167552, 0, -0.999999, -26.919, 1.51, 17.1949)
+
+[node name="Chair4" parent="." instance=ExtResource("31_ay10j")]
+transform = Transform3D(-0.999999, 0, 0.00167552, 0, 1, 0, -0.00167552, 0, -0.999999, -28.169, 1.51, 17.1928)
