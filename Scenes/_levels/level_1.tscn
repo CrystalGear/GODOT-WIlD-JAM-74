@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://bn56ncgudcqxy"]
+[gd_scene load_steps=6 format=3 uid="uid://bn56ncgudcqxy"]
 
 [ext_resource type="PackedScene" uid="uid://ia38iawogjd7" path="res://Scenes/default_environment.tscn" id="1_g2m6j"]
 [ext_resource type="PackedScene" uid="uid://c15oa1883es0v" path="res://Scenes/blockout/blockout_level.tscn" id="2_qp6am"]
 [ext_resource type="PackedScene" uid="uid://dkbwkvi8f7mtw" path="res://Scenes/Characters/player.tscn" id="3_nxca5"]
+[ext_resource type="PackedScene" uid="uid://bbmqruprrgtxx" path="res://Scenes/ambient_generator.tscn" id="4_v30bs"]
+[ext_resource type="AudioStream" uid="uid://bf0lerblh65ln" path="res://Audio/SFX/wood creaking.mp3" id="5_2ufkd"]
 
 [node name="Level1" type="Node3D"]
 
@@ -12,3 +14,11 @@
 
 [node name="Player" parent="." instance=ExtResource("3_nxca5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 2.75, 19.25)
+
+[node name="Ambient Audio" type="Node" parent="."]
+
+[node name="AmbientGenerator" parent="Ambient Audio" instance=ExtResource("4_v30bs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.5, 1.5, 15.25)
+stream = ExtResource("5_2ufkd")
+
+[node name="Static Lights" type="Node" parent="."]
