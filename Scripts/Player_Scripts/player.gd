@@ -26,6 +26,10 @@ func _physics_process(delta: float) -> void:
 	_handle_movement()
 	move_and_slide()
 	
+	_flash_light(delta)
+	
+
+func _flash_light(delta: float):
 	# Sticking flashlight code here for now
 	# Stops charging down once charge is at 0
 	if (light_charge > 0 && flash_light_on == true):
@@ -33,7 +37,7 @@ func _physics_process(delta: float) -> void:
 	
 	# Checks if light charge is under the fading threshold, default 40%
 	# then starts fading the flashlight
-	if (flash_light_on == true):
+	if flash_light_on:
 		if (light_charge < light_fade_threshold):
 			if(light_charge < 0):
 				light_charge = 0
@@ -44,13 +48,7 @@ func _physics_process(delta: float) -> void:
 		flash_light.light_energy = 0
 	
 	if (Input.is_action_just_pressed("secondary_action")):
-		_flash_light_toggle()
-
-func _flash_light_toggle():
-	if (flash_light_on == true):
-		flash_light_on = false
-	else:
-		flash_light_on = true
+		flash_light_on = not flash_light_on
 
 func _flash_light_charge(new_charge: float) -> void:
 	if (new_charge > 100):
