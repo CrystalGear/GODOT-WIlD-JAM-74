@@ -8,6 +8,7 @@
 transparency = 1
 blend_mode = 4
 cull_mode = 2
+depth_draw_mode = 1
 albedo_texture = ExtResource("1_5y2vx")
 metallic = 1.0
 metallic_texture = ExtResource("2_t4xwn")
@@ -18,3 +19,5 @@ normal_texture = ExtResource("3_d817n")
 ao_enabled = true
 ao_texture = ExtResource("2_t4xwn")
 ao_texture_channel = 1
+subsurf_scatter_strength = 0.3
+refraction_enabled = true
