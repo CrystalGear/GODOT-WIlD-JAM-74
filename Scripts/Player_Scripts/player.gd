@@ -29,7 +29,7 @@ func _physics_process(delta: float) -> void:
 	# Sticking flashlight code here for now
 	# Stops charging down once charge is at 0
 	if (light_charge > 0 && flash_light_on == true):
-		light_charge -= (delta * 1.5)
+		light_charge -= delta
 	
 	# Checks if light charge is under the fading threshold, default 40%
 	# then starts fading the flashlight
@@ -49,10 +49,8 @@ func _physics_process(delta: float) -> void:
 func _flash_light_toggle():
 	if (flash_light_on == true):
 		flash_light_on = false
-		print("Flashlight Off")
 	else:
 		flash_light_on = true
-		print("Flashlight On")
 
 func _flash_light_charge(new_charge: float) -> void:
 	if (new_charge > 100):
