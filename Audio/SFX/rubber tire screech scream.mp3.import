@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cej81w7j0fbit"
+path="res://.godot/imported/rubber tire screech scream.mp3-766ceb579be85befd07d939b5cff34cc.mp3str"
+
+[deps]
+
+source_file="res://Audio/SFX/rubber tire screech scream.mp3"
+dest_files=["res://.godot/imported/rubber tire screech scream.mp3-766ceb579be85befd07d939b5cff34cc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
