@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://c7ocvb2duj8e6"]
+[gd_scene load_steps=30 format=3 uid="uid://c7ocvb2duj8e6"]
 
 [ext_resource type="PackedScene" uid="uid://ia38iawogjd7" path="res://Scenes/default_environment.tscn" id="1_58fx7"]
 [ext_resource type="PackedScene" uid="uid://c15oa1883es0v" path="res://Scenes/blockout/blockout_level.tscn" id="2_fyn8b"]
@@ -22,7 +22,13 @@
 [ext_resource type="PackedScene" uid="uid://dvaa6ypjd3u3t" path="res://Scenes/Game Objects/tool_hammer.tscn" id="22_g4667"]
 [ext_resource type="PackedScene" path="res://Scenes/Game Objects/wine_bottle.tscn" id="23_krj8f"]
 [ext_resource type="PackedScene" uid="uid://f2vmqitmguct" path="res://Scenes/Game Objects/wrench.tscn" id="24_u6grm"]
+[ext_resource type="PackedScene" uid="uid://j8l8l2b3xcsk" path="res://Scenes/Game Objects/arm_chair.tscn" id="24_yjtd0"]
 [ext_resource type="PackedScene" uid="uid://bbmqruprrgtxx" path="res://Scenes/ambient_generator.tscn" id="25_1b3p2"]
+[ext_resource type="PackedScene" uid="uid://shf1hdvgvp8o" path="res://Scenes/Game Objects/sofa.tscn" id="25_a0cja"]
+[ext_resource type="PackedScene" uid="uid://cvylh8vaedgsi" path="res://Scenes/Game Objects/coffee_table.tscn" id="26_ywwt8"]
+[ext_resource type="PackedScene" uid="uid://cwp5kgbtdhvyp" path="res://Scenes/Game Objects/tv.tscn" id="27_j33u4"]
+[ext_resource type="PackedScene" uid="uid://bams2i4fn5aa6" path="res://Scenes/Game Objects/rug_2.tscn" id="28_twbws"]
+[ext_resource type="PackedScene" uid="uid://5rw4g32g1cg8" path="res://Scenes/Game Objects/rug_1.tscn" id="29_f773r"]
 
 [node name="LevelDebug" type="Node3D"]
 
@@ -31,7 +37,7 @@
 [node name="BlockoutLevel" parent="." instance=ExtResource("2_fyn8b")]
 
 [node name="Player" parent="." instance=ExtResource("3_qsqcb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.12008, 2, -4.8602)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.366, 2.61113, 3.4617)
 
 [node name="Movable Objects" type="Node" parent="."]
 
@@ -133,3 +139,60 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -27.83
 
 [node name="AmbientGenerator" parent="Ambient Noise Generators" instance=ExtResource("25_1b3p2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.33298, 2, -4.8602)
+
+[node name="Arm Chair" parent="." instance=ExtResource("24_yjtd0")]
+transform = Transform3D(-0.334531, 0, -0.942385, 0, 1, 0, 0.942385, 0, -0.334531, -23.2517, 1.51, 7.48859)
+
+[node name="Arm Chair2" parent="." instance=ExtResource("24_yjtd0")]
+transform = Transform3D(-0.779043, 0, 0.626971, 0, 1, 0, -0.626971, 0, -0.779043, -28.2608, 1.51, 7.48859)
+
+[node name="Sofa" parent="." instance=ExtResource("25_a0cja")]
+transform = Transform3D(-0.999888, 0, -0.0149918, 0, 1, 0, 0.0149918, 0, -0.999888, -25.9155, 1.51, 8.38374)
+
+[node name="Coffee Table" parent="." instance=ExtResource("26_ywwt8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.0765, 1.51, 6.26283)
+
+[node name="Cabinet" parent="." instance=ExtResource("4_ey6o2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.0269, 1.51, 3.32801)
+
+[node name="Cabinet2" parent="." instance=ExtResource("4_ey6o2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.4328, 1.51, 3.32801)
+
+[node name="Cabinet3" parent="." instance=ExtResource("4_ey6o2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.8461, 1.51, 3.32801)
+
+[node name="Cabinet4" parent="." instance=ExtResource("4_ey6o2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.2521, 1.51, 3.32801)
+
+[node name="TV" parent="." instance=ExtResource("27_j33u4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.1734, 2.48931, 3.29909)
+
+[node name="Rug2" parent="." instance=ExtResource("28_twbws")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.9204, 1.51, 4.76892)
+
+[node name="Rug1" parent="." instance=ExtResource("29_f773r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.7196, 1.51, 5.83386)
+
+[node name="Pumpkin" parent="." instance=ExtResource("13_6ylba")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.4651, 2.07228, 6.14981)
+
+[node name="Mug 1" parent="." instance=ExtResource("10_amf3u")]
+transform = Transform3D(0.721047, 0, -0.692886, 0, 1, 0, 0.692886, 0, 0.721047, -25.7091, 2.07228, 6.49416)
+
+[node name="Pumpkin2" parent="." instance=ExtResource("13_6ylba")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.1069, 2.49008, 3.37315)
+
+[node name="Cabinet5" parent="." instance=ExtResource("4_ey6o2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.4405, 1.51, 12.4768)
+
+[node name="Cabinet6" parent="." instance=ExtResource("4_ey6o2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.839, 1.51, 12.4768)
+
+[node name="Cabinet7" parent="." instance=ExtResource("4_ey6o2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.2386, 1.51, 12.4768)
+
+[node name="Cabinet8" parent="." instance=ExtResource("4_ey6o2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.6371, 1.51, 12.4768)
+
+[node name="Sink" parent="." instance=ExtResource("17_xuuva")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.7941, 1.51, 12.4132)
