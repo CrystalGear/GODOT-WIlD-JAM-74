@@ -6,7 +6,7 @@
 
 [resource]
 albedo_texture = ExtResource("1_fhatq")
-metallic = 1.0
+metallic_specular = 0.2
 metallic_texture = ExtResource("2_2km72")
 roughness_texture = ExtResource("2_2km72")
 roughness_texture_channel = 2

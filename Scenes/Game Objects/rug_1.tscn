@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://xdq3wo4mkd1b"]
+[gd_scene load_steps=7 format=3 uid="uid://5rw4g32g1cg8"]
 
 [ext_resource type="Texture2D" uid="uid://c8dic4y1admav" path="res://Textures/Kitchen Props/Rug_initialShadingGroup_BaseMap.png" id="1_5pbsb"]
 [ext_resource type="Texture2D" uid="uid://uq61ormx8af3" path="res://Textures/Kitchen Props/Rug_initialShadingGroup_MaskMap.png" id="2_0bqek"]
