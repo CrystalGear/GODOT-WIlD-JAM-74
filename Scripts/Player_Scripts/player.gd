@@ -4,6 +4,12 @@ class_name Player extends CharacterBody3D
 @export var walking_speed:float = 5.0
 @export var crouch_walk_speed = 2.5
 @export var jump_velocity:float = 4.5
+
+@export var flash_light_on = false
+@export var light_charge = 100
+@export var light_fade_threshold = 40
+@onready var flash_light: SpotLight3D = $Camera3D/FlashlightHand/SpotLight3D
+
 @export var player_height = 1.7
 
 @export var pull = 12
@@ -39,7 +45,6 @@ func _ready() -> void:
 	
 	#Attempt to place the music player as a child of the palyer
 	AudioManager.attach_to_player()
-	
 
 func _physics_process(delta: float) -> void:
 	handle_joystick_rotation()
@@ -53,6 +58,37 @@ func _physics_process(delta: float) -> void:
 	throw_held_object()
 	interaction_component.InventoryComponent.player_node = self
 	
+	
+	_flash_light(delta)
+	
+
+func _flash_light(delta: float):
+	# Sticking flashlight code here for now
+	# Stops charging down once charge is at 0
+	if (light_charge > 0 && flash_light_on == true):
+		light_charge -= delta
+	
+	# Checks if light charge is under the fading threshold, default 40%
+	# then starts fading the flashlight
+	if flash_light_on:
+		if (light_charge < light_fade_threshold):
+			if(light_charge < 0):
+				light_charge = 0
+			flash_light.light_energy = (light_charge / light_fade_threshold)
+		else:
+			flash_light.light_energy = 1
+	else:
+		flash_light.light_energy = 0
+	
+	if (Input.is_action_just_pressed("secondary_action")):
+		flash_light_on = not flash_light_on
+
+func _flash_light_charge(new_charge: float) -> void:
+	if (new_charge > 100):
+		new_charge = 100
+	elif (new_charge < 0):
+		new_charge = 0
+	light_charge = new_charge
 
 # Add the gravity.
 func _apply_gravity(delta: float):

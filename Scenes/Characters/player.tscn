@@ -75,3 +75,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.127626, -0.137938, 0.47670
 
 [editable path="Camera3D/PlayerInteractionComponent"]
 [editable path="Camera3D/PlayerInteractionComponent/InventoryComponent"]
+
+[node name="FlashlightHand" type="Node3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26002, -0.267397, -0.188811)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Camera3D/FlashlightHand"]
+light_color = Color(0.970043, 0.922577, 0.687504, 1)
+shadow_enabled = true
+distance_fade_enabled = true
+spot_range = 30.0
+spot_angle = 44.6278
+spot_angle_attenuation = 1.93187
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(0.172833, 0.172833, 0.172833, 1)
