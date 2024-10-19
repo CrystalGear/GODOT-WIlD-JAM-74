@@ -1,9 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://bn56ncgudcqxy"]
+[gd_scene load_steps=4 format=3 uid="uid://bn56ncgudcqxy"]
 
-[ext_resource type="Texture2D" uid="uid://orr75x8cq8b" path="res://icon.svg" id="1_lqahr"]
+[ext_resource type="PackedScene" uid="uid://ia38iawogjd7" path="res://Scenes/default_environment.tscn" id="1_g2m6j"]
+[ext_resource type="PackedScene" uid="uid://c15oa1883es0v" path="res://Scenes/blockout/blockout_level.tscn" id="2_qp6am"]
+[ext_resource type="PackedScene" uid="uid://dkbwkvi8f7mtw" path="res://Scenes/Characters/player.tscn" id="3_nxca5"]
 
 [node name="Level1" type="Node3D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(548, 136)
-texture = ExtResource("1_lqahr")
+[node name="DefaultEnvironment" parent="." instance=ExtResource("1_g2m6j")]
+
+[node name="BlockoutLevel" parent="." instance=ExtResource("2_qp6am")]
+
+[node name="Player" parent="." instance=ExtResource("3_nxca5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 2.75, 19.25)
