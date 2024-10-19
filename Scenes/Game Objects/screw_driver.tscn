@@ -6,8 +6,8 @@
 [ext_resource type="Material" uid="uid://bvp7uuvvisbqp" path="res://Materials/screw_driver.tres" id="2_1r7lp"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_lmlk3"]
-height = 0.259189
-radius = 0.023259
+height = 0.25
+radius = 0.105009
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_gy71o"]
 _surfaces = [{
@@ -46,3 +46,11 @@ shape = SubResource("CylinderShape3D_lmlk3")
 visible = false
 mesh = SubResource("ArrayMesh_gy71o")
 skeleton = NodePath("../Screw_Driver")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="DetectionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125794, 0)
+shape = SubResource("CylinderShape3D_lmlk3")
