@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cprujwgiy0hk6"]
+
+[ext_resource type="PackedScene" uid="uid://comnoeywptynw" path="res://Models/Modular Kit/SM_G_Floor_1_5x1_5m.fbx" id="1_4dqut"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c4oku"]
+size = Vector3(1.5, 0.025, 1.5)
+
+[node name="SM_G_Floor_1_5x1_5m" type="StaticBody3D"]
+
+[node name="SM_G_Floor_1_5x1_5m" parent="." instance=ExtResource("1_4dqut")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 0, 0)
+shape = SubResource("BoxShape3D_c4oku")

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://6mg7oernbpas"]
+
+[ext_resource type="PackedScene" uid="uid://bhvrau5j88skp" path="res://Models/Modular Kit/SM A Gable End.fbx" id="1_hf1c5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4g1oh"]
+size = Vector3(0.35, 3, 6)
+
+[node name="SM A Gable End" type="StaticBody3D"]
+
+[node name="SM A Gable End" parent="." instance=ExtResource("1_hf1c5")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("BoxShape3D_4g1oh")
