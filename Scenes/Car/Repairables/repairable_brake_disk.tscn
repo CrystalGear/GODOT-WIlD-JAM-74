@@ -11,4 +11,6 @@ outline_mesh = NodePath("BrakeDisk/Outline")
 [node name="BrakeDisk" parent="." index="1" instance=ExtResource("2_ek26r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0106661, -0.00390746, -0.00288808)
 
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+
 [editable path="BrakeDisk"]

@@ -4,10 +4,20 @@
 [ext_resource type="PackedScene" uid="uid://8duwd4erf4xy" path="res://Scenes/Car/bolts.tscn" id="2_oevai"]
 
 [node name="RepairableBolts" node_paths=PackedStringArray("static_part", "part_mesh", "outline_mesh") instance=ExtResource("1_pa4tp")]
+collision_mask = 2
 static_part = NodePath("Bolts")
 part_mesh = NodePath("Bolts/Bolts")
 outline_mesh = NodePath("Bolts/Outline")
 
 [node name="Bolts" parent="." index="1" instance=ExtResource("2_oevai")]
+collision_layer = 2
+
+[node name="Bolts" parent="Bolts" index="0"]
+visible = false
+
+[node name="Outline" parent="Bolts" index="1"]
+visible = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 
 [editable path="Bolts"]

@@ -4,17 +4,21 @@
 [ext_resource type="PackedScene" uid="uid://beit8p6qknbfo" path="res://Scenes/Car/battery.tscn" id="2_fkbkn"]
 
 [node name="RepairableBattery" node_paths=PackedStringArray("static_part", "part_mesh", "outline_mesh") instance=ExtResource("1_vt4x8")]
+collision_mask = 2
 static_part = NodePath("Battery")
 part_mesh = NodePath("Battery/Battery")
 outline_mesh = NodePath("Battery/Outline")
 
 [node name="Battery" parent="." index="1" instance=ExtResource("2_fkbkn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0118012, 0, -0.00598669)
+collision_layer = 2
 
 [node name="Battery" parent="Battery" index="0"]
 visible = false
 
 [node name="Outline" parent="Battery" index="1"]
 visible = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 
 [editable path="Battery"]
