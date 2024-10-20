@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b6g1180ykln18" path="res://Scenes/Game Objects/pumpkin.tscn" id="13_6ylba"]
 [ext_resource type="PackedScene" uid="uid://01lqrl4m4dia" path="res://Scenes/Game Objects/sink.tscn" id="17_xuuva"]
 [ext_resource type="PackedScene" uid="uid://cp7qcj6bigbdu" path="res://Scenes/Car/car.tscn" id="18_3ngov"]
-[ext_resource type="PackedScene" path="res://Scenes/Characters/enemy.tscn" id="19_cnscy"]
+[ext_resource type="PackedScene" uid="uid://de1bpgxwkt8rr" path="res://Scenes/Characters/enemy.tscn" id="19_cnscy"]
 [ext_resource type="PackedScene" path="res://teleport_point.tscn" id="21_rf2wo"]
 [ext_resource type="PackedScene" path="res://Scenes/Game Objects/enemy_test_model.tscn" id="21_t6xds"]
 [ext_resource type="PackedScene" uid="uid://crhgx1286i5xe" path="res://Scenes/Car/wheel.tscn" id="22_48c45"]
@@ -54,13 +54,6 @@ basementSpawner = NodePath("../basementSpawner")
 
 [node name="Enemy" parent="." node_paths=PackedStringArray("atticSpawner", "basementSpawner") instance=ExtResource("19_cnscy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.6514, 8.39684, 13.9602)
-base_movement_speed = null
-patrol_speed = null
-chase_speed = null
-detection_radius = null
-debug_mode = null
-patrol_min_bounds = null
-patrol_max_bounds = null
 atticSpawner = NodePath("../atticSpawner")
 basementSpawner = NodePath("../basementSpawner")
 
