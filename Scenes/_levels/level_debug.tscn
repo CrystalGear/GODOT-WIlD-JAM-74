@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://c7ocvb2duj8e6"]
 
 [ext_resource type="PackedScene" uid="uid://ia38iawogjd7" path="res://Scenes/default_environment.tscn" id="1_58fx7"]
-[ext_resource type="PackedScene" uid="uid://c15oa1883es0v" path="res://Scenes/blockout/blockout_level.tscn" id="2_fyn8b"]
+[ext_resource type="PackedScene" uid="uid://c15oa1883es0v" path="res://Scenes/blockout/blockout_level_dave.tscn" id="2_fyn8b"]
 [ext_resource type="PackedScene" uid="uid://dkbwkvi8f7mtw" path="res://Scenes/Characters/player.tscn" id="3_qsqcb"]
 [ext_resource type="PackedScene" uid="uid://c4fae4oguft4q" path="res://Scenes/Game Objects/cabinet.tscn" id="4_ey6o2"]
 [ext_resource type="PackedScene" uid="uid://n1o8kkttkpbu" path="res://Scenes/Game Objects/mug_1.tscn" id="10_amf3u"]
