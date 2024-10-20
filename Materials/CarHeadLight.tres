@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://cw88nwiospju8"]
+
+[ext_resource type="Texture2D" uid="uid://dbaia1uky1y1s" path="res://Textures/Car textures/CarGrill/Car_Grill_Headlights_BaseColor.png" id="1_js0ca"]
+[ext_resource type="Texture2D" uid="uid://q0p73fj3rskq" path="res://Textures/Car textures/CarGrill/Car_Grill_Headlights_OcclusionRoughnessMetallic.png" id="2_w78vb"]
+[ext_resource type="Texture2D" uid="uid://c6thuhap66piu" path="res://Textures/Car textures/CarGrill/Car_Grill_Headlights_Normal.png" id="3_dc7e2"]
+
+[resource]
+albedo_texture = ExtResource("1_js0ca")
+metallic = 1.0
+metallic_texture = ExtResource("2_w78vb")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_w78vb")
+normal_enabled = true
+normal_texture = ExtResource("3_dc7e2")

@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://ks1yc6pi8t83"]
+[gd_scene load_steps=7 format=4 uid="uid://ks1yc6pi8t83"]
 
 [ext_resource type="Script" path="res://Scripts/Item Scripts/car_part.gd" id="1_26g3x"]
 [ext_resource type="PhysicsMaterial" uid="uid://cgjgp1v8epf62" path="res://PhysicsMaterial/default_tool_physics.tres" id="1_in0c3"]
 [ext_resource type="ArrayMesh" uid="uid://bw5pmxg7nbe2j" path="res://Models/The Car/Seperate Items/Headlight_1_L.res" id="1_oi6sx"]
+[ext_resource type="Material" uid="uid://cw88nwiospju8" path="res://Materials/CarHeadLight.tres" id="3_2fboi"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_4bj1l"]
 _surfaces = [{
@@ -26,6 +27,7 @@ physics_material_override = ExtResource("1_in0c3")
 script = ExtResource("1_26g3x")
 
 [node name="Headlight 1" type="MeshInstance3D" parent="."]
+material_override = ExtResource("3_2fboi")
 mesh = ExtResource("1_oi6sx")
 
 [node name="Outline" type="MeshInstance3D" parent="."]

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfekdusjlkfqd"]
+
+[ext_resource type="PackedScene" uid="uid://dh6ekuoa3keva" path="res://Scenes/Car/Repairables/base_repairable_scene.tscn" id="1_0lhpn"]
+[ext_resource type="PackedScene" uid="uid://basjkxmvv5v8k" path="res://Scenes/Car/steering_wheel.tscn" id="2_2jw3l"]
+
+[node name="RepairableSteeringWheel" node_paths=PackedStringArray("static_part", "part_mesh", "outline_mesh") instance=ExtResource("1_0lhpn")]
+static_part = NodePath("SteeringWheel")
+part_mesh = NodePath("SteeringWheel/SteeringWheel")
+outline_mesh = NodePath("SteeringWheel/Outline")
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00927734, 0, 0)
+
+[node name="SteeringWheel" parent="." index="1" instance=ExtResource("2_2jw3l")]
+
+[editable path="SteeringWheel"]

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnl45qykfs7v5"]
+
+[ext_resource type="PackedScene" uid="uid://dh6ekuoa3keva" path="res://Scenes/Car/Repairables/base_repairable_scene.tscn" id="1_irasb"]
+[ext_resource type="PackedScene" uid="uid://cy7tx0piok6gp" path="res://Scenes/Car/bonnet.tscn" id="2_2gbm3"]
+
+[node name="RepairableBonnet" node_paths=PackedStringArray("static_part", "part_mesh", "outline_mesh") instance=ExtResource("1_irasb")]
+static_part = NodePath("Bonnet")
+part_mesh = NodePath("Bonnet/Bonnet")
+outline_mesh = NodePath("Bonnet/Outline")
+
+[node name="Bonnet" parent="." index="1" instance=ExtResource("2_2gbm3")]
+
+[node name="Outline" parent="Bonnet" index="2"]
+visible = false
+
+[editable path="Bonnet"]
