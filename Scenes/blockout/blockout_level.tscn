@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c5rekpqjdm04u" path="res://Scenes/Modular Kit/sm_f_door_1_5m.tscn" id="5_66fqq"]
 [ext_resource type="PackedScene" uid="uid://bht2er3wvdqro" path="res://Scenes/Modular Kit/sm_f_wall_int_corner.tscn" id="6_mfu42"]
 [ext_resource type="PackedScene" uid="uid://c3u7tvsnoxutf" path="res://Scenes/Modular Kit/sm_f_wall_int_1_5m.tscn" id="7_w6spd"]
-[ext_resource type="PackedScene" uid="uid://do16ukrdu2wks" path="res://Scenes/Modular Kit/sm_f_door_1_5m_open.tscn" id="8_7mehn"]
+[ext_resource type="PackedScene" path="res://Scenes/Modular Kit/sm_f_door_1_5m_open.tscn" id="8_7mehn"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dckfx"]
 size = Vector3(6, 3, 0.5)
@@ -141,6 +141,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.3848, 1.5, 20.29)
 [node name="SM F Wall 3x3m2" parent="Free Placed Geometry/Kitchen" instance=ExtResource("4_68hix")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.7347, 1.5, 20.29)
 
+[node name="SM_F_Wall_Int Corner" parent="Free Placed Geometry/Kitchen" instance=ExtResource("6_mfu42")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 1.6, 20.1205)
+
+[node name="SM_F_Wall_Int Corner2" parent="Free Placed Geometry/Kitchen" instance=ExtResource("6_mfu42")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.1371, 1.6, 20.1205)
+
 [node name="SM F Door 1_5m" parent="Free Placed Geometry" instance=ExtResource("5_66fqq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 1.5, 17.6312)
 
@@ -200,6 +206,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49508, -4.76837e-07, 0.3848
 
 [node name="SM F Door 1_5m_open5" parent="Free Placed Geometry" instance=ExtResource("8_7mehn")]
 transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -22.1174, 4.51, 15.75)
+visible = false
 
 [node name="SM_F_Wall_Int_1_5m" parent="Free Placed Geometry/SM F Door 1_5m_open5" instance=ExtResource("7_w6spd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49508, -4.76837e-07, 0.384872)
