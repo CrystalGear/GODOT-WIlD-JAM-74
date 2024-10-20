@@ -152,7 +152,7 @@ func _handle_movement() -> void:
 		step_timer -= ((absolute_velocity.x + absolute_velocity.z) / 2 * current_move_speed)
 	else:
 		input_dir = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-		var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+		direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		if direction:
 			velocity.x = direction.x * current_move_speed
 			velocity.z = direction.z * current_move_speed

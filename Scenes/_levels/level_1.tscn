@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dkbwkvi8f7mtw" path="res://Scenes/Characters/player.tscn" id="3_nxca5"]
 [ext_resource type="PackedScene" uid="uid://bj0lcccv1qld" path="res://Scenes/letterbox.tscn" id="4_4voce"]
 [ext_resource type="PackedScene" uid="uid://bbmqruprrgtxx" path="res://Scenes/ambient_generator.tscn" id="4_wh0ju"]
-[ext_resource type="PackedScene" path="res://Scenes/Characters/enemy.tscn" id="5_n0qbt"]
+[ext_resource type="PackedScene" uid="uid://blnnbmexf5lhr" path="res://Scenes/Characters/enemy.tscn" id="5_n0qbt"]
 [ext_resource type="AudioStream" uid="uid://bmllli52m6li6" path="res://Audio/SFX/pots-and-pans-clatter-1-87352.mp3" id="5_u0t7o"]
 [ext_resource type="AudioStream" uid="uid://bgu24parh4d6y" path="res://Audio/SFX/knock-knock!-made-with-Voicemod.mp3" id="6_f7ehi"]
 [ext_resource type="AudioStream" uid="uid://cyk314vkjr7j0" path="res://Audio/SFX/creak-#3-made-with-Voicemod.mp3" id="7_vdh0g"]
@@ -37,7 +37,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.92464, 2.43556, 10.7976)
 enemy = NodePath("../Enemy")
 
 [node name="Enemy" parent="." instance=ExtResource("5_n0qbt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.73484, 2.8604, 7.38257)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.73484, 2.67476, 7.38257)
 
 [node name="Letterbox" parent="." instance=ExtResource("4_4voce")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 2.75, 16.1502)
