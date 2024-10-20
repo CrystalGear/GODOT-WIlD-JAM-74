@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dkbwkvi8f7mtw"]
+[gd_scene load_steps=10 format=3 uid="uid://dkbwkvi8f7mtw"]
 
 [ext_resource type="Script" path="res://Scripts/Player_Scripts/player.gd" id="1_xnuy8"]
 [ext_resource type="PackedScene" uid="uid://drw7vuij4qrl0" path="res://Scenes/UI/timer_canvas.tscn" id="2_dq00m"]
@@ -46,8 +46,15 @@ _data = {
 "crouch": SubResource("Animation_2raob")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_3jjmy"]
+size = Vector3(30, 4, 30)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f0rn8"]
+size = Vector3(6, 4, 6)
+
 [node name="Player" type="CharacterBody3D"]
-collision_layer = 524288
+collision_layer = 524352
+collision_mask = 129
 script = ExtResource("1_xnuy8")
 pull = 15
 
@@ -71,11 +78,6 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 
 [node name="ItemSlotTransform" parent="Camera3D/PlayerInteractionComponent/InventoryComponent" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.127626, -0.137938, 0.476709)
 
-[node name="timer_canvas" parent="." instance=ExtResource("2_dq00m")]
-
-[editable path="Camera3D/PlayerInteractionComponent"]
-[editable path="Camera3D/PlayerInteractionComponent/InventoryComponent"]
-
 [node name="FlashlightHand" type="Node3D" parent="Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26002, -0.267397, -0.188811)
 
@@ -87,5 +89,18 @@ spot_range = 30.0
 spot_angle = 44.6278
 spot_angle_attenuation = 1.93187
 
+[node name="timer_canvas" parent="." instance=ExtResource("2_dq00m")]
+
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 light_color = Color(0.172833, 0.172833, 0.172833, 1)
+
+[node name="WalkSoundShapeCast" type="ShapeCast3D" parent="."]
+shape = SubResource("BoxShape3D_3jjmy")
+collision_mask = 128
+
+[node name="CrouchSoundShapeCast" type="ShapeCast3D" parent="."]
+shape = SubResource("BoxShape3D_f0rn8")
+collision_mask = 128
+
+[editable path="Camera3D/PlayerInteractionComponent"]
+[editable path="Camera3D/PlayerInteractionComponent/InventoryComponent"]

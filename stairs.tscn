@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6nbafsspib4j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gfhgo"]
+size = Vector3(2.5, 0.3, 4.32788)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yiqa3"]
+size = Vector3(2.5, 0.3, 0.596298)
+
+[node name="Stairs" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5496, 3.20422, 12.3397)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.732982, -0.680248, 0, 0.680248, 0.732982, 0.568723, -0.340019, 0.19856)
+shape = SubResource("BoxShape3D_gfhgo")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5496, 3.20422, 12.3397)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 0.994482, -0.10491, 0, 0.10491, 0.994482, 0.568723, 1.12531, -1.68429)
+shape = SubResource("BoxShape3D_yiqa3")
