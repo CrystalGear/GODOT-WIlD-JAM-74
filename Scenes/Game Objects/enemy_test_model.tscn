@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://ttf4lepyb5q0"]
+
+[ext_resource type="PackedScene" uid="uid://bljsdswm4klu2" path="res://Models/SpookySpectre.fbx" id="1_cv416"]
+[ext_resource type="Material" uid="uid://bfim2prxnff2n" path="res://Materials/Spooky-Spectre_material_3d.tres" id="2_obglr"]
+[ext_resource type="Texture2D" uid="uid://dms4ea5aeqkt1" path="res://Images/Textures/Spooky Spectre/SpookySpectre_Spooky_Spectre_blinn1_BaseMap.png" id="3_6j3wa"]
+[ext_resource type="Texture2D" uid="uid://dtqv45o8bdk1l" path="res://Images/Textures/Spooky Spectre/SpookySpectre_Spooky_Spectre_blinn1_MaskMap.png" id="4_jmkcx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k46lq"]
+albedo_texture = ExtResource("3_6j3wa")
+metallic_texture = ExtResource("3_6j3wa")
+metallic_texture_channel = 2
+roughness = 0.0
+roughness_texture = ExtResource("4_jmkcx")
+emission_enabled = true
+emission = Color(0.531146, 1.52213e-06, 4.33177e-07, 1)
+emission_energy_multiplier = 12.37
+normal_enabled = true
+
+[node name="Enemy Test Model" type="StaticBody3D"]
+
+[node name="SpookySpectre" parent="." instance=ExtResource("1_cv416")]
+
+[node name="Spooky_Spectre_Group63730Spooky_Spectre" parent="SpookySpectre/Spooky_Spectre_group1" index="0"]
+material_override = ExtResource("2_obglr")
+
+[node name="Spooky_Spectre_ZBrush_defualt_group" parent="SpookySpectre/Spooky_Spectre_group1" index="1"]
+material_override = ExtResource("2_obglr")
+
+[node name="Spooky_Spectre_Eyes" parent="SpookySpectre/Spooky_Spectre_group1" index="2"]
+surface_material_override/0 = SubResource("StandardMaterial3D_k46lq")
+
+[node name="Spooky_Spectre_Group17422" parent="SpookySpectre/Spooky_Spectre_group1" index="3"]
+surface_material_override/0 = ExtResource("2_obglr")
+
+[editable path="SpookySpectre"]
