@@ -1,18 +1,14 @@
-
-[gd_scene load_steps=4 format=3 uid="uid://blnnbmexf5lhr"]
+[gd_scene load_steps=5 format=3 uid="uid://blnnbmexf5lhr"]
 
 [ext_resource type="Script" path="res://Scripts/Enemy_Scripts/enemy.gd" id="1_rxut0"]
 [ext_resource type="PackedScene" uid="uid://ttf4lepyb5q0" path="res://Scenes/Game Objects/enemy_test_model.tscn" id="2_kwkaf"]
 
-
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fmah0"]
-radius = 0.4
+radius = 0.32
 height = 2.247
 
-
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1ty2j"]
-radius = 0.7
-height = 2.14
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_iuu2m"]
+height = 2.247
 
 [node name="Enemy" type="CharacterBody3D"]
 collision_layer = 128
@@ -20,12 +16,14 @@ collision_mask = 65
 script = ExtResource("1_rxut0")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+target_desired_distance = 0.4
+path_max_distance = 1.01
+path_postprocessing = 1
 use_3d_avoidance = true
 avoidance_layers = 3
 avoidance_mask = 3
 debug_enabled = true
 debug_path_custom_color = Color(1, 0, 1, 1)
-
 
 [node name="VisionRaycast" type="RayCast3D" parent="."]
 target_position = Vector3(0, 0, 100)
@@ -33,10 +31,18 @@ collision_mask = 67
 debug_shape_custom_color = Color(1, 0, 0, 1)
 debug_shape_thickness = 5
 
-
 [node name="Enemy Test Model" parent="." instance=ExtResource("2_kwkaf")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.588485, -0.141212)
 shape = SubResource("CapsuleShape3D_fmah0")
 
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 128
+collision_mask = 64
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.588485, -0.141212)
+shape = SubResource("CapsuleShape3D_iuu2m")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
