@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bn56ncgudcqxy"]
+[gd_scene load_steps=12 format=3 uid="uid://bn56ncgudcqxy"]
 
 [ext_resource type="PackedScene" uid="uid://ia38iawogjd7" path="res://Scenes/default_environment.tscn" id="1_g2m6j"]
 [ext_resource type="PackedScene" uid="uid://c15oa1883es0v" path="res://Scenes/blockout/blockout_level.tscn" id="2_qp6am"]
@@ -8,6 +8,9 @@
 [ext_resource type="AudioStream" uid="uid://bgu24parh4d6y" path="res://Audio/SFX/knock-knock!-made-with-Voicemod.mp3" id="6_f7ehi"]
 [ext_resource type="AudioStream" uid="uid://cyk314vkjr7j0" path="res://Audio/SFX/creak-#3-made-with-Voicemod.mp3" id="7_vdh0g"]
 [ext_resource type="AudioStream" uid="uid://bydqnlc715a0q" path="res://Audio/SFX/metal-thud-6034.mp3" id="8_18jsh"]
+[ext_resource type="PackedScene" uid="uid://crhgx1286i5xe" path="res://Scenes/Car/wheel.tscn" id="9_qd8f3"]
+[ext_resource type="PackedScene" uid="uid://dw8rbp3nrsuel" path="res://Scenes/Car/Repairables/RepairableWheel.tscn" id="10_gc6wg"]
+[ext_resource type="PackedScene" uid="uid://f2vmqitmguct" path="res://Scenes/Game Objects/wrench.tscn" id="11_pqe37"]
 
 [node name="Level1" type="Node3D"]
 
@@ -37,3 +40,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.2957, -1.5, 11.2521)
 stream = ExtResource("7_vdh0g")
 
 [node name="Static Lights" type="Node" parent="."]
+
+[node name="Wheel" parent="." instance=ExtResource("9_qd8f3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7562, 2.34879, 12.5476)
+
+[node name="RepairWheel" parent="." node_paths=PackedStringArray("collectable_part", "tool_to_repair_with") instance=ExtResource("10_gc6wg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.8193, 2.658, 12.734)
+collectable_part = NodePath("../Wheel")
+tool_to_repair_with = NodePath("../Wrench")
+
+[node name="Wrench" parent="." instance=ExtResource("11_pqe37")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.8972, 2.59567, 12.8173)

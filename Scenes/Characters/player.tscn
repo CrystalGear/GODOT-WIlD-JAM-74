@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://dkbwkvi8f7mtw"]
+[gd_scene load_steps=10 format=3 uid="uid://dkbwkvi8f7mtw"]
 
 [ext_resource type="Script" path="res://Scripts/Player_Scripts/player.gd" id="1_xnuy8"]
+[ext_resource type="AudioStream" uid="uid://cvhbm53q0ox5" path="res://Audio/SFX/repair.mp3" id="2_013tk"]
 [ext_resource type="PackedScene" uid="uid://drw7vuij4qrl0" path="res://Scenes/UI/timer_canvas.tscn" id="2_dq00m"]
 [ext_resource type="PackedScene" uid="uid://d4jrqdt68qvbu" path="res://Scenes/player_interaction_component.tscn" id="2_t3gbh"]
 
@@ -79,6 +80,7 @@ _data = {
 collision_layer = 524288
 script = ExtResource("1_xnuy8")
 pull = 15
+repair_sound = ExtResource("2_013tk")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_gbg41")

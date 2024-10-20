@@ -14,6 +14,8 @@ class_name Player extends CharacterBody3D
 
 @export var pull = 12
 
+@export var repair_sound: AudioStream
+
 @onready var camera = $Camera3D
 @onready var collision_shape = $CollisionShape3D
 @onready var raycast = $RayCast3D
@@ -31,6 +33,7 @@ var mouse_sensitivity:float:
 	set(value):
 		OptionsManager.Set_Mouse_Sensitivity(value * 200)
 var joystick_sensitivity = 2
+
 
 func _input(event) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
@@ -135,13 +138,13 @@ func interact_with_object():
 		interaction_component.interact_with_item()
 		if interaction_cast.is_colliding():
 			var other = interaction_cast.get_collider()
-			print(other)
 			if other is Openable:
 				print("opening")
 				other.use()
 			if other is Repairable:
 				if other.repair($Camera3D/PlayerInteractionComponent/InventoryComponent/ItemSlotTransform.get_child(0)):
 					animation_player.play("repair")
+					AudioManager.play_clip(repair_sound)
 				
 
 func drop_held_object():

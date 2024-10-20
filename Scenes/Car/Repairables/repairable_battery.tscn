@@ -11,4 +11,10 @@ outline_mesh = NodePath("Battery/Outline")
 [node name="Battery" parent="." index="1" instance=ExtResource("2_fkbkn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0118012, 0, -0.00598669)
 
+[node name="Battery" parent="Battery" index="0"]
+visible = false
+
+[node name="Outline" parent="Battery" index="1"]
+visible = true
+
 [editable path="Battery"]
