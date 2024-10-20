@@ -4,13 +4,15 @@ class_name Enemy extends CharacterBody3D
 enum EnemyState { PATROL, CHASE, SEARCH }
 
 @export var base_movement_speed: float = 3.0
-@export var patrol_speed: float = 1.5
-@export var chase_speed: float = 3.0
+@export var patrol_speed: float = 3
+@export var chase_speed: float = 4
 @export var detection_radius: float = 10.0
 @export var debug_mode: bool = false
 
 @export var patrol_min_bounds: Vector3 = Vector3(-50, -3, -15)
 @export var patrol_max_bounds: Vector3 = Vector3(10, 9, 20)
+@export var atticSpawner: Node3D
+@export var basementSpawner: Node3D
 
 var player: CharacterBody3D = null
 var state: EnemyState = EnemyState.PATROL
@@ -28,7 +30,7 @@ func _ready() -> void:
 	nav_region = find_navigation_region3D_by_group()
 	
 	# Assumes 'self' is the enemy and is a sibling of 'Player' under the same parent.
-    # Access the parent first, then find 'Player' among its children.
+	# Access the parent first, then find 'Player' among its children.
 	player = get_parent().get_node("Player")
 
 	if player:
@@ -161,3 +163,9 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 	print(body.name)
 	if body is Player:
 		stun_player()
+
+func teleport_to_base():
+	if player.transform.origin.y > 0:
+		self.transform.origin = basementSpawner.transform.origin
+	else:
+		self.transform.origin = atticSpawner.transform.origin

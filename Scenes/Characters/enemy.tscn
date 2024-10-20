@@ -16,6 +16,7 @@ material = SubResource("StandardMaterial3D_vbaap")
 size = Vector3(0.4, 0.4, 0.4)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1ty2j"]
+radius = 0.7
 height = 2.14
 
 [node name="Enemy" type="CharacterBody3D"]

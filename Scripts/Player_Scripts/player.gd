@@ -17,6 +17,9 @@ class_name Player extends CharacterBody3D
 @export var pull = 12
 @export var enemy: Enemy
 
+@export var atticSpawner: Node3D
+@export var basementSpawner: Node3D
+
 @onready var camera = $Camera3D
 @onready var collision_shape = $CollisionShape3D
 @onready var raycast = $RayCast3D
@@ -169,7 +172,10 @@ func flip_stun() -> void:
 		return
 	b_is_stunned = !b_is_stunned
 	print(b_is_stunned)
+	$Camera3D.camera_shake(camera_shake_time, camera_shake_intensity)
 	$StunTimer.start()
+	enemy.teleport_to_base()
+	force_drop()
 
 func reset_stun() -> void:
 	if !b_is_stunned:
@@ -178,3 +184,12 @@ func reset_stun() -> void:
 
 func _on_stun_timer_timeout() -> void:
 	reset_stun()
+
+func force_drop():
+	var temp_item = interaction_component.drop_item()
+	if temp_item:
+		print(temp_item.name)
+		if self.transform.origin.y > 0:
+			temp_item.transform.origin = basementSpawner.transform.origin
+		else:
+			temp_item.transform.origin = atticSpawner.transform.origin

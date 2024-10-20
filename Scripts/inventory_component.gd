@@ -86,8 +86,9 @@ func throw_held_item() -> void:
 
 
 
-func drop_held_item():
+func drop_held_item() -> Item:
 	if held_item != null:
+		var temp_item = held_item
 		#add collision back to item
 		held_item.collision_layer = 2
 		held_item.collision_mask = 1
@@ -103,10 +104,9 @@ func drop_held_item():
 		held_item.set_physics_process(true)
 		
 		#throw
-		held_item.apply_impulse(-player_node.camera.global_transform.basis[2]*(held_item.mass*drop_launch_force))
-		
+		held_item.apply_impulse(-player_node.camera.global_transform.basis[2] * (held_item.mass * drop_launch_force))
+		#player_node.block_flashlight = false
 		#clear the held item variable
 		held_item = null
-	
-	
-	
+		return temp_item
+	return null

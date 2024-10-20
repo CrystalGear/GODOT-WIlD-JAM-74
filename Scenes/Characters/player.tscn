@@ -57,6 +57,8 @@ size = Vector3(6, 4, 6)
 collision_layer = 524352
 collision_mask = 129
 script = ExtResource("1_xnuy8")
+camera_shake_time = 2
+camera_shake_intensity = 0.1
 pull = 15
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

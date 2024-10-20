@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://cd0cqn0wp7hbo"]
+
+[node name="TeleportPoint" type="Node3D"]
