@@ -306,6 +306,7 @@ surface_material_override/1 = SubResource("StandardMaterial3D_jds0r")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SM F Wall Arch 3x3m/SM_Wall_IntArch_3x3m/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_xr1lv")
+disabled = true
 
 [node name="SM F Wall Window 1_5m" parent="." instance=ExtResource("6_gd7mw")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.57875, 0, 7.9475)

@@ -20,6 +20,11 @@ collision_mask = 65
 script = ExtResource("1_rxut0")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+use_3d_avoidance = true
+avoidance_layers = 3
+avoidance_mask = 3
+debug_enabled = true
+debug_path_custom_color = Color(1, 0, 1, 1)
 
 
 [node name="VisionRaycast" type="RayCast3D" parent="."]
