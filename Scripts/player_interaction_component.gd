@@ -42,8 +42,11 @@ func interact_with_item() -> void:
 	else:
 		_pick_up_item()
 		
-func drop_item():
-	InventoryComponent.drop_held_item()
+func drop_item()-> Item:
+	var temp_item = InventoryComponent.drop_held_item()
+	if temp_item:
+		return temp_item
+	return null
 
 func throw_item():
 	InventoryComponent.throw_held_item()
