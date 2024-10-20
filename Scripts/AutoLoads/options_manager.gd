@@ -23,12 +23,14 @@ func Set_Mouse_Sensitivity(value: float) -> void:
 func Set_Master_Volume(value: float) -> void:
 	if value >= 0.0 and value <= 1.0:
 		master_volume = value
+		AudioManager.update_music_volume()
 	else:
 		print("Master volume out of valid range")
 
 func Set_Music_Volume(value: float) -> void:
 	if value >= 0.0 and value <= 1.0:
 		music_volume = value
+		AudioManager.update_music_volume()
 	else:
 		print("Music volume out of valid range")
 
