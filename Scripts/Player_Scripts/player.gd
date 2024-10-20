@@ -11,6 +11,8 @@ class_name Player extends CharacterBody3D
 @onready var flash_light: SpotLight3D = $Camera3D/FlashlightHand/SpotLight3D
 
 @export var player_height = 1.7
+@export var camera_shake_time = 1
+@export var camera_shake_intensity = 0.4
 
 @export var pull = 12
 @export var enemy: Enemy
