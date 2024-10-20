@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b76f2gih7f1jo"]
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_0ql8g"]
-[ext_resource type="Texture2D" uid="uid://orr75x8cq8b" path="res://icon.svg" id="2_hqxtv"]
+[ext_resource type="Texture2D" uid="uid://c03xxs76qos4s" path="res://Images/background.png" id="2_cgvfw"]
 [ext_resource type="Theme" uid="uid://duemvjths1y6w" path="res://Themes/menu_theme.tres" id="3_xuq28"]
 
 [node name="MainMenu" type="Control"]
@@ -20,7 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_hqxtv")
+texture = ExtResource("2_cgvfw")
 
 [node name="StartButton" type="Button" parent="."]
 layout_mode = 1
