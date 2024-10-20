@@ -1,0 +1,24 @@
+[gd_scene load_steps=7 format=3 uid="uid://oja4vxf5srgx"]
+
+[ext_resource type="PackedScene" uid="uid://cgpj736brouc4" path="res://Models/Picture.fbx" id="1_cvm3j"]
+[ext_resource type="Material" uid="uid://bv3pxmtesaaw" path="res://Materials/Picture Frame.tres" id="2_7nr4j"]
+[ext_resource type="Texture2D" uid="uid://d15u5c471hpu2" path="res://Textures/Pictures/LeeRoy/Picture_blinn1_BaseMap.png" id="3_w16da"]
+[ext_resource type="Texture2D" uid="uid://bvskl00rhadxg" path="res://Textures/Pictures/Christine/Picture_blinn1_MaskMap.png" id="4_nuqef"]
+[ext_resource type="Texture2D" uid="uid://dahcvy3fkoun" path="res://Textures/Pictures/Christine/Picture_blinn1_Normal.png" id="5_s14k5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gb0c7"]
+albedo_texture = ExtResource("3_w16da")
+metallic = 1.0
+metallic_texture = ExtResource("4_nuqef")
+normal_enabled = true
+normal_texture = ExtResource("5_s14k5")
+
+[node name="Christine Poster" type="StaticBody3D"]
+
+[node name="Picture" parent="." instance=ExtResource("1_cvm3j")]
+
+[node name="pCube1" parent="Picture" index="0"]
+surface_material_override/0 = ExtResource("2_7nr4j")
+surface_material_override/1 = SubResource("StandardMaterial3D_gb0c7")
+
+[editable path="Picture"]
