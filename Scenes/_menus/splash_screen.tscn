@@ -1,14 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://d1qulakchfluv"]
 
-[ext_resource type="Texture2D" uid="uid://orr75x8cq8b" path="res://icon.svg" id="1_4x34b"]
 [ext_resource type="Script" path="res://Scripts/splash_screen.gd" id="1_6sk1p"]
+[ext_resource type="Texture2D" uid="uid://c0ev03cgfbrn6" path="res://Images/splash.png" id="2_y0ybf"]
 
 [node name="SplashScreen" type="Node2D"]
 script = ExtResource("1_6sk1p")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(618, 298)
-texture = ExtResource("1_4x34b")
+position = Vector2(955.75, 517.75)
+scale = Vector2(1.53911, 1.64728)
+texture = ExtResource("2_y0ybf")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
