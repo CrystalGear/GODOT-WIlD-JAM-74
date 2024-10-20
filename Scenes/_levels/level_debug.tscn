@@ -43,19 +43,10 @@ script = ExtResource("2_n4ogn")
 
 [node name="Player" parent="." node_paths=PackedStringArray("enemy") instance=ExtResource("3_qsqcb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.92464, 2.43556, 10.7976)
-walking_speed = null
-crouch_walk_speed = null
-jump_velocity = null
-flash_light_on = null
-light_charge = null
-light_fade_threshold = null
-player_height = null
-camera_shake_time = null
-camera_shake_intensity = null
 enemy = NodePath("../Enemy")
 
 [node name="Enemy" parent="." instance=ExtResource("19_cnscy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.73484, 2.8604, 7.38257)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.1551, 5.98915, 7.38257)
 
 [node name="Movable Objects" type="Node" parent="."]
 

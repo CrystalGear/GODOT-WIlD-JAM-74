@@ -1,23 +1,33 @@
-[gd_scene load_steps=23 format=4 uid="uid://cp7qcj6bigbdu"]
+[gd_scene load_steps=31 format=4 uid="uid://cp7qcj6bigbdu"]
 
 [ext_resource type="PackedScene" uid="uid://u8502osh6bu2" path="res://Models/The Car/Car.fbx" id="1_g5mll"]
-[ext_resource type="Material" uid="uid://bs54jbac65r34" path="res://Materials/Battery + Engine.tres" id="2_efiqq"]
+[ext_resource type="Material" path="res://Materials/Battery + Engine.tres" id="2_efiqq"]
 [ext_resource type="Texture2D" uid="uid://dbaia1uky1y1s" path="res://Textures/Car textures/CarGrill/Car_Grill_Headlights_BaseColor.png" id="2_l2exa"]
-[ext_resource type="Material" uid="uid://dndx41kwiae6e" path="res://Materials/Wheels.tres" id="2_qaa60"]
-[ext_resource type="Material" uid="uid://b5uilfnxnegq8" path="res://Materials/Car_Interior.tres" id="2_s57xi"]
+[ext_resource type="Material" path="res://Materials/Wheels.tres" id="2_qaa60"]
+[ext_resource type="Material" path="res://Materials/Car_Interior.tres" id="2_s57xi"]
 [ext_resource type="Texture2D" uid="uid://q0p73fj3rskq" path="res://Textures/Car textures/CarGrill/Car_Grill_Headlights_OcclusionRoughnessMetallic.png" id="3_3xtvs"]
-[ext_resource type="Material" uid="uid://cw88nwiospju8" path="res://Materials/CarHeadLight.tres" id="3_6m3s1"]
+[ext_resource type="Material" path="res://Materials/CarHeadLight.tres" id="3_6m3s1"]
 [ext_resource type="Texture2D" uid="uid://c6thuhap66piu" path="res://Textures/Car textures/CarGrill/Car_Grill_Headlights_Normal.png" id="4_0upa5"]
-[ext_resource type="Material" uid="uid://bsgsgw2tgfrk6" path="res://Materials/Car_underSide.tres" id="5_3kblr"]
-[ext_resource type="Material" uid="uid://cl8ril12wm24o" path="res://Materials/Car_Window.tres" id="5_u2mnr"]
-[ext_resource type="Material" uid="uid://hnsxy8grr6ck" path="res://Materials/bonnet.tres" id="7_jv17n"]
-[ext_resource type="Material" uid="uid://cx5c57ov3gjen" path="res://Materials/Car_Door.tres" id="8_pnew5"]
+[ext_resource type="Material" path="res://Materials/Car_underSide.tres" id="5_3kblr"]
+[ext_resource type="Material" path="res://Materials/Car_Window.tres" id="5_u2mnr"]
+[ext_resource type="Material" path="res://Materials/bonnet.tres" id="7_jv17n"]
+[ext_resource type="Material" path="res://Materials/Car_Door.tres" id="8_pnew5"]
+[ext_resource type="PackedScene" uid="uid://dw8rbp3nrsuel" path="res://Scenes/Car/Repairables/RepairableWheel.tscn" id="10_stwyo"]
+[ext_resource type="PackedScene" uid="uid://bnl45qykfs7v5" path="res://Scenes/Car/Repairables/repairable_bonnet.tscn" id="14_cdie0"]
+[ext_resource type="PackedScene" uid="uid://cq3do781opv8g" path="res://Scenes/Car/Repairables/repairable_battery.tscn" id="15_6v3m8"]
+[ext_resource type="PackedScene" uid="uid://pcelbyjwjyp" path="res://Scenes/Car/Repairables/repairable_bolts.tscn" id="16_5j5wb"]
+[ext_resource type="PackedScene" uid="uid://bewq1tifaq166" path="res://Scenes/Car/Repairables/repairable_headlight_1.tscn" id="17_irk6r"]
+[ext_resource type="PackedScene" uid="uid://dlue2b0gl5i4a" path="res://Scenes/Car/Repairables/repairable_headlight_2.tscn" id="18_3wk2t"]
+[ext_resource type="PackedScene" uid="uid://cfekdusjlkfqd" path="res://Scenes/Car/Repairables/repairable_steering_wheel.tscn" id="19_k8yjt"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sp80w"]
-size = Vector3(1.47241, 1.72974, 1.2973)
+size = Vector3(1.47241, 0.305788, 1.18066)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5lcbm"]
+size = Vector3(1.47241, 0.560609, 1.18066)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_x4k10"]
-size = Vector3(1.86523, 1.13647, 1.38583)
+size = Vector3(1.61035, 1.13647, 1.38583)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xjqah"]
 size = Vector3(1.86523, 0.47644, 2.10695)
@@ -82,24 +92,29 @@ data = PackedVector3Array(0.4196, -0.1584, -0.232, 0.2804, -0.1552, -0.2075, 0.2
 [node name="Car" instance=ExtResource("1_g5mll")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="0"]
+visible = false
 
 [node name="Cab" type="CollisionShape3D" parent="StaticBody3D" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.06873, 0.223297)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.78071, 0.223297)
 shape = SubResource("BoxShape3D_sp80w")
 
-[node name="Bonnet" type="CollisionShape3D" parent="StaticBody3D" index="1"]
+[node name="Cab2" type="CollisionShape3D" parent="StaticBody3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.526683, 0.223297)
+shape = SubResource("BoxShape3D_5lcbm")
+
+[node name="Bonnet" type="CollisionShape3D" parent="StaticBody3D" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.772095, 1.53061)
 shape = SubResource("BoxShape3D_x4k10")
 
-[node name="bed" type="CollisionShape3D" parent="StaticBody3D" index="2"]
+[node name="bed" type="CollisionShape3D" parent="StaticBody3D" index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.442078, -1.52178)
 shape = SubResource("BoxShape3D_xjqah")
 
-[node name="BedSides" type="CollisionShape3D" parent="StaticBody3D" index="3"]
+[node name="BedSides" type="CollisionShape3D" parent="StaticBody3D" index="4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.566467, 0.839363, -1.43865)
 shape = SubResource("BoxShape3D_b3ido")
 
-[node name="BedSides2" type="CollisionShape3D" parent="StaticBody3D" index="4"]
+[node name="BedSides2" type="CollisionShape3D" parent="StaticBody3D" index="5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.601628, 0.839363, -1.43865)
 shape = SubResource("BoxShape3D_b3ido")
 
@@ -107,6 +122,7 @@ shape = SubResource("BoxShape3D_b3ido")
 material_override = ExtResource("2_s57xi")
 
 [node name="SteeringWheel2" parent="Interior/SteeringWheel" index="1"]
+visible = false
 material_override = ExtResource("2_s57xi")
 
 [node name="pCylinder3" parent="Interior/SteeringWheel" index="2"]
@@ -134,6 +150,7 @@ material_override = ExtResource("2_s57xi")
 material_override = ExtResource("2_s57xi")
 
 [node name="Headlight_1_L" parent="Headlights_Grill" index="0"]
+visible = false
 material_override = ExtResource("3_6m3s1")
 
 [node name="Headlight_2_L" parent="Headlights_Grill" index="1"]
@@ -143,6 +160,7 @@ material_override = ExtResource("3_6m3s1")
 surface_material_override/0 = SubResource("StandardMaterial3D_wqb75")
 
 [node name="Headlight_2_R" parent="Headlights_Grill" index="3"]
+visible = false
 surface_material_override/0 = ExtResource("3_6m3s1")
 
 [node name="Headlight_1_R" parent="Headlights_Grill" index="4"]
@@ -164,6 +182,7 @@ material_override = ExtResource("2_qaa60")
 material_override = ExtResource("5_3kblr")
 
 [node name="R_Bolts" parent="Underside_wheels/Wheels_Back" index="3"]
+visible = false
 material_override = ExtResource("5_3kblr")
 
 [node name="R" parent="Underside_wheels/Wheels_Back/R" index="0"]
@@ -178,8 +197,14 @@ material_override = ExtResource("5_3kblr")
 [node name="R_Bolts2" parent="Underside_wheels/Wheels_Front" index="2"]
 material_override = ExtResource("5_3kblr")
 
+[node name="L1" parent="Underside_wheels/Wheels_Front" index="3"]
+visible = false
+
 [node name="L1" parent="Underside_wheels/Wheels_Front/L1" index="0"]
 material_override = ExtResource("2_qaa60")
+
+[node name="R2" parent="Underside_wheels/Wheels_Front" index="4"]
+visible = false
 
 [node name="R2" parent="Underside_wheels/Wheels_Front/R2" index="0"]
 material_override = ExtResource("2_qaa60")
@@ -277,9 +302,6 @@ material_override = ExtResource("5_3kblr")
 [node name="Engine_under" parent="Underside_wheels/Underside" index="12"]
 material_override = ExtResource("5_3kblr")
 
-[node name="Door_Passenger" parent="Doors" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-
 [node name="Window" parent="Doors/Door_Passenger" index="0"]
 surface_material_override/0 = ExtResource("5_u2mnr")
 
@@ -291,7 +313,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.838045, 1.12634, 0.22848)
 shape = SubResource("ConcavePolygonShape3D_woqc1")
 
 [node name="Door_Driver" parent="Doors" index="1"]
-transform = Transform3D(0.173648, 0, 0.984808, 0, 1, 0, -0.984808, 0, 0.173648, -0.114249, 0, 1.32575)
+transform = Transform3D(0.915922, 0, 0.401357, 0, 1, 0, -0.401357, 0, 0.915922, -0.308292, 0, 0.364591)
 
 [node name="Window2" parent="Doors/Door_Driver" index="0"]
 material_override = ExtResource("5_u2mnr")
@@ -301,12 +323,14 @@ material_override = ExtResource("8_pnew5")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Doors/Door_Driver" index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.22431, 1.10935, 0.738276)
+visible = false
 shape = SubResource("ConcavePolygonShape3D_hi76q")
 
 [node name="BatteryConnectors1" parent="Engine" index="0"]
 material_override = ExtResource("2_efiqq")
 
 [node name="Battery" parent="Engine" index="1"]
+visible = false
 material_override = ExtResource("2_efiqq")
 
 [node name="Engine2" parent="Engine" index="3"]
@@ -317,6 +341,7 @@ material_override = ExtResource("7_jv17n")
 
 [node name="Bonnet" parent="BodyWork" index="1"]
 transform = Transform3D(1, 0, 0, 0, 0.749245, 0.662293, 0, -0.662293, 0.749245, -3.55271e-17, 1.26888, 0.853442)
+visible = false
 material_override = ExtResource("7_jv17n")
 
 [node name="FrontBumpers2" parent="BodyWork" index="2"]
@@ -327,3 +352,29 @@ material_override = ExtResource("7_jv17n")
 
 [node name="Cab" parent="BodyWork" index="4"]
 material_override = ExtResource("7_jv17n")
+
+[node name="Repairables" type="Node3D" parent="." index="10"]
+
+[node name="RepairWheel Left Front" parent="Repairables" index="0" instance=ExtResource("10_stwyo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.723166, 0.407842, 1.43667)
+
+[node name="RepairWheel Right Front" parent="Repairables" index="1" instance=ExtResource("10_stwyo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.719227, 0.407842, 1.43667)
+
+[node name="RepairableBonnet" parent="Repairables" index="2" instance=ExtResource("14_cdie0")]
+transform = Transform3D(1, 0, 0, 0, 0.749245, 0.662293, 0, -0.662293, 0.749245, -3.55271e-17, 1.26888, 0.853442)
+
+[node name="RepairableBattery" parent="Repairables" index="3" instance=ExtResource("15_6v3m8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.971344, 1.6808)
+
+[node name="RepairableBoltsRightRear" parent="Repairables" index="4" instance=ExtResource("16_5j5wb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.831936, 0.407804, -1.48942)
+
+[node name="RepairableHeadlight1" parent="Repairables" index="5" instance=ExtResource("17_irk6r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.649228, 2.13684)
+
+[node name="RepairableHeadlight2" parent="Repairables" index="6" instance=ExtResource("18_3wk2t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35464, 0.680907, 2.13684)
+
+[node name="RepairableSteeringWheel" parent="Repairables" index="7" instance=ExtResource("19_k8yjt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.326363, 1.19702, 0.378012)

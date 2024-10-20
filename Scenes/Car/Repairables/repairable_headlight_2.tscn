@@ -4,10 +4,20 @@
 [ext_resource type="PackedScene" uid="uid://5766t6nqrhhy" path="res://Scenes/Car/headlight_2.tscn" id="2_p208c"]
 
 [node name="RepairableHeadlight2" node_paths=PackedStringArray("static_part", "part_mesh", "outline_mesh") instance=ExtResource("1_i83yl")]
+collision_mask = 2
 static_part = NodePath("Headlight 2")
 part_mesh = NodePath("Headlight 2/Headlight 2")
 outline_mesh = NodePath("Headlight 2/Outline")
 
 [node name="Headlight 2" parent="." index="1" instance=ExtResource("2_p208c")]
+collision_layer = 2
+
+[node name="Headlight 2" parent="Headlight 2" index="0"]
+visible = false
+
+[node name="Outline" parent="Headlight 2" index="2"]
+visible = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 
 [editable path="Headlight 2"]
