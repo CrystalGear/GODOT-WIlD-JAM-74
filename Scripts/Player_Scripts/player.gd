@@ -23,7 +23,12 @@ class_name Player extends CharacterBody3D
 @export var pull = 12
 @export var enemy: Enemy
 
+
+@export var atticSpawner: Node3D
+@export var basementSpawner: Node3D
+
 @export var repair_sound: AudioStream
+
 
 @onready var camera = $Camera3D
 @onready var collision_shape = $CollisionShape3D
@@ -43,6 +48,7 @@ var mouse_sensitivity:float:
 		OptionsManager.Set_Mouse_Sensitivity(value * 200)
 var joystick_sensitivity = 2
 var input_dir: Vector2
+var b_is_stunned: bool = false
 
 
 func _input(event) -> void:
@@ -134,6 +140,9 @@ func _jump() -> void:
 
 # Get the input direction and handle the movement/deceleration.
 func _handle_movement() -> void:
+
+	if b_is_stunned:
+		velocity = Vector3.ZERO
 	input_dir = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
@@ -142,8 +151,14 @@ func _handle_movement() -> void:
 		var absolute_velocity = velocity.abs()
 		step_timer -= ((absolute_velocity.x + absolute_velocity.z) / 2 * current_move_speed)
 	else:
-		velocity.x = move_toward(velocity.x, 0, current_move_speed)
-		velocity.z = move_toward(velocity.z, 0, current_move_speed)
+		input_dir = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+		var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+		if direction:
+			velocity.x = direction.x * current_move_speed
+			velocity.z = direction.z * current_move_speed
+		else:
+			velocity.x = move_toward(velocity.x, 0, current_move_speed)
+			velocity.z = move_toward(velocity.z, 0, current_move_speed)
 
 func _step_handler() -> void:
 	if (step_timer <= 0):
@@ -189,4 +204,32 @@ func drop_held_object():
 func throw_held_object():
 	if Input.is_action_just_pressed("throw"):
 		interaction_component.throw_item()
-	
+
+func flip_stun() -> void:
+	print("Calling FLIP_STUN")
+	if $StunTimer.time_left > 0:
+		print("FLIP STUN ABORTED - ALREADY RUNNING")
+		return
+	b_is_stunned = !b_is_stunned
+	print(b_is_stunned)
+	$Camera3D.camera_shake(camera_shake_time, camera_shake_intensity)
+	$StunTimer.start()
+	enemy.teleport_to_base()
+	force_drop()
+
+func reset_stun() -> void:
+	if !b_is_stunned:
+		return
+	b_is_stunned = !b_is_stunned
+
+func _on_stun_timer_timeout() -> void:
+	reset_stun()
+
+func force_drop():
+	var temp_item = interaction_component.drop_item()
+	if temp_item:
+		print(temp_item.name)
+		if self.transform.origin.y > 0:
+			temp_item.transform.origin = basementSpawner.transform.origin
+		else:
+			temp_item.transform.origin = atticSpawner.transform.origin

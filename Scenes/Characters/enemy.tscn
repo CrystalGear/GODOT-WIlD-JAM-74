@@ -1,12 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://blnnbmexf5lhr"]
+[gd_scene load_steps=7 format=3 uid="uid://blnnbmexf5lhr"]
 
 [ext_resource type="Script" path="res://Scripts/Enemy_Scripts/enemy.gd" id="1_rxut0"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_xjvjf"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1ty2j"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_oiumf"]
 radius = 0.1
-height = 1.5
+height = 2.14
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vbaap"]
 albedo_color = Color(1, 0, 1, 1)
@@ -15,8 +15,13 @@ albedo_color = Color(1, 0, 1, 1)
 material = SubResource("StandardMaterial3D_vbaap")
 size = Vector3(0.4, 0.4, 0.4)
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1ty2j"]
+radius = 0.7
+height = 2.14
+
 [node name="Enemy" type="CharacterBody3D"]
 collision_layer = 128
+collision_mask = 65
 script = ExtResource("1_rxut0")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
@@ -25,7 +30,7 @@ script = ExtResource("1_rxut0")
 mesh = SubResource("CapsuleMesh_xjvjf")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("CapsuleShape3D_1ty2j")
+shape = SubResource("CapsuleShape3D_oiumf")
 
 [node name="VisionRaycast" type="RayCast3D" parent="."]
 target_position = Vector3(0, 0, 100)
@@ -36,3 +41,12 @@ debug_shape_thickness = 5
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.546551, 0.499467)
 mesh = SubResource("BoxMesh_ynd2p")
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 128
+collision_mask = 64
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("CapsuleShape3D_1ty2j")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
