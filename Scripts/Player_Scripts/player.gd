@@ -5,6 +5,8 @@ class_name Player extends CharacterBody3D
 @export var crouch_walk_speed = 2.5
 @export var jump_velocity:float = 4.5
 @export var player_height = 1.7
+@export var camera_shake_time = 1
+@export var camera_shake_intensity = 0.4
 
 @export var pull = 12
 

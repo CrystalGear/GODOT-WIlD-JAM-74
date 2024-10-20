@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dkbwkvi8f7mtw"]
+[gd_scene load_steps=9 format=3 uid="uid://dkbwkvi8f7mtw"]
 
 [ext_resource type="Script" path="res://Scripts/Player_Scripts/player.gd" id="1_xnuy8"]
 [ext_resource type="PackedScene" uid="uid://drw7vuij4qrl0" path="res://Scenes/UI/timer_canvas.tscn" id="2_dq00m"]
+[ext_resource type="Script" path="res://Scenes/Characters/camera_3d.gd" id="2_jty26"]
 [ext_resource type="PackedScene" uid="uid://d4jrqdt68qvbu" path="res://Scenes/player_interaction_component.tscn" id="2_t3gbh"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gbg41"]
@@ -64,14 +65,15 @@ libraries = {
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.523499, 0)
 keep_aspect = 0
-
-[node name="timer_canvas" parent="." instance=ExtResource("2_dq00m")]
+script = ExtResource("2_jty26")
 
 [node name="PlayerInteractionComponent" parent="Camera3D" instance=ExtResource("2_t3gbh")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
 
 [node name="ItemSlotTransform" parent="Camera3D/PlayerInteractionComponent/InventoryComponent" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.127626, -0.137938, 0.476709)
+
+[node name="timer_canvas" parent="." instance=ExtResource("2_dq00m")]
 
 [editable path="Camera3D/PlayerInteractionComponent"]
 [editable path="Camera3D/PlayerInteractionComponent/InventoryComponent"]
