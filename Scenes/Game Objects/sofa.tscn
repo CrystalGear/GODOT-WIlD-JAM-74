@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://shf1hdvgvp8o"]
 
 [ext_resource type="PackedScene" uid="uid://by24vh0o4c7q8" path="res://Models/Living Room/Sofa.fbx" id="1_0jwqp"]
-[ext_resource type="Texture2D" uid="uid://bgpgkiqxeyj0w" path="res://Textures/living Room/Sofa_standardSurface1_BaseMap.png" id="2_si3ja"]
-[ext_resource type="Texture2D" uid="uid://c1gudggegdavn" path="res://Textures/living Room/Sofa_standardSurface1_MaskMap.png" id="3_gh11v"]
-[ext_resource type="Texture2D" uid="uid://17qogabek3l0" path="res://Textures/living Room/Sofa_standardSurface1_Normal.png" id="4_cupmc"]
+[ext_resource type="Texture2D" uid="uid://bgpgkiqxeyj0w" path="res://Images/Textures/living Room/Sofa_standardSurface1_BaseMap.png" id="2_si3ja"]
+[ext_resource type="Texture2D" uid="uid://c1gudggegdavn" path="res://Images/Textures/living Room/Sofa_standardSurface1_MaskMap.png" id="3_gh11v"]
+[ext_resource type="Texture2D" uid="uid://17qogabek3l0" path="res://Images/Textures/living Room/Sofa_standardSurface1_Normal.png" id="4_cupmc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nf6jk"]
 albedo_texture = ExtResource("2_si3ja")

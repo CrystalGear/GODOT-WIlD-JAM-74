@@ -1,8 +1,8 @@
 [gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://ia0bc4l2xa4r"]
 
-[ext_resource type="Texture2D" uid="uid://cgovosxnfviui" path="res://Textures/Bathroom Furniture/Toilet_standardSurface1_BaseMap.png" id="1_mfihc"]
-[ext_resource type="Texture2D" uid="uid://dwlyn4dmg5ium" path="res://Textures/Bathroom Furniture/Toilet_standardSurface1_MaskMap.png" id="2_51xl2"]
-[ext_resource type="Texture2D" uid="uid://gh0tqn5qo6qe" path="res://Textures/Bathroom Furniture/Toilet_standardSurface1_Normal.png" id="3_xm8va"]
+[ext_resource type="Texture2D" uid="uid://cgovosxnfviui" path="res://Images/Textures/Bathroom Furniture/Toilet_standardSurface1_BaseMap.png" id="1_mfihc"]
+[ext_resource type="Texture2D" uid="uid://dwlyn4dmg5ium" path="res://Images/Textures/Bathroom Furniture/Toilet_standardSurface1_MaskMap.png" id="2_51xl2"]
+[ext_resource type="Texture2D" uid="uid://gh0tqn5qo6qe" path="res://Images/Textures/Bathroom Furniture/Toilet_standardSurface1_Normal.png" id="3_xm8va"]
 
 [resource]
 albedo_texture = ExtResource("1_mfihc")

@@ -1,12 +1,12 @@
 [gd_scene load_steps=11 format=3 uid="uid://cvylh8vaedgsi"]
 
 [ext_resource type="PackedScene" uid="uid://bysq8uccamrve" path="res://Models/Living Room/Coffee_Table.fbx" id="1_2w183"]
-[ext_resource type="Texture2D" uid="uid://d223bxmeitbhh" path="res://Textures/living Room/Coffee_Table_standardSurface1_BaseMap.png" id="2_21d7q"]
-[ext_resource type="Texture2D" uid="uid://v2uaqiclyf7e" path="res://Textures/living Room/Coffee_Table_standardSurface1_MaskMap.png" id="3_gaqi7"]
-[ext_resource type="Texture2D" uid="uid://7cliegc5ijqt" path="res://Textures/living Room/Coffee_Table_standardSurface1_Normal.png" id="4_21kql"]
-[ext_resource type="Texture2D" uid="uid://conjhw7j1ybto" path="res://Textures/living Room/Coffee_Table_Glass_BaseMap.png" id="5_h0mj2"]
-[ext_resource type="Texture2D" uid="uid://dmkfhgrh1appp" path="res://Textures/living Room/Coffee_Table_Glass_MaskMap.png" id="6_scytj"]
-[ext_resource type="Texture2D" uid="uid://chhynncix34u4" path="res://Textures/living Room/Coffee_Table_Glass_Normal.png" id="7_2jp5t"]
+[ext_resource type="Texture2D" uid="uid://d223bxmeitbhh" path="res://Images/Textures/living Room/Coffee_Table_standardSurface1_BaseMap.png" id="2_21d7q"]
+[ext_resource type="Texture2D" uid="uid://v2uaqiclyf7e" path="res://Images/Textures/living Room/Coffee_Table_standardSurface1_MaskMap.png" id="3_gaqi7"]
+[ext_resource type="Texture2D" uid="uid://7cliegc5ijqt" path="res://Images/Textures/living Room/Coffee_Table_standardSurface1_Normal.png" id="4_21kql"]
+[ext_resource type="Texture2D" uid="uid://conjhw7j1ybto" path="res://Images/Textures/living Room/Coffee_Table_Glass_BaseMap.png" id="5_h0mj2"]
+[ext_resource type="Texture2D" uid="uid://dmkfhgrh1appp" path="res://Images/Textures/living Room/Coffee_Table_Glass_MaskMap.png" id="6_scytj"]
+[ext_resource type="Texture2D" uid="uid://chhynncix34u4" path="res://Images/Textures/living Room/Coffee_Table_Glass_Normal.png" id="7_2jp5t"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l56fc"]
 albedo_texture = ExtResource("2_21d7q")

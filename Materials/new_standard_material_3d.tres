@@ -1,8 +1,8 @@
 [gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://8cxjd8kqjw6m"]
 
-[ext_resource type="Texture2D" uid="uid://7onoffq6ffyw" path="res://Textures/Modular Kit/SM F WALL 3X3_M_Walls/SM F Wall 3x3m_M_Walls_BaseColor.1001.png" id="1_u31qo"]
-[ext_resource type="Texture2D" uid="uid://eb10jwyqd86j" path="res://Textures/Modular Kit/SM F WALL 3X3_M_Walls/SM F Wall 3x3m_M_Walls_OcclusionRoughnessMetallic.1001.png" id="2_qkmgd"]
-[ext_resource type="Texture2D" uid="uid://cgkophg7tr4tl" path="res://Textures/Modular Kit/SM F WALL 3X3_M_Walls/SM F Wall 3x3m_M_Walls_Normal.1001.png" id="3_o7i2r"]
+[ext_resource type="Texture2D" uid="uid://7onoffq6ffyw" path="res://Images/Textures/Modular Kit/SM F WALL 3X3_M_Walls/SM F Wall 3x3m_M_Walls_BaseColor.1001.png" id="1_u31qo"]
+[ext_resource type="Texture2D" uid="uid://eb10jwyqd86j" path="res://Images/Textures/Modular Kit/SM F WALL 3X3_M_Walls/SM F Wall 3x3m_M_Walls_OcclusionRoughnessMetallic.1001.png" id="2_qkmgd"]
+[ext_resource type="Texture2D" uid="uid://cgkophg7tr4tl" path="res://Images/Textures/Modular Kit/SM F WALL 3X3_M_Walls/SM F Wall 3x3m_M_Walls_Normal.1001.png" id="3_o7i2r"]
 
 [resource]
 albedo_texture = ExtResource("1_u31qo")

@@ -1,12 +1,12 @@
 [gd_scene load_steps=11 format=3 uid="uid://cwrtbfn8155qr"]
 
 [ext_resource type="PackedScene" uid="uid://bkrh5c1wl8c7" path="res://Models/Kitchen Furniture/Table.fbx" id="1_lrgha"]
-[ext_resource type="Texture2D" uid="uid://cxewcd3ntppvx" path="res://Textures/Kitchen Furniture/Table_standardSurface1_BaseMap.png" id="2_c5l5r"]
-[ext_resource type="Texture2D" uid="uid://c5nyr3cuvdvo3" path="res://Textures/Kitchen Furniture/Table_standardSurface1_MaskMap.png" id="3_baj5d"]
-[ext_resource type="Texture2D" uid="uid://dxjje4dst1adw" path="res://Textures/Kitchen Furniture/Table_standardSurface1_Normal.png" id="4_ii84q"]
-[ext_resource type="Texture2D" uid="uid://cexbjlxrnj7xg" path="res://Textures/Kitchen Furniture/Table_blinn15_BaseMap.png" id="5_4w4qj"]
-[ext_resource type="Texture2D" uid="uid://b74sqoanxj1aa" path="res://Textures/Kitchen Furniture/Table_blinn15_MaskMap.png" id="6_o0xbl"]
-[ext_resource type="Texture2D" uid="uid://dku8orijekkt3" path="res://Textures/Kitchen Furniture/Table_blinn15_Normal.png" id="7_hsack"]
+[ext_resource type="Texture2D" uid="uid://cxewcd3ntppvx" path="res://Images/Textures/Kitchen Furniture/Table_standardSurface1_BaseMap.png" id="2_c5l5r"]
+[ext_resource type="Texture2D" uid="uid://c5nyr3cuvdvo3" path="res://Images/Textures/Kitchen Furniture/Table_standardSurface1_MaskMap.png" id="3_baj5d"]
+[ext_resource type="Texture2D" uid="uid://dxjje4dst1adw" path="res://Images/Textures/Kitchen Furniture/Table_standardSurface1_Normal.png" id="4_ii84q"]
+[ext_resource type="Texture2D" uid="uid://cexbjlxrnj7xg" path="res://Images/Textures/Kitchen Furniture/Table_blinn15_BaseMap.png" id="5_4w4qj"]
+[ext_resource type="Texture2D" uid="uid://b74sqoanxj1aa" path="res://Images/Textures/Kitchen Furniture/Table_blinn15_MaskMap.png" id="6_o0xbl"]
+[ext_resource type="Texture2D" uid="uid://dku8orijekkt3" path="res://Images/Textures/Kitchen Furniture/Table_blinn15_Normal.png" id="7_hsack"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wr3vl"]
 albedo_texture = ExtResource("2_c5l5r")

@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://d0j0g4n0fvhrs"]
 
 [ext_resource type="PackedScene" uid="uid://bs7mb3ud04bsi" path="res://Models/Kitchen Furniture/Dining Chair.fbx" id="1_u8yve"]
-[ext_resource type="Texture2D" uid="uid://c76gy5v0dq6fq" path="res://Textures/Kitchen Furniture/Dining Chair_standardSurface1_BaseMap.png" id="2_dgelp"]
-[ext_resource type="Texture2D" uid="uid://bgo1ur1rmocq" path="res://Textures/Kitchen Furniture/Dining Chair_standardSurface1_MaskMap.png" id="3_ga2m5"]
-[ext_resource type="Texture2D" uid="uid://b7oabsw8ku3h0" path="res://Textures/Kitchen Furniture/Dining Chair_standardSurface1_Normal.png" id="4_3gpei"]
+[ext_resource type="Texture2D" uid="uid://c76gy5v0dq6fq" path="res://Images/Textures/Kitchen Furniture/Dining Chair_standardSurface1_BaseMap.png" id="2_dgelp"]
+[ext_resource type="Texture2D" uid="uid://bgo1ur1rmocq" path="res://Images/Textures/Kitchen Furniture/Dining Chair_standardSurface1_MaskMap.png" id="3_ga2m5"]
+[ext_resource type="Texture2D" uid="uid://b7oabsw8ku3h0" path="res://Images/Textures/Kitchen Furniture/Dining Chair_standardSurface1_Normal.png" id="4_3gpei"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lxmv0"]
 albedo_texture = ExtResource("2_dgelp")

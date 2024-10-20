@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://dx2ssnl1g2oj8"]
 
 [ext_resource type="PackedScene" uid="uid://m1cdwq3nn5vf" path="res://Models/BedRoom/Bed.fbx" id="1_hxofx"]
-[ext_resource type="Texture2D" uid="uid://5koklf0gs8vh" path="res://Textures/BedRoom/Bed_standardSurface1_BaseMap.png" id="2_ywhch"]
-[ext_resource type="Texture2D" uid="uid://camjno5qe0ea7" path="res://Textures/BedRoom/Bed_standardSurface1_MaskMap.png" id="3_0tdyw"]
-[ext_resource type="Texture2D" uid="uid://dai5kqu6jxt5w" path="res://Textures/BedRoom/Bed_standardSurface1_Normal.png" id="4_y8b7y"]
+[ext_resource type="Texture2D" uid="uid://5koklf0gs8vh" path="res://Images/Textures/BedRoom/Bed_standardSurface1_BaseMap.png" id="2_ywhch"]
+[ext_resource type="Texture2D" uid="uid://camjno5qe0ea7" path="res://Images/Textures/BedRoom/Bed_standardSurface1_MaskMap.png" id="3_0tdyw"]
+[ext_resource type="Texture2D" uid="uid://dai5kqu6jxt5w" path="res://Images/Textures/BedRoom/Bed_standardSurface1_Normal.png" id="4_y8b7y"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ahu0k"]
 albedo_texture = ExtResource("2_ywhch")

@@ -1,8 +1,8 @@
 [gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://och53dgdm0ad"]
 
-[ext_resource type="Texture2D" uid="uid://bmhqp5pklpn7x" path="res://Textures/Kitchen Props/Wine Bottle_blinn5SG_BaseMap.png" id="1_p58r3"]
-[ext_resource type="Texture2D" uid="uid://bi87nw0crkhd6" path="res://Textures/Kitchen Props/Wine Bottle_blinn5SG_MaskMap.png" id="2_hwmeg"]
-[ext_resource type="Texture2D" uid="uid://b1b2gq3gvvw2s" path="res://Textures/Kitchen Props/Wine Bottle_blinn5SG_Normal.png" id="3_ji4xn"]
+[ext_resource type="Texture2D" uid="uid://bmhqp5pklpn7x" path="res://Images/Textures/Kitchen Props/Wine Bottle_blinn5SG_BaseMap.png" id="1_p58r3"]
+[ext_resource type="Texture2D" uid="uid://bi87nw0crkhd6" path="res://Images/Textures/Kitchen Props/Wine Bottle_blinn5SG_MaskMap.png" id="2_hwmeg"]
+[ext_resource type="Texture2D" uid="uid://b1b2gq3gvvw2s" path="res://Images/Textures/Kitchen Props/Wine Bottle_blinn5SG_Normal.png" id="3_ji4xn"]
 
 [resource]
 albedo_texture = ExtResource("1_p58r3")

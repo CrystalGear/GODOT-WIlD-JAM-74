@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://j8l8l2b3xcsk"]
 
 [ext_resource type="PackedScene" uid="uid://dl5617ouxjoi8" path="res://Models/Living Room/Arm Chair.fbx" id="1_j1tin"]
-[ext_resource type="Texture2D" uid="uid://bmqi7ehujjteo" path="res://Textures/living Room/Arm Chair_standardSurface1_BaseMap.png" id="2_q3bwc"]
-[ext_resource type="Texture2D" uid="uid://dx40dys28g6pl" path="res://Textures/living Room/Arm Chair_standardSurface1_MaskMap.png" id="3_fxcm1"]
-[ext_resource type="Texture2D" uid="uid://byqjk3q5p78ks" path="res://Textures/living Room/Arm Chair_standardSurface1_Normal.png" id="4_s13nx"]
+[ext_resource type="Texture2D" uid="uid://bmqi7ehujjteo" path="res://Images/Textures/living Room/Arm Chair_standardSurface1_BaseMap.png" id="2_q3bwc"]
+[ext_resource type="Texture2D" uid="uid://dx40dys28g6pl" path="res://Images/Textures/living Room/Arm Chair_standardSurface1_MaskMap.png" id="3_fxcm1"]
+[ext_resource type="Texture2D" uid="uid://byqjk3q5p78ks" path="res://Images/Textures/living Room/Arm Chair_standardSurface1_Normal.png" id="4_s13nx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qiw5j"]
 albedo_texture = ExtResource("2_q3bwc")

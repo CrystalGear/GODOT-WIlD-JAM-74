@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://5rw4g32g1cg8"]
 
-[ext_resource type="Texture2D" uid="uid://c8dic4y1admav" path="res://Textures/Kitchen Props/Rug_initialShadingGroup_BaseMap.png" id="1_5pbsb"]
-[ext_resource type="Texture2D" uid="uid://uq61ormx8af3" path="res://Textures/Kitchen Props/Rug_initialShadingGroup_MaskMap.png" id="2_0bqek"]
-[ext_resource type="Texture2D" uid="uid://tk47e1m3shnr" path="res://Textures/Kitchen Props/Rug_initialShadingGroup_Normal.png" id="3_v06rh"]
+[ext_resource type="Texture2D" uid="uid://c8dic4y1admav" path="res://Images/Textures/Kitchen Props/Rug_initialShadingGroup_BaseMap.png" id="1_5pbsb"]
+[ext_resource type="Texture2D" uid="uid://uq61ormx8af3" path="res://Images/Textures/Kitchen Props/Rug_initialShadingGroup_MaskMap.png" id="2_0bqek"]
+[ext_resource type="Texture2D" uid="uid://tk47e1m3shnr" path="res://Images/Textures/Kitchen Props/Rug_initialShadingGroup_Normal.png" id="3_v06rh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0kw58"]
 albedo_texture = ExtResource("1_5pbsb")

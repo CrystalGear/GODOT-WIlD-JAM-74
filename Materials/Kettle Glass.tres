@@ -1,8 +1,8 @@
 [gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://cmixkx5wjuiep"]
 
-[ext_resource type="Texture2D" uid="uid://bkw3a7ftj5mxs" path="res://Textures/Kitchen Props/Kettle_blinn2SG_BaseMap.png" id="1_ic03j"]
-[ext_resource type="Texture2D" uid="uid://druvgn14eiefi" path="res://Textures/Kitchen Props/Kettle_blinn2SG_MaskMap.png" id="2_wlxs8"]
-[ext_resource type="Texture2D" uid="uid://dscyip5ocynm" path="res://Textures/Kitchen Props/Kettle_blinn2SG_Normal.png" id="3_a2aoc"]
+[ext_resource type="Texture2D" uid="uid://bkw3a7ftj5mxs" path="res://Images/Textures/Kitchen Props/Kettle_blinn2SG_BaseMap.png" id="1_ic03j"]
+[ext_resource type="Texture2D" uid="uid://druvgn14eiefi" path="res://Images/Textures/Kitchen Props/Kettle_blinn2SG_MaskMap.png" id="2_wlxs8"]
+[ext_resource type="Texture2D" uid="uid://dscyip5ocynm" path="res://Images/Textures/Kitchen Props/Kettle_blinn2SG_Normal.png" id="3_a2aoc"]
 
 [resource]
 albedo_texture = ExtResource("1_ic03j")
