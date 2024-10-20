@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bd6srtfpvmhei"]
+
+[ext_resource type="PackedScene" uid="uid://cbva4a6etm8q2" path="res://Models/SM_F_TableLamp.fbx" id="1_gmqlr"]
+[ext_resource type="Material" uid="uid://dcpdd26hppvna" path="res://Materials/table_lamp.tres" id="2_gl45w"]
+
+[node name="table_lamp" instance=ExtResource("1_gmqlr")]
+
+[node name="SM_F_TableLamp" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_gl45w")

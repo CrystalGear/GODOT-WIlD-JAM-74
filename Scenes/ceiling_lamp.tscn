@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://di10civgg6nrb"]
+
+[ext_resource type="PackedScene" uid="uid://cutmi4qjrkfnu" path="res://Models/SM_CeilingLamp.fbx" id="1_g7frc"]
+[ext_resource type="Material" uid="uid://c4ddmeuaeqyxn" path="res://Materials/ceiling_lamp.tres" id="2_noakc"]
+
+[node name="SM_CeilingLamp" instance=ExtResource("1_g7frc")]
+
+[node name="SM_F_CeilingLamp" parent="." index="0"]
+surface_material_override/0 = ExtResource("2_noakc")

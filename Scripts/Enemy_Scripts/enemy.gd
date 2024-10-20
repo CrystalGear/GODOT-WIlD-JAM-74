@@ -28,7 +28,7 @@ func _ready() -> void:
 	nav_region = find_navigation_region3D_by_group()
 	
 	# Assumes 'self' is the enemy and is a sibling of 'Player' under the same parent.
-    # Access the parent first, then find 'Player' among its children.
+	# Access the parent first, then find 'Player' among its children.
 	player = get_parent().get_node("Player")
 
 	if player:

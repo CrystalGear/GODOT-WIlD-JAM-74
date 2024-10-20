@@ -31,6 +31,7 @@ func pick_up_car_part(item_to_pickup: Node3D) -> bool:
 		held_item = item_to_pickup
 		held_item.collision_layer = 0
 		held_item.collision_mask = 0
+		player_node.block_flashlight = true
 		
 		((held_item as Node3D) as RigidBody3D).freeze = true
 		held_item.reparent($ItemSlotTransform, true)
@@ -80,14 +81,16 @@ func throw_held_item() -> void:
 		
 		#throw
 		held_item.apply_impulse(-player_node.camera.global_transform.basis[2]*(held_item.mass*throw_launch_force))
+		player_node.block_flashlight = false
 		
 		#clear the held item variable
 		held_item = null
 
 
 
-func drop_held_item():
+func drop_held_item() -> Item:
 	if held_item != null:
+		var temp_item = held_item
 		#add collision back to item
 		held_item.collision_layer = 2
 		held_item.collision_mask = 1
@@ -104,9 +107,12 @@ func drop_held_item():
 		
 		#throw
 		held_item.apply_impulse(-player_node.camera.global_transform.basis[2]*(held_item.mass*drop_launch_force))
-		
+		player_node.block_flashlight = false
 		#clear the held item variable
 		held_item = null
+		return temp_item
+	return null
+		
 	
 	
 	

@@ -6,6 +6,7 @@ class_name Player extends CharacterBody3D
 @export var jump_velocity:float = 4.5
 
 @export var flash_light_on = false
+var block_flashlight = false
 @export var light_charge = 100
 @export var light_fade_threshold = 40
 @onready var flash_light: SpotLight3D = $Camera3D/FlashlightHand/SpotLight3D
@@ -87,7 +88,7 @@ func _flash_light(delta: float):
 	
 	# Checks if light charge is under the fading threshold, default 40%
 	# then starts fading the flashlight
-	if flash_light_on:
+	if flash_light_on and not block_flashlight:
 		if (light_charge < light_fade_threshold):
 			if(light_charge < 0):
 				light_charge = 0
@@ -153,6 +154,7 @@ func interact_with_object():
 func drop_held_object():
 	if Input.is_action_just_pressed("secondary_action"):
 		interaction_component.drop_item()
+		
 		
 func throw_held_object():
 	if Input.is_action_just_pressed("throw"):
