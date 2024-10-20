@@ -10,8 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://01lqrl4m4dia" path="res://Scenes/Game Objects/sink.tscn" id="17_xuuva"]
 [ext_resource type="PackedScene" uid="uid://cp7qcj6bigbdu" path="res://Scenes/Car/car.tscn" id="18_3ngov"]
 [ext_resource type="PackedScene" uid="uid://blnnbmexf5lhr" path="res://Scenes/Characters/enemy.tscn" id="19_cnscy"]
-[ext_resource type="PackedScene" path="res://teleport_point.tscn" id="21_rf2wo"]
-[ext_resource type="PackedScene" path="res://Scenes/Game Objects/enemy_test_model.tscn" id="21_t6xds"]
+[ext_resource type="PackedScene" uid="uid://cd0cqn0wp7hbo" path="res://teleport_point.tscn" id="21_rf2wo"]
+[ext_resource type="PackedScene" uid="uid://ttf4lepyb5q0" path="res://Scenes/Game Objects/enemy_test_model.tscn" id="21_t6xds"]
 [ext_resource type="PackedScene" uid="uid://crhgx1286i5xe" path="res://Scenes/Car/wheel.tscn" id="22_48c45"]
 [ext_resource type="PackedScene" uid="uid://j8l8l2b3xcsk" path="res://Scenes/Game Objects/arm_chair.tscn" id="24_yjtd0"]
 [ext_resource type="PackedScene" uid="uid://bbmqruprrgtxx" path="res://Scenes/ambient_generator.tscn" id="25_1b3p2"]
@@ -46,15 +46,8 @@ script = ExtResource("2_n4ogn")
 
 [node name="Player" parent="." node_paths=PackedStringArray("enemy", "atticSpawner", "basementSpawner") instance=ExtResource("3_qsqcb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.92464, 2.43556, 10.7976)
-walking_speed = null
-crouch_walk_speed = null
-jump_velocity = null
-flash_light_on = null
-light_charge = null
-light_fade_threshold = null
-player_height = null
-camera_shake_time = null
-camera_shake_intensity = null
+camera_shake_time = 1
+camera_shake_intensity = 0.4
 enemy = NodePath("../Enemy")
 atticSpawner = NodePath("../atticSpawner")
 basementSpawner = NodePath("../basementSpawner")

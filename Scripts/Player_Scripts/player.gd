@@ -13,7 +13,6 @@ var block_flashlight = false
 @onready var flash_light: SpotLight3D = $Camera3D/FlashlightHand/SpotLight3D
 @onready var flash_light_sound: AudioStreamPlayer3D = $Camera3D/FlashlightHand/FlashLightSound
 @onready var flash_light_turn_on: AudioStreamPlayer3D = $Camera3D/FlashlightHand/FlashLightTurnOn
-@onready var flash_light_turn_off: AudioStreamPlayer3D = $Camera3D/FlashlightHand/FlashLightTurnOff
 @onready var step_sound: AudioStreamPlayer3D = $StepSound
 
 
@@ -82,7 +81,7 @@ func _physics_process(delta: float) -> void:
 	_step_handler()
 	
 	emit_sound_collider()
-	
+	#print("Player's location: " + str(global_transform.origin))
 
 func emit_sound_collider() -> void:
 	if input_dir != Vector2.ZERO and b_is_crouching == false:

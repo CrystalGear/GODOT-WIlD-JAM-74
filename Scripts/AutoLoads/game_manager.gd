@@ -86,4 +86,4 @@ func toggle_pause(b_new_state: bool) -> void:
 func repaired_part():
 	_repaired_parts += 1
 	if _repaired_parts == _max_parts_to_repair:
-		print("YOU WIN!")
+		LevelManager.show_win_screen()

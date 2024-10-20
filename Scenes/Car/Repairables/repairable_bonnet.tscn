@@ -4,13 +4,20 @@
 [ext_resource type="PackedScene" uid="uid://cy7tx0piok6gp" path="res://Scenes/Car/bonnet.tscn" id="2_2gbm3"]
 
 [node name="RepairableBonnet" node_paths=PackedStringArray("static_part", "part_mesh", "outline_mesh") instance=ExtResource("1_irasb")]
+collision_mask = 2
 static_part = NodePath("Bonnet")
 part_mesh = NodePath("Bonnet/Bonnet")
 outline_mesh = NodePath("Bonnet/Outline")
 
 [node name="Bonnet" parent="." index="1" instance=ExtResource("2_2gbm3")]
+collision_layer = 2
+
+[node name="Bonnet" parent="Bonnet" index="0"]
+visible = false
 
 [node name="Outline" parent="Bonnet" index="2"]
-visible = false
+visible = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 
 [editable path="Bonnet"]

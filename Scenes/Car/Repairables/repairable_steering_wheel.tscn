@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://basjkxmvv5v8k" path="res://Scenes/Car/steering_wheel.tscn" id="2_2jw3l"]
 
 [node name="RepairableSteeringWheel" node_paths=PackedStringArray("static_part", "part_mesh", "outline_mesh") instance=ExtResource("1_0lhpn")]
+collision_mask = 2
 static_part = NodePath("SteeringWheel")
 part_mesh = NodePath("SteeringWheel/SteeringWheel")
 outline_mesh = NodePath("SteeringWheel/Outline")
@@ -12,5 +13,11 @@ outline_mesh = NodePath("SteeringWheel/Outline")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00927734, 0, 0)
 
 [node name="SteeringWheel" parent="." index="1" instance=ExtResource("2_2jw3l")]
+collision_layer = 2
+
+[node name="SteeringWheel" parent="SteeringWheel" index="0"]
+visible = false
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 
 [editable path="SteeringWheel"]
