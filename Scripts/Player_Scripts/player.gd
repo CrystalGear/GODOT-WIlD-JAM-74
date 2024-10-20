@@ -75,7 +75,7 @@ func _physics_process(delta: float) -> void:
 	_step_handler()
 	
 	emit_sound_collider()
-	
+	print("Player's location: " + str(global_transform.origin))
 
 func emit_sound_collider() -> void:
 	if input_dir != Vector2.ZERO and b_is_crouching == false:

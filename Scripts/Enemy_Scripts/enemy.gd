@@ -28,7 +28,7 @@ func _ready() -> void:
 	nav_region = find_navigation_region3D_by_group()
 	
 	# Assumes 'self' is the enemy and is a sibling of 'Player' under the same parent.
-    # Access the parent first, then find 'Player' among its children.
+	# Access the parent first, then find 'Player' among its children.
 	player = get_parent().get_node("Player")
 
 	if player:
@@ -75,7 +75,9 @@ func handle_debug_mode() -> void:
 			state = EnemyState.PATROL
 
 func rotate_enemy_movement() -> void:
-	look_at(global_transform.origin - velocity)
+	var target_position = global_transform.origin - velocity
+	if not global_transform.origin.is_equal_approx(target_position):
+		look_at(target_position)
 
 func _process(delta) -> void:
 		
@@ -87,6 +89,7 @@ func _process(delta) -> void:
 func patrol() -> void:
 	# Sets a random patrol point for the enemy to move towards.
 	var random_position = await get_random_patrol_point()
+	print("Random position: " + str(random_position))
 	nav_agent.target_position = random_position
 	state = EnemyState.PATROL
 	base_movement_speed = patrol_speed
