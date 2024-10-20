@@ -169,6 +169,6 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 
 func teleport_to_base():
 	if player.transform.origin.y > 0:
-		self.transform.origin = basementSpawner.transform.origin
+D		self.transform.origin = basementSpawner.transform.origin
 	else:
 		self.transform.origin = atticSpawner.transform.origin
