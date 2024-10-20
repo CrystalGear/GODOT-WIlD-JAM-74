@@ -76,9 +76,11 @@ script = ExtResource("2_ql3km")
 
 [node name="BlockoutLevel2" parent="NavigationRegion3D" instance=ExtResource("3_c7k7f")]
 
-[node name="Player" parent="." node_paths=PackedStringArray("enemy") instance=ExtResource("3_nxca5")]
+[node name="Player" parent="." node_paths=PackedStringArray("enemy", "atticSpawner", "basementSpawner") instance=ExtResource("3_nxca5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.92464, 2.43556, 10.7976)
 enemy = NodePath("../Enemy")
+atticSpawner = NodePath("../atticSpawner")
+basementSpawner = NodePath("../basementSpawner")
 
 [node name="Enemy" parent="." node_paths=PackedStringArray("atticSpawner", "basementSpawner") instance=ExtResource("5_n0qbt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.6514, 8.39684, 13.9602)

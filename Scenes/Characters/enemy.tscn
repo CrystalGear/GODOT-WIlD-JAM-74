@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://de1bpgxwkt8rr"]
 
 [ext_resource type="Script" path="res://Scripts/Enemy_Scripts/enemy.gd" id="1_rxut0"]
-[ext_resource type="PackedScene" uid="uid://ttf4lepyb5q0" path="res://Scenes/Game Objects/enemy_test_model.tscn" id="2_kwkaf"]
+[ext_resource type="PackedScene" path="res://Scenes/Game Objects/enemy_test_model.tscn" id="2_kwkaf"]
 [ext_resource type="AudioStream" uid="uid://rffh0xl42toa" path="res://Audio/SFX/breathing.mp3" id="3_awv25"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fmah0"]
@@ -23,7 +23,6 @@ path_postprocessing = 1
 use_3d_avoidance = true
 avoidance_layers = 3
 avoidance_mask = 3
-debug_enabled = true
 debug_path_custom_color = Color(1, 0, 1, 1)
 
 [node name="VisionRaycast" type="RayCast3D" parent="."]
