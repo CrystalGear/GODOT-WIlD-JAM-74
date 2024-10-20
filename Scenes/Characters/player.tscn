@@ -71,11 +71,6 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 
 [node name="ItemSlotTransform" parent="Camera3D/PlayerInteractionComponent/InventoryComponent" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.127626, -0.137938, 0.476709)
 
-[node name="timer_canvas" parent="." instance=ExtResource("2_dq00m")]
-
-[editable path="Camera3D/PlayerInteractionComponent"]
-[editable path="Camera3D/PlayerInteractionComponent/InventoryComponent"]
-
 [node name="FlashlightHand" type="Node3D" parent="Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26002, -0.267397, -0.188811)
 
@@ -87,5 +82,14 @@ spot_range = 30.0
 spot_angle = 44.6278
 spot_angle_attenuation = 1.93187
 
+[node name="timer_canvas" parent="." instance=ExtResource("2_dq00m")]
+
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 light_color = Color(0.172833, 0.172833, 0.172833, 1)
+
+[node name="InteractionCast" type="RayCast3D" parent="."]
+transform = Transform3D(0.999999, -0.000496677, 0.000979294, 0.000497626, 0.999999, -0.000971186, -0.000978812, 0.000971672, 0.999999, 0, 0, 0)
+target_position = Vector3(0, 0, -2)
+
+[editable path="Camera3D/PlayerInteractionComponent"]
+[editable path="Camera3D/PlayerInteractionComponent/InventoryComponent"]

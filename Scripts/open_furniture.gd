@@ -1,7 +1,7 @@
-extends RigidBody3D
+class_name Openable extends RigidBody3D
 
 var opening: bool = false;
-@onready var animation_player: AnimationPlayer = $AnimationPlayer
+@export var animation_player: AnimationPlayer
 
 func use():
 	if opening:

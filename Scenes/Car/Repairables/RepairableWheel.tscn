@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://dw8rbp3nrsuel"]
+
+[ext_resource type="Script" path="res://Scripts/placeable_part.gd" id="1_jhtit"]
+[ext_resource type="PackedScene" uid="uid://crhgx1286i5xe" path="res://Scenes/Car/wheel.tscn" id="2_he3v6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wq1f4"]
+
+[node name="RepairWheel" type="Area3D" node_paths=PackedStringArray("static_part", "part_mesh", "outline_mesh")]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_jhtit")
+static_part = NodePath("Wheel")
+part_mesh = NodePath("Wheel/WheelMesh")
+outline_mesh = NodePath("Wheel/Outline")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_wq1f4")
+
+[node name="Wheel" parent="." instance=ExtResource("2_he3v6")]
+
+[node name="WheelMesh" parent="Wheel" index="0"]
+visible = false
+
+[node name="Outline" parent="Wheel" index="2"]
+visible = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+
+[editable path="Wheel"]

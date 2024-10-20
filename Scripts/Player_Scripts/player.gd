@@ -19,6 +19,7 @@ class_name Player extends CharacterBody3D
 @onready var raycast = $RayCast3D
 @onready var animation_player = $AnimationPlayer
 @onready var interaction_component = $Camera3D/PlayerInteractionComponent
+@onready var interaction_cast: RayCast3D = $InteractionCast
 
 #vars
 var b_is_crouching = false
@@ -132,6 +133,13 @@ func crouch():
 func interact_with_object():
 	if Input.is_action_just_pressed("primary_action"):
 		interaction_component.interact_with_item()
+		if interaction_cast.is_colliding():
+			var other = interaction_cast.get_collider()
+			print(other)
+			if other is Openable:
+				print("opening")
+				other.use()
+				
 
 func drop_held_object():
 	if Input.is_action_just_pressed("secondary_action"):

@@ -1,7 +1,8 @@
-[gd_scene load_steps=31 format=3 uid="uid://cul6512w7nc6c"]
+[gd_scene load_steps=32 format=3 uid="uid://cul6512w7nc6c"]
 
 [ext_resource type="PhysicsMaterial" uid="uid://cgjgp1v8epf62" path="res://PhysicsMaterial/default_tool_physics.tres" id="1_j0wbv"]
 [ext_resource type="ArrayMesh" uid="uid://dtnooqeyf3hh7" path="res://Models/Bathroom Furniture/Toilet.obj" id="1_kgpeq"]
+[ext_resource type="Script" path="res://Scripts/open_furniture.gd" id="2_sj3xs"]
 [ext_resource type="Material" uid="uid://ia0bc4l2xa4r" path="res://Materials/toilet.tres" id="2_x6xc0"]
 [ext_resource type="PackedScene" uid="uid://bmmddg0boaxrs" path="res://Scenes/Game Objects/toilet_lid.tscn" id="3_pd5um"]
 
@@ -74,6 +75,33 @@ points = PackedVector3Array(-0.138031, 0.0104212, -0.0975663, -0.159218, 0.43433
 [sub_resource type="BoxShape3D" id="BoxShape3D_8s5vl"]
 size = Vector3(0.59021, 0.66333, 0.290283)
 
+[sub_resource type="Animation" id="Animation_3xibw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Toilet_Lid:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Toilet_Lid:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_15eah"]
 resource_name = "open"
 length = 0.5
@@ -102,43 +130,18 @@ tracks/1/keys = {
 "values": [Vector3(0, 0, 0), Vector3(0, 0, 0.304211)]
 }
 
-[sub_resource type="Animation" id="Animation_3xibw"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Toilet_Lid:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Toilet_Lid:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7mkk0"]
 _data = {
 "RESET": SubResource("Animation_3xibw"),
 "open": SubResource("Animation_15eah")
 }
 
-[node name="Toilet" type="RigidBody3D"]
+[node name="Toilet" type="RigidBody3D" node_paths=PackedStringArray("animation_player")]
 physics_material_override = ExtResource("1_j0wbv")
 contact_monitor = true
 max_contacts_reported = 10
+script = ExtResource("2_sj3xs")
+animation_player = NodePath("AnimationPlayer")
 
 [node name="Toilet" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_kgpeq")
@@ -210,7 +213,9 @@ shape = SubResource("ConvexPolygonShape3D_2fywn")
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
 shape = SubResource("ConvexPolygonShape3D_s7hbs")
 
-[node name="Toilet_Lid" parent="." instance=ExtResource("3_pd5um")]
+[node name="Toilet_Lid" parent="." node_paths=PackedStringArray("animation_player") instance=ExtResource("3_pd5um")]
+script = ExtResource("2_sj3xs")
+animation_player = NodePath("../AnimationPlayer")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0162964, 0.999175, -0.453979)

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlue2b0gl5i4a"]
+
+[ext_resource type="PackedScene" uid="uid://dh6ekuoa3keva" path="res://Scenes/Car/Repairables/base_repairable_scene.tscn" id="1_i83yl"]
+[ext_resource type="PackedScene" uid="uid://5766t6nqrhhy" path="res://Scenes/Car/headlight_2.tscn" id="2_p208c"]
+
+[node name="RepairableHeadlight2" node_paths=PackedStringArray("static_part", "part_mesh", "outline_mesh") instance=ExtResource("1_i83yl")]
+static_part = NodePath("Headlight 2")
+part_mesh = NodePath("Headlight 2/Headlight 2")
+outline_mesh = NodePath("Headlight 2/Outline")
+
+[node name="Headlight 2" parent="." index="1" instance=ExtResource("2_p208c")]
+
+[editable path="Headlight 2"]

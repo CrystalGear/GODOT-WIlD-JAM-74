@@ -55,7 +55,7 @@ _data = {
 "open": SubResource("Animation_veqyy")
 }
 
-[node name="Cabinet" type="RigidBody3D"]
+[node name="Cabinet" type="RigidBody3D" node_paths=PackedStringArray("animation_player")]
 physics_material_override = ExtResource("1_tussa")
 freeze = true
 contact_monitor = true
@@ -63,13 +63,16 @@ max_contacts_reported = 10
 linear_damp = 0.1
 angular_damp = 0.1
 script = ExtResource("2_7byhy")
+animation_player = NodePath("AnimationPlayer")
 
 [node name="Cabinet" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_145fn")
 surface_material_override/0 = ExtResource("2_su7kl")
 
-[node name="Cabinet Door" parent="." instance=ExtResource("5_kh6yq")]
+[node name="Cabinet Door" parent="." node_paths=PackedStringArray("animation_player") instance=ExtResource("5_kh6yq")]
 transform = Transform3D(0.999689, 0, -0.0249204, 0, 1, 0, 0.0249204, 0, 0.999689, -0.3, 0, 0.25)
+script = ExtResource("2_7byhy")
+animation_player = NodePath("../AnimationPlayer")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0183105, 0.95127, -0.032959)
