@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://8duwd4erf4xy"]
+[gd_scene load_steps=7 format=4 uid="uid://8duwd4erf4xy"]
 
 [ext_resource type="PhysicsMaterial" uid="uid://cgjgp1v8epf62" path="res://PhysicsMaterial/default_tool_physics.tres" id="1_8qslj"]
 [ext_resource type="ArrayMesh" uid="uid://ttssllovc8o2" path="res://Models/The Car/Seperate Items/bolts.res" id="1_lmc0y"]
 [ext_resource type="Script" path="res://Scripts/Item Scripts/car_part.gd" id="1_rqo1s"]
+[ext_resource type="Material" uid="uid://bsgsgw2tgfrk6" path="res://Materials/Car_underSide.tres" id="3_poiw6"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_15p20"]
 _surfaces = [{
@@ -26,6 +27,7 @@ physics_material_override = ExtResource("1_8qslj")
 script = ExtResource("1_rqo1s")
 
 [node name="Bolts" type="MeshInstance3D" parent="."]
+material_override = ExtResource("3_poiw6")
 mesh = ExtResource("1_lmc0y")
 
 [node name="Outline" type="MeshInstance3D" parent="."]

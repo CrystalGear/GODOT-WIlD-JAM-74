@@ -60,8 +60,9 @@ func pick_up_tool(item_to_pickup: Node3D) -> bool:
 		
 	return false
 
-func pick_up_key() -> void:
+func pick_up_key() -> bool:
 	KeysQuantity += 1
+	return true
 
 func throw_held_item() -> void:
 	if held_item != null:

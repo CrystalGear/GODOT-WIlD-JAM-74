@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=4 uid="uid://crhgx1286i5xe"]
+[gd_scene load_steps=7 format=4 uid="uid://crhgx1286i5xe"]
 
 [ext_resource type="Script" path="res://Scripts/Item Scripts/car_part.gd" id="1_kg50p"]
 [ext_resource type="ArrayMesh" uid="uid://bopucknlrhxwu" path="res://Models/The Car/Seperate Items/L_Wheel.res" id="2_3mkvq"]
+[ext_resource type="Material" uid="uid://dndx41kwiae6e" path="res://Materials/Wheels.tres" id="3_negb0"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_264sn"]
 bounce = 0.6
@@ -32,6 +33,7 @@ script = ExtResource("1_kg50p")
 
 [node name="WheelMesh" type="MeshInstance3D" parent="."]
 mesh = ExtResource("2_3mkvq")
+surface_material_override/0 = ExtResource("3_negb0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)

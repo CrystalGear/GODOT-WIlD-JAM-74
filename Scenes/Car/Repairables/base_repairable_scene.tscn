@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dh6ekuoa3keva"]
+
+[ext_resource type="Script" path="res://Scripts/placeable_part.gd" id="1_s8n0l"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o7fxc"]
+
+[node name="BaseRepairableScene" type="Area3D"]
+script = ExtResource("1_s8n0l")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_o7fxc")

@@ -4,25 +4,34 @@ class_name Player extends CharacterBody3D
 @export var walking_speed:float = 5.0
 @export var crouch_walk_speed = 2.5
 @export var jump_velocity:float = 4.5
+@export var step_timer = 550
 
 @export var flash_light_on = false
 var block_flashlight = false
 @export var light_charge = 100
 @export var light_fade_threshold = 40
 @onready var flash_light: SpotLight3D = $Camera3D/FlashlightHand/SpotLight3D
+@onready var flash_light_sound: AudioStreamPlayer3D = $Camera3D/FlashlightHand/FlashLightSound
+@onready var flash_light_turn_on: AudioStreamPlayer3D = $Camera3D/FlashlightHand/FlashLightTurnOn
+@onready var flash_light_turn_off: AudioStreamPlayer3D = $Camera3D/FlashlightHand/FlashLightTurnOff
+@onready var step_sound: AudioStreamPlayer3D = $StepSound
 
-@export var player_height = 1.7
+
+@export var player_height = 1.9
 @export var camera_shake_time = 1
 @export var camera_shake_intensity = 0.4
 
 @export var pull = 12
 @export var enemy: Enemy
 
+@export var repair_sound: AudioStream
+
 @onready var camera = $Camera3D
 @onready var collision_shape = $CollisionShape3D
 @onready var raycast = $RayCast3D
 @onready var animation_player = $AnimationPlayer
 @onready var interaction_component = $Camera3D/PlayerInteractionComponent
+@onready var interaction_cast: RayCast3D = $InteractionCast
 
 #vars
 var b_is_crouching = false
@@ -35,6 +44,7 @@ var mouse_sensitivity:float:
 		OptionsManager.Set_Mouse_Sensitivity(value * 200)
 var joystick_sensitivity = 2
 var input_dir: Vector2
+
 
 func _input(event) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
@@ -62,9 +72,9 @@ func _physics_process(delta: float) -> void:
 	drop_held_object()
 	throw_held_object()
 	interaction_component.InventoryComponent.player_node = self
-	
-	
 	_flash_light(delta)
+	_step_handler()
+	
 	emit_sound_collider()
 	
 
@@ -92,14 +102,19 @@ func _flash_light(delta: float):
 		if (light_charge < light_fade_threshold):
 			if(light_charge < 0):
 				light_charge = 0
+				flash_light_sound.volume_db = -999
 			flash_light.light_energy = (light_charge / light_fade_threshold)
+			flash_light_sound.volume_db = -15 + ((flash_light.light_energy * 20) - 20)
 		else:
 			flash_light.light_energy = 1
+			flash_light_sound.volume_db = -15
 	else:
 		flash_light.light_energy = 0
+		flash_light_sound.volume_db = -999
 	
-	if (Input.is_action_just_pressed("secondary_action")):
+	if (Input.is_action_just_pressed("middle_mouse")):
 		flash_light_on = not flash_light_on
+		flash_light_turn_on.play()
 
 func _flash_light_charge(new_charge: float) -> void:
 	if (new_charge > 100):
@@ -125,9 +140,16 @@ func _handle_movement() -> void:
 	if direction:
 		velocity.x = direction.x * current_move_speed
 		velocity.z = direction.z * current_move_speed
+		var absolute_velocity = velocity.abs()
+		step_timer -= ((absolute_velocity.x + absolute_velocity.z) / 2 * current_move_speed)
 	else:
 		velocity.x = move_toward(velocity.x, 0, current_move_speed)
 		velocity.z = move_toward(velocity.z, 0, current_move_speed)
+
+func _step_handler() -> void:
+	if (step_timer <= 0):
+		step_sound.play()
+		step_timer = 550
 
 func handle_joystick_rotation():
 	var rotation_input = Input.get_vector("look_up", "look_down", "look_left", "look_right")
@@ -150,6 +172,16 @@ func crouch():
 func interact_with_object():
 	if Input.is_action_just_pressed("primary_action"):
 		interaction_component.interact_with_item()
+		if interaction_cast.is_colliding():
+			var other = interaction_cast.get_collider()
+			if other is Openable:
+				print("opening")
+				other.use()
+			if other is Repairable:
+				if other.repair($Camera3D/PlayerInteractionComponent/InventoryComponent/ItemSlotTransform.get_child(0)):
+					animation_player.play("repair")
+					AudioManager.play_clip(repair_sound)
+				
 
 func drop_held_object():
 	if Input.is_action_just_pressed("secondary_action"):

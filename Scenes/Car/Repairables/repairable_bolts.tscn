@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://pcelbyjwjyp"]
+
+[ext_resource type="PackedScene" uid="uid://dh6ekuoa3keva" path="res://Scenes/Car/Repairables/base_repairable_scene.tscn" id="1_pa4tp"]
+[ext_resource type="PackedScene" uid="uid://8duwd4erf4xy" path="res://Scenes/Car/bolts.tscn" id="2_oevai"]
+
+[node name="RepairableBolts" node_paths=PackedStringArray("static_part", "part_mesh", "outline_mesh") instance=ExtResource("1_pa4tp")]
+static_part = NodePath("Bolts")
+part_mesh = NodePath("Bolts/Bolts")
+outline_mesh = NodePath("Bolts/Outline")
+
+[node name="Bolts" parent="." index="1" instance=ExtResource("2_oevai")]
+
+[editable path="Bolts"]
