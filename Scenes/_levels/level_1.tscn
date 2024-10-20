@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ia38iawogjd7" path="res://Scenes/default_environment.tscn" id="1_g2m6j"]
 [ext_resource type="Script" path="res://Scenes/blockout/add_to_group.gd" id="2_ql3km"]
-[ext_resource type="PackedScene" uid="uid://c15oa1883es0v" path="res://Scenes/blockout/blockout_level_dave.tscn" id="3_kvqxv"]
+[ext_resource type="PackedScene" uid="uid://c15oa1883es0v" path="res://Scenes/blockout/blockout_level.tscn" id="3_c7k7f"]
 [ext_resource type="PackedScene" uid="uid://dkbwkvi8f7mtw" path="res://Scenes/Characters/player.tscn" id="3_nxca5"]
 [ext_resource type="PackedScene" uid="uid://bj0lcccv1qld" path="res://Scenes/letterbox.tscn" id="4_4voce"]
 [ext_resource type="PackedScene" uid="uid://bbmqruprrgtxx" path="res://Scenes/ambient_generator.tscn" id="4_wh0ju"]
@@ -30,8 +30,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.183406)
 navigation_mesh = SubResource("NavigationMesh_aq544")
 script = ExtResource("2_ql3km")
 
-[node name="BlockoutLevel" parent="NavigationRegion3D" instance=ExtResource("3_kvqxv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.183406)
+[node name="BlockoutLevel2" parent="NavigationRegion3D" instance=ExtResource("3_c7k7f")]
 
 [node name="Player" parent="." node_paths=PackedStringArray("enemy") instance=ExtResource("3_nxca5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.92464, 2.43556, 10.7976)
