@@ -13,6 +13,7 @@ class_name Player extends CharacterBody3D
 @export var player_height = 1.7
 
 @export var pull = 12
+@export var enemy: Enemy
 
 @onready var camera = $Camera3D
 @onready var collision_shape = $CollisionShape3D
@@ -30,6 +31,7 @@ var mouse_sensitivity:float:
 	set(value):
 		OptionsManager.Set_Mouse_Sensitivity(value * 200)
 var joystick_sensitivity = 2
+var input_dir: Vector2
 
 func _input(event) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
@@ -60,7 +62,20 @@ func _physics_process(delta: float) -> void:
 	
 	
 	_flash_light(delta)
+	emit_sound_collider()
 	
+
+func emit_sound_collider() -> void:
+	if input_dir != Vector2.ZERO and b_is_crouching == false:
+		if $WalkSoundShapeCast.is_colliding():
+			var collider = $WalkSoundShapeCast.get_collider(0)
+			if collider is Enemy:
+				enemy.chase()
+	elif input_dir != Vector2.ZERO and b_is_crouching == true:
+		if $CrouchSoundShapeCast.is_colliding():
+			var collider = $CrouchSoundShapeCast.get_collider(0)
+			if collider is Enemy:
+				enemy.chase()
 
 func _flash_light(delta: float):
 	# Sticking flashlight code here for now
@@ -102,7 +117,7 @@ func _jump() -> void:
 
 # Get the input direction and handle the movement/deceleration.
 func _handle_movement() -> void:
-	var input_dir := Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	input_dir = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
 		velocity.x = direction.x * current_move_speed
