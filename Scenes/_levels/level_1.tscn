@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bn56ncgudcqxy"]
+[gd_scene load_steps=43 format=3 uid="uid://bn56ncgudcqxy"]
 
 [ext_resource type="PackedScene" uid="uid://ia38iawogjd7" path="res://Scenes/default_environment.tscn" id="1_g2m6j"]
 [ext_resource type="Script" path="res://Scenes/blockout/add_to_group.gd" id="2_ql3km"]
@@ -27,6 +27,20 @@
 [ext_resource type="PackedScene" uid="uid://b6g1180ykln18" path="res://Scenes/Game Objects/pumpkin.tscn" id="25_xvfvx"]
 [ext_resource type="PackedScene" uid="uid://drnc5j7ndeiqo" path="res://Scenes/Game Objects/small_bowl.tscn" id="26_lh3cx"]
 [ext_resource type="PackedScene" uid="uid://cf6iskhoghxyi" path="res://Scenes/Game Objects/small_plate.tscn" id="27_3hjls"]
+[ext_resource type="PackedScene" path="res://Scenes/Game Objects/cupboard_2.tscn" id="28_30rnt"]
+[ext_resource type="PackedScene" path="res://Scenes/Game Objects/bed_side_table.tscn" id="29_m2d54"]
+[ext_resource type="PackedScene" uid="uid://cwp5kgbtdhvyp" path="res://Scenes/Game Objects/tv.tscn" id="30_ypww5"]
+[ext_resource type="PackedScene" uid="uid://ddey0qc0s7ku7" path="res://Scenes/Game Objects/wine_bottle.tscn" id="31_35ekd"]
+[ext_resource type="PackedScene" uid="uid://cayk0xcknxwwm" path="res://Scenes/Game Objects/mug_2.tscn" id="32_bqhf0"]
+[ext_resource type="PackedScene" path="res://Scenes/Game Objects/cupboard_1.tscn" id="33_ktb73"]
+[ext_resource type="PackedScene" uid="uid://dx2ssnl1g2oj8" path="res://Scenes/Game Objects/bed.tscn" id="34_kb6kl"]
+[ext_resource type="PackedScene" path="res://Scenes/Game Objects/fridge.tscn" id="35_56k1n"]
+[ext_resource type="PackedScene" uid="uid://bletst11kfa1j" path="res://Scenes/Game Objects/large_bowl.tscn" id="36_mw2ns"]
+[ext_resource type="PackedScene" path="res://Scenes/table_lamp.tscn" id="37_8fg3h"]
+[ext_resource type="PackedScene" uid="uid://cp7qcj6bigbdu" path="res://Scenes/Car/car.tscn" id="38_1sx7u"]
+[ext_resource type="PackedScene" uid="uid://bcrfodun78qow" path="res://Scenes/Game Objects/bath.tscn" id="39_kc1j0"]
+[ext_resource type="PackedScene" uid="uid://cul6512w7nc6c" path="res://Scenes/Game Objects/toilet.tscn" id="40_jtn8t"]
+[ext_resource type="PackedScene" uid="uid://5rw4g32g1cg8" path="res://Scenes/Game Objects/rug_1.tscn" id="41_gnmbr"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_aq544"]
 vertices = PackedVector3Array(-31.25, 1.77195, -1.44441, -31.25, 1.77195, -0.694406, -22.75, 1.77195, -0.694406, -22.75, 1.77195, -1.44441, 1.75, 4.77195, 5.30559, 2, 4.77195, 11.3056, 3.5, 4.77195, 11.5556, 4.25, 4.77195, 4.55559, -31.25, 4.77195, -1.44441, -31.5, 4.77195, -0.194406, -31.5, 4.77195, 5.30559, -22.25, 4.77195, 4.55559, -22.75, 4.77195, -1.44441, 1.75, 4.77195, 24.3056, -31.25, 4.77195, 24.3056, -31.25, 4.77195, 25.0556, 4.25, 4.77195, 25.0556, 3.25, 4.77195, 12.5556, 2, 4.77195, 12.5556, -22.75, 1.77195, 9.80559, -23, 1.77195, 9.30559, -29.25, 1.77195, 9.05559, -31, 1.77195, 9.80559, -29, 1.77195, 8.30559, -23, 1.77195, 8.30559, -23, 1.77195, 0.305594, -31, 1.77195, 0.305594, -19.25, 14.0219, 3.05559, -19.25, 14.0219, 23.8056, -13.75, 14.0219, 23.8056, -13.75, 14.0219, 3.05559, -19.5, 7.77195, 5.30559, -13.75, 7.77195, 5.30559, -13.75, 7.77195, 4.55559, -34.25, 7.77195, 4.55559, -34.25, 7.77195, 21.3056, -19.75, 7.77195, 21.3056, -20, 7.77195, 5.80559, -22, 1.77195, 4.55559, -22, 1.77195, 5.30559, 1.25, 1.77195, 5.30559, 1.25, 1.77195, 4.55559, 1.5, 7.77195, 12.3056, 3, 7.77195, 11.8056, 1.5, 7.77195, 11.5556, 1.25, 7.77195, 4.55559, -10.25, 7.77195, 4.55559, -10.25, 7.77195, 21.3056, 1.5, 7.77195, 21.3056, -13.25, 10.7719, 15.0556, -13.5, 10.7719, 20.8056, -10.5, 10.7719, 20.8056, -10.5, 10.7719, 5.80559, -13.75, 10.7719, 5.80559, -31, 4.77195, 10.8056, -20, 4.77195, 10.8056, -20, 4.77195, 6.30559, -31, 4.77195, 6.30559, -22, 1.77195, 6.30559, -22, 1.77195, 8.05559, -13.75, 1.77195, 8.05559, -13.25, 1.77195, 8.05559, 1, 1.77195, 8.05559, 1, 1.77195, 6.30559, -19, 4.77195, 11.5556, -19, 4.77195, 14.3056, -14, 4.77195, 14.3056, -14, 4.77195, 6.30559, -19, 4.77195, 6.30559, -19, 4.77195, 10.5556, -31, 4.77195, 11.3056, -19.75, 4.77195, 11.3056, -19, 7.77195, 15.3056, -13.75, 7.77195, 15.3056, -14, 7.77195, 6.30559, -19, 7.77195, 6.30559, -10.25, 4.77195, 9.80559, -8, 4.77195, 9.80559, -8, 4.77195, 8.30559, -7.75, 1.77195, 15.3056, -10, 1.77195, 15.3056, -10, 1.77195, 17.3056, -5, 1.77195, 17.3056, -7, 1.77195, 15.0556, -5, 4.77195, 6.30559, -7.25, 4.77195, 8.05559, -11, 5.52195, 10.0556, -10, 4.77195, 9.47226, -13.25, 7.77195, 15.3056, -11, 7.77195, 15.3056, -13, 4.77195, 6.30559, -13.0714, 4.77195, 8.87702, -13.1786, 7.77195, 12.7342, -11, 7.77195, 12.6806, -11.6667, 4.77195, 8.80559, -7.15, 4.77195, 10.8556, -5, 1.77195, 14.5556, -5, 4.77195, 10.4306, -3.75, 4.77195, 22.3056, -4.25, 4.77195, 22.8056, 1, 4.77195, 22.8056, -0.5, 4.77195, 11.5556, 1, 4.77195, 11.3056, 1, 4.77195, 6.30559, -1.25, 4.77195, 11.3056, -4, 4.77195, 6.30559, -4, 4.77195, 11.3056, -4, 4.77195, 12.3056, 0, 4.77195, 12.5556, -1, 4.77195, 12.0556, 1, 4.77195, 12.5556, -16.75, -1.22805, 21.3056, -17, -1.22805, 18.3056, -29, -1.22805, 18.0556, -32.75, -1.22805, 21.3056, -28.5, -1.22805, 8.30559, -11, -1.22805, 8.30559, -11, -1.22805, 7.55559, -32.75, -1.22805, 7.55559, -29, -1.22805, 8.80559, -9.25, -1.22805, 7.55559, -10, -1.22805, 7.55559, -10, -1.22805, 21.0556, -9.25, -1.22805, 22.3056, -32.75, -1.22805, 22.3056, -31, 1.77195, 11.0556, -22.75, 1.77195, 11.0556, -22, 1.77195, 9.55559, -14, 1.77195, 11.0556, -22.25, 1.77195, 11.0556, -4, 1.77195, 8.30559, -4, 1.77195, 10.5556, -2, 1.77195, 10.5556, -10, 1.77195, 11.8056, -8.25, 1.77195, 8.55559, -10, 1.77195, 9.30559, -10.75, 1.77195, 11.5556, -13, 1.77195, 9.30559, 0.5, 1.77195, 11.0556, -2, 1.77195, 9.30559, -0.25, 1.77195, 16.3056, 1, 1.77195, 16.3056, 1, 1.77195, 9.30559, -9.75, 1.77195, 8.55559, -2.25, 1.77195, 8.55559, -13.25, -0.728052, 17.3056, -11, -0.728052, 17.3056, -13.1667, 1.52195, 14.6389, -10.875, 1.77195, 14.4306, -16.25, -1.22805, 11.0556, -11, -1.22805, 11.0556, -11, -1.22805, 9.30559, -16.75, -1.22805, 11.0556, -28, -1.22805, 9.30559, -28, -1.22805, 11.0556, -7, 1.77195, 9.30559, -7, 1.77195, 9.80559, -5, 1.77195, 9.80559, -5, 1.77195, 9.30559, -12.5, 4.77195, 20.5556, -11, 4.77195, 20.3056, -11, 4.77195, 18.3056, -13, 4.77195, 18.3056, -10.5, 4.77195, 21.5556, -12.25, 4.77195, 21.5556, -5, 4.77195, 21.8056, -13, 4.77195, 21.3056, -13.75, 4.77195, 21.5556, -5, 4.77195, 21.3056, -8.25, 4.77195, 21.0556, -9.75, 4.77195, 21.0556, -31, 4.77195, 23.3056, -23.25, 4.77195, 23.3056, -23.25, 4.77195, 22.3056, -31, 4.77195, 21.5556, -22.25, 4.77195, 21.8056, 1, 1.77195, 17.3056, -2.25, 1.77195, 16.3056, -4, 1.77195, 17.3056, -2.75, 1.77195, 15.8056, -7, 2.02195, 10.8056, -7, 2.02195, 11.3056, -6.5, 2.02195, 11.3056, -6.5, 2.02195, 10.8056, -5.5, 2.02195, 10.8056, -5.5, 2.02195, 11.3056, -5, 2.02195, 11.3056, -5, 2.02195, 10.8056, -29.25, 1.77195, 11.5556, -29, 1.77195, 12.3056, -31, 1.77195, 19.5556, -29.5, 1.77195, 19.3056, -29, 1.77195, 20.5556, -25.25, 1.77195, 20.5556, -25.25, 1.77195, 19.8056, -24.5, 1.77195, 19.3056, -23, 1.77195, 12.3056, -23, 1.77195, 19.5556, -28, -1.22805, 17.3056, -17, -1.22805, 17.3056, -22, 1.77195, 17.3056, -14, 1.77195, 17.3056, -14, -1.22805, 14.3056, -12.5, -0.978052, 13.8056, -13.75, -0.978052, 13.8056, -14, -1.22805, 13.0556, -11, -1.22805, 12.8056, -16, -1.22805, 20.3056, -13.75, -1.22805, 17.3056, -14, -1.22805, 16.3056, -11, -1.22805, 20.3056, -14, 4.77195, 15.8056, -14, 4.77195, 15.3056, -20, 4.77195, 15.5556, -22.25, 4.77195, 15.8056, -20.5, 4.77195, 14.5556, -31, 4.77195, 17.3056, -23.25, 4.77195, 17.3056, -23.25, 4.77195, 16.3056, -31, 4.77195, 15.3056, -31, 4.77195, 14.3056, -21, 4.77195, 15.5556, -13, 5.02195, 12.3056, -13, 5.02195, 12.8056, -12.5, 5.02195, 12.8056, -12.5, 5.02195, 12.3056, -11.5, 5.02195, 12.3056, -11.5, 5.02195, 12.8056, -11, 5.02195, 12.8056, -11, 5.02195, 12.3056, -1.5, 2.02195, 13.5556, -1.5, 2.02195, 14.0556, -0.75, 2.02195, 14.0556, -0.75, 2.02195, 13.5556, -13, 4.77195, 13.8056, -13, 4.77195, 17.3056, -11, 4.77195, 17.3056, -11, 4.77195, 13.8056, -11, 7.77195, 20.3056, -19, 7.77195, 20.3056, -22.25, 4.77195, 21.3056, -14, 4.77195, 21.3056, -23, 4.77195, 21.0556, -23, 4.77195, 18.3056, -31, 4.77195, 18.3056, -16.75, 1.77195, 19.0556, -16.25, 1.77195, 22.0556, -13.75, 1.77195, 22.0556, -14, 1.77195, 18.3056, -22, 1.77195, 18.3056, -22, 1.77195, 19.0556, -10, 1.77195, 19.0556, 1.25, 1.77195, 19.0556, 1.25, 1.77195, 18.5556, -10, 1.77195, 18.3056, -7, 4.77195, 19.5556, -7, 4.77195, 20.3056, -5, 4.77195, 20.3056, -5, 4.77195, 19.5556, -31.25, 1.77195, 21.0556, -31.25, 1.77195, 22.0556, -30.25, 1.77195, 22.0556, -30.5, 1.77195, 20.8056, -24, 1.77195, 21.8056, -22.75, 1.77195, 22.0556, -23, 1.77195, 20.8056, -23.75, 1.77195, 20.8056, 1.25, 7.77195, 25.0556, -34.25, 7.77195, 25.0556, 1, 4.77195, 23.3056, -22, 4.77195, 23.3056, -5, 4.77195, 22.5556)
@@ -167,5 +181,161 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7895, 2.36153, 19.0619)
 
 [node name="Small Plate2" parent="." instance=ExtResource("27_3hjls")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.6426, 2.53875, 12.3037)
+
+[node name="Cupboard 2" parent="." instance=ExtResource("28_30rnt")]
+transform = Transform3D(-0.000401421, 0, 1, 0, 1, 0, -1, 0, -0.000401421, -22.7789, 1.51, 18.8133)
+
+[node name="Cupboard 3" parent="." instance=ExtResource("28_30rnt")]
+transform = Transform3D(0.000401421, 0, 1, 0, 1, 0, 1, 0, -0.000401421, -22.7789, 1.51, 19.6068)
+
+[node name="Bed Side Table" parent="." instance=ExtResource("29_m2d54")]
+transform = Transform3D(-0.0201223, 0, 0.999798, 0, 1, 0, -0.999798, 0, -0.0201223, -23.0609, 1.51573, 17.479)
+
+[node name="Bed Side Table2" parent="." instance=ExtResource("29_m2d54")]
+transform = Transform3D(-0.999795, 0, -0.0202269, 0, 1, 0, 0.0202269, 0, -0.999795, -26.5201, 1.51573, 3.12685)
+
+[node name="TV" parent="." instance=ExtResource("30_ypww5")]
+transform = Transform3D(0.995752, 0, 0.0920752, 0, 1, 0, -0.0920752, 0, 0.995752, -26.6307, 2.3521, 3.22014)
+
+[node name="Cupboard 4" parent="." instance=ExtResource("28_30rnt")]
+transform = Transform3D(-0.999724, 0, -0.0234901, 0, 1, 0, 0.0234901, 0, -0.999724, -30.7616, 1.51, 0.519354)
+
+[node name="Bed Side Table3" parent="." instance=ExtResource("29_m2d54")]
+transform = Transform3D(-0.999945, 0, 0.010524, 0, 1, 0, -0.010524, 0, -0.999945, -29.577, 1.51573, 0.549048)
+
+[node name="Wine Bottle" parent="." instance=ExtResource("31_35ekd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.1036, 2.3562, 19.0846)
+
+[node name="Pumpkin3" parent="." instance=ExtResource("25_xvfvx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.9396, 2.3521, 17.1932)
+
+[node name="Pumpkin4" parent="." instance=ExtResource("25_xvfvx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.6677, 2.07228, 6.05742)
+
+[node name="Mug 2" parent="." instance=ExtResource("32_bqhf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.2072, 2.07228, 6.42774)
+
+[node name="Mug 3" parent="." instance=ExtResource("23_gugwn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.2986, 1.66598, 6.35394)
+
+[node name="Bed Side Table4" parent="." instance=ExtResource("29_m2d54")]
+transform = Transform3D(0.0183249, 0, -0.999832, 0, 1, 0, 0.999832, 0, 0.0183249, -21.8993, 1.51573, 17.187)
+
+[node name="Cupboard 1" parent="." instance=ExtResource("33_ktb73")]
+transform = Transform3D(-0.00356052, 0, -0.999994, 0, 1, 0, 0.999994, 0, -0.00356052, -21.8829, 1.51, 13.9653)
+
+[node name="Cabinet8" parent="." instance=ExtResource("17_abiiw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1099, 1.51, 9.44161)
+
+[node name="Cabinet9" parent="." instance=ExtResource("17_abiiw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5262, 1.51, 9.44161)
+
+[node name="Cabinet10" parent="." instance=ExtResource("17_abiiw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0602998, 1.51, 9.44161)
+
+[node name="Cabinet12" parent="." instance=ExtResource("17_abiiw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.23023, 1.51, 9.44161)
+
+[node name="Cabinet11" parent="." instance=ExtResource("17_abiiw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.643999, 1.51, 9.44161)
+
+[node name="Bed Side Table5" parent="." instance=ExtResource("29_m2d54")]
+transform = Transform3D(0.00663224, 0, 0.999978, 0, 1, 0, -0.999978, 0, 0.00663224, 0.929141, 1.51573, 6.9649)
+
+[node name="Bed Side Table6" parent="." instance=ExtResource("29_m2d54")]
+transform = Transform3D(0.00663224, 0, 0.999978, 0, 1, 0, -0.999978, 0, 0.00663224, 0.929141, 1.51573, 8.24528)
+
+[node name="Bed" parent="." instance=ExtResource("34_kb6kl")]
+transform = Transform3D(0.0135957, 0, 0.999908, 0, 1, 0, -0.999908, 0, 0.0135957, -29.1617, 4.6665, 21.0212)
+
+[node name="Bed2" parent="." instance=ExtResource("34_kb6kl")]
+transform = Transform3D(0.0135957, 0, 0.999908, 0, 1, 0, -0.999908, 0, 0.0135957, -29.1617, 4.6665, 10.6506)
+
+[node name="Bed3" parent="." instance=ExtResource("34_kb6kl")]
+transform = Transform3D(0.999713, 0, 0.0239436, 0, 1, 0, -0.0239436, 0, 0.999713, -2.72615, 4.6665, 14.6676)
+
+[node name="Bed Side Table7" parent="." instance=ExtResource("29_m2d54")]
+transform = Transform3D(-0.999922, 0, -0.0124613, 0, 1, 0, 0.0124613, 0, -0.999922, -2.62882, 4.59383, 17.3042)
+
+[node name="Bed Side Table8" parent="." instance=ExtResource("29_m2d54")]
+transform = Transform3D(0.0173827, 0, -0.999849, 0, 1, 0, 0.999849, 0, 0.0173827, -26.5614, 4.58637, 20.9519)
+
+[node name="Bed Side Table9" parent="." instance=ExtResource("29_m2d54")]
+transform = Transform3D(-0.0155153, 0, -0.99988, 0, 1, 0, 0.99988, 0, -0.0155153, -26.6233, 4.58979, 10.5465)
+
+[node name="Cupboard 5" parent="." instance=ExtResource("33_ktb73")]
+transform = Transform3D(0.0441251, 0, 0.999026, 0, 1, 0, -0.999026, 0, 0.0441251, -20.145, 4.62236, 6.99348)
+
+[node name="Cupboard 6" parent="." instance=ExtResource("28_30rnt")]
+transform = Transform3D(0.0236819, 0, 0.99972, 0, 1, 0, -0.99972, 0, 0.0236819, -19.9999, 4.58922, 8.32169)
+
+[node name="Sofa2" parent="." instance=ExtResource("13_el84s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.3237, 4.51, 15.4375)
+
+[node name="Arm Chair3" parent="." instance=ExtResource("12_hhful")]
+transform = Transform3D(0.786784, 0, -0.617228, 0, 1, 0, 0.617228, 0, 0.786784, -14.4112, 4.51, 15.9792)
+
+[node name="Coffee Table2" parent="." instance=ExtResource("14_ktdxf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.4457, 4.51, 17.2294)
+
+[node name="Bed Side Table10" parent="." instance=ExtResource("29_m2d54")]
+transform = Transform3D(0.0306781, 0, 0.999529, 0, 1, 0, -0.999529, 0, 0.0306781, -14.0643, 4.51573, 19.8013)
+
+[node name="Candle2" parent="." instance=ExtResource("20_an508")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.9707, 5.3521, 19.3294)
+
+[node name="Candle3" parent="." instance=ExtResource("20_an508")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.286, 5.3521, 19.5599)
+
+[node name="Fridge" parent="." instance=ExtResource("35_56k1n")]
+transform = Transform3D(-0.0138924, 0, 0.999904, 0, 1, 0, -0.999904, 0, -0.0138924, -23.028, 1.51, 15.8191)
+
+[node name="Large Bowl" parent="." instance=ExtResource("36_mw2ns")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.8893, 2.56816, 12.4512)
+
+[node name="Table2" parent="." instance=ExtResource("15_yl7nb")]
+transform = Transform3D(0.0485883, 0, 0.998819, 0, 1, 0, -0.998819, 0, 0.0485883, -14.4926, 1.51, 12.997)
+
+[node name="table_lamp" parent="." instance=ExtResource("37_8fg3h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.6974, 2.34335, 0.452719)
+
+[node name="table_lamp2" parent="." instance=ExtResource("37_8fg3h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.4006, 2.3562, 12.9824)
+
+[node name="Candle4" parent="." instance=ExtResource("20_an508")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.27551, 2.49008, 9.35839)
+
+[node name="Car" parent="." instance=ExtResource("38_1sx7u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.966211, 1.37489, 14.955)
+
+[node name="Bath" parent="." instance=ExtResource("39_kc1j0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.89866, 4.51, 6.70527)
+
+[node name="Bath2" parent="." instance=ExtResource("39_kc1j0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.1502, 4.51, 6.70527)
+
+[node name="Toilet" parent="." instance=ExtResource("40_jtn8t")]
+transform = Transform3D(0.0170685, 0, -0.999854, 0, 1, 0, 0.999854, 0, 0.0170685, -14.1493, 4.51, 10.6456)
+
+[node name="Toilet2" parent="." instance=ExtResource("40_jtn8t")]
+transform = Transform3D(0.999957, 0, -0.00928508, 0, 1, 0, 0.00928508, 0, 0.999957, 0.0178289, 4.51, 6.87754)
+
+[node name="Sink2" parent="." instance=ExtResource("18_41vwf")]
+transform = Transform3D(0.0634176, 0, -0.997987, 0, 1, 0, 0.997987, 0, 0.0634176, 1.21758, 4.51, 10.9318)
+
+[node name="Sink3" parent="." instance=ExtResource("18_41vwf")]
+transform = Transform3D(0.0634176, 0, -0.997987, 0, 1, 0, 0.997987, 0, 0.0634176, -13.7441, 4.51, 12.6985)
+
+[node name="Mug 4" parent="." instance=ExtResource("23_gugwn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.1527, 5.07228, 17.3134)
+
+[node name="Pumpkin5" parent="." instance=ExtResource("25_xvfvx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.8503, 5.07228, 17.4194)
+
+[node name="Rug3" parent="." instance=ExtResource("19_vak2f")]
+transform = Transform3D(0.822164, 0, -0.569251, 0, 1, 0, 0.569251, 0, 0.822164, -17.714, 4.51, 19.0383)
+
+[node name="Rug1" parent="." instance=ExtResource("41_gnmbr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.004, 1.51, 16.3996)
 
 [editable path="DefaultEnvironment"]

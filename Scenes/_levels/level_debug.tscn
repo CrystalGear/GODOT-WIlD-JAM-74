@@ -1,5 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://c7ocvb2duj8e6"]
-
+[gd_scene load_steps=25 format=3 uid="uid://c7ocvb2duj8e6"]
 
 [ext_resource type="PackedScene" uid="uid://ia38iawogjd7" path="res://Scenes/default_environment.tscn" id="1_58fx7"]
 [ext_resource type="Script" path="res://Scenes/blockout/add_to_group.gd" id="2_n4ogn"]
@@ -10,13 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://b6g1180ykln18" path="res://Scenes/Game Objects/pumpkin.tscn" id="13_6ylba"]
 [ext_resource type="PackedScene" uid="uid://01lqrl4m4dia" path="res://Scenes/Game Objects/sink.tscn" id="17_xuuva"]
 [ext_resource type="PackedScene" uid="uid://cp7qcj6bigbdu" path="res://Scenes/Car/car.tscn" id="18_3ngov"]
-
 [ext_resource type="PackedScene" uid="uid://blnnbmexf5lhr" path="res://Scenes/Characters/enemy.tscn" id="19_cnscy"]
-[ext_resource type="PackedScene" uid="uid://ttf4lepyb5q0" path="res://Scenes/Game Objects/enemy_test_model.tscn" id="21_t6xds"]
-[ext_resource type="PackedScene" uid="uid://cd0cqn0wp7hbo" path="res://teleport_point.tscn" id="21_rf2wo"]
+[ext_resource type="PackedScene" path="res://teleport_point.tscn" id="21_rf2wo"]
+[ext_resource type="PackedScene" path="res://Scenes/Game Objects/enemy_test_model.tscn" id="21_t6xds"]
 [ext_resource type="PackedScene" uid="uid://crhgx1286i5xe" path="res://Scenes/Car/wheel.tscn" id="22_48c45"]
-
-
 [ext_resource type="PackedScene" uid="uid://j8l8l2b3xcsk" path="res://Scenes/Game Objects/arm_chair.tscn" id="24_yjtd0"]
 [ext_resource type="PackedScene" uid="uid://bbmqruprrgtxx" path="res://Scenes/ambient_generator.tscn" id="25_1b3p2"]
 [ext_resource type="PackedScene" uid="uid://shf1hdvgvp8o" path="res://Scenes/Game Objects/sofa.tscn" id="25_a0cja"]
@@ -162,7 +158,6 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -28.97
 [node name="Car" parent="." instance=ExtResource("18_3ngov")]
 transform = Transform3D(0.99993, 0, 0.011868, 0, 1, 0, -0.011868, 0, 0.99993, -1.23098, 1.46551, 14.1616)
 
-
 [node name="Enemy Test Model" parent="." instance=ExtResource("21_t6xds")]
 transform = Transform3D(0.60578, 0, -0.795632, 0, 1, 0, 0.795632, 0, 0.60578, -24.811, 2.07257, 5.14393)
 
@@ -174,4 +169,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.6514, 8.39684, 13.9602)
 
 [node name="Wheel" parent="." instance=ExtResource("22_48c45")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.82518, 2.30167, 9.37756)
-
