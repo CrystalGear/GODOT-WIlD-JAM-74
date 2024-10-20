@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c4jme2d5sauf4"
+path="res://.godot/imported/spooky ambiance quiet.mp3-6abdff68493f0caf8520d07457fdc966.mp3str"
+
+[deps]
+
+source_file="res://Audio/SFX/spooky ambiance quiet.mp3"
+dest_files=["res://.godot/imported/spooky ambiance quiet.mp3-6abdff68493f0caf8520d07457fdc966.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b3lj584qu0imh"
+path="res://.godot/imported/wood creaking quiet.mp3-31668c98eaf23cc18a86ac3df3d21f43.mp3str"
+
+[deps]
+
+source_file="res://Audio/SFX/wood creaking quiet.mp3"
+dest_files=["res://.godot/imported/wood creaking quiet.mp3-31668c98eaf23cc18a86ac3df3d21f43.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
