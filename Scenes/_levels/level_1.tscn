@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://ia38iawogjd7" path="res://Scenes/default_environment.tscn" id="1_g2m6j"]
 [ext_resource type="PackedScene" uid="uid://c15oa1883es0v" path="res://Scenes/blockout/blockout_level.tscn" id="2_qp6am"]
 [ext_resource type="PackedScene" uid="uid://dkbwkvi8f7mtw" path="res://Scenes/Characters/player.tscn" id="3_nxca5"]
-[ext_resource type="PackedScene" path="res://Scenes/ambient_generator.tscn" id="4_wh0ju"]
+[ext_resource type="PackedScene" uid="uid://bbmqruprrgtxx" path="res://Scenes/ambient_generator.tscn" id="4_wh0ju"]
 [ext_resource type="AudioStream" uid="uid://bmllli52m6li6" path="res://Audio/SFX/pots-and-pans-clatter-1-87352.mp3" id="5_u0t7o"]
 [ext_resource type="AudioStream" uid="uid://bgu24parh4d6y" path="res://Audio/SFX/knock-knock!-made-with-Voicemod.mp3" id="6_f7ehi"]
 [ext_resource type="AudioStream" uid="uid://cyk314vkjr7j0" path="res://Audio/SFX/creak-#3-made-with-Voicemod.mp3" id="7_vdh0g"]
