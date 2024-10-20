@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://bn56ncgudcqxy"]
+[gd_scene load_steps=10 format=3 uid="uid://bn56ncgudcqxy"]
 
 [ext_resource type="PackedScene" uid="uid://ia38iawogjd7" path="res://Scenes/default_environment.tscn" id="1_g2m6j"]
 [ext_resource type="PackedScene" uid="uid://c15oa1883es0v" path="res://Scenes/blockout/blockout_level.tscn" id="2_qp6am"]
 [ext_resource type="PackedScene" uid="uid://dkbwkvi8f7mtw" path="res://Scenes/Characters/player.tscn" id="3_nxca5"]
+[ext_resource type="PackedScene" uid="uid://bj0lcccv1qld" path="res://Scenes/letterbox.tscn" id="4_4voce"]
 [ext_resource type="PackedScene" uid="uid://bbmqruprrgtxx" path="res://Scenes/ambient_generator.tscn" id="4_wh0ju"]
 [ext_resource type="AudioStream" uid="uid://bmllli52m6li6" path="res://Audio/SFX/pots-and-pans-clatter-1-87352.mp3" id="5_u0t7o"]
 [ext_resource type="AudioStream" uid="uid://bgu24parh4d6y" path="res://Audio/SFX/knock-knock!-made-with-Voicemod.mp3" id="6_f7ehi"]
@@ -16,7 +17,10 @@
 [node name="BlockoutLevel" parent="." instance=ExtResource("2_qp6am")]
 
 [node name="Player" parent="." instance=ExtResource("3_nxca5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 2.75, 19.25)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 2.75, 16.1528)
+
+[node name="Letterbox" parent="." instance=ExtResource("4_4voce")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 2.75, 16.1502)
 
 [node name="Ambient Audio" type="Node" parent="."]
 
