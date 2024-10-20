@@ -1,0 +1,37 @@
+[gd_scene load_steps=9 format=3 uid="uid://boe83b08lcna6"]
+
+[ext_resource type="PackedScene" uid="uid://cgpj736brouc4" path="res://Models/Picture.fbx" id="1_c3uap"]
+[ext_resource type="Texture2D" uid="uid://csvy06xivy6es" path="res://Textures/Pictures/Christine/Picture_standardSurface1_BaseMap.png" id="2_1kid8"]
+[ext_resource type="Texture2D" uid="uid://dy68k2qsun13q" path="res://Textures/Pictures/Christine/Picture_standardSurface1_MaskMap.png" id="3_q8eyd"]
+[ext_resource type="Texture2D" uid="uid://bfnlvyc6ekbck" path="res://Textures/Pictures/Christine/Picture_standardSurface1_Normal.png" id="4_pdaoe"]
+[ext_resource type="Texture2D" uid="uid://1q2771bqb6h3" path="res://Textures/Pictures/Dan/Picture_blinn1_BaseMap.png" id="5_3p6s5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pvxv5"]
+albedo_texture = ExtResource("2_1kid8")
+metallic = 1.0
+metallic_texture = ExtResource("3_q8eyd")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("3_q8eyd")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("4_pdaoe")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xjqy3"]
+albedo_texture = ExtResource("5_3p6s5")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_sytgu"]
+data = PackedVector3Array(0.025, 0.025, 0.025, 0.025, -0.025, 0.025, -0.025, -0.025, 0.025, -0.025, -0.025, 0.025, -0.025, 0.025, 0.025, 0.025, 0.025, 0.025, 0.025, 0.025, -0.025, 0.025, 0.025, 0.025, -0.025, 0.025, 0.025, -0.025, 0.025, 0.025, -0.025, 0.025, -0.025, 0.025, 0.025, -0.025, 0.025, -0.025, -0.025, 0.025, 0.025, -0.025, -0.025, 0.025, -0.025, -0.025, 0.025, -0.025, -0.025, -0.025, -0.025, 0.025, -0.025, -0.025, 0.025, -0.025, 0.025, 0.025, -0.025, -0.025, -0.025, -0.025, -0.025, -0.025, -0.025, -0.025, -0.025, -0.025, 0.025, 0.025, -0.025, 0.025, 0.023, -0.023, -0.023, 0.025, -0.025, -0.025, 0.025, -0.025, 0.025, 0.025, -0.025, 0.025, 0.023, -0.023, 0.023, 0.023, -0.023, -0.023, 0.023, 0.023, -0.023, 0.025, 0.025, -0.025, 0.025, -0.025, -0.025, 0.025, -0.025, -0.025, 0.023, -0.023, -0.023, 0.023, 0.023, -0.023, 0.023, 0.023, 0.023, 0.025, 0.025, 0.025, 0.025, 0.025, -0.025, 0.025, 0.025, -0.025, 0.023, 0.023, -0.023, 0.023, 0.023, 0.023, 0.023, 0.023, 0.023, 0.023, -0.023, 0.023, 0.025, -0.025, 0.025, 0.025, -0.025, 0.025, 0.025, 0.025, 0.025, 0.023, 0.023, 0.023, -0.0172, -0.023, -0.023, 0.023, -0.023, -0.023, 0.023, -0.023, 0.023, 0.023, -0.023, 0.023, -0.0172, -0.023, 0.023, -0.0172, -0.023, -0.023, -0.0172, 0.023, -0.023, 0.023, 0.023, -0.023, 0.023, -0.023, -0.023, 0.023, -0.023, -0.023, -0.0172, -0.023, -0.023, -0.0172, 0.023, -0.023, -0.0172, 0.023, 0.023, 0.023, 0.023, 0.023, 0.023, 0.023, -0.023, 0.023, 0.023, -0.023, -0.0172, 0.023, -0.023, -0.0172, 0.023, 0.023, -0.0172, -0.023, 0.023, 0.023, -0.023, 0.023, 0.023, 0.023, 0.023, 0.023, 0.023, 0.023, -0.0172, 0.023, 0.023, -0.0172, -0.023, 0.023, -0.0172, 0.023, -0.023, -0.0172, -0.023, -0.023, -0.0172, -0.023, 0.023, -0.0172, -0.023, 0.023, -0.0172, 0.023, 0.023, -0.0172, 0.023, -0.023)
+
+[node name="Christine Poster" type="StaticBody3D"]
+
+[node name="Picture" parent="." instance=ExtResource("1_c3uap")]
+
+[node name="pCube1" parent="Picture" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_pvxv5")
+surface_material_override/1 = SubResource("StandardMaterial3D_xjqy3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 34.5325, 0, 0, 0, 22.8036, 0, 0.880943, 0)
+shape = SubResource("ConcavePolygonShape3D_sytgu")
+
+[editable path="Picture"]
