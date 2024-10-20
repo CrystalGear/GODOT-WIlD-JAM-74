@@ -17,11 +17,14 @@ class_name Player extends CharacterBody3D
 @export var pull = 12
 @export var enemy: Enemy
 
+@export var repair_sound: AudioStream
+
 @onready var camera = $Camera3D
 @onready var collision_shape = $CollisionShape3D
 @onready var raycast = $RayCast3D
 @onready var animation_player = $AnimationPlayer
 @onready var interaction_component = $Camera3D/PlayerInteractionComponent
+@onready var interaction_cast: RayCast3D = $InteractionCast
 
 #vars
 var b_is_crouching = false
@@ -34,6 +37,7 @@ var mouse_sensitivity:float:
 		OptionsManager.Set_Mouse_Sensitivity(value * 200)
 var joystick_sensitivity = 2
 var input_dir: Vector2
+
 
 func _input(event) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
@@ -149,6 +153,16 @@ func crouch():
 func interact_with_object():
 	if Input.is_action_just_pressed("primary_action"):
 		interaction_component.interact_with_item()
+		if interaction_cast.is_colliding():
+			var other = interaction_cast.get_collider()
+			if other is Openable:
+				print("opening")
+				other.use()
+			if other is Repairable:
+				if other.repair($Camera3D/PlayerInteractionComponent/InventoryComponent/ItemSlotTransform.get_child(0)):
+					animation_player.play("repair")
+					AudioManager.play_clip(repair_sound)
+				
 
 func drop_held_object():
 	if Input.is_action_just_pressed("secondary_action"):

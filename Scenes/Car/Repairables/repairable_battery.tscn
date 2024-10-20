@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cq3do781opv8g"]
+
+[ext_resource type="PackedScene" uid="uid://dh6ekuoa3keva" path="res://Scenes/Car/Repairables/base_repairable_scene.tscn" id="1_vt4x8"]
+[ext_resource type="PackedScene" uid="uid://beit8p6qknbfo" path="res://Scenes/Car/battery.tscn" id="2_fkbkn"]
+
+[node name="RepairableBattery" node_paths=PackedStringArray("static_part", "part_mesh", "outline_mesh") instance=ExtResource("1_vt4x8")]
+static_part = NodePath("Battery")
+part_mesh = NodePath("Battery/Battery")
+outline_mesh = NodePath("Battery/Outline")
+
+[node name="Battery" parent="." index="1" instance=ExtResource("2_fkbkn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0118012, 0, -0.00598669)
+
+[node name="Battery" parent="Battery" index="0"]
+visible = false
+
+[node name="Outline" parent="Battery" index="1"]
+visible = true
+
+[editable path="Battery"]

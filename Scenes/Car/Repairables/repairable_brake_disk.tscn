@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://75pebknjur68"]
+
+[ext_resource type="PackedScene" uid="uid://dh6ekuoa3keva" path="res://Scenes/Car/Repairables/base_repairable_scene.tscn" id="1_jc5fm"]
+[ext_resource type="PackedScene" uid="uid://dws40hsag81yi" path="res://Scenes/Car/brake_disk.tscn" id="2_ek26r"]
+
+[node name="RepairableBrakeDisk" node_paths=PackedStringArray("static_part", "part_mesh", "outline_mesh") instance=ExtResource("1_jc5fm")]
+static_part = NodePath("BrakeDisk")
+part_mesh = NodePath("BrakeDisk/BrakeDisk")
+outline_mesh = NodePath("BrakeDisk/Outline")
+
+[node name="BrakeDisk" parent="." index="1" instance=ExtResource("2_ek26r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0106661, -0.00390746, -0.00288808)
+
+[editable path="BrakeDisk"]

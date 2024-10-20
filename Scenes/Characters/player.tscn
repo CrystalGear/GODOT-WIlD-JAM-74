@@ -1,6 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://dkbwkvi8f7mtw"]
 
 [ext_resource type="Script" path="res://Scripts/Player_Scripts/player.gd" id="1_xnuy8"]
+[ext_resource type="AudioStream" uid="uid://cvhbm53q0ox5" path="res://Audio/SFX/repair.mp3" id="2_013tk"]
 [ext_resource type="PackedScene" uid="uid://drw7vuij4qrl0" path="res://Scenes/UI/timer_canvas.tscn" id="2_dq00m"]
 [ext_resource type="Script" path="res://Scenes/Characters/camera_3d.gd" id="2_jty26"]
 [ext_resource type="PackedScene" uid="uid://d4jrqdt68qvbu" path="res://Scenes/player_interaction_component.tscn" id="2_t3gbh"]
@@ -23,6 +24,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [1.7]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D/PlayerInteractionComponent/InventoryComponent/ItemSlotTransform:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_2raob"]
 resource_name = "crouch"
@@ -41,10 +54,27 @@ tracks/0/keys = {
 "values": [1.7, 0.85]
 }
 
+[sub_resource type="Animation" id="Animation_b61vc"]
+resource_name = "repair"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D/PlayerInteractionComponent/InventoryComponent/ItemSlotTransform:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, -0.610865), Vector3(0, 0, 0), Vector3(0, 0, -0.436332), Vector3(0, 0, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lk1yr"]
 _data = {
 "RESET": SubResource("Animation_vkb7n"),
-"crouch": SubResource("Animation_2raob")
+"crouch": SubResource("Animation_2raob"),
+"repair": SubResource("Animation_b61vc")
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3jjmy"]
@@ -53,11 +83,12 @@ size = Vector3(30, 4, 30)
 [sub_resource type="BoxShape3D" id="BoxShape3D_f0rn8"]
 size = Vector3(6, 4, 6)
 
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" groups=["player"]]
 collision_layer = 524352
 collision_mask = 129
 script = ExtResource("1_xnuy8")
 pull = 15
+repair_sound = ExtResource("2_013tk")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_gbg41")
@@ -93,6 +124,8 @@ spot_angle_attenuation = 1.93187
 
 [node name="timer_canvas" parent="." instance=ExtResource("2_dq00m")]
 
+[node name="timer_canvas" parent="." instance=ExtResource("2_dq00m")]
+
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 light_color = Color(0.172833, 0.172833, 0.172833, 1)
 
@@ -103,6 +136,14 @@ collision_mask = 128
 [node name="CrouchSoundShapeCast" type="ShapeCast3D" parent="."]
 shape = SubResource("BoxShape3D_f0rn8")
 collision_mask = 128
+
+[editable path="Camera3D/PlayerInteractionComponent"]
+[editable path="Camera3D/PlayerInteractionComponent/InventoryComponent"]
+
+[node name="InteractionCast" type="RayCast3D" parent="."]
+transform = Transform3D(0.999999, -0.000496677, 0.000979294, 0.000497626, 0.999999, -0.000971186, -0.000978812, 0.000971672, 0.999999, 0, 0, 0)
+target_position = Vector3(0, 0, -2)
+collide_with_areas = true
 
 [editable path="Camera3D/PlayerInteractionComponent"]
 [editable path="Camera3D/PlayerInteractionComponent/InventoryComponent"]
