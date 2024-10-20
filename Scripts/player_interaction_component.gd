@@ -27,7 +27,9 @@ func _pick_up_item() -> void:
 			item = null
 			return
 		elif InventoryComponent.pick_up_key():
+			item.hide()
 			item = null
+			
 			return
 
 func interact_with_item() -> void:
