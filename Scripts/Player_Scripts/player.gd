@@ -32,6 +32,7 @@ var mouse_sensitivity:float:
 		OptionsManager.Set_Mouse_Sensitivity(value * 200)
 var joystick_sensitivity = 2
 var input_dir: Vector2
+var b_is_stunned: bool = false
 
 func _input(event) -> void:
 	if event is InputEventMouseMotion and Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
@@ -117,14 +118,17 @@ func _jump() -> void:
 
 # Get the input direction and handle the movement/deceleration.
 func _handle_movement() -> void:
-	input_dir = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:
-		velocity.x = direction.x * current_move_speed
-		velocity.z = direction.z * current_move_speed
+	if b_is_stunned:
+		velocity = Vector3.ZERO
 	else:
-		velocity.x = move_toward(velocity.x, 0, current_move_speed)
-		velocity.z = move_toward(velocity.z, 0, current_move_speed)
+		input_dir = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+		var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+		if direction:
+			velocity.x = direction.x * current_move_speed
+			velocity.z = direction.z * current_move_speed
+		else:
+			velocity.x = move_toward(velocity.x, 0, current_move_speed)
+			velocity.z = move_toward(velocity.z, 0, current_move_speed)
 
 func handle_joystick_rotation():
 	var rotation_input = Input.get_vector("look_up", "look_down", "look_left", "look_right")
@@ -155,4 +159,20 @@ func drop_held_object():
 func throw_held_object():
 	if Input.is_action_just_pressed("throw"):
 		interaction_component.throw_item()
-	
+
+func flip_stun() -> void:
+	print("Calling FLIP_STUN")
+	if $StunTimer.time_left > 0:
+		print("FLIP STUN ABORTED - ALREADY RUNNING")
+		return
+	b_is_stunned = !b_is_stunned
+	print(b_is_stunned)
+	$StunTimer.start()
+
+func reset_stun() -> void:
+	if !b_is_stunned:
+		return
+	b_is_stunned = !b_is_stunned
+
+func _on_stun_timer_timeout() -> void:
+	reset_stun()

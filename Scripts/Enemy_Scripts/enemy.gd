@@ -128,3 +128,11 @@ func _check_collisions() -> void:
 		else:
 			raycast.debug_shape_custom_color = Color(0, 255,0)
 			b_can_see_player = false
+
+func stun_player() -> void:
+	player.flip_stun()
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	print(body.name)
+	if body is Player:
+		stun_player()
