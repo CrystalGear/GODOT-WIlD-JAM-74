@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b82dgb8mndtb8"]
+
+[resource]
+resource_name = "M_Glossy"
+vertex_color_use_as_albedo = true
+albedo_color = Color(0.94338, 0.94338, 0.94338, 1)
+roughness = 0.153846
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.0

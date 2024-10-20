@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://gu48bc1pl8qr"]
+
+[ext_resource type="Texture2D" uid="uid://dsp8cuc1ld7t2" path="res://Images/Textures/Haunted Floors Architecture/SM F Door 1.5m/SM F Door 1.5m_M_Walls_BaseColor.1001.png" id="1_1hi8p"]
+[ext_resource type="Texture2D" uid="uid://buriujmsgwvkd" path="res://Images/Textures/Haunted Floors Architecture/SM F Door 1.5m/SM F Door 1.5m_M_Walls_OcclusionRoughnessMetallic.1001.png" id="2_wi471"]
+[ext_resource type="Texture2D" uid="uid://btj81gcuir5es" path="res://Images/Textures/Haunted Floors Architecture/SM F Door 1.5m/SM F Door 1.5m_M_Walls_Normal.1001.png" id="3_6ohkf"]
+
+[resource]
+albedo_texture = ExtResource("1_1hi8p")
+metallic = 1.0
+metallic_texture = ExtResource("2_wi471")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_wi471")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_6ohkf")
+ao_enabled = true
+ao_texture = ExtResource("2_wi471")

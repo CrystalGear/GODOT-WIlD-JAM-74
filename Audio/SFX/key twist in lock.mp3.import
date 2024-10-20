@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bjs34vtiuq0cc"
+path="res://.godot/imported/key twist in lock.mp3-b22ffc2821faa7478b29c5994d13a0c6.mp3str"
+
+[deps]
+
+source_file="res://Audio/SFX/key twist in lock.mp3"
+dest_files=["res://.godot/imported/key twist in lock.mp3-b22ffc2821faa7478b29c5994d13a0c6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

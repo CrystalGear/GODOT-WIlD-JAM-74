@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://x30u8r4pi2se"
+path="res://.godot/imported/click off.mp3-a2a87efad85722b8d93a27e2df2f8853.mp3str"
+
+[deps]
+
+source_file="res://Audio/SFX/click off.mp3"
+dest_files=["res://.godot/imported/click off.mp3-a2a87efad85722b8d93a27e2df2f8853.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

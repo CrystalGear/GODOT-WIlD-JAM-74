@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://ucgj4rjwqene"]
+
+[ext_resource type="Texture2D" uid="uid://r7mgd1ilug7l" path="res://Images/Textures/Haunted Floors Architecture/SM F BayWall Int 6x3m/SM_F_BayWall_Int_6x3mm_M_WindowGlass_BaseColor.1001.png" id="1_rnpiy"]
+[ext_resource type="Texture2D" uid="uid://dp81c1eijrdxn" path="res://Images/Textures/Haunted Floors Architecture/SM F BayWall Int 6x3m/SM_F_BayWall_Int_6x3mm_M_WindowGlass_OcclusionRoughnessMetallic.1001.png" id="2_rjewi"]
+[ext_resource type="Texture2D" uid="uid://nyewybux4pai" path="res://Images/Textures/Haunted Floors Architecture/SM F BayWall Int 6x3m/SM_F_BayWall_Int_6x3mm_M_WindowGlass_Normal.1001.png" id="3_vgt3s"]
+
+[resource]
+albedo_texture = ExtResource("1_rnpiy")
+metallic = 1.0
+metallic_texture = ExtResource("2_rjewi")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_rjewi")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_vgt3s")
+ao_enabled = true
+ao_texture = ExtResource("2_rjewi")

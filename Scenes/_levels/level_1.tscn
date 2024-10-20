@@ -1,9 +1,39 @@
-[gd_scene load_steps=2 format=3 uid="uid://bn56ncgudcqxy"]
+[gd_scene load_steps=9 format=3 uid="uid://bn56ncgudcqxy"]
 
-[ext_resource type="Texture2D" uid="uid://orr75x8cq8b" path="res://icon.svg" id="1_lqahr"]
+[ext_resource type="PackedScene" uid="uid://ia38iawogjd7" path="res://Scenes/default_environment.tscn" id="1_g2m6j"]
+[ext_resource type="PackedScene" uid="uid://c15oa1883es0v" path="res://Scenes/blockout/blockout_level.tscn" id="2_qp6am"]
+[ext_resource type="PackedScene" uid="uid://dkbwkvi8f7mtw" path="res://Scenes/Characters/player.tscn" id="3_nxca5"]
+[ext_resource type="PackedScene" path="res://Scenes/ambient_generator.tscn" id="4_wh0ju"]
+[ext_resource type="AudioStream" uid="uid://bmllli52m6li6" path="res://Audio/SFX/pots-and-pans-clatter-1-87352.mp3" id="5_u0t7o"]
+[ext_resource type="AudioStream" uid="uid://bgu24parh4d6y" path="res://Audio/SFX/knock-knock!-made-with-Voicemod.mp3" id="6_f7ehi"]
+[ext_resource type="AudioStream" uid="uid://cyk314vkjr7j0" path="res://Audio/SFX/creak-#3-made-with-Voicemod.mp3" id="7_vdh0g"]
+[ext_resource type="AudioStream" uid="uid://bydqnlc715a0q" path="res://Audio/SFX/metal-thud-6034.mp3" id="8_18jsh"]
 
 [node name="Level1" type="Node3D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(548, 136)
-texture = ExtResource("1_lqahr")
+[node name="DefaultEnvironment" parent="." instance=ExtResource("1_g2m6j")]
+
+[node name="BlockoutLevel" parent="." instance=ExtResource("2_qp6am")]
+
+[node name="Player" parent="." instance=ExtResource("3_nxca5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 2.75, 19.25)
+
+[node name="Ambient Audio" type="Node" parent="."]
+
+[node name="Attic" parent="Ambient Audio" instance=ExtResource("4_wh0ju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0737, 7.51, 19.3417)
+stream = ExtResource("8_18jsh")
+
+[node name="Kitchen Pots and pans" parent="Ambient Audio" instance=ExtResource("4_wh0ju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.2893, 1.60142, 15.5199)
+stream = ExtResource("5_u0t7o")
+
+[node name="Knocking" parent="Ambient Audio" instance=ExtResource("4_wh0ju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5964, 4.51, 14.148)
+stream = ExtResource("6_f7ehi")
+
+[node name="Basement Thud" parent="Ambient Audio" instance=ExtResource("4_wh0ju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.2957, -1.5, 11.2521)
+stream = ExtResource("7_vdh0g")
+
+[node name="Static Lights" type="Node" parent="."]

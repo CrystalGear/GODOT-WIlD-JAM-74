@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://j18uepfs08el"
+path="res://.godot/imported/walking full.mp3-24a65666ab606a3aa4bbd16905ec90a3.mp3str"
+
+[deps]
+
+source_file="res://Audio/SFX/walking full.mp3"
+dest_files=["res://.godot/imported/walking full.mp3-24a65666ab606a3aa4bbd16905ec90a3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

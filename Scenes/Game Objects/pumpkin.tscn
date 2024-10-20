@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://rmrv1k73c0da"]
+[gd_scene load_steps=4 format=3 uid="uid://b6g1180ykln18"]
 
 [ext_resource type="ArrayMesh" uid="uid://djoo4ag4u76w4" path="res://Models/Kitchen Props/Pumpkin.obj" id="1_ncafa"]
 [ext_resource type="Material" uid="uid://ydndftnrrkx5" path="res://Materials/pumpkin.tres" id="2_7dnsb"]

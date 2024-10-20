@@ -1,0 +1,22 @@
+[gd_resource type="StandardMaterial3D" load_steps=7 format=3 uid="uid://crfhqfkjl4exu"]
+
+[ext_resource type="Texture2D" uid="uid://cn03xrem2x8gp" path="res://Images/Textures/Haunted Garage Architecture/SM_G_Banister/SM_G_Banister_standardSurface10_BaseColor.1001.png" id="1_4a302"]
+[ext_resource type="Texture2D" uid="uid://q0j0gueektuh" path="res://Images/Textures/Haunted Garage Architecture/SM_G_Banister/SM_G_Banister_standardSurface10_Emissive.1001.png" id="2_p0ma4"]
+[ext_resource type="Texture2D" uid="uid://dtrudpfbi2poi" path="res://Images/Textures/Haunted Garage Architecture/SM_G_Banister/SM_G_Banister_standardSurface10_Height.1001.png" id="3_xqo3o"]
+[ext_resource type="Texture2D" uid="uid://cqfub4hkqeuf3" path="res://Images/Textures/Haunted Garage Architecture/SM_G_Banister/SM_G_Banister_standardSurface10_Metallic.1001.png" id="4_oifd5"]
+[ext_resource type="Texture2D" uid="uid://cy7imdau42d1" path="res://Images/Textures/Haunted Garage Architecture/SM_G_Banister/SM_G_Banister_standardSurface10_Normal.1001.png" id="5_i5kkp"]
+[ext_resource type="Texture2D" uid="uid://dekeksm6tvm45" path="res://Images/Textures/Haunted Garage Architecture/SM_G_Banister/SM_G_Banister_standardSurface10_Roughness.1001.png" id="6_dmfby"]
+
+[resource]
+albedo_texture = ExtResource("1_4a302")
+metallic = 1.0
+metallic_texture = ExtResource("4_oifd5")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("6_dmfby")
+roughness_texture_channel = 1
+emission_enabled = true
+emission_texture = ExtResource("2_p0ma4")
+normal_enabled = true
+normal_texture = ExtResource("5_i5kkp")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_xqo3o")

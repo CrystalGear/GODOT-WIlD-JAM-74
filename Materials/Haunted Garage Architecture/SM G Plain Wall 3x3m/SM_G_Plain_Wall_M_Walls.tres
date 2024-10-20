@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://dxc5ddyie6k47"]
+
+[ext_resource type="Texture2D" uid="uid://b2xsl82wh6obs" path="res://Images/Textures/Haunted Garage Architecture/SM G Plain Wall 3x3m/SM_G_Plain_Wall_M_Walls_BaseColor.1001.png" id="1_bdbur"]
+[ext_resource type="Texture2D" uid="uid://cpulcxpp03a7o" path="res://Images/Textures/Haunted Garage Architecture/SM G Plain Wall 3x3m/SM_G_Plain_Wall_M_Walls_OcclusionRoughnessMetallic.1001.png" id="2_nrdha"]
+[ext_resource type="Texture2D" uid="uid://cfom4qkh0ebw" path="res://Images/Textures/Haunted Garage Architecture/SM G Plain Wall 3x3m/SM_G_Plain_Wall_M_Walls_Normal.1001.png" id="3_gv1dd"]
+
+[resource]
+albedo_texture = ExtResource("1_bdbur")
+metallic = 1.0
+metallic_texture = ExtResource("2_nrdha")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_nrdha")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_gv1dd")
+ao_enabled = true
+ao_texture = ExtResource("2_nrdha")

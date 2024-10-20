@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://brb1le3f3lyha"]
+
+[ext_resource type="Texture2D" uid="uid://ekp53ctuejuu" path="res://Images/Textures/Haunted Attic Architecture/SM A Roof 6x3m/SM A Roof 6x3m_AtticWood_BaseColor.1001.png" id="1_b8qx6"]
+[ext_resource type="Texture2D" uid="uid://b562mcxuka4wu" path="res://Images/Textures/Haunted Attic Architecture/SM A Roof 6x3m/SM A Roof 6x3m_AtticWood_OcclusionRoughnessMetallic.1001.png" id="2_3gs2j"]
+[ext_resource type="Texture2D" uid="uid://c0wb26i3ppch8" path="res://Images/Textures/Haunted Attic Architecture/SM A Roof 6x3m/SM A Roof 6x3m_AtticWood_Normal.1001.png" id="3_6qsn6"]
+
+[resource]
+albedo_texture = ExtResource("1_b8qx6")
+metallic = 1.0
+metallic_texture = ExtResource("2_3gs2j")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_3gs2j")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_6qsn6")
+ao_enabled = true
+ao_texture = ExtResource("2_3gs2j")

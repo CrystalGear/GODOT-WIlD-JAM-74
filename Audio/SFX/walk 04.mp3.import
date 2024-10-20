@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dhavdm7x23spy"
+path="res://.godot/imported/walk 04.mp3-3d7e33c48b2ac389325b745d0b94f946.mp3str"
+
+[deps]
+
+source_file="res://Audio/SFX/walk 04.mp3"
+dest_files=["res://.godot/imported/walk 04.mp3-3d7e33c48b2ac389325b745d0b94f946.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
