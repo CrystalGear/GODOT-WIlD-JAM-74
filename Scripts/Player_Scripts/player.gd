@@ -12,7 +12,6 @@ class_name Player extends CharacterBody3D
 @onready var flash_light: SpotLight3D = $Camera3D/FlashlightHand/SpotLight3D
 @onready var flash_light_sound: AudioStreamPlayer3D = $Camera3D/FlashlightHand/FlashLightSound
 @onready var flash_light_turn_on: AudioStreamPlayer3D = $Camera3D/FlashlightHand/FlashLightTurnOn
-@onready var flash_light_turn_off: AudioStreamPlayer3D = $Camera3D/FlashlightHand/FlashLightTurnOff
 @onready var step_sound: AudioStreamPlayer3D = $StepSound
 
 

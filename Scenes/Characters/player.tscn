@@ -219,12 +219,9 @@ collision_mask = 128
 shape = SubResource("BoxShape3D_f0rn8")
 collision_mask = 128
 
-
 [node name="StunTimer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
-
-[connection signal="timeout" from="StunTimer" to="." method="_on_stun_timer_timeout"]
 
 [node name="InteractionCast" type="RayCast3D" parent="."]
 transform = Transform3D(0.999999, -0.000496677, 0.000979294, 0.000497626, 0.999999, -0.000971186, -0.000978812, 0.000971672, 0.999999, 0, 0, 0)
@@ -236,6 +233,7 @@ stream = SubResource("AudioStreamRandomizer_gx8hf")
 volume_db = -30.0
 pitch_scale = 0.85
 
+[connection signal="timeout" from="StunTimer" to="." method="_on_stun_timer_timeout"]
 
 [editable path="Camera3D/PlayerInteractionComponent"]
 [editable path="Camera3D/PlayerInteractionComponent/InventoryComponent"]
