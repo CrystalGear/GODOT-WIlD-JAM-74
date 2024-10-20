@@ -139,6 +139,9 @@ func interact_with_object():
 			if other is Openable:
 				print("opening")
 				other.use()
+			if other is Repairable:
+				if other.repair($Camera3D/PlayerInteractionComponent/InventoryComponent/ItemSlotTransform.get_child(0)):
+					animation_player.play("repair")
 				
 
 func drop_held_object():

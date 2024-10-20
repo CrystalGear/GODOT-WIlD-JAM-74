@@ -6,7 +6,6 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_wq1f4"]
 
 [node name="RepairWheel" type="Area3D" node_paths=PackedStringArray("static_part", "part_mesh", "outline_mesh")]
-collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_jhtit")
 static_part = NodePath("Wheel")

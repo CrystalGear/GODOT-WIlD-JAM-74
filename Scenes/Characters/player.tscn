@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dkbwkvi8f7mtw"]
+[gd_scene load_steps=9 format=3 uid="uid://dkbwkvi8f7mtw"]
 
 [ext_resource type="Script" path="res://Scripts/Player_Scripts/player.gd" id="1_xnuy8"]
 [ext_resource type="PackedScene" uid="uid://drw7vuij4qrl0" path="res://Scenes/UI/timer_canvas.tscn" id="2_dq00m"]
@@ -22,6 +22,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [1.7]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera3D/PlayerInteractionComponent/InventoryComponent/ItemSlotTransform:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_2raob"]
 resource_name = "crouch"
@@ -40,13 +52,30 @@ tracks/0/keys = {
 "values": [1.7, 0.85]
 }
 
+[sub_resource type="Animation" id="Animation_b61vc"]
+resource_name = "repair"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera3D/PlayerInteractionComponent/InventoryComponent/ItemSlotTransform:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, -0.610865), Vector3(0, 0, 0), Vector3(0, 0, -0.436332), Vector3(0, 0, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lk1yr"]
 _data = {
 "RESET": SubResource("Animation_vkb7n"),
-"crouch": SubResource("Animation_2raob")
+"crouch": SubResource("Animation_2raob"),
+"repair": SubResource("Animation_b61vc")
 }
 
-[node name="Player" type="CharacterBody3D"]
+[node name="Player" type="CharacterBody3D" groups=["player"]]
 collision_layer = 524288
 script = ExtResource("1_xnuy8")
 pull = 15
@@ -90,6 +119,7 @@ light_color = Color(0.172833, 0.172833, 0.172833, 1)
 [node name="InteractionCast" type="RayCast3D" parent="."]
 transform = Transform3D(0.999999, -0.000496677, 0.000979294, 0.000497626, 0.999999, -0.000971186, -0.000978812, 0.000971672, 0.999999, 0, 0, 0)
 target_position = Vector3(0, 0, -2)
+collide_with_areas = true
 
 [editable path="Camera3D/PlayerInteractionComponent"]
 [editable path="Camera3D/PlayerInteractionComponent/InventoryComponent"]

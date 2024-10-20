@@ -9,6 +9,8 @@ const DISALLOWED_PAUSE_LEVELS = ["SplashScreen", "MainMenu", "OptionsMenu", "Win
 var b_paused:bool = false
 var pause_timer
 var pause_ui:Control
+var _repaired_parts: int = 0
+var _max_parts_to_repair:int = 8
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -80,3 +82,8 @@ func toggle_pause(b_new_state: bool) -> void:
 
 	# Enable the node's _physics_process() function
 	set_physics_process(b_new_state)
+	
+func repaired_part():
+	_repaired_parts += 1
+	if _repaired_parts == _max_parts_to_repair:
+		print("YOU WIN!")
