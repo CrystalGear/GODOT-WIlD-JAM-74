@@ -18,6 +18,7 @@ func _process(delta: float) -> void:
 	timer_text.text = str(time_remaining)
 		
 	if (time_remaining <= 0):
+		LevelManager.show_game_over()
 		time_remaining = 0
 		continueCountdown = false
 

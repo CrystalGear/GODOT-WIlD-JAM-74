@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://blnnbmexf5lhr"]
+[gd_scene load_steps=5 format=3 uid="uid://de1bpgxwkt8rr"]
 
 [ext_resource type="Script" path="res://Scripts/Enemy_Scripts/enemy.gd" id="1_rxut0"]
-[ext_resource type="PackedScene" uid="uid://ttf4lepyb5q0" path="res://Scenes/Game Objects/enemy_test_model.tscn" id="2_kwkaf"]
+[ext_resource type="PackedScene" path="res://Scenes/Game Objects/enemy_test_model.tscn" id="2_kwkaf"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fmah0"]
 radius = 0.32

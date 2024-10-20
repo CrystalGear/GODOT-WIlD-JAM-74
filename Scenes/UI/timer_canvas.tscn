@@ -6,5 +6,6 @@
 script = ExtResource("1_5wg34")
 
 [node name="timer_text" type="Label" parent="."]
+offset_top = -27.0
 offset_right = 40.0
-offset_bottom = 23.0
+offset_bottom = -4.0
