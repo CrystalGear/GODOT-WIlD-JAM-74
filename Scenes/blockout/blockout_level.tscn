@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://c15oa1883es0v"]
+[gd_scene load_steps=12 format=3 uid="uid://c15oa1883es0v"]
 
 [ext_resource type="MeshLibrary" uid="uid://1wqdvga7wiho" path="res://MeshLibraries/Modular Kit.tres" id="2_2nask"]
 [ext_resource type="PackedScene" uid="uid://dl38xjaj3y0nd" path="res://Scenes/Modular Kit/sm_g_door.tscn" id="3_1bkna"]
 [ext_resource type="PackedScene" uid="uid://dowkc1gtuo6mr" path="res://Scenes/Modular Kit/sm_g_ridge_wall.tscn" id="3_oy2tf"]
 [ext_resource type="PackedScene" uid="uid://0coiwmth6iud" path="res://Scenes/Modular Kit/sm_f_wall_3x_3m.tscn" id="4_68hix"]
 [ext_resource type="PackedScene" uid="uid://c5rekpqjdm04u" path="res://Scenes/Modular Kit/sm_f_door_1_5m.tscn" id="5_66fqq"]
+[ext_resource type="PackedScene" uid="uid://dn4ngmlaqijdm" path="res://Scenes/Modular Kit/sm_f_bay_wall_int_6x_3_mm.tscn" id="6_68m8n"]
 [ext_resource type="PackedScene" uid="uid://bht2er3wvdqro" path="res://Scenes/Modular Kit/sm_f_wall_int_corner.tscn" id="6_mfu42"]
 [ext_resource type="PackedScene" uid="uid://c3u7tvsnoxutf" path="res://Scenes/Modular Kit/sm_f_wall_int_1_5m.tscn" id="7_w6spd"]
 [ext_resource type="PackedScene" path="res://Scenes/Modular Kit/sm_f_door_1_5m_open.tscn" id="8_7mehn"]
@@ -44,9 +45,9 @@ cell_size = Vector3(3, 3, 3)
 cell_center_x = false
 cell_center_z = false
 data = {
-"cells": PackedInt32Array(65535, 3, 655364, 65535, 2, 524291, 65534, 2, 524291, 65533, 2, 524291, 65532, 2, 524291, 65534, 6, 655363, 65533, 6, 655363, 65534, 3, 3, 65533, 3, 4, 65532, 3, 3, 65531, 6, 3, 65529, 6, 3, 65531, 2, 655363, 65528, 4, 3, 65527, 4, 3, 65526, 4, 4, 65528, 3, 3, 65527, 3, 3, 65526, 3, 4, 65528, 0, 655363, 65527, 0, 655363, 65526, 0, 655363, 65527, 7, 7, -4, 7, 3, -5, 7, 3, -4, 3, 3, -5, 3, 3, -6, 3, 3, -7, 3, 655363, -8, 3, 655363, -9, 3, 655363, -6, 6, 3, -7, 6, 3, -8, 6, 3, -9, 6, 3, 65532, 7, 655363, 131070, 6, 655363, 131069, 2, 655363, 131070, 2, 655363, 131068, 2, 655363, 131069, 8, 131075, 131070, 8, 131075, 131068, 8, 131075, 131071, 8, 655363, 65536, 8, 655363, 131070, 7, 524291, 131071, 2, 3, 65536, 2, 3, 131071, 4, 3, 131067, 8, 655363, 131066, 8, 655363, 131065, 8, 655363, 131067, 5, 655363, 131066, 5, 655363, 131064, 8, 3, 131063, 8, 3, 131064, 5, 3, 131063, 5, 3, 131062, 5, 3, 131062, 8, 3, 131064, 6, 3, 131063, 6, 3, 131062, 6, 3, 131067, 2, 655363, 131066, 2, 655363, 131065, 2, 655363, 131064, 2, 655363, 131063, 2, 655363, 131062, 2, 655363, 131069, 7, 655364, 131068, 6, 3, 196604, 2, 655363, 196603, 2, 655363, 196602, 2, 655363, 196604, 7, 3, 196603, 7, 3, 196602, 7, 3, 0, 2, 524291, 65529, 2, 655363, 65530, 2, 655363)
+"cells": PackedInt32Array(65535, 3, 655364, 65535, 2, 524291, 65534, 2, 524291, 65533, 2, 524291, 65532, 2, 524291, 65534, 6, 655363, 65533, 6, 655363, 65534, 3, 3, 65533, 3, 4, 65532, 3, 3, 65531, 6, 3, 65529, 6, 3, 65531, 2, 655363, 65528, 4, 3, 65527, 4, 3, 65526, 4, 4, 65528, 3, 3, 65527, 3, 3, 65526, 3, 4, 65528, 0, 655363, 65527, 0, 655363, 65526, 0, 655363, -4, 7, 3, -5, 7, 3, -4, 3, 3, -5, 3, 3, -6, 3, 3, -7, 3, 655363, -8, 3, 655363, -9, 3, 655363, -6, 6, 3, -7, 6, 3, -8, 6, 3, -9, 6, 3, 65532, 7, 655363, 131070, 6, 655363, 131069, 2, 655363, 131070, 2, 655363, 131068, 2, 655363, 131069, 8, 131075, 131070, 8, 131075, 131068, 8, 131075, 131071, 8, 655363, 65536, 8, 655363, 131070, 7, 524291, 131071, 2, 3, 65536, 2, 3, 131071, 4, 3, 131067, 8, 655363, 131066, 8, 655363, 131065, 8, 655363, 131067, 5, 655363, 131066, 5, 655363, 131064, 8, 3, 131063, 8, 3, 131064, 5, 3, 131063, 5, 3, 131062, 5, 3, 131062, 8, 3, 131064, 6, 3, 131063, 6, 3, 131062, 6, 3, 131067, 2, 655363, 131066, 2, 655363, 131065, 2, 655363, 131064, 2, 655363, 131063, 2, 655363, 131062, 2, 655363, 131069, 7, 655364, 131068, 6, 3, 196604, 2, 655363, 196603, 2, 655363, 196602, 2, 655363, 196604, 7, 3, 196603, 7, 3, 196602, 7, 3, 0, 2, 524291, 65529, 2, 655363, 65530, 2, 655363)
 }
-metadata/_editor_floor_ = Vector3(0, 1, 0)
+metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="Stairs Going Up" type="GridMap" parent="Ground Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49285, 2.02951, 1.49866)
@@ -146,6 +147,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 1.6, 20.1205)
 
 [node name="SM_F_Wall_Int Corner2" parent="Free Placed Geometry/Kitchen" instance=ExtResource("6_mfu42")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.1371, 1.6, 20.1205)
+
+[node name="SM_F_BayWall_Int_6x3mm" parent="Free Placed Geometry/Kitchen" instance=ExtResource("6_68m8n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.1304, 1.51, 20.9995)
 
 [node name="SM F Door 1_5m" parent="Free Placed Geometry" instance=ExtResource("5_66fqq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 1.5, 17.6312)
