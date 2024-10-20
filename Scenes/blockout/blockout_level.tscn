@@ -1,7 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://c15oa1883es0v"]
+[gd_scene load_steps=9 format=3 uid="uid://c15oa1883es0v"]
 
 [ext_resource type="MeshLibrary" uid="uid://1wqdvga7wiho" path="res://MeshLibraries/Modular Kit.tres" id="2_2nask"]
+[ext_resource type="PackedScene" uid="uid://dl38xjaj3y0nd" path="res://Scenes/Modular Kit/sm_g_door.tscn" id="3_1bkna"]
 [ext_resource type="PackedScene" uid="uid://dowkc1gtuo6mr" path="res://Scenes/Modular Kit/sm_g_ridge_wall.tscn" id="3_oy2tf"]
+[ext_resource type="PackedScene" uid="uid://0coiwmth6iud" path="res://Scenes/Modular Kit/sm_f_wall_3x_3m.tscn" id="4_68hix"]
+[ext_resource type="PackedScene" uid="uid://c5rekpqjdm04u" path="res://Scenes/Modular Kit/sm_f_door_1_5m.tscn" id="5_66fqq"]
+[ext_resource type="PackedScene" uid="uid://bq3glb2ucid8f" path="res://Models/Modular Kit/SM_F_Wall_Int Corner.fbx" id="6_4ol7p"]
+[ext_resource type="PackedScene" uid="uid://4p838qoq8fah" path="res://Models/Modular Kit/SM_F_Wall_Int_1.5m.fbx" id="7_8ebu8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dckfx"]
 size = Vector3(6, 3, 0.5)
@@ -35,7 +40,7 @@ cell_size = Vector3(3, 3, 3)
 cell_center_x = false
 cell_center_z = false
 data = {
-"cells": PackedInt32Array(65535, 6, 24, 0, 6, 24, 65535, 3, 655364, 65535, 2, 524291, 65534, 2, 524291, 65533, 2, 524291, 65532, 2, 524291, 65534, 6, 655363, 65533, 6, 655363, 65534, 3, 3, 65533, 3, 4, 65532, 3, 3, 65531, 6, 3, 65529, 6, 3, 65531, 2, 655363, 65530, 6, 655364, 65528, 4, 3, 65527, 4, 3, 65526, 4, 4, 65528, 3, 3, 65527, 3, 3, 65526, 3, 4, 65528, 0, 655363, 65527, 0, 655363, 65526, 0, 655363, 65527, 7, 7, -4, 7, 3, -5, 7, 3, -4, 3, 3, -5, 3, 3, -6, 3, 3, -7, 3, 655363, -8, 3, 655363, -9, 3, 655363, -6, 6, 3, -7, 6, 3, -8, 6, 3, -9, 6, 3, 65532, 7, 655363, 131070, 6, 655363, 131069, 2, 655363, 131070, 2, 655363, 131068, 2, 655363, 131069, 8, 131075, 131070, 8, 131075, 131068, 8, 131075, 131071, 8, 655363, 65536, 8, 655363, 131070, 7, 524291, 131068, 7, 655364, 131071, 2, 3, 65536, 2, 3, 131071, 4, 3, 65536, 4, 4, 131067, 8, 655363, 131066, 8, 655363, 131065, 8, 655363, 131067, 5, 655363, 131066, 5, 655363, 131065, 5, 4, 131064, 8, 3, 131063, 8, 3, 131064, 5, 3, 131063, 5, 3, 131062, 5, 3, 131062, 8, 3, 131064, 6, 3, 131063, 6, 3, 131062, 6, 3, 131067, 2, 655363, 131066, 2, 655363, 131065, 2, 655363, 131064, 2, 655363, 131063, 2, 655363, 131062, 2, 655363, 131069, 7, 655364, 131068, 6, 3, 196604, 2, 655363, 196603, 2, 655363, 196602, 2, 655363, 196604, 7, 3, 196603, 7, 3, 196602, 7, 3, 0, 2, 524291, 65529, 2, 655363, 65530, 2, 655363)
+"cells": PackedInt32Array(65535, 3, 655364, 65535, 2, 524291, 65534, 2, 524291, 65533, 2, 524291, 65532, 2, 524291, 65534, 6, 655363, 65533, 6, 655363, 65534, 3, 3, 65533, 3, 4, 65532, 3, 3, 65531, 6, 3, 65529, 6, 3, 65531, 2, 655363, 65528, 4, 3, 65527, 4, 3, 65526, 4, 4, 65528, 3, 3, 65527, 3, 3, 65526, 3, 4, 65528, 0, 655363, 65527, 0, 655363, 65526, 0, 655363, 65527, 7, 7, -4, 7, 3, -5, 7, 3, -4, 3, 3, -5, 3, 3, -6, 3, 3, -7, 3, 655363, -8, 3, 655363, -9, 3, 655363, -6, 6, 3, -7, 6, 3, -8, 6, 3, -9, 6, 3, 65532, 7, 655363, 131070, 6, 655363, 131069, 2, 655363, 131070, 2, 655363, 131068, 2, 655363, 131069, 8, 131075, 131070, 8, 131075, 131068, 8, 131075, 131071, 8, 655363, 65536, 8, 655363, 131070, 7, 524291, 131068, 7, 655364, 131071, 2, 3, 65536, 2, 3, 131071, 4, 3, 65536, 4, 4, 131067, 8, 655363, 131066, 8, 655363, 131065, 8, 655363, 131067, 5, 655363, 131066, 5, 655363, 131065, 5, 4, 131064, 8, 3, 131063, 8, 3, 131064, 5, 3, 131063, 5, 3, 131062, 5, 3, 131062, 8, 3, 131064, 6, 3, 131063, 6, 3, 131062, 6, 3, 131067, 2, 655363, 131066, 2, 655363, 131065, 2, 655363, 131064, 2, 655363, 131063, 2, 655363, 131062, 2, 655363, 131069, 7, 655364, 131068, 6, 3, 196604, 2, 655363, 196603, 2, 655363, 196602, 2, 655363, 196604, 7, 3, 196603, 7, 3, 196602, 7, 3, 0, 2, 524291, 65529, 2, 655363, 65530, 2, 655363)
 }
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
@@ -46,7 +51,7 @@ cell_size = Vector3(3, 3, 3)
 data = {
 "cells": PackedInt32Array(65533, 3, 1441798, 131067, 3, 1048582)
 }
-metadata/_editor_floor_ = Vector3(0, 1, 0)
+metadata/_editor_floor_ = Vector3(0, 2, 0)
 
 [node name="Stairs Going Down" type="GridMap" parent="Ground Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.51876, -0.93686, -1.6)
@@ -97,14 +102,20 @@ transform = Transform3D(-8.74228e-08, -4.37114e-08, 1, 1, -4.37114e-08, 8.74228e
 [node name="SM_G_Ridge Wall4" parent="Free Placed Geometry" instance=ExtResource("3_oy2tf")]
 transform = Transform3D(-8.74228e-08, -4.37114e-08, 1, 1, -4.37114e-08, 8.74228e-08, 4.37114e-08, 1, 4.37114e-08, 1.5, 3, 15)
 
+[node name="SM_G_Ridge Wall8" parent="Free Placed Geometry" instance=ExtResource("3_oy2tf")]
+transform = Transform3D(-4.37114e-08, -1, -8.74228e-08, 1, -4.37114e-08, 8.74228e-08, -8.74228e-08, -8.74228e-08, 1, 3.5, 3, 18)
+
+[node name="SM_G_Ridge Wall9" parent="Free Placed Geometry" instance=ExtResource("3_oy2tf")]
+transform = Transform3D(-4.37114e-08, -0.6, -8.74228e-08, 1, -2.62268e-08, 8.74228e-08, -8.74228e-08, -5.24537e-08, 1, -2.5, 3, 18)
+
 [node name="SM_G_Ridge Wall5" parent="Free Placed Geometry" instance=ExtResource("3_oy2tf")]
-transform = Transform3D(8.74228e-08, -4.37114e-08, -1, 1, -4.37114e-08, 8.74228e-08, -4.37114e-08, -1, 4.37114e-08, -4.32743, 3, 18)
+transform = Transform3D(8.74228e-08, -4.37114e-08, -1, 1, -4.37114e-08, 8.74228e-08, -4.37114e-08, -1, 4.37114e-08, -4.38001, 3, 18)
 
 [node name="SM_G_Ridge Wall6" parent="Free Placed Geometry" instance=ExtResource("3_oy2tf")]
-transform = Transform3D(8.74228e-08, -4.37114e-08, -1, 1, -4.37114e-08, 8.74228e-08, -4.37114e-08, -1, 4.37114e-08, -4.32743, 3, 15)
+transform = Transform3D(8.74228e-08, -4.37114e-08, -1, 1, -4.37114e-08, 8.74228e-08, -4.37114e-08, -1, 4.37114e-08, -4.38001, 3, 15)
 
 [node name="SM_G_Ridge Wall7" parent="Free Placed Geometry" instance=ExtResource("3_oy2tf")]
-transform = Transform3D(8.74228e-08, -4.37114e-08, -1, 1, -4.37114e-08, 8.74228e-08, -4.37114e-08, -1, 4.37114e-08, -4.32743, 3, 12)
+transform = Transform3D(8.74228e-08, -4.37114e-08, -1, 1, -4.37114e-08, 8.74228e-08, -4.37114e-08, -1, 4.37114e-08, -4.38001, 3, 12)
 
 [node name="Garage Door Collider" type="StaticBody3D" parent="Free Placed Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 3, 18)
@@ -112,3 +123,33 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 3, 18)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Free Placed Geometry/Garage Door Collider"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0)
 shape = SubResource("BoxShape3D_dckfx")
+
+[node name="SM_G_Door" parent="." instance=ExtResource("3_1bkna")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1.5, 19.5)
+
+[node name="SM F Wall 3x3m" parent="." instance=ExtResource("4_68hix")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.3848, 1.5, 20.29)
+
+[node name="SM F Wall 3x3m2" parent="." instance=ExtResource("4_68hix")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.7347, 1.5, 20.29)
+
+[node name="SM F Door 1_5m" parent="." instance=ExtResource("5_66fqq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 1.5, 17.6312)
+
+[node name="SM_F_Wall_Int Corner3" parent="SM F Door 1_5m" instance=ExtResource("6_4ol7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.840733, 0.113739, 0.28108)
+
+[node name="SM_F_Wall_Int Corner5" parent="SM F Door 1_5m" instance=ExtResource("6_4ol7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.54489, 0.113739, 0.28108)
+
+[node name="SM_F_Wall_Int Corner6" parent="SM F Door 1_5m" instance=ExtResource("6_4ol7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.54907, 0.113739, 0.28108)
+
+[node name="SM_F_Wall_Int Corner4" parent="SM F Door 1_5m" instance=ExtResource("6_4ol7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.850266, 0.113739, 0.28108)
+
+[node name="SM_F_Wall_Int_1_5m" parent="SM F Door 1_5m" instance=ExtResource("7_8ebu8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0.377)
+
+[node name="SM_F_Wall_Int_1_5m2" parent="SM F Door 1_5m" instance=ExtResource("7_8ebu8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.62206, 0, 0.377001)
