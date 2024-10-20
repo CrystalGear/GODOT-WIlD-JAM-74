@@ -13,4 +13,7 @@ shape = SubResource("ConcavePolygonShape3D_sm7dr")
 
 [node name="SM F Door 1_5m" parent="." instance=ExtResource("1_3m6da")]
 
+[node name="Node3D" type="Node3D" parent="SM F Door 1_5m/SM_Wall_Door_Int_1_5m" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.474992, 0, 0)
+
 [editable path="SM F Door 1_5m"]

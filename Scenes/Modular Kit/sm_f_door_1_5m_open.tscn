@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://do16ukrdu2wks"]
+
+[ext_resource type="PackedScene" uid="uid://dw8ypomuwkoak" path="res://Models/Modular Kit/SM F Door 1.5m.fbx" id="1_1oky7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6lnxv"]
+size = Vector3(0.239502, 2.99219, 0.390869)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dlfu8"]
+size = Vector3(1.49805, 0.548035, 1)
+
+[node name="SM F Door 1_5m_open" type="StaticBody3D"]
+
+[node name="SM F Door 1_5m" parent="." instance=ExtResource("1_1oky7")]
+
+[node name="SM_Door" parent="SM F Door 1_5m/SM_Wall_Door_Int_1_5m" index="0"]
+transform = Transform3D(-0.162499, 0, 0.986709, 0, 0.919786, 0, -0.986709, 0, -0.162499, -1.80565, -1.49811, 0.604715)
+
+[node name="Node3D" type="Node3D" parent="SM F Door 1_5m/SM_Wall_Door_Int_1_5m" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.474992, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.661011, 1.49609, 0.364624)
+shape = SubResource("BoxShape3D_6lnxv")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.661, 1.496, 0.365)
+shape = SubResource("BoxShape3D_6lnxv")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.7457, 0)
+shape = SubResource("BoxShape3D_dlfu8")
+
+[editable path="SM F Door 1_5m"]

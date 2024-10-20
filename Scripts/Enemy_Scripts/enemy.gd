@@ -17,14 +17,38 @@ var state: EnemyState = EnemyState.PATROL
 var b_can_see_player: bool = false
 
 @onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
-@onready var nav_region: NavigationRegion3D = get_node("../NavigationRegion3D")
+
 @onready var raycast: RayCast3D = $VisionRaycast
 
+var nav_region: NavigationRegion3D
+
+var b_nav_ready: bool = false
+
 func _ready() -> void:
-	# Initializes the enemy and sets the player reference.
-	player = get_tree().root.get_node("BlockoutLevel/Player")
+	nav_region = find_navigation_region3D_by_group()
+	
+	# Assumes 'self' is the enemy and is a sibling of 'Player' under the same parent.
+    # Access the parent first, then find 'Player' among its children.
+	player = get_parent().get_node("Player")
+
 	if player:
-		call_deferred("patrol") # Required because it errors if done before the navmesh is fully mapped at runtime
+		call_deferred("patrol") # Call patrol after ensuring the player and navigation are ready.
+	else:
+		print("Player node not found. Check the node path and hierarchy.")
+			
+func find_navigation_region3D_by_group():
+	# Retrieve all nodes in the 'navAgent' group.
+	var nav_agents = get_tree().get_nodes_in_group("navRegion")
+	print(nav_agents)
+	
+	for node in nav_agents:
+		# Check if the node is a NavigationRegion3D
+		if node is NavigationRegion3D:
+			#print("Found NavigationRegion3D in group 'navRegion': ", node.name)
+			return node  # Return the found node or handle it as needed
+	
+	print("No NavigationRegion3D found in the 'navRegion' group")
+	return null
 
 func handle_debug_mode() -> void:
 	# Handles state transitions and updates behavior based on the current state.
@@ -54,6 +78,7 @@ func rotate_enemy_movement() -> void:
 	look_at(global_transform.origin - velocity)
 
 func _process(delta) -> void:
+		
 	handle_debug_mode()
 	_check_collisions()
 	rotate_enemy_movement()

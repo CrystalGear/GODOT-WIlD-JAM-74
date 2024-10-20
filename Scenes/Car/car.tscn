@@ -1,5 +1,39 @@
-[gd_scene load_steps=2 format=3 uid="uid://cp7qcj6bigbdu"]
+[gd_scene load_steps=6 format=3 uid="uid://cp7qcj6bigbdu"]
 
 [ext_resource type="PackedScene" uid="uid://u8502osh6bu2" path="res://Models/The Car/Car.fbx" id="1_g5mll"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_sp80w"]
+size = Vector3(1.47241, 1.72974, 1.2973)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x4k10"]
+size = Vector3(1.86523, 1.13647, 1.38583)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xjqah"]
+size = Vector3(1.86523, 0.47644, 2.10695)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b3ido"]
+size = Vector3(0.140991, 0.583176, 1.94068)
+
 [node name="Car" instance=ExtResource("1_g5mll")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="0"]
+
+[node name="Cab" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.06873, 0.223297)
+shape = SubResource("BoxShape3D_sp80w")
+
+[node name="Bonnet" type="CollisionShape3D" parent="StaticBody3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.772095, 1.53061)
+shape = SubResource("BoxShape3D_x4k10")
+
+[node name="bed" type="CollisionShape3D" parent="StaticBody3D" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.442078, -1.52178)
+shape = SubResource("BoxShape3D_xjqah")
+
+[node name="BedSides" type="CollisionShape3D" parent="StaticBody3D" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.566467, 0.839363, -1.43865)
+shape = SubResource("BoxShape3D_b3ido")
+
+[node name="BedSides2" type="CollisionShape3D" parent="StaticBody3D" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.601628, 0.839363, -1.43865)
+shape = SubResource("BoxShape3D_b3ido")
