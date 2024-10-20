@@ -1,8 +1,20 @@
-[gd_scene load_steps=6 format=4 uid="uid://cy7tx0piok6gp"]
+[gd_scene load_steps=10 format=4 uid="uid://cy7tx0piok6gp"]
 
 [ext_resource type="PhysicsMaterial" uid="uid://cgjgp1v8epf62" path="res://PhysicsMaterial/default_tool_physics.tres" id="1_1gik1"]
 [ext_resource type="ArrayMesh" uid="uid://bgaxfnyudruyy" path="res://Models/The Car/Seperate Items/Bonnet.res" id="1_6erdo"]
 [ext_resource type="Script" path="res://Scripts/Item Scripts/car_part.gd" id="1_7nr4n"]
+[ext_resource type="Texture2D" uid="uid://dt8866mrerrkr" path="res://Textures/Car textures/CarBody/Car_CarBody_BaseColor.png" id="4_ll4dr"]
+[ext_resource type="Texture2D" uid="uid://c2ep6ymdit8gh" path="res://Textures/Car textures/CarBody/Car_CarBody_OcclusionRoughnessMetallic.png" id="5_030x1"]
+[ext_resource type="Texture2D" uid="uid://63rv0aerh7v1" path="res://Textures/Car textures/CarBody/Car_CarBody_Normal.png" id="6_8230q"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xtf0b"]
+albedo_texture = ExtResource("4_ll4dr")
+metallic = 1.0
+metallic_texture = ExtResource("5_030x1")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("5_030x1")
+normal_enabled = true
+normal_texture = ExtResource("6_8230q")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ghlwp"]
 points = PackedVector3Array(-0.741587, -0.276787, -0.0219873, -0.741587, -0.276787, 0.232942, 0.741571, -0.276753, -0.0218512, -0.0230915, 0.0707977, 0.0475637, -0.207615, -0.175655, 1.25496, -0.648817, 0.00125351, 0.395183, -0.0230915, 0.0707977, 1.32208, 0.695114, 0.00125351, 0.0012871, 0.347553, -0.207209, 1.11356, -0.69513, 0.00125351, 0.0012871, 0.695114, -0.276753, 0.395183, -0.415564, -0.0483267, 1.02313, -0.602505, -0.253549, 0.650249, 0.67203, 0.00125351, 0.372044, 0.130735, -0.113849, 1.32749, 0.613457, -0.0920569, 0.629495, 0.579115, -0.0914268, -0.0219873, 0.0230757, 0.0707977, 1.32208, -0.347424, -0.207209, 1.11356, -0.691614, -0.0705976, 0.392342, -0.176541, -0.0478113, 1.3136, 0.262432, -0.0483318, 1.2419, -0.69513, -0.276787, 0.418457, 0.579115, -0.253549, 0.673251, 0.741571, -0.276753, 0.233078, 0.415532, -0.0483289, 1.02312, 0.123029, -0.174764, 1.28892, -0.277147, -0.00704328, 1.18513, 0.0230757, 0.0707977, 0.0475637, -0.591278, -0.0701619, 0.673251, 0.273051, 0.0125005, 1.13528, -0.130749, -0.113848, 1.32748)
@@ -26,10 +38,12 @@ script = ExtResource("1_7nr4n")
 
 [node name="Bonnet" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_6erdo")
+surface_material_override/0 = SubResource("StandardMaterial3D_xtf0b")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("ConvexPolygonShape3D_ghlwp")
 
 [node name="Outline" type="MeshInstance3D" parent="."]
+visible = false
 mesh = SubResource("ArrayMesh_nwaac")
 skeleton = NodePath("../Bonnet")

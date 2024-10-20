@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://beit8p6qknbfo"]
+[gd_scene load_steps=7 format=4 uid="uid://beit8p6qknbfo"]
 
 [ext_resource type="PhysicsMaterial" uid="uid://cgjgp1v8epf62" path="res://PhysicsMaterial/default_tool_physics.tres" id="1_e8qfu"]
 [ext_resource type="Script" path="res://Scripts/Item Scripts/car_part.gd" id="1_k5oi0"]
 [ext_resource type="ArrayMesh" uid="uid://xmrlrq68tnaf" path="res://Models/The Car/Seperate Items/Battery.res" id="1_tcwct"]
+[ext_resource type="Material" uid="uid://bs54jbac65r34" path="res://Materials/Battery + Engine.tres" id="4_b1tw5"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_4ck2m"]
 _surfaces = [{
@@ -26,6 +27,7 @@ script = ExtResource("1_k5oi0")
 
 [node name="Battery" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_tcwct")
+surface_material_override/0 = ExtResource("4_b1tw5")
 
 [node name="Outline" type="MeshInstance3D" parent="."]
 visible = false
