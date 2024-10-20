@@ -4,4 +4,3 @@
 
 [node name="options_manager" type="Node"]
 script = ExtResource("1_nrkg8")
-music_volume = 0.0
