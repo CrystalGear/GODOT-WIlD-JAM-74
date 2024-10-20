@@ -1,0 +1,30 @@
+[gd_scene load_steps=8 format=3 uid="uid://bv8ib6nk4iwex"]
+
+[ext_resource type="PackedScene" uid="uid://cgpj736brouc4" path="res://Models/Picture.fbx" id="1_fta3n"]
+[ext_resource type="Texture2D" uid="uid://csvy06xivy6es" path="res://Textures/Pictures/Christine/Picture_standardSurface1_BaseMap.png" id="2_ajtkl"]
+[ext_resource type="Texture2D" uid="uid://dy68k2qsun13q" path="res://Textures/Pictures/Christine/Picture_standardSurface1_MaskMap.png" id="3_mlt1w"]
+[ext_resource type="Texture2D" uid="uid://bfnlvyc6ekbck" path="res://Textures/Pictures/Christine/Picture_standardSurface1_Normal.png" id="4_v5wmg"]
+[ext_resource type="Texture2D" uid="uid://cewgmx8aedycg" path="res://Textures/Pictures/Callum/Picture_blinn1_BaseMap.png" id="5_k1hju"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pvxv5"]
+albedo_texture = ExtResource("2_ajtkl")
+metallic = 1.0
+metallic_texture = ExtResource("3_mlt1w")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("3_mlt1w")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("4_v5wmg")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yaorn"]
+albedo_texture = ExtResource("5_k1hju")
+
+[node name="Christine Poster" type="StaticBody3D"]
+
+[node name="Picture" parent="." instance=ExtResource("1_fta3n")]
+
+[node name="pCube1" parent="Picture" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_pvxv5")
+surface_material_override/1 = SubResource("StandardMaterial3D_yaorn")
+
+[editable path="Picture"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://c7ocvb2duj8e6"]
+[gd_scene load_steps=45 format=3 uid="uid://c7ocvb2duj8e6"]
 
 [ext_resource type="PackedScene" uid="uid://ia38iawogjd7" path="res://Scenes/default_environment.tscn" id="1_58fx7"]
 [ext_resource type="PackedScene" uid="uid://c15oa1883es0v" path="res://Scenes/blockout/blockout_level.tscn" id="2_fyn8b"]
@@ -32,6 +32,18 @@
 [ext_resource type="PackedScene" uid="uid://cwrtbfn8155qr" path="res://Scenes/Game Objects/table.tscn" id="30_6s6m8"]
 [ext_resource type="PackedScene" uid="uid://d0j0g4n0fvhrs" path="res://Scenes/Game Objects/chair.tscn" id="31_ay10j"]
 [ext_resource type="PackedScene" uid="uid://dx2ssnl1g2oj8" path="res://Scenes/Game Objects/bed.tscn" id="32_b30sh"]
+[ext_resource type="PackedScene" uid="uid://cgu02sq1sjrn0" path="res://Scenes/Game Objects/Pictures/christine_poster.tscn" id="33_4lk5f"]
+[ext_resource type="PackedScene" uid="uid://bv8ib6nk4iwex" path="res://Scenes/Game Objects/Pictures/Callum.tscn" id="34_rhby4"]
+[ext_resource type="PackedScene" uid="uid://bycnmxta82y5" path="res://Scenes/Game Objects/Pictures/Gabe.tscn" id="35_mldj4"]
+[ext_resource type="PackedScene" uid="uid://cexiskpvels1a" path="res://Scenes/Game Objects/Pictures/Dave.tscn" id="36_8u5nb"]
+[ext_resource type="PackedScene" uid="uid://bg7atpw2pvkgj" path="res://Scenes/Game Objects/Pictures/Nial.tscn" id="37_8rrwr"]
+[ext_resource type="PackedScene" uid="uid://boe83b08lcna6" path="res://Scenes/Game Objects/Pictures/Dan.tscn" id="38_y0j8w"]
+[ext_resource type="PackedScene" uid="uid://c4c5iwj7pi1cf" path="res://Scenes/Game Objects/Pictures/Hayden.tscn" id="39_op4q1"]
+[ext_resource type="PackedScene" uid="uid://bos61muk2lfhc" path="res://Scenes/Game Objects/Pictures/Claire.tscn" id="40_52xag"]
+[ext_resource type="PackedScene" uid="uid://dhl4h1gew7338" path="res://Scenes/Game Objects/Pictures/James.tscn" id="41_1rto2"]
+[ext_resource type="PackedScene" uid="uid://qagivtc7qkpo" path="res://Scenes/Game Objects/Pictures/Steven.tscn" id="42_p81oc"]
+[ext_resource type="PackedScene" uid="uid://oja4vxf5srgx" path="res://Scenes/Game Objects/Pictures/LeeRoy.tscn" id="43_ycq2p"]
+[ext_resource type="PackedScene" uid="uid://djvep4enug3lm" path="res://Scenes/Game Objects/Pictures/Liam.tscn" id="44_vo62v"]
 
 [node name="LevelDebug" type="Node3D"]
 
@@ -223,3 +235,39 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -28.97
 
 [node name="Bed3" parent="." instance=ExtResource("32_b30sh")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -28.9744, 4.70861, 10.4945)
+
+[node name="Christine Poster" parent="." instance=ExtResource("33_4lk5f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.34813, 2.17176, 10.6895)
+
+[node name="Christine Poster2" parent="." instance=ExtResource("34_rhby4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.35779, 2.16078, 11.931)
+
+[node name="Christine Poster3" parent="." instance=ExtResource("35_mldj4")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.3457, 2.32224, 7.51702)
+
+[node name="Christine Poster4" parent="." instance=ExtResource("36_8u5nb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.3755, 1.993, 7.77425)
+
+[node name="Christine Poster5" parent="." instance=ExtResource("37_8rrwr")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -15.1455, 2.0988, 17.8664)
+
+[node name="Christine Poster6" parent="." instance=ExtResource("38_y0j8w")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -20.5548, 2.19782, 17.8624)
+
+[node name="Christine Poster7" parent="." instance=ExtResource("39_op4q1")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -27.0343, 2.30643, 0.192556)
+
+[node name="Christine Poster8" parent="." instance=ExtResource("40_52xag")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -26.8159, 2.49008, 12.1255)
+
+[node name="Christine Poster9" parent="." instance=ExtResource("41_1rto2")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -13.6898, 2.35527, 9.81174)
+
+[node name="Christine Poster10" parent="." instance=ExtResource("42_p81oc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.3678, 2.09149, 10.5267)
+
+[node name="Christine Poster11" parent="." instance=ExtResource("43_ycq2p")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8.80283, 2.18157, 17.8609)
+
+[node name="Christine Poster12" parent="." instance=ExtResource("44_vo62v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3683, 2.17777, 10.6922)
