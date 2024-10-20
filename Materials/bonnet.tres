@@ -1,4 +1,4 @@
-[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://hnsxy8grr6ck"]
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://4ih1gfjbiowl"]
 
 [ext_resource type="Texture2D" uid="uid://dt8866mrerrkr" path="res://Textures/Car textures/CarBody/Car_CarBody_BaseColor.png" id="1_b3lox"]
 [ext_resource type="Texture2D" uid="uid://c2ep6ymdit8gh" path="res://Textures/Car textures/CarBody/Car_CarBody_OcclusionRoughnessMetallic.png" id="2_f46p0"]
