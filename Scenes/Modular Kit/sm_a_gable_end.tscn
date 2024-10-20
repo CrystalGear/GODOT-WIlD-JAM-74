@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bhvrau5j88skp" path="res://Models/Modular Kit/SM A Gable End.fbx" id="1_hf1c5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_4g1oh"]
-size = Vector3(0.35, 3, 6)
+size = Vector3(0.478516, 3, 6)
 
 [node name="SM A Gable End" type="StaticBody3D"]
 
