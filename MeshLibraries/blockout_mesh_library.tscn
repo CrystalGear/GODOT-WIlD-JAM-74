@@ -101,6 +101,7 @@ height = 1.7
 [node name="BlockoutMeshLibrary" type="Node3D"]
 
 [node name="SafeZone" type="MeshInstance3D" parent="."]
+layers = 2
 mesh = SubResource("BoxMesh_kshh1")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="SafeZone"]
@@ -110,6 +111,7 @@ shape = SubResource("BoxShape3D_6pl35")
 
 [node name="UnsafeZone" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00674, 0, 0)
+layers = 2
 mesh = SubResource("BoxMesh_jgoml")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="UnsafeZone"]
@@ -119,6 +121,7 @@ shape = SubResource("BoxShape3D_80h7m")
 
 [node name="Tires" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.54946, 0, 0)
+layers = 2
 mesh = SubResource("TorusMesh_t2tl5")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Tires"]
@@ -128,6 +131,7 @@ shape = SubResource("CylinderShape3D_kbgp4")
 
 [node name="MetalFurniture" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04091, 0, 0)
+layers = 2
 mesh = SubResource("BoxMesh_2m16u")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MetalFurniture"]
@@ -137,6 +141,7 @@ shape = SubResource("BoxShape3D_kgxrj")
 
 [node name="WoodenFurniture" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08662, 0, 0)
+layers = 2
 mesh = SubResource("BoxMesh_amp50")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="WoodenFurniture"]
@@ -146,6 +151,7 @@ shape = SubResource("BoxShape3D_f25f2")
 
 [node name="WoodenBarrel" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.983351, 0, 1.11766)
+layers = 2
 mesh = SubResource("CylinderMesh_ygta6")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="WoodenBarrel"]
@@ -155,6 +161,7 @@ shape = SubResource("CylinderShape3D_menxx")
 
 [node name="ToxicBarrel" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00959301, 0, 1.12246)
+layers = 2
 mesh = SubResource("CylinderMesh_3wict")
 skeleton = NodePath("../WoodenBarrel")
 
@@ -165,6 +172,7 @@ shape = SubResource("CylinderShape3D_menxx")
 
 [node name="BasicWall" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.05051, 0, 1.0649)
+layers = 2
 mesh = SubResource("BoxMesh_4frgr")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="BasicWall"]
@@ -174,6 +182,7 @@ shape = SubResource("BoxShape3D_rwym8")
 
 [node name="StairsUp" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.10581, 0, 1.07449)
+layers = 2
 mesh = SubResource("BoxMesh_cl55i")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="StairsUp"]
@@ -183,6 +192,7 @@ shape = SubResource("BoxShape3D_r0s17")
 
 [node name="StairsDown" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.10581, 0, 2.15858)
+layers = 2
 mesh = SubResource("BoxMesh_dwin2")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="StairsDown"]
@@ -192,6 +202,7 @@ shape = SubResource("BoxShape3D_r0s17")
 
 [node name="PlayerScale" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.992945, 0, 2.14898)
+layers = 2
 mesh = SubResource("CylinderMesh_4p0gf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="PlayerScale"]
