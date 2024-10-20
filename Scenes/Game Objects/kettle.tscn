@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2o4m6xxbxnjm"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://cgjgp1v8epf62" path="res://PhysicsMaterial/default_tool_physics.tres" id="1_0dv0a"]
+[ext_resource type="ArrayMesh" uid="uid://c5f5rde366ps4" path="res://Models/Kitchen Props/Kettle.obj" id="1_ck3x5"]
+[ext_resource type="Material" uid="uid://cgxrys4ocg3du" path="res://Materials/Kettle.tres" id="2_7gkoa"]
+[ext_resource type="Material" uid="uid://cmixkx5wjuiep" path="res://Materials/Kettle Glass.tres" id="3_w2bj6"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_m6nqm"]
+points = PackedVector3Array(0.114785, 0.00201636, 0.00548627, 0.172832, 0.288925, -0.0696407, -0.0265595, 0.00703214, -0.153132, -0.0487224, 0.00880521, 0.0894725, 0.0410544, 0.323001, 0.0837826, 0.0188104, 0.324653, -0.147539, -0.12292, 0.00136686, -0.0624006, 0.172094, 0.0522927, 0.00564736, 0.0632929, 0.00949069, -0.1346, 0.0194795, 0.371549, -0.0107281, -0.0489559, 0.323755, 0.0843579, 0.172832, 0.288925, 0.0128724, 0.0407821, 0.0101352, 0.0885953, -0.161462, 0.323561, -0.0621698, 0.17217, 0.0522343, -0.0624308, -0.111032, 0.00787732, 0.0393043, -0.16873, 0.324905, -0.00568612, -0.0540155, 0.32233, -0.14001, -0.0876666, 0.00941984, -0.123469, -0.0453671, 0.371549, -0.0401717, -0.00380113, 0.2671, 0.0953269, -0.0825772, 0.0026872, 0.0672986, 0.0634582, 0.322923, -0.129307, 0.0300406, 0.00206225, -0.146973, -0.127584, 0.00839354, -0.000298175, 0.00766719, 0.371549, -0.0578531, -0.0758028, 0.315904, 0.0714373, -0.0277005, 0.371549, 0.00105944, 0.114831, 0.00194372, -0.0622681, 0.024442, 0.00147389, 0.0905912, -0.168931, 0.325073, -0.0511335, 0.0629648, 0.0104156, 0.0772654)
+
+[node name="Kettle" type="RigidBody3D"]
+physics_material_override = ExtResource("1_0dv0a")
+contact_monitor = true
+max_contacts_reported = 10
+
+[node name="Kettle Mesh" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_ck3x5")
+surface_material_override/0 = ExtResource("2_7gkoa")
+surface_material_override/1 = ExtResource("3_w2bj6")
+surface_material_override/2 = ExtResource("2_7gkoa")
+surface_material_override/3 = ExtResource("3_w2bj6")
+surface_material_override/4 = ExtResource("2_7gkoa")
+surface_material_override/5 = ExtResource("3_w2bj6")
+surface_material_override/6 = ExtResource("2_7gkoa")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_m6nqm")

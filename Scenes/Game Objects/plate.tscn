@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://bcgacy5fiavus"]
+
+[ext_resource type="ArrayMesh" uid="uid://bh3s3stvnf4wx" path="res://Models/Kitchen Props/Plate.obj" id="1_aokbh"]
+[ext_resource type="PhysicsMaterial" uid="uid://cgjgp1v8epf62" path="res://PhysicsMaterial/default_tool_physics.tres" id="1_odel7"]
+[ext_resource type="Material" uid="uid://bn51aeok3tikj" path="res://Materials/plate_and_bowls.tres" id="2_m8bwr"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2fgws"]
+points = PackedVector3Array(-0.0923333, 0.0111278, 0.213683, -0.0398543, 0.00357262, -0.214007, -0.0495888, -0.00311667, -0.220722, 0.220978, -0.00311667, 0.0498442, -0.142172, -0.0173611, 0.0854497, -0.227661, 0.0111278, -0.0426499, 0.19965, 0.0111278, -0.121, 0.1213, -0.0173611, -0.113906, 0.0714165, -0.0173611, 0.149566, 0.142672, 0.0111278, 0.185217, -0.1208, -0.0173611, -0.113906, 0.0714165, 0.0111278, -0.220722, -0.220522, -0.00311667, 0.0498442, -0.0495888, -0.00311667, 0.220778, -0.142172, 0.0111278, -0.185117, -0.192011, -0.00311667, -0.121, 0.142672, -0.00311667, -0.177978, -0.184917, 0.0111278, 0.142472, 0.19965, -0.0102389, -0.0284166, 0.1213, -0.00311667, 0.192266, 0.228161, 0.0111278, 0.0427053, 0.149766, -0.0173611, 0.0712165, -0.142172, -0.00311667, 0.178033, 0.00729973, -0.0173611, -0.163744, -0.0709611, -0.0173611, 0.149566, 0.0429053, 0.0111278, 0.227961, 0.213883, -0.00311667, -0.0782554, -0.19915, -0.0102389, -0.0284166, 0.0785108, -0.00311667, -0.213583, 0.178233, -0.00311667, 0.142472, -0.142172, -0.00311667, -0.177978, 0.0500442, -0.00311667, 0.220778)
+
+[node name="Plate" type="RigidBody3D"]
+physics_material_override = ExtResource("1_odel7")
+contact_monitor = true
+max_contacts_reported = 10
+
+[node name="Plate" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_aokbh")
+surface_material_override/0 = ExtResource("2_m8bwr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_2fgws")

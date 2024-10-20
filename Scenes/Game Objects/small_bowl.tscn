@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://drnc5j7ndeiqo"]
+
+[ext_resource type="ArrayMesh" uid="uid://dsdte4p0q5ood" path="res://Models/Kitchen Props/Small Bowl.obj" id="1_7umhx"]
+[ext_resource type="PhysicsMaterial" uid="uid://cgjgp1v8epf62" path="res://PhysicsMaterial/default_tool_physics.tres" id="1_agna7"]
+[ext_resource type="Material" uid="uid://bn51aeok3tikj" path="res://Materials/plate_and_bowls.tres" id="2_crmdp"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0la0l"]
+points = PackedVector3Array(-0.0180061, -0.0181302, 0.085375, -0.0183188, 0.0261534, -0.118002, -0.0184007, 0.036608, -0.11844, 0.115877, 0.0419852, 0.00189242, 0.0588665, -0.0648145, -0.0421151, -0.111577, 0.041996, 0.00545474, -0.0613749, -0.0649284, -0.0254693, 0.0447865, 0.041996, 0.0978523, 0.0518809, -0.0611667, 0.0409809, 0.0518889, 0.041996, -0.111812, 0.0122155, -0.0516567, -0.0858911, -0.0784907, 0.00874457, -0.0793264, -0.0475872, -0.0611728, 0.0409872, -0.0476111, 0.041996, 0.0943123, 0.0826607, 0.00198919, -0.0758493, 0.0960192, -0.00470705, 0.0314737, -0.0849073, -0.00473607, 0.0448399, -0.104452, 0.041996, -0.0513865, -0.0278482, -0.0614373, -0.0720887, 0.0896227, -0.0349646, -0.0154754, 0.0188636, -0.0649106, 0.0547531, -0.0854098, -0.0349864, -0.0154821, 0.108752, 0.0419852, -0.0513865, 0.0523639, -0.00138647, 0.0816309, 0.105212, 0.0419852, 0.0409889, -0.0476111, 0.041996, -0.111812, 0.0390644, -0.0147614, -0.0993848, 0.0157293, 0.00558003, 0.0965639, -0.0756931, 0.0190479, 0.0690931, -0.0347337, -0.0080747, -0.102618, -0.0745215, -0.0280832, -0.0587504, 0.065644, -0.0649031, 0.00796114)
+
+[node name="Small Bowl" type="RigidBody3D"]
+physics_material_override = ExtResource("1_agna7")
+contact_monitor = true
+max_contacts_reported = 10
+
+[node name="Small Bowl" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.0112048, 0, 0.999937, 0, 1, 0, -0.999937, 0, 0.0112048, 0, 0, 0)
+mesh = ExtResource("1_7umhx")
+surface_material_override/0 = ExtResource("2_crmdp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.0112048, 0, 0.999937, 0, 1, 0, -0.999937, 0, 0.0112048, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_0la0l")

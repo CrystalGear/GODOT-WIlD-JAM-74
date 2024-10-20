@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://dpb1o3q8iqq82"]
+
+[ext_resource type="Texture2D" uid="uid://cqul8ricibytq" path="res://Images/Textures/Haunted Floors Architecture/SM F BayWall Int 6x3m/SM_F_BayWall_Int_6x3mm_M_Walls_BaseColor.1001.png" id="1_3a4bf"]
+[ext_resource type="Texture2D" uid="uid://57p8evys25vv" path="res://Images/Textures/Haunted Floors Architecture/SM F BayWall Int 6x3m/SM_F_BayWall_Int_6x3mm_M_Walls_OcclusionRoughnessMetallic.1001.png" id="2_pv2hd"]
+[ext_resource type="Texture2D" uid="uid://bxqkb4dxri37g" path="res://Images/Textures/Haunted Floors Architecture/SM F BayWall Int 6x3m/SM_F_BayWall_Int_6x3mm_M_Walls_Normal.1001.png" id="3_ht04k"]
+
+[resource]
+albedo_texture = ExtResource("1_3a4bf")
+metallic = 1.0
+metallic_texture = ExtResource("2_pv2hd")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_pv2hd")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_ht04k")
+ao_enabled = true
+ao_texture = ExtResource("2_pv2hd")

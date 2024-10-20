@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://bletst11kfa1j"]
+
+[ext_resource type="ArrayMesh" uid="uid://dmmkvf2ukgx31" path="res://Models/Kitchen Props/Large Bowl.obj" id="1_a0tru"]
+[ext_resource type="PhysicsMaterial" uid="uid://cgjgp1v8epf62" path="res://PhysicsMaterial/default_tool_physics.tres" id="1_j53m5"]
+[ext_resource type="Material" uid="uid://bn51aeok3tikj" path="res://Materials/plate_and_bowls.tres" id="2_hqfjd"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_el5uv"]
+points = PackedVector3Array(-0.0764699, 0.0426905, 0.199264, -0.0463422, 0.0199069, -0.233469, -0.0525478, 0.00629339, -0.224651, 0.219119, 0.0426905, 0.0232955, 0.0575254, -0.0645545, 0.0956657, -0.231319, 0.0426905, -0.0610955, -0.13399, -0.0647945, 0.00667006, 0.0766389, -0.0645336, -0.120699, 0.11352, 0.0426905, -0.215945, 0.11352, 0.0426905, 0.178145, -0.117195, -0.0528332, -0.123484, -0.143947, -0.0136143, 0.118947, 0.163617, -0.0331828, -0.0645394, -0.160905, 0.0426905, -0.187814, -0.0385773, -0.0525931, 0.130463, 0.129607, -0.0523892, 0.052152, -0.21721, 0.0426905, 0.0725897, 0.190945, 0.0426905, -0.13852, 0.0132402, -0.0588191, -0.160958, 0.0268322, -0.00702372, 0.178941, -0.203945, -0.0070236, -0.0518741, 0.15259, 0.00622202, 0.119944, 0.0987474, -0.000508361, -0.195794, -0.204878, -0.000360362, 0.0341157, 0.0360955, 0.0426905, -0.244119, -0.0570278, -0.0645421, -0.139819, 0.12182, -0.0647905, -0.0444681, -0.164822, 0.00622591, -0.157812, 0.198683, -0.000401475, 0.000883015, -0.0887935, -0.0645302, 0.0829318, 0.136254, -0.0330151, -0.122412, 0.0982275, -0.0266348, 0.131056)
+
+[node name="Large Bowl" type="RigidBody3D"]
+physics_material_override = ExtResource("1_j53m5")
+contact_monitor = true
+max_contacts_reported = 10
+
+[node name="Large Bowl" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_a0tru")
+surface_material_override/0 = ExtResource("2_hqfjd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_el5uv")

@@ -1,0 +1,22 @@
+[gd_resource type="StandardMaterial3D" load_steps=7 format=3 uid="uid://bv3qqsvx8tbrf"]
+
+[ext_resource type="Texture2D" uid="uid://l4bbvxrav7aq" path="res://Images/Textures/Haunted Garage Architecture/SM_G_Stairs/SM_G_Stairs_M_Walls_BaseColor.1001.png" id="1_wgdxt"]
+[ext_resource type="Texture2D" uid="uid://d0778osw7kxy5" path="res://Images/Textures/Haunted Garage Architecture/SM_G_Stairs/SM_G_Stairs_M_Walls_Emissive.1001.png" id="2_08gok"]
+[ext_resource type="Texture2D" uid="uid://cueps8d5rbkd0" path="res://Images/Textures/Haunted Garage Architecture/SM_G_Stairs/SM_G_Stairs_M_Walls_Height.1001.png" id="3_tucvw"]
+[ext_resource type="Texture2D" uid="uid://ct0l2mfwan61p" path="res://Images/Textures/Haunted Garage Architecture/SM_G_Stairs/SM_G_Stairs_M_Walls_Metallic.1001.png" id="4_qj3sl"]
+[ext_resource type="Texture2D" uid="uid://c1uedlj1hxljx" path="res://Images/Textures/Haunted Garage Architecture/SM_G_Stairs/SM_G_Stairs_M_Walls_Normal.1001.png" id="5_4rp1g"]
+[ext_resource type="Texture2D" uid="uid://dqljur4d20cys" path="res://Images/Textures/Haunted Garage Architecture/SM_G_Stairs/SM_G_Stairs_M_Walls_Roughness.1001.png" id="6_g4ee6"]
+
+[resource]
+albedo_texture = ExtResource("1_wgdxt")
+metallic = 1.0
+metallic_texture = ExtResource("4_qj3sl")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("6_g4ee6")
+roughness_texture_channel = 1
+emission_enabled = true
+emission_texture = ExtResource("2_08gok")
+normal_enabled = true
+normal_texture = ExtResource("5_4rp1g")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_tucvw")

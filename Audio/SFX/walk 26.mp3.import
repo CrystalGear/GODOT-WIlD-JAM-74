@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bcsj134murmei"
+path="res://.godot/imported/walk 26.mp3-2fb8fae400e59b91152b553f77dcd049.mp3str"
+
+[deps]
+
+source_file="res://Audio/SFX/walk 26.mp3"
+dest_files=["res://.godot/imported/walk 26.mp3-2fb8fae400e59b91152b553f77dcd049.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

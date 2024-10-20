@@ -1,0 +1,22 @@
+[gd_resource type="StandardMaterial3D" load_steps=7 format=3 uid="uid://dfg6aymxfvst"]
+
+[ext_resource type="Texture2D" uid="uid://c06jgo4pw6ai5" path="res://Images/Textures/Haunted Garage Architecture/SM_G_Floor_3x3m/SM_G_Floor_3x3m_standardSurface1_BaseColor.1001.png" id="1_6nhw0"]
+[ext_resource type="Texture2D" uid="uid://obarjbp0obkt" path="res://Images/Textures/Haunted Garage Architecture/SM_G_Floor_3x3m/SM_G_Floor_3x3m_standardSurface1_Emissive.1001.png" id="2_vina5"]
+[ext_resource type="Texture2D" uid="uid://dcyklitgqekhk" path="res://Images/Textures/Haunted Garage Architecture/SM_G_Floor_3x3m/SM_G_Floor_3x3m_standardSurface1_Height.1001.png" id="3_l6kyj"]
+[ext_resource type="Texture2D" uid="uid://dcyacgohqi313" path="res://Images/Textures/Haunted Garage Architecture/SM_G_Floor_3x3m/SM_G_Floor_3x3m_standardSurface1_Metallic.1001.png" id="4_4obho"]
+[ext_resource type="Texture2D" uid="uid://d0q63vqlmgvim" path="res://Images/Textures/Haunted Garage Architecture/SM_G_Floor_3x3m/SM_G_Floor_3x3m_standardSurface1_Normal.1001.png" id="5_jijcy"]
+[ext_resource type="Texture2D" uid="uid://bvnrh1cl2lhsy" path="res://Images/Textures/Haunted Garage Architecture/SM_G_Floor_3x3m/SM_G_Floor_3x3m_standardSurface1_Roughness.1001.png" id="6_h51ua"]
+
+[resource]
+albedo_texture = ExtResource("1_6nhw0")
+metallic = 1.0
+metallic_texture = ExtResource("4_4obho")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("6_h51ua")
+roughness_texture_channel = 1
+emission_enabled = true
+emission_texture = ExtResource("2_vina5")
+normal_enabled = true
+normal_texture = ExtResource("5_jijcy")
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_l6kyj")

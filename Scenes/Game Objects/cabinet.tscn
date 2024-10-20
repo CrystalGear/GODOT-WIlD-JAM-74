@@ -1,0 +1,97 @@
+[gd_scene load_steps=13 format=3 uid="uid://c4fae4oguft4q"]
+
+[ext_resource type="ArrayMesh" uid="uid://qi40k1wrjana" path="res://Models/Kitchen Furniture/Cabinet.obj" id="1_145fn"]
+[ext_resource type="PhysicsMaterial" uid="uid://cgjgp1v8epf62" path="res://PhysicsMaterial/default_tool_physics.tres" id="1_tussa"]
+[ext_resource type="Script" path="res://Scripts/open_furniture.gd" id="2_7byhy"]
+[ext_resource type="Material" uid="uid://cothvu2u62ru0" path="res://Materials/cabinet.tres" id="2_su7kl"]
+[ext_resource type="PackedScene" uid="uid://b5x1jupt08y6" path="res://Scenes/Game Objects/cabinet_door.tscn" id="5_kh6yq"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rspu7"]
+size = Vector3(0.588867, 0.0576172, 0.616211)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i6d38"]
+size = Vector3(0.588867, 0.0625, 0.616211)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_56k1f"]
+size = Vector3(0.0505371, 0.867249, 0.599609)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bjsq4"]
+size = Vector3(0.0505371, 0.867249, 0.494385)
+
+[sub_resource type="Animation" id="Animation_ttla3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cabinet Door:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -0.024923, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_veqyy"]
+resource_name = "open"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cabinet Door:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, -0.024923, 0), Vector3(0, -2.12169, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4i68g"]
+_data = {
+"RESET": SubResource("Animation_ttla3"),
+"open": SubResource("Animation_veqyy")
+}
+
+[node name="Cabinet" type="RigidBody3D"]
+physics_material_override = ExtResource("1_tussa")
+freeze = true
+contact_monitor = true
+max_contacts_reported = 10
+linear_damp = 0.1
+angular_damp = 0.1
+script = ExtResource("2_7byhy")
+
+[node name="Cabinet" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_145fn")
+surface_material_override/0 = ExtResource("2_su7kl")
+
+[node name="Cabinet Door" parent="." instance=ExtResource("5_kh6yq")]
+transform = Transform3D(0.999689, 0, -0.0249204, 0, 1, 0, 0.0249204, 0, 0.999689, -0.3, 0, 0.25)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0183105, 0.95127, -0.032959)
+shape = SubResource("BoxShape3D_rspu7")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0183105, 0.0232213, -0.032959)
+shape = SubResource("BoxShape3D_i6d38")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.294435, 0.488018, -0.0429688)
+shape = SubResource("BoxShape3D_56k1f")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.256986, 0.488018, -0.0429688)
+shape = SubResource("BoxShape3D_56k1f")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.0206065, 0.488018, -0.316797)
+shape = SubResource("BoxShape3D_bjsq4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4i68g")
+}

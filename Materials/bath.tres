@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://ffnsscwc8v1h"]
+
+[ext_resource type="Texture2D" uid="uid://8od6j23oa1ty" path="res://Textures/Bathroom Furniture/Bath_standardSurface1_BaseMap.png" id="1_tysfv"]
+[ext_resource type="Texture2D" uid="uid://dk8vo3782r3ky" path="res://Textures/Bathroom Furniture/Bath_standardSurface1_MaskMap.png" id="2_vlyrh"]
+[ext_resource type="Texture2D" uid="uid://dp04wcpbtp4ne" path="res://Textures/Bathroom Furniture/Bath_standardSurface1_Normal.png" id="3_h6sxp"]
+
+[resource]
+albedo_texture = ExtResource("1_tysfv")
+metallic = 1.0
+metallic_texture = ExtResource("2_vlyrh")
+roughness_texture = ExtResource("2_vlyrh")
+roughness_texture_channel = 2
+normal_enabled = true
+normal_texture = ExtResource("3_h6sxp")
+ao_enabled = true
+ao_texture = ExtResource("2_vlyrh")
+ao_texture_channel = 1

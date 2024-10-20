@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://3ilkrs1v7xfa"
+path="res://.godot/imported/hammer 08.mp3-5ba372468782bb8fcbb6698ce4706d41.mp3str"
+
+[deps]
+
+source_file="res://Audio/SFX/hammer 08.mp3"
+dest_files=["res://.godot/imported/hammer 08.mp3-5ba372468782bb8fcbb6698ce4706d41.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
