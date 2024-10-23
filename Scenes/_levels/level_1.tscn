@@ -78,6 +78,7 @@ script = ExtResource("2_ql3km")
 
 [node name="Player" parent="." node_paths=PackedStringArray("enemy", "atticSpawner", "basementSpawner") instance=ExtResource("3_nxca5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.92464, 2.43556, 10.7976)
+light_fade_threshold = 200
 enemy = NodePath("../Enemy")
 atticSpawner = NodePath("../atticSpawner")
 basementSpawner = NodePath("../basementSpawner")

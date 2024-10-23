@@ -4,6 +4,7 @@
 
 [node name="timer_canvas" type="CanvasLayer"]
 script = ExtResource("1_5wg34")
+time_limit = 900.0
 
 [node name="timer_text" type="Label" parent="."]
 offset_top = -27.0

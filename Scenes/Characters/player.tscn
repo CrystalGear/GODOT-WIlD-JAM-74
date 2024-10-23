@@ -157,6 +157,7 @@ stream_31/stream = ExtResource("33_ctnul")
 collision_layer = 524352
 collision_mask = 129
 script = ExtResource("1_xnuy8")
+light_charge = 600
 camera_shake_time = 2
 camera_shake_intensity = 0.1
 pull = 15
@@ -188,11 +189,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26002, -0.267397, -0.188811
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Camera3D/FlashlightHand"]
 light_color = Color(0.970043, 0.922577, 0.687504, 1)
+light_energy = 0.4
+light_indirect_energy = 0.4
 shadow_enabled = true
 distance_fade_enabled = true
 spot_range = 30.0
-spot_angle = 44.6278
-spot_angle_attenuation = 1.93187
+spot_angle = 35.0
+spot_angle_attenuation = 17.1484
 
 [node name="FlashLightSound" type="AudioStreamPlayer3D" parent="Camera3D/FlashlightHand"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.26002, -0.256102, 0.188811)
